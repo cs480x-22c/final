@@ -1,0 +1,47 @@
+html,
+body,
+#root {
+    margin:0;
+    padding:0;
+    height: 100%;
+    width: 100%;
+    background-color: #D7CAB6;
+}
+
+#app
+{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.name-container
+{
+    padding: 10px 0px 20px 0px;
+}
+
+.name-container h1
+{
+    font-family: 'Arsenal', sans-serif;
+    text-align: center;
+    margin: auto;
+    font-size: 50px;
+}
+
+.climb-panel
+{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 95%;
+    margin: 20px;
+    width: 40%;
+}
+
+.route
+{
+    background-color: #DEDCCF;
+    width: 100%;
+    height: 100%;
+}
