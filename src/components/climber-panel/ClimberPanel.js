@@ -20,11 +20,19 @@ export default class ClimberPanel extends React.Component
         })
     }
 
+    setClimber(climber)
+    {
+        this.setState({
+            selectingClimber: false
+        })
+        this.props.setClimber(climber)
+    }
+
     render()
     {
         if(this.state.selectingClimber)
         {
-            return <SelectClimber />
+            return <SelectClimber setClimber={this.setClimber.bind(this)}/>
         }
         else {
             return (

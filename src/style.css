@@ -182,3 +182,46 @@ h3 {
     border-radius: 56px;
     filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 16%));
 }
+
+.climber-select
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 7%;
+}
+
+.climber-icon-container
+{
+    background-color: white;
+    border-radius: 20px;
+    flex: 1 0 25%;
+    margin: 2%;
+    height: 100px; 
+    padding: 5px;
+    text-align: center;
+    flex-grow: 0;
+}
+
+.climber-icon-container:hover
+{
+    background-color: #EBCCA9;
+}
+
+.climber-icon 
+{
+    height: 60%;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.climber-icon-container h4 {
+    margin: 0px;
+}
+
+.disable-select {
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}

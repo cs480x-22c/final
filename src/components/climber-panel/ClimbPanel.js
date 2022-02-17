@@ -17,7 +17,7 @@ export default class ClimbPanel extends React.Component
 
     setClimber(newClimber)
     {
-        console.log("called")
+        console.log("set")
         this.setState({
             climber: newClimber
         })
