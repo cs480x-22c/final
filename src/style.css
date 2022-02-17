@@ -5,7 +5,8 @@ body,
     padding:0;
     height: 100%;
     width: 100%;
-    background-color: #D7CAB6;
+    background-color: #F0F4EF;
+    font-family: 'Arsenal', sans-serif;
 }
 
 #app
@@ -16,32 +17,174 @@ body,
     justify-content: center;
 }
 
-.name-container
+.info-button-container
 {
-    padding: 10px 0px 20px 0px;
+    margin: 10px;
+    width: 1.5vw;
+    height: 1.5vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    min-width: 30px;
+    min-height: 30px;
+
 }
 
-.name-container h1
+.info-button
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    margin: 0;
+    font-family: 'Arsenal', sans-serif;
+    background-color: #ECB16D;
+    color: #FFFFFF;
+    border: none;
+    font-size: 100%;
+
+}
+
+.info-popup
+{
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    height: 50vh;
+    z-index: 100;
+    background-color: #ECB16D;
+    border-radius: 56px;
+    filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 25%));
+    color: white;
+    word-wrap: break-word;
+    margin: auto;
+    min-height: 200px;
+}
+
+.info-how-to
+{
+    display: flex;
+    flex-direction: column;
+    margin: 1vw;
+    align-items: center;
+    
+}
+
+h1 {
+    font-size: 2vw;
+}
+
+h2 {
+    font-size: 1.5vw;
+}
+
+h3 {
+    font-size: 1vw;
+}
+
+.info-popup h1 {
+    margin: 0;
+}
+
+.info-popup p
+{
+    margin: 10px 100px;
+    text-align: center;
+    font-size: 1vw
+}
+
+.info-popup button
 {
     font-family: 'Arsenal', sans-serif;
-    text-align: center;
     margin: auto;
-    font-size: 50px;
+    background-color: #EBCCA9;
+    border-radius: 25px 25px;
+    width: 10vw;
+    font-size: 1vw;
+    height: 3vh;
+    border: none;
+    color:white;
+    min-height: 20px;
 }
 
 .climb-panel
 {
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    margin: 2vw;
+}
+
+.climber-panel
+{
+    display: flex;
     flex-direction: column;
-    height: 95%;
+    align-items: center;
+    background-color: #ECB16D;
+    width: 15vw;
+    height: 50vh;
+    border-radius: 56px;
+    margin: 30px
+}
+
+.climber-name-display
+{
+    color: white;
+    text-align: center;
     margin: 20px;
-    width: 40%;
+    width: 100%;
+}
+
+.climber-name-display h1
+{
+    margin: 0px;
+    font-size: 2vw;
+    text-transform: capitalize;
+}
+
+.avatar
+{
+    border-radius: 50%;
+    width: 10vw
+}
+
+.change-climber-button-container
+{
+    display: flex;
+    margin-top: 3vh;   
+    width: 100%;
+    height: 4vh;
+}
+
+.change-climber-button
+{
+    font-family: 'Arsenal', sans-serif;
+    margin: auto;
+    background-color: #EBCCA9;
+    border-radius: 25px 25px;
+    width: 50%;
+    height: 100%;
+    border: none;
+    color:white;
+    font-size: 2vh;
+}
+
+.route-container
+{
+    background-color: #FFFFFF;
+    height: 90vh;
+    width: 30vw;
+    border-radius: 56px;
+    filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 16%));
 }
 
 .route
 {
-    background-color: #DEDCCF;
-    width: 100%;
-    height: 100%;
+    
 }
+
