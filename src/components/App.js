@@ -9,16 +9,6 @@ export default class App extends React.Component
         super(props)
     }
 
-    openInfoPopup()
-    {
-
-    }
-
-    closeInfoPopup()
-    {
-
-    }
-
     render()
     {
         return (
