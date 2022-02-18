@@ -3,18 +3,19 @@
 import pandas as pd
 import numpy as np
 
-greek = pd.read_csv("greek.csv")
-pathnums = pd.read_csv("pathnums.csv")
-names = pd.read_csv("names.csv")
-stars = pd.read_csv("stars.csv")
-manual_names = pd.read_csv("manual_names.csv", encoding='latin1')
-manual_HD = pd.read_csv("manual_HD.csv", encoding='latin1')
+greek = pd.read_csv("helper-csvs/greek.csv")
+pathnums = pd.read_csv("helper-csvs/pathnums.csv")
+names = pd.read_csv("helper-csvs/names.csv")
+stars = pd.read_csv("helper-csvs/stars.csv")
+manual_names = pd.read_csv("helper-csvs/manual_names.csv", encoding='latin1')
+manual_HD = pd.read_csv("helper-csvs/manual_HD.csv", encoding='latin1')
 
 #manually convert names without matches
 def replace(name):   
     #fix typos in website
     name = name.replace("Leporus", "Leporis")
     name = name.replace("Ophichi", "Ophiuchi")
+    name = name.replace("Theya", "Theta")
     
     search = manual_names.loc[manual_names["Name"] == name]
     if len(search) == 1:

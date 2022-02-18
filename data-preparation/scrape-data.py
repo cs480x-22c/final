@@ -47,7 +47,7 @@ def scrape2(name):
 star_dfs = [] #star names and locations
 pathnums_dfs = [] #map stars to numbers for paths
 
-names = pd.read_csv("names.csv")
+names = pd.read_csv("helper-csvs/names.csv")
 for name in names.Name:
     print(name)
     star_dfs.append(scrape(name))
@@ -64,5 +64,5 @@ messier.append("Large Magellanic Cloud")
 not_messier = pathnums_df["Name"].apply(lambda x: x not in messier)
 pathnums_df = pathnums_df[not_messier]
 
-star_df.to_csv("stars.csv", index=False)
-pathnums_df.to_csv("pathnums.csv", index=False)
+star_df.to_csv("helper-csvs/stars.csv", index=False)
+pathnums_df.to_csv("helper-csvs/pathnums.csv", index=False)
