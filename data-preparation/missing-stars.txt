@@ -6,10 +6,12 @@ Lacerta
 Leo Minor
 Lynx
 Monoceros
+Norma 7
 Pegasus
 Phoenix
 Puppis
 Serpens
+Scorpius 23
 Taurus
 Ursa Major
 Vela
