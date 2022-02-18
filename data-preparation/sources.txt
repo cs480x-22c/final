@@ -1,0 +1,4 @@
+https://skyandtelescope.org/astronomy-resources/right-ascension-declination-celestial-coordinates/
+http://www.seasky.org/constellations/constellations.html
+https://en.wikipedia.org/wiki/Lists_of_stars_by_constellation
+https://medium.com/analytics-vidhya/web-scraping-a-wikipedia-table-into-a-dataframe-c52617e1f451

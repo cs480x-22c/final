@@ -4,10 +4,23 @@ import pandas as pd
 import numpy as np
 
 greek = pd.read_csv("greek.csv")
-pathkey = pd.read_csv("path_keys.csv")
+pathnums = pd.read_csv("pathnums.csv")
 names = pd.read_csv("names.csv")
 stars = pd.read_csv("stars.csv")
-alternate = pd.read_csv("alternate_manual.csv", encoding='latin1')
+manual_names = pd.read_csv("manual_names.csv", encoding='latin1')
+manual_HD = pd.read_csv("manual_HD.csv", encoding='latin1')
+
+#manually convert names without matches
+def replace(name):   
+    #fix typos in website
+    name = name.replace("Leporus", "Leporis")
+    name = name.replace("Ophichi", "Ophiuchi")
+    
+    search = manual_names.loc[manual_names["Name"] == name]
+    if len(search) == 1:
+        search = search.iloc[0]
+        return search["Name_Converted"]
+    return name 
 
 #convert greek name and genitive to greek symbol and abbreviation
 def convertName(name, constellation):
@@ -34,11 +47,11 @@ def convertName(name, constellation):
     return name
 
 #find HD catalogue number
-def search(name):
+def search(name, name_converted, constellation):
     #search if name matches official name
-    searchNameResult = stars.loc[stars["Name"] == name]
+    searchNameResult = stars.loc[stars["Name"] == name_converted]
     #search if name is listed in notes
-    searchNotesResult = stars["Notes"].apply(lambda x: name in str(x))
+    searchNotesResult = stars["Notes"].apply(lambda x: name_converted in str(x))
     
     if len(searchNameResult) == 1:
         return searchNameResult.iloc[0].HD
@@ -46,20 +59,20 @@ def search(name):
         idx = np.where(searchNotesResult)[0][0]
         return stars.iloc[idx].HD
     else: #if no matches or multiple matches need to manually find number
-        return "Manual"
+        filterByConstellation = manual_HD.loc[manual_HD["Constellation"] == constellation]
+        searchHD = filterByConstellation.loc[filterByConstellation["Name"] == name]
+        return searchHD.iloc[0].HD
        
-#manually convert names without matches
-def replace(name):   
-    name = name.replace("Leporus", "Leporis")
-    name = name.replace("Ophichi", "Ophiuchi")
-    search = alternate.loc[alternate["Name"] == name]
-    if len(search) == 1:
-        search = search.iloc[0]
-        return search.Designation
-    return name 
-       
-pathkey["Designation"] = pathkey["Designation"].apply(lambda x: replace(x))
-pathkey["Converted"] = pathkey.apply(lambda x: convertName(x["Designation"], x["Constellation"]), axis=1)
-pathkey["HD"] = pathkey["Converted"].apply(lambda x: search(x))
+pathnums["Name"] = pathnums["Name"].apply(lambda x: replace(x))
+pathnums["Name_Converted"] = pathnums.apply(lambda x: convertName(x["Name"], x["Constellation"]), axis=1)
+pathnums["HD"] = pathnums.apply(lambda x: search(x["Name"], x["Name_Converted"], x["Constellation"]), axis=1)
+pathnums["HD"] = pd.to_numeric(pathnums["HD"])
+stars["HD"] = pd.to_numeric(stars["HD"], errors="coerce")
+stars.drop_duplicates(subset="HD", inplace=True)
 
-pathkey.to_csv("path_keys.csv", index=False)
+#create combined file
+mapping = pathnums.merge(stars, how="inner", on="HD")
+mapping = mapping[["Number", "Constellation_x", "HD", "RA", "Dec", "vis.mag."]]
+mapping.rename(columns={"Constellation_x":"Constellation", "vis.mag.":"Mag"}, inplace=True)
+
+mapping.to_csv("path_mappings.csv", index=False)
