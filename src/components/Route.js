@@ -10,9 +10,7 @@ export default class Route extends React.Component
     render()
     {
         return (
-            <div className="route-container">
                 <svg className="route"></svg>
-            </div>
         )
     }
 }

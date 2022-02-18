@@ -19,7 +19,7 @@ export default class InfoPopup extends React.Component
                     </p> 
                 </div>
                 
-                <button onClick={this.props.closePopup}>Close</button>
+                <button className="button" onClick={this.props.closePopup}>Close</button>
                 <h3>Made by Travis Thompson</h3>
             </div>
         )

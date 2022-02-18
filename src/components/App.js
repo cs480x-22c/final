@@ -12,7 +12,7 @@ export default class App extends React.Component
             new Climber("00000", "travis", 'thompson'),
             new Climber("00001", "colby", 'frechette'),
             new Climber("00002", "jason", 'dykstra'),
-            new Climber("00003", "elliot", 'irving'),
+            new Climber("00002", "elliot", 'irving'),
         ]
     }
 
@@ -25,5 +25,6 @@ export default class App extends React.Component
                 <ClimbPanel climbers={this.climbers} reversed={true} />
             </div>
         )
+        
     }
 }

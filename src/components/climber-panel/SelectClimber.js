@@ -13,7 +13,7 @@ export default class SelectClimber extends React.Component
         let icons = []
         for(let i = 0; i < climbers.length; i++)
         {
-            icons.push(<ClimberIcon setClimber={this.props.setClimber} key={climbers[i].firstName} climber={climbers[i]}/>)
+            icons.push(<ClimberIcon setClimber={this.props.setClimber} key={climbers[i].uuid} climber={climbers[i]}/>)
         }
         return icons
     }

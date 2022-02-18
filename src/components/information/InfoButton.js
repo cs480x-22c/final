@@ -11,7 +11,7 @@ export default class InfoButton extends React.Component
     {
         return (
         <div className="info-button-container">
-            <button type="submit" className="info-button" onClick={this.props.togglePopup}>i</button>
+            <button type="submit" className="info-button button" onClick={this.props.togglePopup}>i</button>
         </div>
         )
     }

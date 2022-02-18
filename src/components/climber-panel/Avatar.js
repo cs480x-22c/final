@@ -10,7 +10,7 @@ export default class Avatar extends React.Component
     render()
     {
         return (
-            <div className="avatarContainer">
+            <div className="avatar-container">
                 <img className="avatar" src={"./climber-images/" + this.props.climber.uuid + ".jpg"}/>
             </div>
         )

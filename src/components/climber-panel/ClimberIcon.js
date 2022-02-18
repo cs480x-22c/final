@@ -15,9 +15,11 @@ export default class ClimberIcon extends React.Component
     render()
     {
         return (
-            <div className="climber-icon-container" onClick={this.selectClimber.bind(this)}>
-                <img className="climber-icon" src={"./climber-images/" + this.props.climber.uuid + ".jpg"}/>
-                <h4 className="disable-select">{this.props.climber.firstName}</h4>
+            <div className="climber-card-container" onClick={this.selectClimber.bind(this)}>
+                <div className="climber-card button">
+                    <img className="climber-icon" src={"./climber-images/" + this.props.climber.uuid + ".jpg"}/>
+                    <h4 className="disable-select">{this.props.climber.firstName}</h4>
+                </div>
             </div>
         )
     }

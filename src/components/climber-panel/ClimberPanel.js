@@ -32,22 +32,28 @@ export default class ClimberPanel extends React.Component
     {
         if(this.state.selectingClimber)
         {
-            return <SelectClimber climbers={this.props.climbers} setClimber={this.setClimber.bind(this)}/>
+            return (
+                <div className="climber-panel-container">
+                    <SelectClimber climbers={this.props.climbers} setClimber={this.setClimber.bind(this)}/>
+                </div>
+            )
         }
         else {
             return (
-                <div className="climber-panel">
-                    <div className="climber-name-display disable-select">
-                        <h1>{this.props.climber.firstName}</h1>
-                        <h1>{this.props.climber.lastName}</h1>
+                <div className="climber-panel-container">
+                    <div className="climber-panel">
+                        <div className="climber-name-display disable-select">
+                            <h1>{this.props.climber.firstName}</h1>
+                            <h1>{this.props.climber.lastName}</h1>
+                        </div>
+                        
+                        <Avatar climber={this.props.climber}/>
+        
+                        <div className="change-climber-button-container">
+                            <button className="change-climber-button button" onClick={this.openClimberSelect.bind(this)}>Change Climber</button>
+                        </div>
                     </div>
-                    
-                    <Avatar climber={this.props.climber}/>
-    
-                    <div className="change-climber-button-container">
-                        <button className="change-climber-button" onClick={this.openClimberSelect.bind(this)}>Change Climber</button>
-                    </div>
-                </div>
+                 </div>
             )
         }     
     }
