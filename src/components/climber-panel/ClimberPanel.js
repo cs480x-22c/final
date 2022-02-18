@@ -37,7 +37,7 @@ export default class ClimberPanel extends React.Component
         else {
             return (
                 <div className="climber-panel">
-                    <div className="climber-name-display">
+                    <div className="climber-name-display disable-select">
                         <h1>{this.props.climber.firstName}</h1>
                         <h1>{this.props.climber.lastName}</h1>
                     </div>
