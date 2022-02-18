@@ -7,6 +7,7 @@ greek = pd.read_csv("greek.csv")
 pathkey = pd.read_csv("path_keys.csv")
 names = pd.read_csv("names.csv")
 stars = pd.read_csv("stars.csv")
+alternate = pd.read_csv("alternate_manual.csv", encoding='latin1')
 
 #convert greek name and genitive to greek symbol and abbreviation
 def convertName(name, constellation):
@@ -39,16 +40,26 @@ def search(name):
     #search if name is listed in notes
     searchNotesResult = stars["Notes"].apply(lambda x: name in str(x))
     
-    if len(searchNameResult) + sum(searchNotesResult) == 1:
-        if len(searchNameResult) == 1:
-            return searchNameResult.iloc[0].HD
-        else:
-            idx = np.where(searchNotesResult)[0][0]
-            return stars.iloc[idx].HD
-    else: #if no matches or multiple matches, need to manually find number
+    if len(searchNameResult) == 1:
+        return searchNameResult.iloc[0].HD
+    elif sum(searchNotesResult) == 1:
+        idx = np.where(searchNotesResult)[0][0]
+        return stars.iloc[idx].HD
+    else: #if no matches or multiple matches need to manually find number
         return "Manual"
        
+#manually convert names without matches
+def replace(name):   
+    name = name.replace("Leporus", "Leporis")
+    name = name.replace("Ophichi", "Ophiuchi")
+    search = alternate.loc[alternate["Name"] == name]
+    if len(search) == 1:
+        search = search.iloc[0]
+        return search.Designation
+    return name 
+       
+pathkey["Designation"] = pathkey["Designation"].apply(lambda x: replace(x))
 pathkey["Converted"] = pathkey.apply(lambda x: convertName(x["Designation"], x["Constellation"]), axis=1)
 pathkey["HD"] = pathkey["Converted"].apply(lambda x: search(x))
 
-pathkey.to_csv("path_keys.csv")
+pathkey.to_csv("path_keys.csv", index=False)

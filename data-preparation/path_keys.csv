@@ -1,842 +1,841 @@
-,Unnamed: 0,Number,Designation,Constellation,Converted,HD
-0,0,4,Alpheratz,Andromeda,Alpheratz,358
-1,1,5,Mirach,Andromeda,Mirach,6860
-2,2,6,Almach,Andromeda,Almach,12533
-3,3,7,Delta Andromedae,Andromeda,δ And,3627
-4,4,8,Nembus,Andromeda,Nembus,9927
-5,5,9,Omicron Andromedae,Andromeda,ο And,217675
-6,6,10,Lambda Andromedae,Andromeda,λ And,222107
-7,7,11,Mu Andromedae,Andromeda,μ And,5448
-8,8,12,Zeta Andromedae,Andromeda,ζ And,4502
-9,9,13,Upsilon Andromedae,Andromeda,υ And,9826
-10,10,14,Kappa Andromedae,Andromeda,κ And,222439
-11,11,15,Phi Andromedae,Andromeda,φ And,6811
-12,12,16,Iota Andromedae,Andromeda,ι And,222173
-13,13,17,Pi Andromedae,Andromeda,π And,3369
-14,14,18,Epsilon Andromedae,Andromeda,ε And,3546
-15,15,19,Eta Andromedae,Andromeda,η And,5516
-16,16,20,Sigma Andromedae,Andromeda,σ And,1404
-17,17,21,Nu Andromedae,Andromeda,ν And,4727
-18,18,22,Theta Andromedae,Andromeda,θ And,1280
-19,19,23,Adhil,Andromeda,Adhil,8207
-20,20,1,Alpha Antilae,Antlia,α Ant,90610
-21,21,2,Epsilon Antilae,Antlia,ε Ant,82150
-22,22,3,Iota Antilae,Antlia,ι Ant,94890
-23,23,4,Theta Antilae,Antlia,θ Ant,84367
-24,24,1,Alpha Apodis,Apus,α Aps,129078
-25,25,2,Gamma Apodis,Apus,γ Aps,147675
-26,26,3,Beta Apodis,Apus,β Aps,149324
-27,27,4,Delta-1 Apodis,Apus,δ1 Aps,Manual
-28,28,5,Delta-2 Apodis,Apus,δ2 Aps,Manual
-29,29,4,Sadalsuud,Aquarius,Sadalsuud,204867
-30,30,5,Sadalmelik,Aquarius,Sadalmelik,209750
-31,31,6,Skat,Aquarius,Skat,216627
-32,32,7,Sadaltager,Aquarius,Sadaltager,213051
-33,33,8,Lambda Aquarii,Aquarius,λ Aqr,216386
-34,34,9,Albali,Aquarius,Albali,198001
-35,35,10,Sadachbia,Aquarius,Sadachbia,212061
-36,36,11,Eta Aquarii,Aquarius,η Aqr,213998
-37,37,12,Tau-2 Aquarii,Aquarius,τ2 Aqr,216032
-38,38,13,Ancha,Aquarius,Ancha,211391
-39,39,14,Phi Aquarii,Aquarius,φ Aqr,219215
-40,40,15,Iota Aquarii,Aquarius,ι Aqr,209819
-41,41,16,Psi-1 Aquarii,Aquarius,ψ1 Aqr,219449
-42,42,17,Psi-2 Aquarii,Aquarius,ψ2 Aqr,219688
-43,43,18,Omega-2 Aquarii,Aquarius,ω2 Aqr,222661
-44,44,19,Nu Aquarii,Aquarius,ν Aqr,201381
-45,45,20,Pi Aquarii,Aquarius,π Aqr,212571
-46,46,21,Mu Aquarii,Aquarius,μ Aqr,198743
-47,47,22,Sigma Aquarii,Aquarius,σ Aqr,213320
-48,48,23,Omega-1 Aquarii,Aquarius,ω1 Aqr,222345
-49,49,24,Psi-3 Aquarii,Aquarius,ψ3 Aqr,219832
-50,50,25,Situla,Aquarius,Situla,214376
-51,51,1,Altair,Aquila,Altair,187642
-52,52,2,Tarazed,Aquila,Tarazed,186791
-53,53,3,Deneb el Okab Australis,Aquila,Deneb el Okab Australis,Manual
-54,54,4,Tseen Foo,Aquila,Tseen Foo,191692
-55,55,5,Delta Aquilae,Aquila,δ Aql,182640
-56,56,6,Lambda Aquilae,Aquila,λ Aql,177756
-57,57,7,Alshain,Aquila,Alshain,188512
-58,58,8,Bezek,Aquila,Bezek,Manual
-59,59,9,Deneb el Okab Borealis,Aquila,Deneb el Okab Borealis,Manual
-60,60,10,Al Thalimain,Aquila,Al Thalimain,Manual
-61,61,1,Beta Arae,Ara,β Ara,157244
-62,62,2,Alpha Arae,Ara,α Ara,158427
-63,63,3,Zeta Arae,Ara,ζ Ara,152786
-64,64,4,Gamma Arae,Ara,γ Ara,157246
-65,65,5,Delta Arae,Ara,δ Ara,158094
-66,66,6,Theta Arae,Ara,θ Ara,165024
-67,67,7,Eta Arae,Ara,η Ara,151249
-68,68,8,Epsilon-1 Arae,Ara,ε1 Ara,152980
-69,69,1,Hamal,Aries,Hamal,12929
-70,70,2,Sheratan,Aries,Sheratan,11636
-71,71,3,41 Arietis,Aries,41 Ari,17573
-72,72,4,Mesarthim,Aries,Mesarthim,11503
-73,73,5,Botein,Aries,Botein,19787
-74,74,6,Epsilon Arietis,Aries,ε Ari,18519
-75,75,7,Lambda Arietis,Aries,λ Ari,11973
-76,76,8,Zeta Arietis,Aries,ζ Ari,20150
-77,77,4,Capella,Auriga,Capella,34029
-78,78,5,Menkalinan,Auriga,Menkalinan,40183
-79,79,6,Mahasim,Auriga,Mahasim,40312
-80,80,7,Hassaleh,Auriga,Hassaleh,31398
-81,81,8,Almaaz,Auriga,Almaaz,31964
-82,82,9,Haedus II,Auriga,Haedus II,32630
-83,83,10,Prijipati,Auriga,Prijipati,Manual
-84,84,11,Haedus,Auriga,Haedus,Manual
-85,85,12,Nu Aurigae,Auriga,ν Aur,39003
-86,86,13,Tau Aurigae,Auriga,τ Aur,38656
-87,87,14,Upsilon Aurigae,Auriga,υ Aur,38944
-88,88,1,Arcturus,Boötes,Arcturus,124897
-89,89,2,Izar,Boötes,Izar,129988
-90,90,3,Muphrid,Boötes,Muphrid,121370
-91,91,4,Seginus,Boötes,Seginus,127762
-92,92,5,Delta Boötis,Boötes,δ Boo,135722
-93,93,6,Nekkar,Boötes,Nekkar,133208
-94,94,7,Sigma Boötis,Boötes,σ Boo,128167
-95,95,8,Rho Boötis,Boötes,ρ Boo,127665
-96,96,9,Zeta Boötis,Boötes,ζ Boo,Manual
-97,97,10,Asellus Primus,Boötes,Asellus Primus,126660
-98,98,11,Upsilon Boötis,Boötes,υ Boo,120477
-99,99,12,Lambda Boötis,Boötes,λ Boo,125162
-100,100,13,Alkalurops,Boötes,Alkalurops,137391
-101,101,14,Tau Boötis,Boötes,τ Boo,120136
-102,102,15,Nadlat,Boötes,Nadlat,Manual
-103,103,16,Asellus Tertius,Boötes,Asellus Tertius,124675
-104,104,17,Xi Boötis,Boötes,ξ Boo,131156
-105,105,18,Asellus Secondus,Boötes,Asellus Secondus,Manual
-106,106,19,Merga,Boötes,Merga,130945
-107,107,1,Alpha Caeli,Caelum,α Cae,29875
-108,108,2,Gamma-1 Caeli,Caelum,γ1 Cae,32831
-109,109,3,Beta Caeli,Caelum,β Cae,29992
-110,110,4,Delta Caeli,Caelum,δ Cae,28873
-111,111,1,Beta Camelopardalis,Camelopardalis,β Cam,31910
-112,112,2,CS Camelopardalis,Camelopardalis,CS Cam,21291
-113,113,3,Alpha Camelopardalis,Camelopardalis,α Cam,30614
-114,114,4,Gamma Camelopardalis,Camelopardalis,γ Cam,23401
-115,115,3,Altarf,Cancer,Altarf,Manual
-116,116,4,Asellus Australis,Cancer,Asellus Australis,74442
-117,117,5,Acubens,Cancer,Acubens,76756
-118,118,6,Asellus Borealis,Cancer,Asellus Borealis,74198
-119,119,7,Tegmen,Cancer,Tegmen,Manual
-120,120,6,Cor Caroli,Canes Venatici,Cor Caroli,Manual
-121,121,7,Chara,Canes Venatici,Chara,109358
-122,122,8,La Superba,Canes Venatici,La Superba,110914
-123,123,2,Sirius,Canis Major,Sirius,Manual
-124,124,3,Adhara,Canis Major,Adhara,52089
-125,125,4,Wezen,Canis Major,Wezen,54605
-126,126,5,Mirzam,Canis Major,Mirzam,44743
-127,127,6,Aludra,Canis Major,Aludra,58350
-128,128,7,Furud,Canis Major,Furud,44402
-129,129,8,Kappa Canis Majoris,Canis Major,κ CMa,50013
-130,130,9,Theta Canis Majoris,Canis Major,θ CMa,50778
-131,131,10,Muliphen,Canis Major,Muliphen,161868
-132,132,11,Iota Canis Majoris,Canis Major,ι CMa,51309
-133,133,1,Procyon,Canis Minor,Procyon,61421
-134,134,2,Gomeisa,Canis Minor,Gomeisa,58715
-135,135,3,Gamma Canis Minoris,Canis Minor,γ CMi,58972
-136,136,4,Epsilon Canis Minoris,Canis Minor,ε CMi,58367
-137,137,2,Deneb Algedi,Capricornus,Deneb Algedi,207098
-138,138,3,Dabih,Capricornus,Dabih,193495
-139,139,4,Algiedi Secunda,Capricornus,Algiedi Secunda,Manual
-140,140,5,Nashira,Capricornus,Nashira,206088
-141,141,6,Yen,Capricornus,Yen,204075
-142,142,7,Dorsum,Capricornus,Dorsum,200761
-143,143,8,Omega Algiedi,Capricornus,Omega Algiedi,Manual
-144,144,9,Psi Capricorni,Capricornus,ψ Cap,197692
-145,145,10,Algiedi Prima,Capricornus,Algiedi Prima,Manual
-146,146,11,Iota Capricorni,Capricornus,ι Cap,203387
-147,147,12,Alshat,Capricornus,Alshat,193432
-148,148,1,Canopis,Carina,Canopis,Manual
-149,149,2,Miaplacidus,Carina,Miaplacidus,80007
-150,150,3,Avior,Carina,Avior,71129
-151,151,4,Aspidiske,Carina,Aspidiske,80404
-152,152,5,Theta Carinae,Carina,θ Car,93030
-153,153,6,Upsilon Carinae,Carina,υ Car,Manual
-154,154,7,Omega Carinae,Carina,ω Car,89080
-155,155,8,Foramen,Carina,Foramen,93308
-156,156,9,Chi Carinae,Carina,χ Car,65575
-157,157,3,Shedar,Cassiopeia,Shedar,Manual
-158,158,4,Caph,Cassiopeia,Caph,432
-159,159,5,Navi,Cassiopeia,Navi,Manual
-160,160,6,Ruchbah,Cassiopeia,Ruchbah,Manual
-161,161,7,Segin,Cassiopeia,Segin,Manual
-162,162,8,Achird,Cassiopeia,Achird,4614
-163,163,9,Zeta Cassiopeiae,Cassiopeia,ζ Cas,3360
-164,164,10,Kappa Cassiopeiae,Cassiopeia,κ Cas,2905
-165,165,11,Marfak,Cassiopeia,Marfak,Manual
-166,166,12,Chi Cassiopeiae,Cassiopeia,χ Cas,9408
-167,167,13,Castula,Cassiopeia,Castula,5395
-168,168,1,Rigel Kentaurus,Centaurus,Rigel Kentaurus,Manual
-169,169,2,Hadar,Centaurus,Hadar,Manual
-170,170,3,Menkent,Centaurus,Menkent,123139
-171,171,4,Muhlifain,Centaurus,Muhlifain,110304
-172,172,5,Epsilon Centauri,Centaurus,ε Cen,118716
-173,173,6,Eta Centauri,Centaurus,η Cen,127972
-174,174,7,Alnair,Centaurus,Alnair,Manual
-175,175,8,Ma Wei,Centaurus,Ma Wei,Manual
-176,176,9,Alhakim,Centaurus,Alhakim,Manual
-177,177,10,Ke Kwan,Centaurus,Ke Kwan,Manual
-178,178,11,Nu Centauri,Centaurus,ν Cen,120307
-179,179,12,Mu Centauri,Centaurus,μ Cen,120324
-180,180,13,Pi Centauri,Centaurus,π Cen,98718
-181,181,14,Sigma Centauri,Centaurus,σ Cen,108483
-182,182,1,Alderamin,Cepheus,Alderamin,203280
-183,183,2,Alfirk,Cepheus,Alfirk,205021
-184,184,3,Alrai,Cepheus,Alrai,161096
-185,185,4,Zeta Cephei,Cepheus,ζ Cep,210745
-186,186,5,Eta Cephei,Cepheus,η Cep,198149
-187,187,6,Iota Cephei,Cepheus,ι Cep,216228
-188,188,7,Delta Cephei,Cepheus,δ Cep,Manual
-189,189,8,Herschel's Garnet Star,Cepheus,Herschel's Garnet Star,Manual
-190,190,9,Epsilon Cephei,Cepheus,ε Cep,211336
-191,191,10,Theta Cephei,Cepheus,θ Cep,195725
-192,192,11,Nu Cephei,Cepheus,ν Cep,207260
-193,193,12,Alkurhah,Cepheus,Alkurhah,Manual
-194,194,13,Pi Cephei,Cepheus,π Cep,218658
-195,195,14,Al Kalb al Rai,Cepheus,Al Kalb al Rai,213798
-196,196,2,Diphda,Cetus,Diphda,4128
-197,197,3,Menkar,Cetus,Menkar,Manual
-198,198,4,Dheneb Algenubi,Cetus,Dheneb Algenubi,Manual
-199,199,5,Kaffaljidhma,Cetus,Kaffaljidhma,16970
-200,200,6,Mira,Cetus,Mira,Manual
-201,201,7,Tau Ceti,Cetus,τ Cet,10700
-202,202,8,Deneb Kaitos Shemali,Cetus,Deneb Kaitos Shemali,1522
-203,203,9,Theya Ceti,Cetus,Theya Cet,Manual
-204,204,10,Baten Kaitos,Cetus,Baten Kaitos,11353
-205,205,11,Upsilon Ceti,Cetus,υ Cet,12274
-206,206,12,Delta Ceti,Cetus,δ Cet,16582
-207,207,13,Mu Ceti,Cetus,μ Cet,17094
-208,208,14,Xi-2 Ceti,Cetus,ξ2 Cet,15318
-209,209,15,Lambda Ceti,Cetus,λ Cet,18604
-210,210,1,Alpha Chamaeleontis,Chamaeleon,α Cha,71243
-211,211,2,Gamma Chamaeleontis,Chamaeleon,γ Cha,92305
-212,212,3,Beta Chamaeleontis,Chamaeleon,β Cha,106911
-213,213,4,Theta Chamaeleontis,Chamaeleon,θ Cha,71701
-214,214,5,Epsilon Chamaeleontis,Chamaeleon,ε Cha,104174
-215,215,6,Delta-1 Chamaeleontis,Chamaeleon,δ1 Cha,93779
-216,216,1,Alpha Circini,Circinus,α Cir,128898
-217,217,2,Beta Circini,Circinus,β Cir,135379
-218,218,3,Gamma Circini,Circinus,γ Cir,136415
-219,219,1,Phact,Columba,Phact,37795
-220,220,2,Wezn,Columba,Wezn,39425
-221,221,3,Ghusn al Zaitun,Columba,Ghusn al Zaitun,Manual
-222,222,4,Epsilon Columbae,Columba,ε Col,36597
-223,223,5,Eta Columbae,Columba,η Col,40808
-224,224,6,Gamma Columbae,Columba,γ Col,40494
-225,225,7,Kappa Columbae,Columba,κ Col,43785
-226,226,8,Lambda Columbae,Columba,λ Col,39764
-227,227,9,Xi Columbae,Columba,ξ Col,40176
-228,228,10,Theta Columbae,Columba,θ Col,42167
-229,229,9,Beta Comae Berenices,Coma Berenices,β Com,114710
-230,230,10,Diadem,Coma Berenices,Diadem,114378
-231,231,11,Gamma Comae Berenices,Coma Berenices,γ Com,108381
-232,232,1,Alfecca Meridiana,Corona Australis,Alfecca Meridiana,178253
-233,233,2,Beta Coronae Australis,Corona Australis,β CrA,178345
-234,234,3,Gamma Coronae Australis,Corona Australis,γ CrA,177475
-235,235,4,Delta Coronae Australis,Corona Australis,δ CrA,177873
-236,236,5,Zeta Coronae Australis,Corona Australis,ζ CrA,176638
-237,237,6,Theta Coronae Australis,Corona Australis,θ CrA,170845
-238,238,1,Alphecca,Corona Borealis,Alphecca,139006
-239,239,2,Nusakan,Corona Borealis,Nusakan,137909
-240,240,3,Gamma Coronae Borealis,Corona Borealis,γ CrB,140436
-241,241,4,Epsilon Coronae Borealis,Corona Borealis,ε CrB,143107
-242,242,5,Theta Coronae Borealis,Corona Borealis,θ CrB,138749
-243,243,6,Delta Coronae Borealis,Corona Borealis,δ CrB,141714
-244,244,7,Iota Coronae Borealis,Corona Borealis,ι CrB,143807
-245,245,1,Gienah,Corvus,Gienah,106625
-246,246,2,Kraz,Corvus,Kraz,109379
-247,247,3,Algorab,Corvus,Algorab,108767
-248,248,4,Minkar,Corvus,Minkar,Manual
-249,249,5,Alchiba,Corvus,Alchiba,105452
-250,250,1,Labrum,Crater,Labrum,Manual
-251,251,2,Alkes,Crater,Alkes,95272
-252,252,3,Gamma Crateris,Crater,γ Crt,99211
-253,253,4,Al Sharas,Crater,Al Sharas,Manual
-254,254,5,Theta Crateris,Crater,θ Crt,100889
-255,255,6,Zeta Crateris,Crater,ζ Crt,102070
-256,256,7,Epsilon Crateris,Crater,ε Crt,99167
-257,257,8,Eta Crateris,Crater,η Crt,103632
-258,258,1,Acrux,Crux,Acrux,Manual
-259,259,2,Mimosa,Crux,Mimosa,111123
-260,260,3,Gacrux,Crux,Gacrux,108903
-261,261,4,Decrux,Crux,Decrux,Manual
-262,262,3,Deneb,Cygnus,Deneb,Manual
-263,263,4,Sadr,Cygnus,Sadr,Manual
-264,264,5,Gienah,Cygnus,Gienah,106625
-265,265,6,Rukh,Cygnus,Rukh,Manual
-266,266,7,Albireo,Cygnus,Albireo,Manual
-267,267,8,Zeta Cygni,Cygnus,ζ Cyg,202109
-268,268,9,Omicron-1 Cygni,Cygnus,ο1 Cyg,192577
-269,269,10,Xi Cygni,Cygnus,ξ Cyg,200905
-270,270,11,Iota Cygni,Cygnus,ι Cyg,184006
-271,271,12,Tau Cygni,Cygnus,τ Cyg,202444
-272,272,13,Kappa Cygni,Cygnus,κ Cyg,181276
-273,273,14,Eta Cygni,Cygnus,η Cyg,188947
-274,274,15,Nu Cygni,Cygnus,ν Cyg,199629
-275,275,16,Omicron-2 Cygni,Cygnus,ο2 Cyg,192909
-276,276,17,Pennae Caudalis,Cygnus,Pennae Caudalis,207330
-277,277,18,Sigma Cygni,Cygnus,σ Cyg,202850
-278,278,19,Azelfafage,Cygnus,Azelfafage,206672
-279,279,20,Ruchba,Cygnus,Ruchba,Manual
-280,280,1,Rotanev,Delphinus,Rotanev,196524
-281,281,2,Sualocin,Delphinus,Sualocin,196867
-282,282,3,Gamma Delphini,Delphinus,γ Del,Manual
-283,283,4,Deneb Dulfim,Delphinus,Deneb Dulfim,195810
-284,284,5,Delta Delphini,Delphinus,δ Del,197461
-285,285,1,Large Magellanic Cloud,Dorado,Large Magellanic Cloud,Manual
-286,286,2,Alpha Doradus,Dorado,α Dor,29305
-287,287,3,Beta Doradus,Dorado,β Dor,37350
-288,288,4,Gamma Doradus,Dorado,γ Dor,Manual
-289,289,5,Delta Doradus,Dorado,δ Dor,39014
-290,290,6,Zeta Doradus,Dorado,ζ Dor,33262
-291,291,2,Etamin,Draco,Etamin,164058
-292,292,3,Aldibain,Draco,Aldibain,148387
-293,293,4,Rastaban,Draco,Rastaban,Manual
-294,294,5,Altais,Draco,Altais,180711
-295,295,6,Aldhibah,Draco,Aldhibah,155763
-296,296,7,Ed Asich,Draco,Ed Asich,137759
-297,297,8,Batentaban Borealis,Draco,Batentaban Borealis,Manual
-298,298,9,Thuban,Draco,Thuban,123299
-299,299,10,Grumium,Draco,Grumium,163588
-300,300,11,Kappa Draconis,Draco,κ Dra,109387
-301,301,12,Tyl,Draco,Tyl,188119
-302,302,13,Gianfar,Draco,Gianfar,100029
-303,303,14,Theta Draconis,Draco,θ Dra,144284
-304,304,15,Phi Draconis,Draco,φ Dra,170000
-305,305,16,Dsiban,Draco,Dsiban,162003
-306,306,17,Alsafi,Draco,Alsafi,185144
-307,307,18,Upsilon Draconis,Draco,υ Dra,176524
-308,308,19,Kuma,Draco,Kuma,Manual
-309,309,20,Arrakis,Draco,Arrakis,154905
-310,310,1,Kitalpha,Equuleus,Kitalpha,202447
-311,311,2,Delta Equulei,Equuleus,δ Equ,202275
-312,312,3,Gamma Equulei,Equuleus,γ Equ,Manual
-313,313,1,Achernar,Eridanus,Achernar,10144
-314,314,2,Cursa,Eridanus,Cursa,33111
-315,315,3,Zaurak,Eridanus,Zaurak,Manual
-316,316,4,Acamar,Eridanus,Acamar,18622
-317,317,5,Rana,Eridanus,Rana,Manual
-318,318,6,Tau-4 Eridani,Eridanus,τ4 Eri,20720
-319,319,7,Chi Eridani,Eridanus,χ Eri,11937
-320,320,8,Sadira,Eridanus,Sadira,Manual
-321,321,9,Theemim,Eridanus,Theemim,Manual
-322,322,10,Azha,Eridanus,Azha,18322
-323,323,11,Sceptrum,Eridanus,Sceptrum,29503
-324,324,12,Nu Eridani,Eridanus,ν Eri,29248
-325,325,13,Mu Eridani,Eridanus,μ Eri,30211
-326,326,14,Beid,Eridanus,Beid,26574
-327,327,15,Tau-3 Eridani,Eridanus,τ3 Eri,18978
-328,328,16,Iota Eridani,Eridanus,ι Eri,16815
-329,329,17,Tau-6 Eridani,Eridanus,τ6 Eri,23754
-330,330,18,Kappa Eridani,Eridanus,κ Eri,15371
-331,331,19,Tau-5 Eridani,Eridanus,τ5 Eri,22203
-332,332,20,Pi Eridani,Eridanus,π Eri,23614
-333,333,21,Keid,Eridanus,Keid,26965
-334,334,22,Tau-1 Eridani,Eridanus,τ1 Eri,17206
-335,335,23,Upsilon-1 Eridani,Eridanus,υ1 Eri,29085
-336,336,24,Tau-9 Eridani,Eridanus,τ9 Eri,25267
-337,337,25,Tau-8 Eridani,Eridanus,τ8 Eri,24587
-338,338,26,Angetenar,Eridanus,Angetenar,17824
-339,339,27,Zeta Eridani,Eridanus,ζ Eri,20320
-340,340,1,Dalim,Fornax,Dalim,20010
-341,341,2,Beta Fornacis,Fornax,β For,17652
-342,342,3,Nu Fornacis,Fornax,ν For,12767
-343,343,4,Omega Fornacis,Fornax,ω For,16046
-344,344,2,Pollux,Gemini,Pollux,62509
-345,345,3,Castor,Gemini,Castor,Manual
-346,346,4,Alhena,Gemini,Alhena,47105
-347,347,5,Tejat Posterior,Gemini,Tejat Posterior,44478
-348,348,6,Mebsuta,Gemini,Mebsuta,48329
-349,349,7,Propus,Gemini,Propus,Manual
-350,350,8,Eta Geminorum,Gemini,η Gem,42995
-351,351,9,Alzirr,Gemini,Alzirr,Manual
-352,352,10,Wasat,Gemini,Wasat,Manual
-353,353,11,Kappa Geminorum,Gemini,κ Gem,62345
-354,354,12,Lambda Geminorum,Gemini,λ Gem,56537
-355,355,13,Theta Geminorum,Gemini,θ Gem,50019
-356,356,14,Mekbuda,Gemini,Mekbuda,52973
-357,357,15,Upsilon Geminorum,Gemini,υ Gem,60522
-358,358,16,Nu Geminorum,Gemini,ν Gem,Manual
-359,359,17,Rho Geminorum,Gemini,ρ Gem,58946
-360,360,18,Tau Geminorum,Gemini,τ Gem,54719
-361,361,1,Alnair,Grus,Alnair,Manual
-362,362,2,Gruid,Grus,Gruid,Manual
-363,363,3,Aldhanab,Grus,Aldhanab,Manual
-364,364,4,Epsilon Gruis,Grus,ε Gru,215789
-365,365,5,Iota Gruis,Grus,ι Gru,218670
-366,366,6,Delta-1 Gruis,Grus,δ1 Gru,213009
-367,367,7,Zeta Gruis,Grus,ζ Gru,217364
-368,368,8,Delta-2 Gruis,Grus,δ2 Gru,213080
-369,369,9,Theta Gruis,Grus,θ Gru,218227
-370,370,10,Lambda Gruis,Grus,λ Gru,209688
-371,371,11,Mu-1 Gruis,Grus,μ1 Gru,211088
-372,372,12,Rho Gruis,Grus,ρ Gru,215104
-373,373,3,Kornephoros,Hercules,Kornephoros,148856
-374,374,4,Zeta Herculis,Hercules,ζ Her,150680
-375,375,5,Sarin,Hercules,Sarin,156164
-376,376,6,Pi Herculis,Hercules,π Her,156283
-377,377,7,Marfak Al Jathih Aisr,Hercules,Marfak Al Jathih Aisr,Manual
-378,378,8,Rasalgethi,Hercules,Rasalgethi,156014
-379,379,9,Sophian,Hercules,Sophian,Manual
-380,380,10,Xi Herculis,Hercules,ξ Her,163993
-381,381,11,Gamma Herculis,Hercules,γ Her,147547
-382,382,12,Iota Herculis,Hercules,ι Her,160762
-383,383,13,Atia,Hercules,Atia,Manual
-384,384,14,Rukbalgethi Genubi,Hercules,Rukbalgethi Genubi,163770
-385,385,15,Rukbalgethi Shemali,Hercules,Rukbalgethi Shemali,147394
-386,386,16,Epsilon Herculis,Hercules,ε Her,153808
-387,387,17,Rho Herculis,Hercules,ρ Her,157778
-388,388,18,Sigma Herculis,Hercules,σ Her,149630
-389,389,19,Phi Herculis,Hercules,φ Her,145389
-390,390,20,Maasym,Hercules,Maasym,158899
-391,391,21,Kajam,Hercules,Kajam,Manual
-392,392,22,Chi Herculis,Hercules,χ Her,142373
-393,393,23,Marfik,Hercules,Marfik,Manual
-394,394,1,Alpha Horologii,Horologium,α Hor,26967
-395,395,2,R Horologii,Horologium,R Hor,18242
-396,396,3,Beta Horologii,Horologium,β Hor,18866
-397,397,4,Mu Horologii,Horologium,μ Hor,19319
-398,398,5,Zeta Horologii,Horologium,ζ Hor,16920
-399,399,6,Eta Horologii,Horologium,η Hor,16555
-400,400,7,Iota Horologii,Horologium,ι Hor,17051
-401,401,4,Alphard,Hydra,Alphard,81797
-402,402,5,Gamma Hydrae,Hydra,γ Hya,115659
-403,403,6,Hydrobius,Hydra,Hydrobius,76294
-404,404,7,Nu Hydrae,Hydra,ν Hya,93813
-405,405,8,Pi Hydrae,Hydra,π Hya,123123
-406,406,9,Ashlesha,Hydra,Ashlesha,74874
-407,407,10,Xi Hydrae,Hydra,ξ Hya,100407
-408,408,11,Lambda Hydrae,Hydra,λ Hya,88284
-409,409,12,Mu Hydrae,Hydra,μ Hya,90432
-410,410,13,Theta Hydrae,Hydra,θ Hya,79469
-411,411,14,Iota Hydrae,Hydra,ι Hya,83618
-412,412,15,Upsilon-1 Hydrae,Hydra,υ1 Hya,85444
-413,413,16,Delta Hydrae,Hydra,δ Hya,73262
-414,414,17,Beta Hydrae,Hydra,β Hya,103192
-415,415,18,Eta Hydrae,Hydra,η Hya,74280
-416,416,19,Minchir,Hydra,Minchir,73471
-417,417,1,Beta Hydri,Hydrus,β Hyi,2151
-418,418,2,Head of Hydrus,Hydrus,Head of Hydrus,12311
-419,419,3,Gamma Hydri,Hydrus,γ Hyi,24512
-420,420,4,Delta Hydri,Hydrus,δ Hyi,15008
-421,421,5,Epsilon Hydri,Hydrus,ε Hyi,16978
-422,422,6,Eta-2 Hydri,Hydrus,η2 Hyi,11977
-423,423,7,Nu Hydri,Hydrus,ν Hyi,18293
-424,424,8,Zeta Hydri,Hydrus,ζ Hyi,17566
-425,425,1,The Persian,Indus,The Persian,Manual
-426,426,2,Beta Indi,Indus,β Ind,198700
-427,427,3,Delta Indi,Indus,δ Ind,208450
-428,428,4,Theta Indi,Indus,θ Ind,202730
-429,429,5,Eta Indi,Indus,η Ind,197157
-430,430,1,Alpha Lacertae,Lacerta,α Lac,213558
-431,431,2,Beta Lacertae,Lacerta,β Lac,212496
-432,432,3,1 Lacertae,Lacerta,1 Lac,211388
-433,433,4,5 Lacertae,Lacerta,5 Lac,213310
-434,434,5,2 Lacertae,Lacerta,2 Lac,212120
-435,435,6,4 Lacertae,Lacerta,4 Lac,212593
-436,436,6,Regulus,Leo,Regulus,87901
-437,437,7,Algiebra,Leo,Algiebra,Manual
-438,438,8,Denebola,Leo,Denebola,102647
-439,439,9,Zosma,Leo,Zosma,97603
-440,440,10,Ras Elased Australis,Leo,Ras Elased Australis,84441
-441,441,11,Chertan,Leo,Chertan,97633
-442,442,12,Adhafera,Leo,Adhafera,89025
-443,443,13,Eta Leonis,Leo,η Leo,87737
-444,444,14,Subra,Leo,Subra,83808
-445,445,15,Rho Leonis,Leo,ρ Leo,91316
-446,446,16,Ras Elased Borealis,Leo,Ras Elased Borealis,85503
-447,447,17,Iota Leonis,Leo,ι Leo,99028
-448,448,18,Sigma Leonis,Leo,σ Leo,98664
-449,449,19,Alterf,Leo,Alterf,82308
-450,450,20,Al Minliar al Asad,Leo,Al Minliar al Asad,81146
-451,451,21,Chi Leonis,Leo,χ Leo,96097
-452,452,22,Pi Leonis,Leo,π Leo,86663
-453,453,1,Praecipua,Leo Minor,Praecipua,Manual
-454,454,2,Beta Leonis Minoris,Leo Minor,β LMi,90537
-455,455,3,21 Leonis Minoris,Leo Minor,21 LMi,87696
-456,456,4,10 Leonis Minoris,Leo Minor,10 LMi,82635
-457,457,2,Arneb,Lepus,Arneb,36673
-458,458,3,Nihal,Lepus,Nihal,36079
-459,459,4,Sasin,Lepus,Sasin,Manual
-460,460,5,Neshmet,Lepus,Neshmet,Manual
-461,461,6,Theta Leporus,Lepus,θ Lep,41695
-462,462,7,Zeta Leporus,Lepus,ζ Lep,38678
-463,463,8,Gamma Leporus,Lepus,γ Lep,Manual
-464,464,9,Eta Leporus,Lepus,η Lep,40136
-465,465,10,Delta Leporus,Lepus,δ Lep,39364
-466,466,11,Lambda Leporus,Lepus,λ Lep,34816
-467,467,12,Kappa Leporus,Lepus,κ Lep,33949
-468,468,1,Zuben Elschemali,Libra,Zuben Elschemali,Manual
-469,469,2,Zuben Elgenubi,Libra,Zuben Elgenubi,Manual
-470,470,3,Brachium,Libra,Brachium,133216
-471,471,4,Upsilon Librae,Libra,υ Lib,139063
-472,472,5,Tau Librae,Libra,τ Lib,139365
-473,473,6,Zuben Elakrab,Libra,Zuben Elakrab,Manual
-474,474,7,Theta Librae,Libra,θ Lib,142198
-475,475,8,Zuben Elakribi,Libra,Zuben Elakribi,132742
-476,476,1,Men,Lupus,Men,Manual
-477,477,2,Kekouan,Lupus,Kekouan,132058
-478,478,3,Gamma Lupi,Lupus,γ Lup,138690
-479,479,4,Delta Lupi,Lupus,δ Lup,136298
-480,480,5,Epsilon Lupi,Lupus,ε Lup,136504
-481,481,6,Zeta Lupi,Lupus,ζ Lup,134505
-482,482,7,Eta Lupi,Lupus,η Lup,143118
-483,483,8,Iota Lupi,Lupus,ι Lup,125238
-484,484,9,Phi-1 Lupi,Lupus,φ1 Lup,136422
-485,485,10,Pi Lupi,Lupus,π Lup,133242
-486,486,11,Chi Lupi,Lupus,χ Lup,141556
-487,487,1,Alpha Lyncis,Lynx,α Lyn,80493
-488,488,2,38 Lyncis,Lynx,38 Lyn,80081
-489,489,3,Alsciaukat,Lynx,Alsciaukat,70272
-490,490,4,2 Lyncis,Lynx,2 Lyn,43378
-491,491,3,Vega,Lyra,Vega,172167
-492,492,4,Sulafat,Lyra,Sulafat,176437
-493,493,5,Sheliak,Lyra,Sheliak,174638
-494,494,6,Delta-2 Lyrae,Lyra,δ2 Lyr,175588
-495,495,7,Theya Lyrae,Lyra,Theya Lyr,Manual
-496,496,8,Aladfar,Lyra,Aladfar,180163
-497,497,9,Zeta Lyrae,Lyra,ζ Lyr,Manual
-498,498,10,Epsilon Lyrae,Lyra,ε Lyr,Manual
-499,499,11,Lambda Lyrae,Lyra,λ Lyr,176670
-500,500,12,Alathfar,Lyra,Alathfar,169702
-501,501,1,Alpha Mensae,Mensa,α Men,43834.0
-502,502,2,Beta Mensae,Mensa,β Men,33285.0
-503,503,3,Gamma Mensae,Mensa,γ Men,37763.0
-504,504,4,Eta Mensae,Mensa,η Men,32440.0
-505,505,1,Gamma Microscopii,Microscopium,γ Mic,199951
-506,506,2,Epsilon Microscopii,Microscopium,ε Mic,202627
-507,507,3,Theta-1 Microscopii,Microscopium,θ1 Mic,203006
-508,508,4,Alpha Microscopii,Microscopium,α Mic,198232
-509,509,5,Iota Microscopii,Microscopium,ι Mic,197937
-510,510,2,Alpha Monocerotis,Monoceros,α Mon,61935
-511,511,3,Gamma Monocerotis,Monoceros,γ Mon,43232
-512,512,4,Delta Monocerotis,Monoceros,δ Mon,55185
-513,513,5,Zeta Monocerotis,Monoceros,ζ Mon,67594
-514,514,6,Beta Monocerotis,Monoceros,β Mon,Manual
-515,515,1,Alpha Muscae,Musca,α Mus,109668
-516,516,2,Beta Muscae,Musca,β Mus,110879
-517,517,3,Delta Muscae,Musca,δ Mus,112985
-518,518,4,Lambda Muscae,Musca,λ Mus,102249
-519,519,5,Gamma Muscae,Musca,γ Mus,109026
-520,520,6,Epsilon Muscae,Musca,ε Mus,106849
-521,521,1,Gamma-2 Normae,Norma,γ2 Nor,146686
-522,522,2,Gamma-1 Normae,Norma,γ1 Nor,146143
-523,523,3,Epsilon Normae,Norma,ε Nor,147971
-524,524,4,Iota-1 Normae,Norma,ι1 Nor,143474
-525,525,5,Eta Normae,Norma,η Nor,143546
-526,526,6,Delta Normae,Norma,δ Nor,144197
-527,527,1,Nu Octantis,Octans,ν Oct,205478
-528,528,2,Beta Octantis,Octans,β Oct,214846
-529,529,3,Delta Octantis,Octans,δ Oct,124882
-530,530,4,Theta Octantis,Octans,θ Oct,224889
-531,531,5,Epsilon Octantis,Octans,ε Oct,210967
-532,532,6,Polaris Australis,Octans,Polaris Australis,177482
-533,533,8,Rasalhague,Ophiuchus,Rasalhague,159561
-534,534,9,Sabik,Ophiuchus,Sabik,155125
-535,535,10,Han,Ophiuchus,Han,149757
-536,536,11,Yed Prior,Ophiuchus,Yed Prior,146051
-537,537,12,Cebalrai,Ophiuchus,Cebalrai,161096
-538,538,13,Kappa Ophichi,Ophiuchus,Kappa Ophichi,Manual
-539,539,14,Yed Posterior,Ophiuchus,Yed Posterior,146791
-540,540,15,Theta Ophichi,Ophiuchus,Theta Ophichi,Manual
-541,541,16,Sinistra,Ophiuchus,Sinistra,163917
-542,542,17,Gamma Ophichi,Ophiuchus,Gamma Ophichi,Manual
-543,543,18,Marfic,Ophiuchus,Marfic,148857
-544,544,4,Betelgeuse,Orion,Betelgeuse,39801
-545,545,5,Rigel,Orion,Rigel,34085
-546,546,6,Bellatrix,Orion,Bellatrix,35468
-547,547,7,Alnilam,Orion,Alnilam,37128
-548,548,8,Alnitak,Orion,Alnitak,Manual
-549,549,9,Saif,Orion,Saif,35411
-550,550,10,Mintaka,Orion,Mintaka,Manual
-551,551,11,Nair al Saif,Orion,Nair al Saif,Manual
-552,552,12,Pi-3 Orionis,Orion,π3 Ori,30652
-553,553,13,Eta Orionis,Orion,η Ori,35411
-554,554,14,Meissa,Orion,Meissa,Manual
-555,555,15,Pi-4 Orionis,Orion,π4 Ori,30836
-556,556,16,Sigma Orionis,Orion,σ Ori,Manual
-557,557,17,Pi-5 Orionis,Orion,π5 Ori,31237
-558,558,18,Omicron-2 Orionis,Orion,ο2 Ori,31421
-559,559,19,Mu Orionis,Orion,μ Ori,40932
-560,560,20,Pi-2 Orionis,Orion,π2 Ori,30739
-561,561,21,Chi-1 Orionis,Orion,χ1 Ori,39587
-562,562,22,Nu Orionis,Orion,ν Ori,41753
-563,563,23,Xi Orionis,Orion,ξ Ori,42560
-564,564,24,Thabit,Orion,Thabit,36512
-565,565,25,Chi-2 Orionis,Orion,χ2 Ori,41117
-566,566,26,Pi-1 Orionis,Orion,π1 Ori,31295
-567,567,27,Pi-6 Orionis,Orion,π6 Ori,31767
-568,568,28,Omicron-1 Orionis,Orion,ο1 Ori,30959
-569,569,1,Peacock,Pavo,Peacock,193924
-570,570,2,Beta Pavonis,Pavo,β Pav,197051
-571,571,3,Delta Pavonis,Pavo,δ Pav,190248
-572,572,4,Eta Pavonis,Pavo,η Pav,160635
-573,573,5,Epsilon Pavonis,Pavo,ε Pav,188228
-574,574,6,Lambda Pavonis,Pavo,λ Pav,173948
-575,575,7,Zeta Pavonis,Pavo,ζ Pav,171759
-576,576,8,Gamma Pavonis,Pavo,γ Pav,203608
-577,577,9,Pi Pavonis,Pavo,π Pav,165040
-578,578,10,Kappa Pavonis,Pavo,κ Pav,174694
-579,579,11,Xi Pavonis,Pavo,ξ Pav,168339
-580,580,2,Enif,Pegasus,Enif,206778
-581,581,3,Scheat,Pegasus,Scheat,Manual
-582,582,4,Markab,Pegasus,Markab,Manual
-583,583,5,Algenib,Pegasus,Algenib,Manual
-584,584,6,Matar,Pegasus,Matar,215182
-585,585,7,Homam,Pegasus,Homam,214923
-586,586,8,Sadalbari,Pegasus,Sadalbari,216131
-587,587,9,Baham,Pegasus,Baham,210418
-588,588,10,Iota Pegasi,Pegasus,ι Peg,210027
-589,589,11,Sadalpheris,Pegasus,Sadalpheris,Manual
-590,590,12,Jih,Pegasus,Jih,206901
-591,591,13,Pi-1 Pegasi,Pegasus,π1 Peg,210354
-592,592,14,Salm,Pegasus,Salm,220061
-593,593,3,Mirphak,Perseus,Mirphak,20902
-594,594,4,Algol,Perseus,Algol,Manual
-595,595,5,Zeta Persei,Perseus,ζ Per,24398
-596,596,6,Epsilon Persei,Perseus,ε Per,24760
-597,597,7,Gamma Persei,Perseus,γ Per,Manual
-598,598,8,Delta Persei,Perseus,δ Per,22928
-599,599,9,Gorgonea Tertia,Perseus,Gorgonea Tertia,19058
-600,600,10,Nu Persei,Perseus,ν Per,23230
-601,601,11,Miram,Perseus,Miram,17506
-602,602,12,Misam,Perseus,Misam,Manual
-603,603,13,Atik,Perseus,Atik,Manual
-604,604,14,Tau Persei,Perseus,τ Per,Manual
-605,605,15,Menkib,Perseus,Menkib,Manual
-606,606,16,Iota Persei,Perseus,ι Per,19373
-607,607,17,Mu Persei,Perseus,μ Per,26630
-608,608,18,Theta Persei,Perseus,θ Per,16895
-609,609,19,Lambda Persei,Perseus,λ Per,25642
-610,610,20,Gorgonea Quata,Perseus,Gorgonea Quata,Manual
-611,611,21,Gorgonea Secunda,Perseus,Gorgonea Secunda,18411
-612,612,1,Ankaa,Phoenix,Ankaa,2261
-613,613,2,Beta Phoenicis,Phoenix,β Phe,6595
-614,614,3,Gamma Phoenicis,Phoenix,γ Phe,9053
-615,615,4,Epsilon Phoenicis,Phoenix,ε Phe,496
-616,616,5,Delta Phoenicis,Phoenix,δ Phe,9362
-617,617,6,Kappa Phoenicis,Phoenix,κ Phe,2262
-618,618,7,Zeta Phoenicis,Phoenix,ζ Phe,6882
-619,619,8,Eta Phoenicis,Phoenix,η Phe,4150
-620,620,9,Psi Phoenicis,Phoenix,ψ Phe,11695
-621,621,10,Mu Phoenicis,Phoenix,μ Phe,3919
-622,622,11,Iota Phoenicis,Phoenix,ι Phe,221760
-623,623,12,Lambda-1 Phoenicis,Phoenix,λ1 Phe,2834
-624,624,13,Nu Phoenicis,Phoenix,ν Phe,7570
-625,625,1,Alpha Pictoris,Pictor,α Pic,50241
-626,626,2,Beta Pictoris,Pictor,β Pic,39060
-627,627,3,Gamma Pictoris,Pictor,γ Pic,39523
-628,628,4,Delta Pictoris,Pictor,δ Pic,42933
-629,629,2,Kallat Nunu,Pisces,Kallat Nunu,Manual
-630,630,3,Gamma Piscium,Pisces,γ Psc,219615
-631,631,4,Alrischa,Pisces,Alrischa,12446
-632,632,5,Omega Piscium,Pisces,ω Psc,224617
-633,633,6,Iota Piscium,Pisces,ι Psc,222368
-634,634,7,Omicron Piscium,Pisces,ο Psc,10761
-635,635,8,Theta Piscium,Pisces,θ Psc,220954
-636,636,9,Epsilon Piscium,Pisces,ε Psc,6186
-637,637,10,Delta Piscium,Pisces,δ Psc,4656
-638,638,11,Nu Piscium,Pisces,ν Psc,10380
-639,639,12,Lambda Piscium,Pisces,λ Psc,222603
-640,640,13,Tau Piscium,Pisces,τ Psc,7106
-641,641,14,Fum al Samakah,Pisces,Fum al Samakah,217891
-642,642,15,Xi Piscium,Pisces,ξ Psc,11559
-643,643,16,Chi Piscium,Pisces,χ Psc,7087
-644,644,17,Phi Piscium,Pisces,φ Psc,7318
-645,645,18,Upsilon Piscium,Pisces,υ Psc,7964
-646,646,19,Mu Piscium,Pisces,μ Psc,9138
-647,647,20,Kappa Piscium,Pisces,κ Psc,220825
-648,648,1,Fomalhaut,Piscis Austrinus,Fomalhaut,Manual
-649,649,2,Epsilon Piscis Austrini,Piscis Austrinus,ε PsA,214748
-650,650,3,Delta Piscis Austrini,Piscis Austrinus,δ PsA,216763
-651,651,4,Beta Piscis Austrini,Piscis Austrinus,β PsA,213398
-652,652,5,Iota Piscis Austrini,Piscis Austrinus,ι PsA,206742
-653,653,6,Gamma Piscis Austrini,Piscis Austrinus,γ PsA,216336
-654,654,7,Mu Piscis Austrini,Piscis Austrinus,μ PsA,210049
-655,655,8,Tau Piscis Austrini,Piscis Austrinus,τ PsA,210302
-656,656,9,Upsilon Piscis Austrini,Piscis Austrinus,υ PsA,210066
-657,657,10,Theta Piscis Austrini,Piscis Austrinus,θ PsA,207155
-658,658,4,Naos,Puppis,Naos,66811
-659,659,5,Tureis,Puppis,Tureis,67523
-660,660,6,Turais,Puppis,Turais,80404
-661,661,7,Tau Puppis,Puppis,τ Pup,50310
-662,662,8,Nu Puppis,Puppis,ν Pup,47670
-663,663,9,Hadir,Puppis,Hadir,Manual
-664,664,10,Azmidiske,Puppis,Azmidiske,63700
-665,665,1,Alpha Pyxidis,Pyxis,α Pyx,74575
-666,666,2,Beta Pyxidis,Pyxis,β Pyx,74006
-667,667,3,Gamma Pyxidis,Pyxis,γ Pyx,75691
-668,668,4,Kappa Pyxidis,Pyxis,κ Pyx,78541
-669,669,5,Lambda Pyxidis,Pyxis,λ Pyx,81169
-670,670,6,Theta Pyxidis,Pyxis,θ Pyx,80874
-671,671,7,Zeta Pyxidis,Pyxis,ζ Pyx,73898
-672,672,8,Delta Pyxidis,Pyxis,δ Pyx,76483
-673,673,1,Alpha Reticuli,Reticulum,α Ret,27256
-674,674,2,Beta Reticuli,Reticulum,β Ret,23817
-675,675,3,Epsilon Reticuli,Reticulum,ε Ret,27442
-676,676,4,Gamma Reticuli,Reticulum,γ Ret,25705
-677,677,5,Delta Reticuli,Reticulum,δ Ret,25422
-678,678,6,Kappa Reticuli,Reticulum,κ Ret,22001
-679,679,7,Iota Reticuli,Reticulum,ι Ret,25728
-680,680,2,Gamma Sagittae,Sagitta,γ Sge,189319
-681,681,3,Delta Sagittae,Sagitta,δ Sge,187076
-682,682,4,Sham,Sagitta,Sham,Manual
-683,683,5,Beta Sagittae,Sagitta,β Sge,185958
-684,684,16,Kaus Australis,Sagittarius,Kaus Australis,169022
-685,685,17,Nunki,Sagittarius,Nunki,175191
-686,686,18,Ascella,Sagittarius,Ascella,176687
-687,687,19,Kaus Media,Sagittarius,Kaus Media,168454
-688,688,20,Kaus Borealis,Sagittarius,Kaus Borealis,169916
-689,689,21,Albaldah,Sagittarius,Albaldah,Manual
-690,690,22,Alnasl,Sagittarius,Alnasl,165135
-691,691,23,Sephdar,Sagittarius,Sephdar,Manual
-692,692,24,Phi Sagittarii,Sagittarius,φ Sgr,173300
-693,693,25,Tau Sagittarii,Sagittarius,τ Sgr,177716
-694,694,26,Omicron Sagittarii,Sagittarius,ο Sgr,177241
-695,695,27,Polis,Sagittarius,Polis,166937
-696,696,28,Rho-1 Sagittarii,Sagittarius,ρ1 Sgr,181577
-697,697,29,Arkab Prior,Sagittarius,Arkab Prior,181454
-698,698,30,Rukbat,Sagittarius,Rukbat,181869
-699,699,31,Iota Sagittarii,Sagittarius,ι Sgr,188114
-700,700,32,Arkab Posterior,Sagittarius,Arkab Posterior,181623
-701,701,33,Theta-1 Sagittarii,Sagittarius,θ1 Sgr,189103
-702,702,34,Omega Sagittarii,Sagittarius,ω Sgr,188376
-703,703,35,Ain al Rami,Sagittarius,Ain al Rami,Manual
-704,704,5,Antares,Scorpius,Antares,148479
-705,705,6,Shaula,Scorpius,Shaula,158926
-706,706,7,Sargas,Scorpius,Sargas,159532
-707,707,8,Dschubba,Scorpius,Dschubba,143275
-708,708,9,Wei,Scorpius,Wei,151680
-709,709,10,Girtab,Scorpius,Girtab,160578
-710,710,11,Acrab,Scorpius,Acrab,144217
-711,711,12,Lesath,Scorpius,Lesath,158408
-712,712,13,Alniyat,Scorpius,Alniyat,Manual
-713,713,14,Alniyat,Scorpius,Alniyat,Manual
-714,714,15,Pi Scorpii,Scorpius,π Sco,143018
-715,715,16,Apollyon,Scorpius,Apollyon,161471
-716,716,17,Mu-1 Scorpii,Scorpius,μ1 Sco,151890
-717,717,18,Eta Scorpii,Scorpius,η Sco,155203
-718,718,19,Mu-2 Scorpii,Scorpius,μ2 Sco,151985
-719,719,20,Rho Scorpii,Scorpius,ρ Sco,142669
-720,720,21,Jabbah,Scorpius,Jabbah,Manual
-721,721,22,Graffias,Scorpius,Graffias,144217
-722,722,1,Alpha Sculptoris,Sculptor,α Scl,5737
-723,723,2,Beta Sculptoris,Sculptor,β Scl,221507
-724,724,3,Gamma Sculptoris,Sculptor,γ Scl,219784
-725,725,4,Delta Sculptoris,Sculptor,δ Scl,223352
-726,726,5,Eta Sculptoris,Sculptor,η Scl,2429
-727,727,3,Ionnina,Scutum,Ionnina,Manual
-728,728,4,Beta Scuti,Scutum,β Sct,173764
-729,729,5,Delta Scuti,Scutum,δ Sct,Manual
-730,730,6,Gamma Scuti,Scutum,γ Sct,170296
-731,731,7,Zeta Scuti,Scutum,ζ Sct,169156
-732,732,8,Epsilon Scuti,Scutum,ε Sct,173009
-733,733,3,Unukalhai,Serpens,Unukalhai,140573
-734,734,4,Eta Serpentis,Serpens,η Ser,168723
-735,735,5,Mu Serpentis,Serpens,μ Ser,141513
-736,736,6,Xi Serpentis,Serpens,ξ Ser,159876
-737,737,7,Beta Serpentis,Serpens,β Ser,141003
-738,738,8,Epsilon Serpentis,Serpens,ε Ser,141795
-739,739,9,Delta Serpentis,Serpens,δ Ser,141795
-740,740,10,Gamma Serpentis,Serpens,γ Ser,142860
-741,741,11,Kappa Serpentis,Serpens,κ Ser,141477
-742,742,12,Nu Serpentis,Serpens,ν Ser,156928
-743,743,13,Lambda Serpentis,Serpens,λ Ser,141004
-744,744,14,Iota Serpentis,Serpens,ι Ser,140159
-745,745,15,Alya,Serpens,Alya,175638
-746,746,1,Alpha Sextantis,Sextans,α Sex,87887
-747,747,2,Beta Sextantis,Sextans,β Sex,90994
-748,748,3,Gamma Sextantis,Sextans,γ Sex,85558
-749,749,4,Delta Sextantis,Sextans,δ Sex,90882
-750,750,3,Aldebaran,Taurus,Aldebaran,29139
-751,751,4,Elnath,Taurus,Elnath,Manual
-752,752,5,Alcyone,Taurus,Alcyone,23607
-753,753,6,Zeta Tauri,Taurus,ζ Tau,37202
-754,754,7,Lambda Tauri,Taurus,λ Tau,25204
-755,755,8,Ain,Taurus,Ain,Manual
-756,756,9,Hyadum I,Taurus,Hyadum I,Manual
-757,757,10,Xi Tauri,Taurus,ξ Tau,21364
-758,758,11,Hyadum II,Taurus,Hyadum II,27697
-759,759,12,Theta Tauri,Taurus,θ Tau,Manual
-760,760,13,Nu Tauri,Taurus,ν Tau,25490
-761,761,14,Tau Tauri,Taurus,τ Tau,29763
-762,762,15,Mu Tauri,Taurus,μ Tau,26912
-763,763,16,Omicron Tauri,Taurus,ο Tau,21120
-764,764,1,Alpha Telescopii,Telescopium,α Tel,169467
-765,765,2,Zeta Telescopii,Telescopium,ζ Tel,169767
-766,766,3,Epsilon Telescopii,Telescopium,ε Tel,166063
-767,767,4,Lambda Telescopii,Telescopium,λ Tel,175510
-768,768,5,Xi Telescopii,Telescopium,ξ Tel,190421
-769,769,6,Iota Telescopii,Telescopium,ι Tel,184127
-770,770,2,Beta Trianguli,Triangulum,β Tri,13161
-771,771,3,Mothalla,Triangulum,Mothalla,11443
-772,772,4,Gamma Trianguli,Triangulum,γ Tri,14055
-773,773,5,Delta Trianguli,Triangulum,δ Tri,13974
-774,774,1,Atria,Triangulum Australe,Atria,150798
-775,775,2,Betria,Triangulum Australe,Betria,141891
-776,776,3,Gatria,Triangulum Australe,Gatria,135382
-777,777,4,Delta Triangulum Australis,Triangulum Australe,δ TrA,145544
-778,778,5,Epsilon Triangulum Australis,Triangulum Australe,ε TrA,138538
-779,779,1,Alpha Tucanae,Tucana,α Tuc,211416
-780,780,2,Gamma Tucanae,Tucana,γ Tuc,219571
-781,781,3,Zeta Tucanae,Tucana,ζ Tuc,1581
-782,782,4,Beta Tucanae,Tucana,β Tuc,Manual
-783,783,5,Epsilon Tucanae,Tucana,ε Tuc,224686
-784,784,6,Delta Tucanae,Tucana,δ Tuc,212581
-785,785,7,Nu Tucanae,Tucana,ν Tuc,213442
-786,786,8,Eta Tucanae,Tucana,η Tuc,224392
-787,787,8,Alioth,Ursa Major,Alioth,112185
-788,788,9,Dubhe,Ursa Major,Dubhe,95689
-789,789,10,Alkaid,Ursa Major,Alkaid,120315
-790,790,11,Mizar,Ursa Major,Mizar,Manual
-791,791,12,Merak,Ursa Major,Merak,95418
-792,792,13,Phad,Ursa Major,Phad,103287
-793,793,14,Psi Ursae Majoris,Ursa Major,ψ UMa,96833
-794,794,15,Talitha,Ursa Major,Talitha,Manual
-795,795,16,Theta Ursae Majoris,Ursa Major,θ UMa,82328
-796,796,17,Megrez,Ursa Major,Megrez,106591
-797,797,18,Muscida,Ursa Major,Muscida,Manual
-798,798,19,Tania Borealis,Ursa Major,Tania Borealis,89021
-799,799,20,Aula Borealis,Ursa Major,Aula Borealis,Manual
-800,800,21,Tania Australis,Ursa Major,Tania Australis,89758
-801,801,22,Kappa Ursae Majoris,Ursa Major,κ UMa,77327
-802,802,23,Chi Ursae Majoris,Ursa Major,χ UMa,102224
-803,803,24,Upsilon Ursae Majoris,Ursa Major,υ UMa,84999
-804,804,25,Aula Australis,Ursa Major,Aula Australis,Manual
-805,805,26,Alcor,Ursa Major,Alcor,Manual
-806,806,1,Polaris,Ursa Minor,Polaris,Manual
-807,807,2,Kocab,Ursa Minor,Kocab,Manual
-808,808,3,Pherkad,Ursa Minor,Pherkad,Manual
-809,809,4,Epsilon Ursae Minoris,Ursa Minor,ε UMi,153751
-810,810,5,Akhfa al Farkadain,Ursa Minor,Akhfa al Farkadain,Manual
-811,811,6,Yildun,Ursa Minor,Yildun,166205
-812,812,7,Anwar al Farkadain,Ursa Minor,Anwar al Farkadain,148048
-813,813,1,Suhail al Muhlif,Vela,Suhail al Muhlif,Manual
-814,814,2,Koo She,Vela,Koo She,74956
-815,815,3,Suhail,Vela,Suhail,Manual
-816,816,4,Markeb,Vela,Markeb,Manual
-817,817,5,Mu Velorum,Vela,μ Vel,93497
-818,818,6,Tseen Kee,Vela,Tseen Kee,Manual
-819,819,7,Psi Velorum,Vela,ψ Vel,Manual
-820,820,12,Spica,Virgo,Spica,Manual
-821,821,13,Porrima,Virgo,Porrima,110379
-822,822,14,Vindemiatrix,Virgo,Vindemiatrix,113226
-823,823,15,Heze,Virgo,Heze,118098
-824,824,16,Auva,Virgo,Auva,112300
-825,825,17,Zavijava,Virgo,Zavijava,102870
-826,826,18,Rijl al Awwa,Virgo,Rijl al Awwa,129502
-827,827,19,Zaniah,Virgo,Zaniah,107259
-828,828,20,Syrma,Virgo,Syrma,124850
-829,829,1,Beta Volantis,Volans,β Vol,71878
-830,830,2,Gamma Volantis,Volans,γ Vol,Manual
-831,831,3,Zeta Volantis,Volans,ζ Vol,63295
-832,832,4,Delta Volantis,Volans,δ Vol,57623
-833,833,5,Alpha Volantis,Volans,α Vol,78045
-834,834,6,Epsilon Volantis,Volans,ε Vol,68520
-835,835,2,Anser,Vulpecula,Anser,183439
-836,836,3,23 Vulpeculae,Vulpecula,23 Vul,192806
-837,837,4,13 Vulpeculae,Vulpecula,13 Vul,188260
-838,838,5,31 Vulpeculae,Vulpecula,31 Vul,198809
-839,839,6,15 Vulpeculae,Vulpecula,15 Vul,189849
-840,840,7,1 Vulpeculae,Vulpecula,1 Vul,180554
+Number,Designation,Constellation,Converted,HD
+4,Alpheratz,Andromeda,Alpheratz,358
+5,Mirach,Andromeda,Mirach,6860
+6,Almach,Andromeda,Almach,12533
+7,Delta Andromedae,Andromeda,δ And,3627
+8,Nembus,Andromeda,Nembus,9927
+9,Omicron Andromedae,Andromeda,ο And,217675
+10,Lambda Andromedae,Andromeda,λ And,222107
+11,Mu Andromedae,Andromeda,μ And,5448
+12,Zeta Andromedae,Andromeda,ζ And,4502
+13,Upsilon Andromedae,Andromeda,υ And,9826
+14,Kappa Andromedae,Andromeda,κ And,222439
+15,Phi Andromedae,Andromeda,φ And,6811
+16,Iota Andromedae,Andromeda,ι And,222173
+17,Pi Andromedae,Andromeda,π And,3369
+18,Epsilon Andromedae,Andromeda,ε And,3546
+19,Eta Andromedae,Andromeda,η And,5516
+20,Sigma Andromedae,Andromeda,σ And,1404
+21,Nu Andromedae,Andromeda,ν And,4727
+22,Theta Andromedae,Andromeda,θ And,1280
+23,Adhil,Andromeda,Adhil,8207
+1,Alpha Antilae,Antlia,α Ant,90610
+2,Epsilon Antilae,Antlia,ε Ant,82150
+3,Iota Antilae,Antlia,ι Ant,94890
+4,Theta Antilae,Antlia,θ Ant,84367
+1,Alpha Apodis,Apus,α Aps,129078
+2,Gamma Apodis,Apus,γ Aps,147675
+3,Beta Apodis,Apus,β Aps,149324
+4,Delta-1 Apodis,Apus,δ1 Aps,145366
+5,Delta-2 Apodis,Apus,δ2 Aps,145388
+4,Sadalsuud,Aquarius,Sadalsuud,204867
+5,Sadalmelik,Aquarius,Sadalmelik,209750
+6,Skat,Aquarius,Skat,216627
+7,Sadaltager,Aquarius,Sadaltager,213051
+8,Lambda Aquarii,Aquarius,λ Aqr,216386
+9,Albali,Aquarius,Albali,198001
+10,Sadachbia,Aquarius,Sadachbia,212061
+11,Eta Aquarii,Aquarius,η Aqr,213998
+12,Tau-2 Aquarii,Aquarius,τ2 Aqr,216032
+13,Ancha,Aquarius,Ancha,211391
+14,Phi Aquarii,Aquarius,φ Aqr,219215
+15,Iota Aquarii,Aquarius,ι Aqr,209819
+16,Psi-1 Aquarii,Aquarius,ψ1 Aqr,219449
+17,Psi-2 Aquarii,Aquarius,ψ2 Aqr,219688
+18,Omega-2 Aquarii,Aquarius,ω2 Aqr,222661
+19,Nu Aquarii,Aquarius,ν Aqr,201381
+20,Pi Aquarii,Aquarius,π Aqr,212571
+21,Mu Aquarii,Aquarius,μ Aqr,198743
+22,Sigma Aquarii,Aquarius,σ Aqr,213320
+23,Omega-1 Aquarii,Aquarius,ω1 Aqr,222345
+24,Psi-3 Aquarii,Aquarius,ψ3 Aqr,219832
+25,Situla,Aquarius,Situla,214376
+1,Altair,Aquila,Altair,187642
+2,Tarazed,Aquila,Tarazed,186791
+3,Zeta Aquilae,Aquila,ζ Aql,177724
+4,Tseen Foo,Aquila,Tseen Foo,191692
+5,Delta Aquilae,Aquila,δ Aql,182640
+6,Lambda Aquilae,Aquila,λ Aql,177756
+7,Alshain,Aquila,Alshain,188512
+8,Eta Aquilae,Aquila,η Aql,187929
+9,Epsilon Aquilae,Aquila,ε Aql,176411
+10,Iota Aquilae,Aquila,ι Aql,184930
+1,Beta Arae,Ara,β Ara,157244
+2,Alpha Arae,Ara,α Ara,158427
+3,Zeta Arae,Ara,ζ Ara,152786
+4,Gamma Arae,Ara,γ Ara,157246
+5,Delta Arae,Ara,δ Ara,158094
+6,Theta Arae,Ara,θ Ara,165024
+7,Eta Arae,Ara,η Ara,151249
+8,Epsilon-1 Arae,Ara,ε1 Ara,152980
+1,Hamal,Aries,Hamal,12929
+2,Sheratan,Aries,Sheratan,11636
+3,41 Arietis,Aries,41 Ari,17573
+4,Mesarthim,Aries,Mesarthim,11503
+5,Botein,Aries,Botein,19787
+6,Epsilon Arietis,Aries,ε Ari,18519
+7,Lambda Arietis,Aries,λ Ari,11973
+8,Zeta Arietis,Aries,ζ Ari,20150
+4,Capella,Auriga,Capella,34029
+5,Menkalinan,Auriga,Menkalinan,40183
+6,Mahasim,Auriga,Mahasim,40312
+7,Hassaleh,Auriga,Hassaleh,31398
+8,Almaaz,Auriga,Almaaz,31964
+9,Haedus II,Auriga,Haedus II,32630
+10,Delta Aurigae,Auriga,δ Aur,40035
+11,Eta Aurigae,Auriga,η Aur,32630
+12,Nu Aurigae,Auriga,ν Aur,39003
+13,Tau Aurigae,Auriga,τ Aur,38656
+14,Upsilon Aurigae,Auriga,υ Aur,38944
+1,Arcturus,Boötes,Arcturus,124897
+2,Izar,Boötes,Izar,129988
+3,Muphrid,Boötes,Muphrid,121370
+4,Seginus,Boötes,Seginus,127762
+5,Delta Boötis,Boötes,δ Boo,135722
+6,Nekkar,Boötes,Nekkar,133208
+7,Sigma Boötis,Boötes,σ Boo,128167
+8,Rho Boötis,Boötes,ρ Boo,127665
+9,Zeta Boötis,Boötes,ζ Boo,Manual
+10,Asellus Primus,Boötes,Asellus Primus,126660
+11,Upsilon Boötis,Boötes,υ Boo,120477
+12,Lambda Boötis,Boötes,λ Boo,125162
+13,Alkalurops,Boötes,Alkalurops,137391
+14,Tau Boötis,Boötes,τ Boo,120136
+15,Psi Boötis,Boötes,ψ Boo,133582
+16,Asellus Tertius,Boötes,Asellus Tertius,124675
+17,Xi Boötis,Boötes,ξ Boo,131156
+18,Iota Boötis,Boötes,ι Boo,125161
+19,Merga,Boötes,Merga,130945
+1,Alpha Caeli,Caelum,α Cae,29875
+2,Gamma-1 Caeli,Caelum,γ1 Cae,32831
+3,Beta Caeli,Caelum,β Cae,29992
+4,Delta Caeli,Caelum,δ Cae,28873
+1,Beta Camelopardalis,Camelopardalis,β Cam,31910
+2,CS Camelopardalis,Camelopardalis,CS Cam,21291
+3,Alpha Camelopardalis,Camelopardalis,α Cam,30614
+4,Gamma Camelopardalis,Camelopardalis,γ Cam,23401
+3,Beta Cancri,Cancer,β Cnc,69267
+4,Asellus Australis,Cancer,Asellus Australis,74442
+5,Acubens,Cancer,Acubens,76756
+6,Asellus Borealis,Cancer,Asellus Borealis,74198
+7,Zeta Cancri,Cancer,ζ Cnc,682556825668257
+6,Cor Caroli,Canes Venatici,Cor Caroli,112413
+7,Chara,Canes Venatici,Chara,109358
+8,La Superba,Canes Venatici,La Superba,110914
+2,Alpha Canis Majoris,Canis Major,α CMa,Manual
+3,Adhara,Canis Major,Adhara,52089
+4,Wezen,Canis Major,Wezen,54605
+5,Mirzam,Canis Major,Mirzam,44743
+6,Aludra,Canis Major,Aludra,58350
+7,Furud,Canis Major,Furud,44402
+8,Kappa Canis Majoris,Canis Major,κ CMa,50013
+9,Theta Canis Majoris,Canis Major,θ CMa,50778
+10,Muliphen,Canis Major,Muliphen,161868
+11,Iota Canis Majoris,Canis Major,ι CMa,51309
+1,Procyon,Canis Minor,Procyon,61421
+2,Gomeisa,Canis Minor,Gomeisa,58715
+3,Gamma Canis Minoris,Canis Minor,γ CMi,58972
+4,Epsilon Canis Minoris,Canis Minor,ε CMi,58367
+2,Deneb Algedi,Capricornus,Deneb Algedi,207098
+3,Dabih,Capricornus,Dabih,193495
+4,Alpha-2 Capricorni,Capricornus,α2 Cap,192947
+5,Nashira,Capricornus,Nashira,206088
+6,Yen,Capricornus,Yen,204075
+7,Dorsum,Capricornus,Dorsum,200761
+8,Omega Capricorni,Capricornus,ω Cap,198542
+9,Psi Capricorni,Capricornus,ψ Cap,197692
+10,Alpha-1 Capricorni,Capricornus,α1 Cap,192876
+11,Iota Capricorni,Capricornus,ι Cap,203387
+12,Alshat,Capricornus,Alshat,193432
+1,Canopus,Carina,Canopus,45348
+2,Miaplacidus,Carina,Miaplacidus,80007
+3,Avior,Carina,Avior,71129
+4,Aspidiske,Carina,Aspidiske,80404
+5,Theta Carinae,Carina,θ Car,93030
+6,Upsilon Carinae,Carina,υ Car,85123
+7,Omega Carinae,Carina,ω Car,89080
+8,Foramen,Carina,Foramen,93308
+9,Chi Carinae,Carina,χ Car,65575
+3,Alpha Cassiopeiae,Cassiopeia,α Cas,3712
+4,Caph,Cassiopeia,Caph,432
+5,Gamma Cassiopeiae,Cassiopeia,γ Cas,5394
+6,Delta Cassiopeiae,Cassiopeia,δ Cas,8538
+7,Epsilon Cassiopeiae,Cassiopeia,ε Cas,11415
+8,Achird,Cassiopeia,Achird,4614
+9,Zeta Cassiopeiae,Cassiopeia,ζ Cas,3360
+10,Kappa Cassiopeiae,Cassiopeia,κ Cas,2905
+11,Theta Cassiopeiae,Cassiopeia,θ Cas,6961
+12,Chi Cassiopeiae,Cassiopeia,χ Cas,9408
+13,Castula,Cassiopeia,Castula,5395
+1,Alpha Centauri,Centaurus,α Cen,
+2,Beta Centauri,Centaurus,β Cen,122451
+3,Menkent,Centaurus,Menkent,123139
+4,Muhlifain,Centaurus,Muhlifain,110304
+5,Epsilon Centauri,Centaurus,ε Cen,118716
+6,Eta Centauri,Centaurus,η Cen,127972
+7,Alnair,Centaurus,Alnair,Manual
+8,Delta Centauri,Centaurus,δ Cen,105435
+9,Iota Centauri,Centaurus,ι Cen,115892
+10,Kappa Centauri,Centaurus,κ Cen,132200
+11,Nu Centauri,Centaurus,ν Cen,120307
+12,Mu Centauri,Centaurus,μ Cen,120324
+13,Pi Centauri,Centaurus,π Cen,98718
+14,Sigma Centauri,Centaurus,σ Cen,108483
+1,Alderamin,Cepheus,Alderamin,203280
+2,Alfirk,Cepheus,Alfirk,205021
+3,Alrai,Cepheus,Alrai,161096
+4,Zeta Cephei,Cepheus,ζ Cep,210745
+5,Eta Cephei,Cepheus,η Cep,198149
+6,Iota Cephei,Cepheus,ι Cep,216228
+7,Delta Cephei,Cepheus,δ Cep,Manual
+8,Mu Cephei,Cepheus,μ Cep,206936
+9,Epsilon Cephei,Cepheus,ε Cep,211336
+10,Theta Cephei,Cepheus,θ Cep,195725
+11,Nu Cephei,Cepheus,ν Cep,207260
+12,Xi Cephei,Cepheus,ξ Cep,Manual
+13,Pi Cephei,Cepheus,π Cep,218658
+14,Al Kalb al Rai,Cepheus,Al Kalb al Rai,213798
+2,Diphda,Cetus,Diphda,4128
+3,Alpha Ceti,Cetus,α Cet,18884
+4,Eta Ceti,Cetus,η Cet,6805
+5,Kaffaljidhma,Cetus,Kaffaljidhma,16970
+6,Mira,Cetus,Mira,14386
+7,Tau Ceti,Cetus,τ Cet,10700
+8,Deneb Kaitos Shemali,Cetus,Deneb Kaitos Shemali,1522
+9,Theta Ceti,Cetus,θ Cet,8512
+10,Baten Kaitos,Cetus,Baten Kaitos,11353
+11,Upsilon Ceti,Cetus,υ Cet,12274
+12,Delta Ceti,Cetus,δ Cet,16582
+13,Mu Ceti,Cetus,μ Cet,17094
+14,Xi-2 Ceti,Cetus,ξ2 Cet,15318
+15,Lambda Ceti,Cetus,λ Cet,18604
+1,Alpha Chamaeleontis,Chamaeleon,α Cha,71243
+2,Gamma Chamaeleontis,Chamaeleon,γ Cha,92305
+3,Beta Chamaeleontis,Chamaeleon,β Cha,106911
+4,Theta Chamaeleontis,Chamaeleon,θ Cha,71701
+5,Epsilon Chamaeleontis,Chamaeleon,ε Cha,104174
+6,Delta-1 Chamaeleontis,Chamaeleon,δ1 Cha,93779
+1,Alpha Circini,Circinus,α Cir,128898
+2,Beta Circini,Circinus,β Cir,135379
+3,Gamma Circini,Circinus,γ Cir,136415
+1,Phact,Columba,Phact,37795
+2,Wezn,Columba,Wezn,39425
+3,Delta Columbae,Columba,δ Col,44762
+4,Epsilon Columbae,Columba,ε Col,36597
+5,Eta Columbae,Columba,η Col,40808
+6,Gamma Columbae,Columba,γ Col,40494
+7,Kappa Columbae,Columba,κ Col,43785
+8,Lambda Columbae,Columba,λ Col,39764
+9,Xi Columbae,Columba,ξ Col,40176
+10,Theta Columbae,Columba,θ Col,42167
+9,Beta Comae Berenices,Coma Berenices,β Com,114710
+10,Diadem,Coma Berenices,Diadem,114378
+11,Gamma Comae Berenices,Coma Berenices,γ Com,108381
+1,Alfecca Meridiana,Corona Australis,Alfecca Meridiana,178253
+2,Beta Coronae Australis,Corona Australis,β CrA,178345
+3,Gamma Coronae Australis,Corona Australis,γ CrA,177475
+4,Delta Coronae Australis,Corona Australis,δ CrA,177873
+5,Zeta Coronae Australis,Corona Australis,ζ CrA,176638
+6,Theta Coronae Australis,Corona Australis,θ CrA,170845
+1,Alphecca,Corona Borealis,Alphecca,139006
+2,Nusakan,Corona Borealis,Nusakan,137909
+3,Gamma Coronae Borealis,Corona Borealis,γ CrB,140436
+4,Epsilon Coronae Borealis,Corona Borealis,ε CrB,143107
+5,Theta Coronae Borealis,Corona Borealis,θ CrB,138749
+6,Delta Coronae Borealis,Corona Borealis,δ CrB,141714
+7,Iota Coronae Borealis,Corona Borealis,ι CrB,143807
+1,Gienah,Corvus,Gienah,106625
+2,Kraz,Corvus,Kraz,109379
+3,Algorab,Corvus,Algorab,108767
+4,Epsilon Corvi,Corvus,ε Crv,105707
+5,Alchiba,Corvus,Alchiba,105452
+1,Delta Crateris,Crater,δ Crt,98430
+2,Alkes,Crater,Alkes,95272
+3,Gamma Crateris,Crater,γ Crt,99211
+4,Beta Crateris,Crater,β Crt,97277
+5,Theta Crateris,Crater,θ Crt,100889
+6,Zeta Crateris,Crater,ζ Crt,102070
+7,Epsilon Crateris,Crater,ε Crt,99167
+8,Eta Crateris,Crater,η Crt,103632
+1,Alpha Crucis,Crux,α Cru,108250
+2,Mimosa,Crux,Mimosa,111123
+3,Gacrux,Crux,Gacrux,108903
+4,Delta Crucis,Crux,δ Cru,106490
+3,Deneb,Cygnus,Deneb,197345
+4,Gamma Cygni,Cygnus,γ Cyg,194093
+5,Gienah,Cygnus,Gienah,106625
+6,Delta Cygni,Cygnus,δ Cyg,186882
+7,Beta Cygni,Cygnus,β Cyg,Manual
+8,Zeta Cygni,Cygnus,ζ Cyg,202109
+9,Omicron-1 Cygni,Cygnus,ο1 Cyg,192577
+10,Xi Cygni,Cygnus,ξ Cyg,200905
+11,Iota Cygni,Cygnus,ι Cyg,184006
+12,Tau Cygni,Cygnus,τ Cyg,202444
+13,Kappa Cygni,Cygnus,κ Cyg,181276
+14,Eta Cygni,Cygnus,η Cyg,188947
+15,Nu Cygni,Cygnus,ν Cyg,199629
+16,Omicron-2 Cygni,Cygnus,ο2 Cyg,192909
+17,Pennae Caudalis,Cygnus,Pennae Caudalis,207330
+18,Sigma Cygni,Cygnus,σ Cyg,202850
+19,Azelfafage,Cygnus,Azelfafage,206672
+20,Omega-2 Cygni,Cygnus,ω2 Cyg,195774
+1,Rotanev,Delphinus,Rotanev,196524
+2,Sualocin,Delphinus,Sualocin,196867
+3,Gamma Delphini,Delphinus,γ Del,Manual
+4,Deneb Dulfim,Delphinus,Deneb Dulfim,195810
+5,Delta Delphini,Delphinus,δ Del,197461
+2,Alpha Doradus,Dorado,α Dor,29305
+3,Beta Doradus,Dorado,β Dor,37350
+4,Gamma Doradus,Dorado,γ Dor,27290
+5,Delta Doradus,Dorado,δ Dor,39014
+6,Zeta Doradus,Dorado,ζ Dor,33262
+2,Etamin,Draco,Etamin,164058
+3,Aldibain,Draco,Aldibain,148387
+4,Beta Draconis,Draco,β Dra,159181
+5,Altais,Draco,Altais,180711
+6,Aldhibah,Draco,Aldhibah,155763
+7,Ed Asich,Draco,Ed Asich,137759
+8,Chi Draconis,Draco,χ Dra,170153
+9,Thuban,Draco,Thuban,123299
+10,Grumium,Draco,Grumium,163588
+11,Kappa Draconis,Draco,κ Dra,109387
+12,Tyl,Draco,Tyl,188119
+13,Gianfar,Draco,Gianfar,100029
+14,Theta Draconis,Draco,θ Dra,144284
+15,Phi Draconis,Draco,φ Dra,170000
+16,Dsiban,Draco,Dsiban,162003
+17,Alsafi,Draco,Alsafi,185144
+18,Upsilon Draconis,Draco,υ Dra,176524
+19,Nu Draconis,Draco,ν Dra,Manual
+20,Arrakis,Draco,Arrakis,154905
+1,Kitalpha,Equuleus,Kitalpha,202447
+2,Delta Equulei,Equuleus,δ Equ,202275
+3,Gamma Equulei,Equuleus,γ Equ,201601
+1,Achernar,Eridanus,Achernar,10144
+2,Cursa,Eridanus,Cursa,33111
+3,Gamma Eridani,Eridanus,γ Eri,25025
+4,Acamar,Eridanus,Acamar,18622
+5,Delta Eridani,Eridanus,δ Eri,23249
+6,Tau-4 Eridani,Eridanus,τ4 Eri,20720
+7,Chi Eridani,Eridanus,χ Eri,11937
+8,Epsilon Eridani,Eridanus,ε Eri,22049
+9,Upsilon-2 Eridani,Eridanus,υ2 Eri,29291
+10,Azha,Eridanus,Azha,18322
+11,Sceptrum,Eridanus,Sceptrum,29503
+12,Nu Eridani,Eridanus,ν Eri,29248
+13,Mu Eridani,Eridanus,μ Eri,30211
+14,Beid,Eridanus,Beid,26574
+15,Tau-3 Eridani,Eridanus,τ3 Eri,18978
+16,Iota Eridani,Eridanus,ι Eri,16815
+17,Tau-6 Eridani,Eridanus,τ6 Eri,23754
+18,Kappa Eridani,Eridanus,κ Eri,15371
+19,Tau-5 Eridani,Eridanus,τ5 Eri,22203
+20,Pi Eridani,Eridanus,π Eri,23614
+21,Keid,Eridanus,Keid,26965
+22,Tau-1 Eridani,Eridanus,τ1 Eri,17206
+23,Upsilon-1 Eridani,Eridanus,υ1 Eri,29085
+24,Tau-9 Eridani,Eridanus,τ9 Eri,25267
+25,Tau-8 Eridani,Eridanus,τ8 Eri,24587
+26,Angetenar,Eridanus,Angetenar,17824
+27,Zeta Eridani,Eridanus,ζ Eri,20320
+1,Dalim,Fornax,Dalim,20010
+2,Beta Fornacis,Fornax,β For,17652
+3,Nu Fornacis,Fornax,ν For,12767
+4,Omega Fornacis,Fornax,ω For,16046
+2,Pollux,Gemini,Pollux,62509
+3,Alpha Geminorum,Gemini,α Gem,Manual
+4,Alhena,Gemini,Alhena,47105
+5,Tejat Posterior,Gemini,Tejat Posterior,44478
+6,Mebsuta,Gemini,Mebsuta,48329
+7,Eta Geminorum,Gemini,η Gem,42995
+8,Eta Geminorum,Gemini,η Gem,42995
+9,Xi Geminorum,Gemini,ξ Gem,48737
+10,Delta Geminorum,Gemini,δ Gem,56986
+11,Kappa Geminorum,Gemini,κ Gem,62345
+12,Lambda Geminorum,Gemini,λ Gem,56537
+13,Theta Geminorum,Gemini,θ Gem,50019
+14,Mekbuda,Gemini,Mekbuda,52973
+15,Upsilon Geminorum,Gemini,υ Gem,60522
+16,Nu Geminorum,Gemini,ν Gem,Manual
+17,Rho Geminorum,Gemini,ρ Gem,58946
+18,Tau Geminorum,Gemini,τ Gem,54719
+1,Alnair,Grus,Alnair,Manual
+2,Beta Gruis,Grus,β Gru,214952
+3,Gamma Gruis,Grus,γ Gru,207971
+4,Epsilon Gruis,Grus,ε Gru,215789
+5,Iota Gruis,Grus,ι Gru,218670
+6,Delta-1 Gruis,Grus,δ1 Gru,213009
+7,Zeta Gruis,Grus,ζ Gru,217364
+8,Delta-2 Gruis,Grus,δ2 Gru,213080
+9,Theta Gruis,Grus,θ Gru,218227
+10,Lambda Gruis,Grus,λ Gru,209688
+11,Mu-1 Gruis,Grus,μ1 Gru,211088
+12,Rho Gruis,Grus,ρ Gru,215104
+3,Kornephoros,Hercules,Kornephoros,148856
+4,Zeta Herculis,Hercules,ζ Her,150680
+5,Sarin,Hercules,Sarin,156164
+6,Pi Herculis,Hercules,π Her,156283
+7,Mu Herculis,Hercules,μ Her,161797
+8,Rasalgethi,Hercules,Rasalgethi,156014
+9,Eta Herculis,Hercules,η Her,150997
+10,Xi Herculis,Hercules,ξ Her,163993
+11,Gamma Herculis,Hercules,γ Her,147547
+12,Iota Herculis,Hercules,ι Her,160762
+13,Omicron Herculis,Hercules,ο Her,166014
+14,Rukbalgethi Genubi,Hercules,Rukbalgethi Genubi,163770
+15,Rukbalgethi Shemali,Hercules,Rukbalgethi Shemali,147394
+16,Epsilon Herculis,Hercules,ε Her,153808
+17,Rho Herculis,Hercules,ρ Her,157778
+18,Sigma Herculis,Hercules,σ Her,149630
+19,Phi Herculis,Hercules,φ Her,145389
+20,Maasym,Hercules,Maasym,158899
+21,Omega Herculis,Hercules,ω Her,148112
+22,Chi Herculis,Hercules,χ Her,142373
+23,Kappa Herculis,Hercules,κ Her,Manual
+1,Alpha Horologii,Horologium,α Hor,26967
+2,R Horologii,Horologium,R Hor,18242
+3,Beta Horologii,Horologium,β Hor,18866
+4,Mu Horologii,Horologium,μ Hor,19319
+5,Zeta Horologii,Horologium,ζ Hor,16920
+6,Eta Horologii,Horologium,η Hor,16555
+7,Iota Horologii,Horologium,ι Hor,17051
+4,Alphard,Hydra,Alphard,81797
+5,Gamma Hydrae,Hydra,γ Hya,115659
+6,Hydrobius,Hydra,Hydrobius,76294
+7,Nu Hydrae,Hydra,ν Hya,93813
+8,Pi Hydrae,Hydra,π Hya,123123
+9,Ashlesha,Hydra,Ashlesha,74874
+10,Xi Hydrae,Hydra,ξ Hya,100407
+11,Lambda Hydrae,Hydra,λ Hya,88284
+12,Mu Hydrae,Hydra,μ Hya,90432
+13,Theta Hydrae,Hydra,θ Hya,79469
+14,Iota Hydrae,Hydra,ι Hya,83618
+15,Upsilon-1 Hydrae,Hydra,υ1 Hya,85444
+16,Delta Hydrae,Hydra,δ Hya,73262
+17,Beta Hydrae,Hydra,β Hya,103192
+18,Eta Hydrae,Hydra,η Hya,74280
+19,Minchir,Hydra,Minchir,73471
+1,Beta Hydri,Hydrus,β Hyi,2151
+2,Head of Hydrus,Hydrus,Head of Hydrus,12311
+3,Gamma Hydri,Hydrus,γ Hyi,24512
+4,Delta Hydri,Hydrus,δ Hyi,15008
+5,Epsilon Hydri,Hydrus,ε Hyi,16978
+6,Eta-2 Hydri,Hydrus,η2 Hyi,11977
+7,Nu Hydri,Hydrus,ν Hyi,18293
+8,Zeta Hydri,Hydrus,ζ Hyi,17566
+1,Alpha Indi,Indus,α Ind,196171
+2,Beta Indi,Indus,β Ind,198700
+3,Delta Indi,Indus,δ Ind,208450
+4,Theta Indi,Indus,θ Ind,202730
+5,Eta Indi,Indus,η Ind,197157
+1,Alpha Lacertae,Lacerta,α Lac,213558
+2,Beta Lacertae,Lacerta,β Lac,212496
+3,1 Lacertae,Lacerta,1 Lac,211388
+4,5 Lacertae,Lacerta,5 Lac,213310
+5,2 Lacertae,Lacerta,2 Lac,212120
+6,4 Lacertae,Lacerta,4 Lac,212593
+6,Regulus,Leo,Regulus,87901
+7,Gamma Leonis,Leo,γ Leo,Manual
+8,Denebola,Leo,Denebola,102647
+9,Zosma,Leo,Zosma,97603
+10,Ras Elased Australis,Leo,Ras Elased Australis,84441
+11,Chertan,Leo,Chertan,97633
+12,Adhafera,Leo,Adhafera,89025
+13,Eta Leonis,Leo,η Leo,87737
+14,Subra,Leo,Subra,83808
+15,Rho Leonis,Leo,ρ Leo,91316
+16,Ras Elased Borealis,Leo,Ras Elased Borealis,85503
+17,Iota Leonis,Leo,ι Leo,99028
+18,Sigma Leonis,Leo,σ Leo,98664
+19,Alterf,Leo,Alterf,82308
+20,Al Minliar al Asad,Leo,Al Minliar al Asad,81146
+21,Chi Leonis,Leo,χ Leo,96097
+22,Pi Leonis,Leo,π Leo,86663
+1,46 Leonis Minoris,Leo Minor,46 LMi,94264
+2,Beta Leonis Minoris,Leo Minor,β LMi,90537
+3,21 Leonis Minoris,Leo Minor,21 LMi,87696
+4,10 Leonis Minoris,Leo Minor,10 LMi,82635
+2,Arneb,Lepus,Arneb,36673
+3,Nihal,Lepus,Nihal,36079
+4,Epsilon Leporis,Lepus,ε Lep,32887
+5,Mu Leporis,Lepus,μ Lep,33904
+6,Theta Leporis,Lepus,θ Lep,41695
+7,Zeta Leporis,Lepus,ζ Lep,38678
+8,Gamma Leporis,Lepus,γ Lep,38393
+9,Eta Leporis,Lepus,η Lep,40136
+10,Delta Leporis,Lepus,δ Lep,39364
+11,Lambda Leporis,Lepus,λ Lep,34816
+12,Kappa Leporis,Lepus,κ Lep,33949
+1,Beta Librae,Libra,β Lib,135742
+2,Alpha Librae,Libra,α Lib,Manual
+3,Brachium,Libra,Brachium,133216
+4,Upsilon Librae,Libra,υ Lib,139063
+5,Tau Librae,Libra,τ Lib,139365
+6,Gamma Librae,Libra,γ Lib,138905
+7,Theta Librae,Libra,θ Lib,142198
+8,Zuben Elakribi,Libra,Zuben Elakribi,132742
+1,Alpha Lupi,Lupus,α Lup,129056
+2,Kekouan,Lupus,Kekouan,132058
+3,Gamma Lupi,Lupus,γ Lup,138690
+4,Delta Lupi,Lupus,δ Lup,136298
+5,Epsilon Lupi,Lupus,ε Lup,136504
+6,Zeta Lupi,Lupus,ζ Lup,134505
+7,Eta Lupi,Lupus,η Lup,143118
+8,Iota Lupi,Lupus,ι Lup,125238
+9,Phi-1 Lupi,Lupus,φ1 Lup,136422
+10,Pi Lupi,Lupus,π Lup,133242
+11,Chi Lupi,Lupus,χ Lup,141556
+1,Alpha Lyncis,Lynx,α Lyn,80493
+2,38 Lyncis,Lynx,38 Lyn,80081
+3,Alsciaukat,Lynx,Alsciaukat,70272
+4,2 Lyncis,Lynx,2 Lyn,43378
+3,Vega,Lyra,Vega,172167
+4,Sulafat,Lyra,Sulafat,176437
+5,Sheliak,Lyra,Sheliak,174638
+6,Delta-2 Lyrae,Lyra,δ2 Lyr,175588
+7,Theta Lyrae,Lyra,θ Lyr,180809
+8,Aladfar,Lyra,Aladfar,180163
+9,Zeta Lyrae,Lyra,ζ Lyr,Manual
+10,Epsilon Lyrae,Lyra,ε Lyr,Manual
+11,Lambda Lyrae,Lyra,λ Lyr,176670
+12,Alathfar,Lyra,Alathfar,169702
+1,Alpha Mensae,Mensa,α Men,43834.0
+2,Beta Mensae,Mensa,β Men,33285.0
+3,Gamma Mensae,Mensa,γ Men,37763.0
+4,Eta Mensae,Mensa,η Men,32440.0
+1,Gamma Microscopii,Microscopium,γ Mic,199951
+2,Epsilon Microscopii,Microscopium,ε Mic,202627
+3,Theta-1 Microscopii,Microscopium,θ1 Mic,203006
+4,Alpha Microscopii,Microscopium,α Mic,198232
+5,Iota Microscopii,Microscopium,ι Mic,197937
+2,Alpha Monocerotis,Monoceros,α Mon,61935
+3,Gamma Monocerotis,Monoceros,γ Mon,43232
+4,Delta Monocerotis,Monoceros,δ Mon,55185
+5,Zeta Monocerotis,Monoceros,ζ Mon,67594
+6,Beta Monocerotis,Monoceros,β Mon,Manual
+1,Alpha Muscae,Musca,α Mus,109668
+2,Beta Muscae,Musca,β Mus,110879
+3,Delta Muscae,Musca,δ Mus,112985
+4,Lambda Muscae,Musca,λ Mus,102249
+5,Gamma Muscae,Musca,γ Mus,109026
+6,Epsilon Muscae,Musca,ε Mus,106849
+1,Gamma-2 Normae,Norma,γ2 Nor,146686
+2,Gamma-1 Normae,Norma,γ1 Nor,146143
+3,Epsilon Normae,Norma,ε Nor,147971
+4,Iota-1 Normae,Norma,ι1 Nor,143474
+5,Eta Normae,Norma,η Nor,143546
+6,Delta Normae,Norma,δ Nor,144197
+1,Nu Octantis,Octans,ν Oct,205478
+2,Beta Octantis,Octans,β Oct,214846
+3,Delta Octantis,Octans,δ Oct,124882
+4,Theta Octantis,Octans,θ Oct,224889
+5,Epsilon Octantis,Octans,ε Oct,210967
+6,Polaris Australis,Octans,Polaris Australis,177482
+8,Rasalhague,Ophiuchus,Rasalhague,159561
+9,Sabik,Ophiuchus,Sabik,155125
+10,Han,Ophiuchus,Han,149757
+11,Yed Prior,Ophiuchus,Yed Prior,146051
+12,Cebalrai,Ophiuchus,Cebalrai,161096
+13,Kappa Ophiuchi,Ophiuchus,κ Oph,153210
+14,Yed Posterior,Ophiuchus,Yed Posterior,146791
+15,Theta Ophiuchi,Ophiuchus,θ Oph,157056
+16,Sinistra,Ophiuchus,Sinistra,163917
+17,Gamma Ophiuchi,Ophiuchus,γ Oph,161868
+18,Marfic,Ophiuchus,Marfic,148857
+4,Betelgeuse,Orion,Betelgeuse,39801
+5,Rigel,Orion,Rigel,34085
+6,Bellatrix,Orion,Bellatrix,35468
+7,Alnilam,Orion,Alnilam,37128
+8,Zeta Orionis,Orion,ζ Ori,Manual
+9,Saif,Orion,Saif,35411
+10,Delta Orionis,Orion,δ Ori,Manual
+11,Iota Orionis,Orion,ι Ori,37043
+12,Pi-3 Orionis,Orion,π3 Ori,30652
+13,Eta Orionis,Orion,η Ori,35411
+14,Lambda Orionis,Orion,λ Ori,Manual
+15,Pi-4 Orionis,Orion,π4 Ori,30836
+16,Sigma Orionis,Orion,σ Ori,Manual
+17,Pi-5 Orionis,Orion,π5 Ori,31237
+18,Omicron-2 Orionis,Orion,ο2 Ori,31421
+19,Mu Orionis,Orion,μ Ori,40932
+20,Pi-2 Orionis,Orion,π2 Ori,30739
+21,Chi-1 Orionis,Orion,χ1 Ori,39587
+22,Nu Orionis,Orion,ν Ori,41753
+23,Xi Orionis,Orion,ξ Ori,42560
+24,Thabit,Orion,Thabit,36512
+25,Chi-2 Orionis,Orion,χ2 Ori,41117
+26,Pi-1 Orionis,Orion,π1 Ori,31295
+27,Pi-6 Orionis,Orion,π6 Ori,31767
+28,Omicron-1 Orionis,Orion,ο1 Ori,30959
+1,Peacock,Pavo,Peacock,193924
+2,Beta Pavonis,Pavo,β Pav,197051
+3,Delta Pavonis,Pavo,δ Pav,190248
+4,Eta Pavonis,Pavo,η Pav,160635
+5,Epsilon Pavonis,Pavo,ε Pav,188228
+6,Lambda Pavonis,Pavo,λ Pav,173948
+7,Zeta Pavonis,Pavo,ζ Pav,171759
+8,Gamma Pavonis,Pavo,γ Pav,203608
+9,Pi Pavonis,Pavo,π Pav,165040
+10,Kappa Pavonis,Pavo,κ Pav,174694
+11,Xi Pavonis,Pavo,ξ Pav,168339
+2,Enif,Pegasus,Enif,206778
+3,Beta Pegasi,Pegasus,β Peg,217906
+4,Alpha Pegasi,Pegasus,α Peg,218045
+5,Gamma Pegasi,Pegasus,γ Peg,886
+6,Matar,Pegasus,Matar,215182
+7,Homam,Pegasus,Homam,214923
+8,Sadalbari,Pegasus,Sadalbari,216131
+9,Baham,Pegasus,Baham,210418
+10,Iota Pegasi,Pegasus,ι Peg,210027
+11,Lambda Pegasi,Pegasus,λ Peg,215665
+12,Jih,Pegasus,Jih,206901
+13,Pi-1 Pegasi,Pegasus,π1 Peg,210354
+14,Salm,Pegasus,Salm,220061
+3,Mirphak,Perseus,Mirphak,20902
+4,Algol,Perseus,Algol,19356
+5,Zeta Persei,Perseus,ζ Per,24398
+6,Epsilon Persei,Perseus,ε Per,24760
+7,Gamma Persei,Perseus,γ Per,Manual
+8,Delta Persei,Perseus,δ Per,22928
+9,Gorgonea Tertia,Perseus,Gorgonea Tertia,19058
+10,Nu Persei,Perseus,ν Per,23230
+11,Miram,Perseus,Miram,17506
+12,Kappa Persei,Perseus,κ Per,19476
+13,Omicron Persei,Perseus,ο Per,23180
+14,Tau Persei,Perseus,τ Per,Manual
+15,Xi Persei,Perseus,ξ Per,24912
+16,Iota Persei,Perseus,ι Per,19373
+17,Mu Persei,Perseus,μ Per,26630
+18,Theta Persei,Perseus,θ Per,16895
+19,Lambda Persei,Perseus,λ Per,25642
+20,Omega Persei,Perseus,ω Per,19656
+21,Gorgonea Secunda,Perseus,Gorgonea Secunda,18411
+1,Ankaa,Phoenix,Ankaa,2261
+2,Beta Phoenicis,Phoenix,β Phe,6595
+3,Gamma Phoenicis,Phoenix,γ Phe,9053
+4,Epsilon Phoenicis,Phoenix,ε Phe,496
+5,Delta Phoenicis,Phoenix,δ Phe,9362
+6,Kappa Phoenicis,Phoenix,κ Phe,2262
+7,Zeta Phoenicis,Phoenix,ζ Phe,6882
+8,Eta Phoenicis,Phoenix,η Phe,4150
+9,Psi Phoenicis,Phoenix,ψ Phe,11695
+10,Mu Phoenicis,Phoenix,μ Phe,3919
+11,Iota Phoenicis,Phoenix,ι Phe,221760
+12,Lambda-1 Phoenicis,Phoenix,λ1 Phe,2834
+13,Nu Phoenicis,Phoenix,ν Phe,7570
+1,Alpha Pictoris,Pictor,α Pic,50241
+2,Beta Pictoris,Pictor,β Pic,39060
+3,Gamma Pictoris,Pictor,γ Pic,39523
+4,Delta Pictoris,Pictor,δ Pic,42933
+2,Eta Piscium,Pisces,η Psc,9270
+3,Gamma Piscium,Pisces,γ Psc,219615
+4,Alrischa,Pisces,Alrischa,12446
+5,Omega Piscium,Pisces,ω Psc,224617
+6,Iota Piscium,Pisces,ι Psc,222368
+7,Omicron Piscium,Pisces,ο Psc,10761
+8,Theta Piscium,Pisces,θ Psc,220954
+9,Epsilon Piscium,Pisces,ε Psc,6186
+10,Delta Piscium,Pisces,δ Psc,4656
+11,Nu Piscium,Pisces,ν Psc,10380
+12,Lambda Piscium,Pisces,λ Psc,222603
+13,Tau Piscium,Pisces,τ Psc,7106
+14,Fum al Samakah,Pisces,Fum al Samakah,217891
+15,Xi Piscium,Pisces,ξ Psc,11559
+16,Chi Piscium,Pisces,χ Psc,7087
+17,Phi Piscium,Pisces,φ Psc,7318
+18,Upsilon Piscium,Pisces,υ Psc,7964
+19,Mu Piscium,Pisces,μ Psc,9138
+20,Kappa Piscium,Pisces,κ Psc,220825
+1,Fomalhaut,Piscis Austrinus,Fomalhaut,216956
+2,Epsilon Piscis Austrini,Piscis Austrinus,ε PsA,214748
+3,Delta Piscis Austrini,Piscis Austrinus,δ PsA,216763
+4,Beta Piscis Austrini,Piscis Austrinus,β PsA,213398
+5,Iota Piscis Austrini,Piscis Austrinus,ι PsA,206742
+6,Gamma Piscis Austrini,Piscis Austrinus,γ PsA,216336
+7,Mu Piscis Austrini,Piscis Austrinus,μ PsA,210049
+8,Tau Piscis Austrini,Piscis Austrinus,τ PsA,210302
+9,Upsilon Piscis Austrini,Piscis Austrinus,υ PsA,210066
+10,Theta Piscis Austrini,Piscis Austrinus,θ PsA,207155
+4,Naos,Puppis,Naos,66811
+5,Tureis,Puppis,Tureis,67523
+6,Turais,Puppis,Turais,80404
+7,Tau Puppis,Puppis,τ Pup,50310
+8,Nu Puppis,Puppis,ν Pup,47670
+9,Sigma Puppis,Puppis,σ Pup,59717
+10,Azmidiske,Puppis,Azmidiske,63700
+1,Alpha Pyxidis,Pyxis,α Pyx,74575
+2,Beta Pyxidis,Pyxis,β Pyx,74006
+3,Gamma Pyxidis,Pyxis,γ Pyx,75691
+4,Kappa Pyxidis,Pyxis,κ Pyx,78541
+5,Lambda Pyxidis,Pyxis,λ Pyx,81169
+6,Theta Pyxidis,Pyxis,θ Pyx,80874
+7,Zeta Pyxidis,Pyxis,ζ Pyx,73898
+8,Delta Pyxidis,Pyxis,δ Pyx,76483
+1,Alpha Reticuli,Reticulum,α Ret,27256
+2,Beta Reticuli,Reticulum,β Ret,23817
+3,Epsilon Reticuli,Reticulum,ε Ret,27442
+4,Gamma Reticuli,Reticulum,γ Ret,25705
+5,Delta Reticuli,Reticulum,δ Ret,25422
+6,Kappa Reticuli,Reticulum,κ Ret,22001
+7,Iota Reticuli,Reticulum,ι Ret,25728
+2,Gamma Sagittae,Sagitta,γ Sge,189319
+3,Delta Sagittae,Sagitta,δ Sge,187076
+4,Alpha Sagittae,Sagitta,α Sge,185758
+5,Beta Sagittae,Sagitta,β Sge,185958
+16,Kaus Australis,Sagittarius,Kaus Australis,169022
+17,Nunki,Sagittarius,Nunki,175191
+18,Ascella,Sagittarius,Ascella,176687
+19,Kaus Media,Sagittarius,Kaus Media,168454
+20,Kaus Borealis,Sagittarius,Kaus Borealis,169916
+21,Pi Sagittarii,Sagittarius,π Sgr,178524
+22,Alnasl,Sagittarius,Alnasl,165135
+23,Eta Sagittarii,Sagittarius,η Sgr,167618
+24,Phi Sagittarii,Sagittarius,φ Sgr,173300
+25,Tau Sagittarii,Sagittarius,τ Sgr,177716
+26,Omicron Sagittarii,Sagittarius,ο Sgr,177241
+27,Polis,Sagittarius,Polis,166937
+28,Rho-1 Sagittarii,Sagittarius,ρ1 Sgr,181577
+29,Arkab Prior,Sagittarius,Arkab Prior,181454
+30,Rukbat,Sagittarius,Rukbat,181869
+31,Iota Sagittarii,Sagittarius,ι Sgr,188114
+32,Arkab Posterior,Sagittarius,Arkab Posterior,181623
+33,Theta-1 Sagittarii,Sagittarius,θ1 Sgr,189103
+34,Omega Sagittarii,Sagittarius,ω Sgr,188376
+35,Nu-1 Sagittarii,Sagittarius,ν1 Sgr,174974
+5,Antares,Scorpius,Antares,148479
+6,Shaula,Scorpius,Shaula,158926
+7,Sargas,Scorpius,Sargas,159532
+8,Dschubba,Scorpius,Dschubba,143275
+9,Wei,Scorpius,Wei,151680
+10,Girtab,Scorpius,Girtab,160578
+11,Acrab,Scorpius,Acrab,144217
+12,Lesath,Scorpius,Lesath,158408
+13,Sigma Scorpii,Scorpius,σ Sco,147165
+14,Sigma Scorpii,Scorpius,σ Sco,147165
+15,Pi Scorpii,Scorpius,π Sco,143018
+16,Apollyon,Scorpius,Apollyon,161471
+17,Mu-1 Scorpii,Scorpius,μ1 Sco,151890
+18,Eta Scorpii,Scorpius,η Sco,155203
+19,Mu-2 Scorpii,Scorpius,μ2 Sco,151985
+20,Rho Scorpii,Scorpius,ρ Sco,142669
+21,Nu Scorpii,Scorpius,ν Sco,145502
+22,Graffias,Scorpius,Graffias,144217
+1,Alpha Sculptoris,Sculptor,α Scl,5737
+2,Beta Sculptoris,Sculptor,β Scl,221507
+3,Gamma Sculptoris,Sculptor,γ Scl,219784
+4,Delta Sculptoris,Sculptor,δ Scl,223352
+5,Eta Sculptoris,Sculptor,η Scl,2429
+3,Alpha Scuti,Scutum,α Sct,171443
+4,Beta Scuti,Scutum,β Sct,173764
+5,Delta Scuti,Scutum,δ Sct,172748
+6,Gamma Scuti,Scutum,γ Sct,170296
+7,Zeta Scuti,Scutum,ζ Sct,169156
+8,Epsilon Scuti,Scutum,ε Sct,173009
+3,Unukalhai,Serpens,Unukalhai,140573
+4,Eta Serpentis,Serpens,η Ser,168723
+5,Mu Serpentis,Serpens,μ Ser,141513
+6,Xi Serpentis,Serpens,ξ Ser,159876
+7,Beta Serpentis,Serpens,β Ser,141003
+8,Epsilon Serpentis,Serpens,ε Ser,141795
+9,Delta Serpentis,Serpens,δ Ser,141795
+10,Gamma Serpentis,Serpens,γ Ser,142860
+11,Kappa Serpentis,Serpens,κ Ser,141477
+12,Nu Serpentis,Serpens,ν Ser,156928
+13,Lambda Serpentis,Serpens,λ Ser,141004
+14,Iota Serpentis,Serpens,ι Ser,140159
+15,Alya,Serpens,Alya,175638
+1,Alpha Sextantis,Sextans,α Sex,87887
+2,Beta Sextantis,Sextans,β Sex,90994
+3,Gamma Sextantis,Sextans,γ Sex,85558
+4,Delta Sextantis,Sextans,δ Sex,90882
+3,Aldebaran,Taurus,Aldebaran,29139
+4,Beta Tauri,Taurus,β Tau,35497
+5,Alcyone,Taurus,Alcyone,23607
+6,Zeta Tauri,Taurus,ζ Tau,37202
+7,Lambda Tauri,Taurus,λ Tau,25204
+8,Epsilon Tauri,Taurus,ε Tau,28305
+9,Gamma Tauri,Taurus,γ Tau,27371
+10,Xi Tauri,Taurus,ξ Tau,21364
+11,Hyadum II,Taurus,Hyadum II,27697
+12,Theta Tauri,Taurus,θ Tau,Manual
+13,Nu Tauri,Taurus,ν Tau,25490
+14,Tau Tauri,Taurus,τ Tau,29763
+15,Mu Tauri,Taurus,μ Tau,26912
+16,Omicron Tauri,Taurus,ο Tau,21120
+1,Alpha Telescopii,Telescopium,α Tel,169467
+2,Zeta Telescopii,Telescopium,ζ Tel,169767
+3,Epsilon Telescopii,Telescopium,ε Tel,166063
+4,Lambda Telescopii,Telescopium,λ Tel,175510
+5,Xi Telescopii,Telescopium,ξ Tel,190421
+6,Iota Telescopii,Telescopium,ι Tel,184127
+2,Beta Trianguli,Triangulum,β Tri,13161
+3,Mothalla,Triangulum,Mothalla,11443
+4,Gamma Trianguli,Triangulum,γ Tri,14055
+5,Delta Trianguli,Triangulum,δ Tri,13974
+1,Atria,Triangulum Australe,Atria,150798
+2,Betria,Triangulum Australe,Betria,141891
+3,Gatria,Triangulum Australe,Gatria,135382
+4,Delta Triangulum Australis,Triangulum Australe,δ TrA,145544
+5,Epsilon Triangulum Australis,Triangulum Australe,ε TrA,138538
+1,Alpha Tucanae,Tucana,α Tuc,211416
+2,Gamma Tucanae,Tucana,γ Tuc,219571
+3,Zeta Tucanae,Tucana,ζ Tuc,1581
+4,Beta Tucanae,Tucana,β Tuc,Manual
+5,Epsilon Tucanae,Tucana,ε Tuc,224686
+6,Delta Tucanae,Tucana,δ Tuc,212581
+7,Nu Tucanae,Tucana,ν Tuc,213442
+8,Eta Tucanae,Tucana,η Tuc,224392
+8,Alioth,Ursa Major,Alioth,112185
+9,Dubhe,Ursa Major,Dubhe,95689
+10,Alkaid,Ursa Major,Alkaid,120315
+11,Mizar,Ursa Major,Mizar,116656
+12,Merak,Ursa Major,Merak,95418
+13,Phad,Ursa Major,Phad,103287
+14,Psi Ursae Majoris,Ursa Major,ψ UMa,96833
+15,Iota Ursae Majoris,Ursa Major,ι UMa,76644
+16,Theta Ursae Majoris,Ursa Major,θ UMa,82328
+17,Megrez,Ursa Major,Megrez,106591
+18,Omicron Ursae Majoris,Ursa Major,ο UMa,71369
+19,Tania Borealis,Ursa Major,Tania Borealis,89021
+20,Nu Ursae Majoris,Ursa Major,ν UMa,98262
+21,Tania Australis,Ursa Major,Tania Australis,89758
+22,Kappa Ursae Majoris,Ursa Major,κ UMa,77327
+23,Chi Ursae Majoris,Ursa Major,χ UMa,102224
+24,Upsilon Ursae Majoris,Ursa Major,υ UMa,84999
+25,Xi Ursae Majoris,Ursa Major,ξ UMa,98231
+26,Alcor,Ursa Major,Alcor,116842
+1,Polaris,Ursa Minor,Polaris,8890
+2,Beta Ursae Minoris,Ursa Minor,β UMi,131873
+3,Gamma Ursae Minoris,Ursa Minor,γ UMi,137422
+4,Epsilon Ursae Minoris,Ursa Minor,ε UMi,153751
+5,Zeta Ursae Minoris,Ursa Minor,ζ UMi,142105
+6,Yildun,Ursa Minor,Yildun,166205
+7,Anwar al Farkadain,Ursa Minor,Anwar al Farkadain,148048
+1,Gamma Velorum,Vela,γ Vel,68243
+2,Koo She,Vela,Koo She,74956
+3,Lambda Velorum,Vela,λ Vel,78647
+4,Kappa Velorum,Vela,κ Vel,81188
+5,Mu Velorum,Vela,μ Vel,93497
+6,Phi Velorum,Vela,φ Vel,86440
+7,Psi Velorum,Vela,ψ Vel,Manual
+12,Spica,Virgo,Spica,116658
+13,Porrima,Virgo,Porrima,110379
+14,Vindemiatrix,Virgo,Vindemiatrix,113226
+15,Heze,Virgo,Heze,118098
+16,Auva,Virgo,Auva,112300
+17,Zavijava,Virgo,Zavijava,102870
+18,Rijl al Awwa,Virgo,Rijl al Awwa,129502
+19,Zaniah,Virgo,Zaniah,107259
+20,Syrma,Virgo,Syrma,124850
+1,Beta Volantis,Volans,β Vol,71878
+2,Gamma Volantis,Volans,γ Vol,Manual
+3,Zeta Volantis,Volans,ζ Vol,63295
+4,Delta Volantis,Volans,δ Vol,57623
+5,Alpha Volantis,Volans,α Vol,78045
+6,Epsilon Volantis,Volans,ε Vol,68520
+2,Anser,Vulpecula,Anser,183439
+3,23 Vulpeculae,Vulpecula,23 Vul,192806
+4,13 Vulpeculae,Vulpecula,13 Vul,188260
+5,31 Vulpeculae,Vulpecula,31 Vul,198809
+6,15 Vulpeculae,Vulpecula,15 Vul,189849
+7,1 Vulpeculae,Vulpecula,1 Vul,180554

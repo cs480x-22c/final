@@ -60,6 +60,7 @@ pathkey_df = pd.concat(pathkey_dfs)
 messier = []
 for i in range(1, 110 + 1):
     messier.append("M" + str(i))
+messier.append("Large Magellanic Cloud")
 not_messier = pathkey_df["Designation"].apply(lambda x: x not in messier)
 pathkey_df = pathkey_df[not_messier]
 
