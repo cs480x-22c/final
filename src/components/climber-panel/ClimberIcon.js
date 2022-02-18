@@ -16,7 +16,7 @@ export default class ClimberIcon extends React.Component
     {
         return (
             <div className="climber-icon-container" onClick={this.selectClimber.bind(this)}>
-                <img className="climber-icon" src="../climber-images/colby_frechette.jpg"/>
+                <img className="climber-icon" src="./climber-images/colby_frechette.jpg"/>
                 <h4 className="disable-select">{this.props.climber.firstName}</h4>
             </div>
         )

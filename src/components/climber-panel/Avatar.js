@@ -11,7 +11,7 @@ export default class Avatar extends React.Component
     {
         return (
             <div className="avatarContainer">
-                <img className="avatar" src="../climber-images/colby_frechette.jpg"/>
+                <img className="avatar" src="./climber-images/colby_frechette.jpg"/>
             </div>
         )
     }
