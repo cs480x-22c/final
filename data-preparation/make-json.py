@@ -10,6 +10,7 @@ def convertToLon(n, constellation):
     return data.iloc[0].Lon
 
 def convertToLat(n, constellation):
+    print(n, constellation)
     constellationData = mappings[mappings["Constellation"] == constellation]
     data = constellationData.loc[constellationData["Number"] == n]
     return data.iloc[0].Lat
@@ -52,4 +53,4 @@ paths["StartLon"] = paths.apply(lambda x: convertToLon(x["Start"], x["Name"]), a
 paths["EndLat"] = paths.apply(lambda x: convertToLat(x["End"], x["Name"]), axis=1)
 paths["EndLon"] = paths.apply(lambda x: convertToLon(x["End"], x["Name"]), axis=1)
 
-makeGeoJSON("stars.geojson", names.Name)
+makeGeoJSON("star.geojson", names.Name)

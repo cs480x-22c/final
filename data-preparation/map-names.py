@@ -50,6 +50,7 @@ def convertName(name, constellation):
 
 #find HD catalogue number
 def search(name, name_converted, constellation):
+    print(name)
     #search if name matches official name
     searchNameResult = stars.loc[stars["Name"] == name_converted]
     #search if name is listed in notes
@@ -64,6 +65,10 @@ def search(name, name_converted, constellation):
         filterByConstellation = manual_HD.loc[manual_HD["Constellation"] == constellation]
         searchHD = filterByConstellation.loc[filterByConstellation["Name"] == name]
         return searchHD.iloc[0].HD
+       
+#add manual pathnums
+manual_pathnums = pd.read_csv("helper-csvs/manual_pathnums.csv")
+pathnums = pd.concat([pathnums, manual_pathnums])
        
 pathnums["Name"] = pathnums.apply(lambda x: replace(x["Name"], x["Constellation"]), axis=1)
 pathnums["Name_Converted"] = pathnums.apply(lambda x: convertName(x["Name"], x["Constellation"]), axis=1)

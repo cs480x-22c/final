@@ -51,7 +51,8 @@ names = pd.read_csv("helper-csvs/names.csv")
 for name in names.Name:
     print(name)
     star_dfs.append(scrape(name))
-    pathnums_dfs.append(scrape2(name))
+    if name != "Norma": #norma is wrong
+        pathnums_dfs.append(scrape2(name))
 
 star_df = pd.concat(star_dfs)
 pathnums_df = pd.concat(pathnums_dfs)
