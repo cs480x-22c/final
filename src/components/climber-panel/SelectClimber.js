@@ -6,18 +6,10 @@ export default class SelectClimber extends React.Component
     constructor(props)
     {
         super(props)
-        this.state= {climbers: [{firstName: 'travis', lastName: 'thompson'},
-                                {firstName: 'bravis', lastName: 'thompson'},
-                                {firstName: 'dravis', lastName: 'thompson'},
-                                {firstName: 'cravis', lastName: 'thompson'},
-                                {firstName: 'aravis', lastName: 'thompson'},
-                                {firstName: 'pravis', lastName: 'thompson'},
-                                {firstName: 'lravis', lastName: 'thompson'}]}
     }
 
     getClimberIcons(climbers)
     {
-        console.log(this.props)
         let icons = []
         for(let i = 0; i < climbers.length; i++)
         {
@@ -31,7 +23,7 @@ export default class SelectClimber extends React.Component
         return (
             <div className="climber-panel">
                 <div className="climber-select">
-                    {this.getClimberIcons(this.state.climbers)}
+                    {this.getClimberIcons(this.props.climbers)}
                 </div>
             </div>
         )

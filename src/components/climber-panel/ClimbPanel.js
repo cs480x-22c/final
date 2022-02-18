@@ -8,16 +8,12 @@ export default class ClimbPanel extends React.Component
     {
         super(props)
         this.state = {
-            climber: {
-                firstName: "colby",
-                lastName: "frechette"
-            }
+            climber: this.props.climbers[this.props.reversed ? 1 : 0]
         }
     }
 
     setClimber(newClimber)
     {
-        console.log("set")
         this.setState({
             climber: newClimber
         })
@@ -25,12 +21,13 @@ export default class ClimbPanel extends React.Component
 
     render()
     {
+        console.log(this.props)
         if(this.props.reversed)
         {
             return (
                 <div className="climb-panel">
                     <Route climber={this.state.climber} />
-                    <ClimberPanel climber={this.state.climber} setClimber={this.setClimber.bind(this)}/>
+                    <ClimberPanel climber={this.state.climber} climbers={this.props.climbers} setClimber={this.setClimber.bind(this)}/>
                 </div>
             )
         }
@@ -38,7 +35,7 @@ export default class ClimbPanel extends React.Component
         {
             return (
                 <div className="climb-panel">
-                    <ClimberPanel climber={this.state.climber} setClimber={this.setClimber.bind(this)}/>
+                    <ClimberPanel climber={this.state.climber} climbers={this.props.climbers} setClimber={this.setClimber.bind(this)}/>
                     <Route climber={this.state.climber} />
                 </div>
             )

@@ -32,7 +32,7 @@ export default class ClimberPanel extends React.Component
     {
         if(this.state.selectingClimber)
         {
-            return <SelectClimber setClimber={this.setClimber.bind(this)}/>
+            return <SelectClimber climbers={this.props.climbers} setClimber={this.setClimber.bind(this)}/>
         }
         else {
             return (
@@ -42,7 +42,7 @@ export default class ClimberPanel extends React.Component
                         <h1>{this.props.climber.lastName}</h1>
                     </div>
                     
-                    <Avatar/>
+                    <Avatar climber={this.props.climber}/>
     
                     <div className="change-climber-button-container">
                         <button className="change-climber-button" onClick={this.openClimberSelect.bind(this)}>Change Climber</button>
