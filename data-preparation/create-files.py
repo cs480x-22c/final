@@ -53,4 +53,14 @@ paths["StartLon"] = paths.apply(lambda x: convertToLon(x["Start"], x["Name"]), a
 paths["EndLat"] = paths.apply(lambda x: convertToLat(x["End"], x["Name"]), axis=1)
 paths["EndLon"] = paths.apply(lambda x: convertToLon(x["End"], x["Name"]), axis=1)
 
-makeGeoJSON("star.geojson", names.Name)
+makeGeoJSON("paths.geojson", names.Name)
+
+#get stars that are used in paths
+start_df = paths[["Name", "Start"]]
+start_df.rename(columns={"Start": "Number", "Name": "Constellation"}, inplace=True)
+end_df = paths[["Name", "End"]]
+end_df.rename(columns={"End": "Number", "Name": "Constellation"}, inplace=True)
+nums_used = pd.concat([start_df, end_df])
+nums_used.drop_duplicates(subset=["Constellation", "Number"], inplace=True)
+stars = nums_used.merge(mappings, on=["Constellation", "Number"])
+stars.to_csv("../stars.csv", index=False)
