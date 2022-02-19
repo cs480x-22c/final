@@ -1,109 +1,113 @@
 Name,Constellation,Name_Converted
-Acrux,Crux,Alpha Crucis
-Ain,Taurus,Epsilon Tauri
-Ain al Rami,Sagittarius,Nu-1 Sagittarii
-Akhfa al Farkadain,Ursa Minor,Zeta Ursae Minoris
-Alrai,Cepheus,Gamma Cephei
-Al Sharas,Crater,Beta Crateris
 Al Thalimain,Aquila,Iota Aquilae
-Albaldah,Sagittarius,Pi Sagittarii
-Albireo,Cygnus,Beta Cygni
-Aldhanab,Grus,Gamma Gruis
-Algenib,Pegasus,Gamma Pegasi
-Algiebra,Leo,Gamma Leonis
-Algiedi Prima,Capricornus,Alpha-1 Capricorni
-Algiedi Secunda,Capricornus,Alpha-2 Capricorni
-Alhakim,Centaurus,Iota Centauri
-Alkurhah,Cepheus,Xi Cephei
-Alnitak,Orion,Zeta Orionis
-Alniyat,Scorpius,Sigma Scorpii
-Altarf,Cancer,Beta Cancri
-Alzirr,Gemini,Xi Geminorum
-Asellus Secondus,Boötes,Iota Boötis
-Atia,Hercules,Omicron Herculis
-Atik,Perseus,Omicron Persei
-Aula Australis,Ursa Major,Xi Ursae Majoris
-Aula Borealis,Ursa Major,Nu Ursae Majoris
-Batentaban Borealis,Draco,Chi Draconis
 Bezek,Aquila,Eta Aquilae
-Canopis,Carina,Canopus
-Castor,Gemini,Alpha Geminorum
-Decrux,Crux,Delta Crucis
 Deneb el Okab Australis,Aquila,Zeta Aquilae
 Deneb el Okab Borealis,Aquila,Epsilon Aquilae
-Dheneb Algenubi,Cetus,Eta Ceti
-Elnath,Taurus,Beta Tauri
-Gamma Ophichi,Ophiucus,Gamma Ophiuchi
-Ghusn al Zaitun,Columba,Delta Columbae
-Gienah,Cygnus,Epsilon Cygni
-Gienah,Corvus,Gamma Corvi
-Gorgonea Quata,Perseus,Omega Persei
-Gruid,Grus,Beta Gruis
-Hadar,Centaurus,Beta Centauri
-Hadir,Puppis,Sigma Puppis
 Haedus,Auriga,Eta Aurigae
-Herschel's Garnet Star,Cepheus,Mu Cephei
-Hyadum I,Taurus,Gamma Tauri
-Ionnina,Scutum,Alpha Scuti
-Jabbah,Scorpius,Nu Scorpii
-Kajam,Hercules,Omega Herculis
-Kallat Nunu,Pisces,Eta Piscium
-Kappa Ophichi,Ophiucus,Kappa Ophichi
-Ke Kwan,Centaurus,Kappa Centauri
-Kocab,Ursa Minor,Beta Ursae Minoris
-Kuma,Draco,Nu Draconis
-Labrum,Crater,Delta Crateris
-Ma Wei,Centaurus,Delta Centauri
+Prijipati,Auriga,Delta Aurigae
+Asellus Secondus,Boötes,Iota Boötis
+Nadlat,Boötes,Psi Boötis
+Altarf,Cancer,Beta Cancri
+Tegmen,Cancer,Zeta Cancri
+Muliphen,Canis Major,Gamma Canis Majoris
+Sirius,Canis Major,Alpha Canis Majoris
+Algiedi Prima,Capricornus,Alpha-1 Capricorni
+Algiedi Secunda,Capricornus,Alpha-2 Capricorni
+Omega Algiedi,Capricornus,Omega Capricorni
+Canopis,Carina,Canopus
 Marfak,Cassiopeia,Theta Cassiopeiae
+Navi,Cassiopeia,Gamma Cassiopeiae
+Ruchbah,Cassiopeia,Delta Cassiopeiae
+Segin,Cassiopeia,Epsilon Cassiopeiae
+Shedar,Cassiopeia,Alpha Cassiopeiae
+Alhakim,Centaurus,Iota Centauri
+Hadar,Centaurus,Beta Centauri
+Ke Kwan,Centaurus,Kappa Centauri
+Ma Wei,Centaurus,Delta Centauri
+Rigel Kentaurus,Centaurus,Alpha Centauri A
+Alrai,Cepheus,Gamma Cephei
+Alkurhah,Cepheus,Xi Cephei
+Herschel's Garnet Star,Cepheus,Mu Cephei
+Dheneb Algenubi,Cetus,Eta Ceti
+Menkar,Cetus,Alpha Ceti
+Ghusn al Zaitun,Columba,Delta Columbae
+Gienah,Corvus,Gamma Corvi
+Minkar,Corvus,Epsilon Corvi
+Al Sharas,Crater,Beta Crateris
+Labrum,Crater,Delta Crateris
+Acrux,Crux,Alpha Crucis
+Decrux,Crux,Delta Crucis
+Albireo,Cygnus,Beta Cygni
+Gienah,Cygnus,Epsilon Cygni
+Ruchba,Cygnus,Omega-2 Cygni
+Rukh,Cygnus,Delta Cygni
+Sadr,Cygnus,Gamma Cygni
+Batentaban Borealis,Draco,Chi Draconis
+Kuma,Draco,Nu Draconis
+Rastaban,Draco,Beta Draconis
+Rana,Eridanus,Delta Eridani
+Sadira,Eridanus,Epsilon Eridani
+Theemim,Eridanus,Upsilon-2 Eridani
+Zaurak,Eridanus,Gamma Eridani
+Alzirr,Gemini,Xi Geminorum
+Castor,Gemini,Alpha Geminorum
+Propus,Gemini,Iota Geminorum
+Wasat,Gemini,Delta Geminorum
+Aldhanab,Grus,Gamma Gruis
+Gruid,Grus,Beta Gruis
+Atia,Hercules,Omicron Herculis
+Kajam,Hercules,Omega Herculis
 Marfak Al Jathih Aisr,Hercules,Mu Herculis
 Marfik,Hercules,Kappa Herculis
-Markab,Pegasus,Alpha Pegasi
-Markeb,Vela,Kappa Velorum
-Meissa,Orion,Lambda Orionis
-Men,Lupus,Alpha Lupi
-Menkar,Cetus,Alpha Ceti
-Menkib,Perseus,Xi Persei
-Minkar,Corvus,Epsilon Corvi
-Mintaka,Orion,Delta Orionis
-Misam,Perseus,Kappa Persei
-Muliphen,Canis Major,Gamma Canis Majoris
-Muscida,Ursa Major,Omicron Ursae Majoris
-Nadlat,Boötes,Psi Boötis
-Nair al Saif,Orion,Iota Orionis
-Navi,Cassiopeia,Gamma Cassiopeiae
-Neshmet,Lepus,Mu Leporis
-Omega Algiedi,Capricornus,Omega Capricorni
-Pherkad,Ursa Minor,Gamma Ursae Minoris
-Praecipua,Leo Minor,46 Leonis Minoris
-Prijipati,Auriga,Delta Aurigae
-Propus,Gemini,Eta Geminorum
-Rana,Eridanus,Delta Eridani
-Rastaban,Draco,Beta Draconis
-Rigel Kentaurus,Centaurus,Alpha Centauri A
-Ruchba,Cygnus,Omega-2 Cygni
-Ruchbah,Cassiopeia,Delta Cassiopeiae
-Rukh,Cygnus,Delta Cygni
-Sadalpheris,Pegasus,Lambda Pegasi
-Sadira,Eridanus,Epsilon Eridani
-Sadr,Cygnus,Gamma Cygni
-Sasin,Lepus,Epsilon Leporis
-Scheat,Pegasus,Beta Pegasi
-Segin,Cassiopeia,Epsilon Cassiopeiae
-Sephdar,Sagittarius,Eta Sagittarii
-Sham,Sagitta,Alpha Sagittae
-Shedar,Cassiopeia,Alpha Cassiopeiae
-Sirius,Canis Major,Alpha Canis Majoris
 Sophian,Hercules,Eta Herculis
-Suhail,Vela,Lambda Velorum
-Suhail al Muhlif,Vela,Gamma Velorum
-Talitha,Ursa Major,Iota Ursae Majoris
-Tegmen,Cancer,Zeta Cancri
+Theta Hydrae,Hydra,Upsilon-2 Hydrae
 The Persian,Indus,Alpha Indi
-Theemim,Eridanus,Upsilon-2 Eridani
-Theta Ophichi,Ophiucus,Theta Ophiuchi
-Tseen Kee,Vela,Phi Velorum
-Wasat,Gemini,Delta Geminorum
-Zaurak,Eridanus,Gamma Eridani
+Algiebra,Leo,Gamma Leonis
+Praecipua,Leo Minor,46 Leonis Minoris
+Neshmet,Lepus,Mu Leporis
+Sasin,Lepus,Epsilon Leporis
 Zuben Elakrab,Libra,Gamma Librae
 Zuben Elgenubi,Libra,Alpha Librae
 Zuben Elschemali,Libra,Beta Librae
+Men,Lupus,Alpha Lupi
+Gamma Ophichi,Ophiucus,Gamma Ophiuchi
+Kappa Ophichi,Ophiucus,Kappa Ophichi
+Theta Ophichi,Ophiucus,Theta Ophiuchi
+Alnitak,Orion,Zeta Orionis
+Meissa,Orion,Lambda Orionis
+Mintaka,Orion,Delta Orionis
+Nair al Saif,Orion,Iota Orionis
+Saif,Orion,Saiph
+Algenib,Pegasus,Gamma Pegasi
+Markab,Pegasus,Alpha Pegasi
+Sadalpheris,Pegasus,Lambda Pegasi
+Scheat,Pegasus,Beta Pegasi
+Atik,Perseus,Omicron Persei
+Gorgonea Quata,Perseus,Omega Persei
+Menkib,Perseus,Xi Persei
+Misam,Perseus,Kappa Persei
+Kallat Nunu,Pisces,Eta Piscium
+Hadir,Puppis,Sigma Puppis
+Tureis,Puppis,Pi Puppis
+Turais,Puppis,Rho Puppis
+Sham,Sagitta,Alpha Sagittae
+Ain al Rami,Sagittarius,Nu-1 Sagittarii
+Albaldah,Sagittarius,Pi Sagittarii
+Sephdar,Sagittarius,Eta Sagittarii
+Alniyat,Scorpius,Sigma Scorpii
+Jabbah,Scorpius,Nu Scorpii
+Ionnina,Scutum,Alpha Scuti
+Ain,Taurus,Epsilon Tauri
+Elnath,Taurus,Beta Tauri
+Hyadum I,Taurus,Gamma Tauri
+Aula Australis,Ursa Major,Xi Ursae Majoris
+Aula Borealis,Ursa Major,Nu Ursae Majoris
+Muscida,Ursa Major,Omicron Ursae Majoris
+Talitha,Ursa Major,Iota Ursae Majoris
+Akhfa al Farkadain,Ursa Minor,Zeta Ursae Minoris
+Kocab,Ursa Minor,Beta Ursae Minoris
+Pherkad,Ursa Minor,Gamma Ursae Minoris
+Markeb,Vela,Kappa Velorum
+Suhail,Vela,Lambda Velorum
+Suhail al Muhlif,Vela,Gamma Velorum
+Tseen Kee,Vela,Phi Velorum

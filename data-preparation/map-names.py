@@ -50,7 +50,7 @@ def convertName(name, constellation):
 
 #find HD catalogue number
 def search(name, name_converted, constellation):
-    print(name)
+    #print(name)
     #search if name matches official name
     searchNameResult = stars.loc[stars["Name"] == name_converted]
     #search if name is listed in notes
@@ -65,12 +65,12 @@ def search(name, name_converted, constellation):
         filterByConstellation = manual_HD.loc[manual_HD["Constellation"] == constellation]
         searchHD = filterByConstellation.loc[filterByConstellation["Name"] == name]
         return searchHD.iloc[0].HD
-       
+     
+pathnums["Name"] = pathnums.apply(lambda x: replace(x["Name"], x["Constellation"]), axis=1)
 #add manual pathnums
 manual_pathnums = pd.read_csv("helper-csvs/manual_pathnums.csv")
 pathnums = pd.concat([pathnums, manual_pathnums])
        
-pathnums["Name"] = pathnums.apply(lambda x: replace(x["Name"], x["Constellation"]), axis=1)
 pathnums["Name_Converted"] = pathnums.apply(lambda x: convertName(x["Name"], x["Constellation"]), axis=1)
 pathnums["HD"] = pathnums.apply(lambda x: search(x["Name"], x["Name_Converted"], x["Constellation"]), axis=1)
 pathnums["HD"] = pd.to_numeric(pathnums["HD"])
@@ -93,10 +93,6 @@ def raToDegree(ra):
     
     decimal = hours * 15 + minutes * 15 / 60 + seconds * 15 / 3600
     
-    #decimal = decimal + 180
-    #if decimal > 180:
-    #    decimal = decimal - 360
-    
     return -(decimal - 180)
 
 def decToDegree(dec):
@@ -114,6 +110,10 @@ def decToDegree(dec):
     decimal = degree + minutes / 60 + seconds / 3600
     
     return decimal
+
+#get manual path mappings
+manual_pathmappings = pd.read_csv("helper-csvs/manual_pathmappings.csv")
+mappings = pd.concat([mappings, manual_pathmappings])
 
 #convert to latitude and longitude
 mappings["Lon"] = mappings.RA.apply(lambda x: raToDegree(x))

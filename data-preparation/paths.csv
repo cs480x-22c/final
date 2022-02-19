@@ -283,6 +283,8 @@ Eridanus,19,6
 Eridanus,6,15
 Eridanus,15,26
 Eridanus,26,22
+Eridanus,22,33
+Eridanus,33,10
 Eridanus,10,27
 Eridanus,27,8
 Eridanus,8,5
@@ -318,6 +320,7 @@ Gemini,18,6
 Gemini,6,5
 Gemini,5,8
 Gemini,6,16
+Gemini,8,19
 Grus,7,4
 Grus,4,2
 Grus,2,5
@@ -362,6 +365,7 @@ Hydra,11,13
 Hydra,13,15
 Hydra,15,4
 Hydra,4,14
+Hydra,14,23
 Hydra,6,9
 Hydra,9,16
 Hydra,16,19
@@ -371,7 +375,6 @@ Hydra,20,8
 Hydra,10,21
 Hydra,21,22
 Hydra,22,7
-Hydra,14,23
 Hydra,23,6
 Hydrus,3,1
 Hydrus,1,5
@@ -517,6 +520,9 @@ Orion,9,8
 Orion,8,7
 Orion,7,10
 Orion,8,4
+Orion,8,16
+Orion,16,11
+Orion,11,24
 Pavo,1,8
 Pavo,8,2
 Pavo,2,3
@@ -540,6 +546,8 @@ Pegasus,4,7
 Pegasus,7,9
 Pegasus,9,2
 Pegasus,5,4
+Pegasus,5,15
+Pegasus,3,15
 Perseus,19,17
 Perseus,17,8
 Perseus,8,3
@@ -608,6 +616,10 @@ Puppis,8,7
 Puppis,7,9
 Puppis,9,4
 Puppis,4,5
+Puppis,6,11
+Puppis,11,10
+Puppis,10,12
+Puppis,12,5
 Pyxis,3,1
 Pyxis,1,2
 Reticulum,3,7
@@ -748,6 +760,8 @@ Vela,1,2
 Vela,2,4
 Vela,4,6
 Vela,6,5
+Vela,5,8
+Vela,7,8
 Virgo,18,20
 Virgo,20,15
 Virgo,15,13

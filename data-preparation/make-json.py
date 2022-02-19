@@ -10,7 +10,7 @@ def convertToLon(n, constellation):
     return data.iloc[0].Lon
 
 def convertToLat(n, constellation):
-    print(n, constellation)
+    #print(n, constellation)
     constellationData = mappings[mappings["Constellation"] == constellation]
     data = constellationData.loc[constellationData["Number"] == n]
     return data.iloc[0].Lat
