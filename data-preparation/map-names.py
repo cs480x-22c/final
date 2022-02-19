@@ -93,6 +93,10 @@ def raToDegree(ra):
     
     decimal = hours * 15 + minutes * 15 / 60 + seconds * 15 / 3600
     
+    #decimal = decimal + 180
+    #if decimal > 180:
+    #    decimal = decimal - 360
+    
     return -(decimal - 180)
 
 def decToDegree(dec):

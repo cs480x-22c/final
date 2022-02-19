@@ -10,9 +10,10 @@ Number,Constellation,Name
 5,Norma,Delta Normae
 4,Norma,Eta Normae
 7,Norma,Gamma-1 Normae
-5,Camelopardalis,BE Camelopardalis
-6,Camelopardalis,BN Camelopardalis
-7,Camelopardalis,7 Camelopardalis
+5,Camelopardalis,HD 49878
+6,Camelopardalis,HD 42818
+7,Camelopardalis,BE Camelopardalis
+8,Camelopardalis,7 Camelopardalis
 8,Cancer,Iota Cancri
 7,Dorado,HD 40409
 15,Centaurus,Rho Centauri
@@ -23,3 +24,38 @@ Number,Constellation,Name
 20,Centaurus,d Centauri
 9,Aries,HD 20644
 5,Leo Minor,30 Leonis Minoris
+7,Lacerta,11 Lacertae
+8,Lacerta,6 Lacertae
+9,Lacerta,HD 211073
+4,Circinus,Theta Circini
+21,Virgo,109 Virginis
+22,Virgo,Tau Virginis
+23,Virgo,Theta Virginis
+24,Virgo,Omicron Virginis
+25,Virgo,Nu Virginis
+27,Ursa Major,23 Ursae Majoris
+17,Taurus,17 Tauri
+16,Serpens,Mu Serpentis
+10,Carina,p Carinae
+11,Carina,V337 Carinae
+12,Carina,l Carinae
+26,Aquarius,88 Aquarii
+27,Aquarius,98 Aquarii
+28,Aquarius,104 Aquarii
+16,Auriga,Beta Tauri
+23,Scorpius,Zeta-2 Scorpii
+14,Phoenix,Theta Phoenicis
+15,Phoenix,Sigma Phoenicis
+20,Hydra,58 Hydrae
+21,Hydra,Beta Crateris
+22,Hydra,Alpha Crateris
+23,Hydra,Theta Hydrae
+28,Eridanus,Upsilon-3 Eridani
+29,Eridanus,Upsilon-4 Eridani
+30,Eridanus,HD 24160
+31,Eridanus,HD 22663
+32,Eridanus,82 G. Eri[3]
+1,Caelum,Alpha Caeli
+2,Caelum,Beta Caeli
+3,Caelum,Gamma-1 Caeli
+4,Caelum,Delta Caeli

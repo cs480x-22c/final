@@ -51,7 +51,7 @@ names = pd.read_csv("helper-csvs/names.csv")
 for name in names.Name:
     print(name)
     star_dfs.append(scrape(name))
-    if name != "Norma": #norma is wrong
+    if name != "Norma" and name != "Caelum": #incorrect data
         pathnums_dfs.append(scrape2(name))
 
 star_df = pd.concat(star_dfs)
