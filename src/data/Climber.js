@@ -21,17 +21,20 @@ class RouteMoves
         this.rightFoot = new Map()
         this.leftFoot = new Map()
 
-        this.leftHand.set(0, "001")
-        this.leftHand.set(3, "002")
-        this.leftHand.set(6, "003")
+        this.leftHand.set(0, "003")
+        this.leftHand.set(6, "")
+        this.leftHand.set(10, "006")
 
-        this.rightHand.set(0, "001")
-        this.rightHand.set(3, "002")
-        this.rightHand.set(6, "003")
+        this.rightHand.set(0, "003")
+        this.rightHand.set(5, "004")
+        this.rightHand.set(10, "")
+        this.rightHand.set(11, "006")
 
         this.leftFoot.set(0, "001")
+        this.leftFoot.set(5, "")
 
-        this.rightFoot.set(1, "002")
+        this.rightFoot.set(0, "002")
+        this.rightFoot.set(9, "005")
 
     }
 
@@ -39,7 +42,7 @@ class RouteMoves
     {
         return {
             leftHand: this.getHold(this.leftHand, time),
-            rightHand: this.getHold(this.rightFoot, time),
+            rightHand: this.getHold(this.rightHand, time),
             leftFoot: this.getHold(this.leftFoot, time),
             rightFoot: this.getHold(this.rightFoot, time),
         }

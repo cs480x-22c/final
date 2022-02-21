@@ -19,7 +19,7 @@ export default class PlayBar extends React.Component
             seconds: state.seconds + 1
         }))
 
-        if(this.state.seconds == this.props.totalSeconds)
+        if(this.state.seconds >= this.props.totalSeconds)
              this.endTimer()
 
         this.updateTime()
@@ -78,7 +78,8 @@ export default class PlayBar extends React.Component
         return (
             <div className="play-container">
                 <button className="play-button button" onClick={this.handleClick.bind(this)} >{this.state.playing ? "⏸" : '⏵'}</button>
-                <input className='play-bar' onChange={this.handleSlide.bind(this)} type="range" value={this.state.seconds} min='0' max='100'></input>
+                <input className='play-bar' onChange={this.handleSlide.bind(this)} type="range" value={this.state.seconds} min='0' max={this.props.totalSeconds}></input>
+                <h3 className="play-timestamp">{this.state.seconds}/{this.props.totalSeconds}</h3>
             </div>
         )
     }

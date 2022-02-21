@@ -34,7 +34,7 @@ export default class App extends React.Component
                     <ClimbPanel currentTime={this.state.currentTime} climbers={this.climbers}/>
                     <ClimbPanel currentTime={this.state.currentTime} climbers={this.climbers} reversed={true} />
                 </div>
-                <PlayBar setTime={this.setCurrentTime.bind(this)} totalSeconds={100}/>
+                <PlayBar setTime={this.setCurrentTime.bind(this)} totalSeconds={15}/>
             </div>
         )
         

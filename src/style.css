@@ -9,6 +9,14 @@ body,
     font-family: 'Arsenal', sans-serif;
 }
 
+@media screen and (max-width: 600px) {
+    html,
+    body,
+    #root {
+        font-size: 3px;
+    }
+}
+
 #app
 {
     display: flex;
@@ -19,7 +27,7 @@ body,
 
 #content
 {
-    height: 95%;
+    height: 93%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,6 +40,7 @@ body,
     margin: auto;
     border-radius: 1em;
     width: 50%;
+    align-items: center;
 }
 
 .play-button
@@ -39,7 +48,8 @@ body,
     border-radius: 1em;
     text-align: center;
     width: 2em;
-    height: 2em
+    height: 2em;
+    margin: 1em;
 }
 
 .play-bar
