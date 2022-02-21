@@ -49,7 +49,10 @@ function createMap(data, stars, rotation, svgID) {
         .attr('d', function (d) { return gpath(d); })
         .attr('stroke-width', 2)
         .attr('stroke', 'steelblue')
-        .attr('id', d => d.id);
+        .attr('id', d => d.id)
+        .on("mouseover", mouseOverConstellation)
+        .on("mouseout", mouseOffConstellation);
+
 
     // draw stars
     svg.selectAll('circle')
@@ -60,7 +63,9 @@ function createMap(data, stars, rotation, svgID) {
         .attr('cy', d => proj([d.Lon, d.Lat])[1])
         .attr("r", d => sizeScale(d.Mag))
         .attr('id', d => d.HD)
-        .attr("fill", "white");
+        .attr("fill", "#aaaaaa")
+        .on("mouseover", mouseOverStar)
+        .on("mouseout", mouseOffStar);
 
     //draw border
     svg.append("circle")
@@ -70,4 +75,53 @@ function createMap(data, stars, rotation, svgID) {
         .attr("stroke-width", 2)
         .attr("stroke", "white")
         .attr("fill", "none");
+
+
+    //glow effect?
+    //Container for the gradients
+var defs = svg.append("defs");
+
+//Filter for the outside glow
+var filter = defs.append("filter")
+    .attr("id","glow");
+filter.append("feGaussianBlur")
+    .attr("stdDeviation","3.5")
+    .attr("result","coloredBlur");
+var feMerge = filter.append("feMerge");
+feMerge.append("feMergeNode")
+    .attr("in","coloredBlur");
+feMerge.append("feMergeNode")
+    .attr("in","SourceGraphic");
+
+    d3.selectAll("path")
+    .style("filter", "url(#glow)");
+    //end glow
+
+    //functions for animations
+    function mouseOverStar() {
+        d3.select(this)
+        .transition().duration(300)
+        .attr('r', 5)
+        .style('fill', 'white');
+    }
+
+    function mouseOffStar() {
+        d3.select(this)
+        .transition().duration(300)
+        .attr('r', 5)
+        .style('fill', 'white');
+    }
+
+    function mouseOverConstellation() {
+        d3.select(this)
+        .transition().duration(200)
+        .style('stroke-width', '5')
+        .style('stroke', '#ddaa11');
+    }
+
+    function mouseOffConstellation() {
+        d3.select(this)
+        .transition().duration(200)
+        .style('stroke-width', '2')
+    }
 }
