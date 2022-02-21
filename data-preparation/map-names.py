@@ -50,7 +50,6 @@ def convertName(name, constellation):
 
 #find HD catalogue number
 def search(name, name_converted, constellation):
-    #print(name)
     #search if name matches official name
     searchNameResult = stars.loc[stars["Name"] == name_converted]
     #search if name is listed in notes

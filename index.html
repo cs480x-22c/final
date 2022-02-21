@@ -1,50 +1,7 @@
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
-<link href="style.css", rel="stylesheet">
+<link href="styles.css" , rel="stylesheet">
 
-<svg width=960 height=600>
-</svg>
+<div id="map-container"></div>
 
-<script>
-    Promise.all([
-        d3.json('paths.geojson'),
-        d3.csv('stars.csv')
-    ]).then(([data, stars]) => {
-        createMap(data, stars);
-    });
-
-    function createMap(data, stars) {
-        let proj = d3.geoBromley()
-        let gpath = d3.geoPath().projection(proj);
-
-        sizeScale = d3.scaleLinear()
-            .domain([6.07, -1.46]) // unit: km
-            .range([1, 5]) // unit: pixels
-
-        // draw constellation
-        d3.select('svg')
-            .append('g')
-            .attr('id', 'data')
-            .selectAll('path')
-            .data(data.features)
-            .enter()
-            .append('path')
-            .attr('d', function (d) { return gpath(d); })
-            .attr('stroke-width', 2)
-            .attr('stroke', 'steelblue')
-            .attr('id', d => d.id);
-
-        // draw constellation
-        d3.select('svg')
-            .append('g')
-            .selectAll('circle')
-            .data(stars)
-            .enter()
-            .append('circle')
-            .attr('cx', d => proj([d.Lon, d.Lat])[0])
-            .attr('cy', d => proj([d.Lon, d.Lat])[1])
-            .attr("r", d => sizeScale(d.Mag))
-            .attr('id', d => d.HD);
-    }
-
-</script>
+<script src="script.js"></script>
