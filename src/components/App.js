@@ -12,8 +12,8 @@ export default class App extends React.Component
         this.climbers = [
             new Climber("00000", "travis", 'thompson'),
             new Climber("00001", "colby", 'frechette'),
-            new Climber("00002", "jason", 'dykstra'),
-            new Climber("00002", "elliot", 'irving'),
+            new Climber("00002", "ben", 'mills'),
+            new Climber("00003", "elliot", 'irving'),
         ]
         this.state = {
             currentTime: 0
