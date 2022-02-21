@@ -2,6 +2,7 @@ import React from "react";
 import Climber from "../data/Climber";
 import ClimbPanel from "./climber-panel/ClimbPanel";
 import InfoPane from "./information/InfoPane";
+import PlayBar from "./play/PlayBar";
 
 export default class App extends React.Component
 {
@@ -14,15 +15,26 @@ export default class App extends React.Component
             new Climber("00002", "jason", 'dykstra'),
             new Climber("00002", "elliot", 'irving'),
         ]
+        this.state = {
+            currentTime: 0
+        }
+    }
+
+    setCurrentTime(time)
+    {
+        this.setState({currentTime: time})
     }
 
     render()
     {
         return (
             <div id="app">
-                <InfoPane/>
-                <ClimbPanel climbers={this.climbers}/>
-                <ClimbPanel climbers={this.climbers} reversed={true} />
+                <div id="content">
+                    <InfoPane/>
+                    <ClimbPanel currentTime={this.state.currentTime} climbers={this.climbers}/>
+                    <ClimbPanel currentTime={this.state.currentTime} climbers={this.climbers} reversed={true} />
+                </div>
+                <PlayBar setTime={this.setCurrentTime.bind(this)} totalSeconds={100}/>
             </div>
         )
         

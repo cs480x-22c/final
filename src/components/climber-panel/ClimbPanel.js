@@ -21,12 +21,11 @@ export default class ClimbPanel extends React.Component
 
     render()
     {
-        console.log(this.props)
         if(this.props.reversed)
         {
             return (
                 <div className="climb-panel">
-                    <Route climber={this.state.climber} />
+                    <Route rid={'left'} routeMoves={this.state.climber.routeMoves} currentTime={this.props.currentTime} />
                     <ClimberPanel climber={this.state.climber} climbers={this.props.climbers} setClimber={this.setClimber.bind(this)}/>
                 </div>
             )
@@ -36,7 +35,7 @@ export default class ClimbPanel extends React.Component
             return (
                 <div className="climb-panel">
                     <ClimberPanel climber={this.state.climber} climbers={this.props.climbers} setClimber={this.setClimber.bind(this)}/>
-                    <Route climber={this.state.climber} />
+                    <Route rid='right' routeMoves={this.state.climber.routeMoves} currentTime={this.props.currentTime} />
                 </div>
             )
         }

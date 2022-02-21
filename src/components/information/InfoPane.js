@@ -7,7 +7,7 @@ export default class InfoPane extends React.Component
     constructor(props)
     {
         super(props)
-        this.state = {showPopup: false}
+        this.state = {showPopup: true}
     }
 
     openPopup()
