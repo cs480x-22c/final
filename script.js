@@ -37,7 +37,7 @@ function createMap(data, stars, rotation, svgID) {
     let gpath = d3.geoPath().projection(proj);
 
     sizeScale = d3.scaleLinear()
-        .domain([6.07, -1.46]) // unit: km
+        .domain([6.07, -1.46]) // unit: magnitude
         .range([1, 5]) // unit: pixels
 
     // draw constellation
