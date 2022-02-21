@@ -12,10 +12,40 @@ body,
 #app
 {
     display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     height: 100%;
+}
+
+#content
+{
+    height: 95%;
+    display: flex;
     align-items: center;
     justify-content: center;
-    flex-grow: 0;
+}
+
+/*Play*/
+.play-container
+{
+    display: flex;
+    margin: auto;
+    border-radius: 1em;
+    width: 50%;
+}
+
+.play-button
+{
+    border-radius: 1em;
+    text-align: center;
+    width: 2em;
+    height: 2em
+}
+
+.play-bar
+{
+    width: 100%;
+    background-color: #ECB16D;
 }
 
 /*Typography*/
@@ -45,7 +75,6 @@ h4
 {
     background-color: #D4B898;
 }
-
 
 /* Climb Panel */
 .climb-panel
@@ -119,15 +148,23 @@ h4
 
 /* Route */
 
-.route
+.route-container
 {
     margin: 1em;
+    padding: 1em;
     background-color: #FFFFFF;
     height: 90%;
     width: 80%;
     border-radius: 56px;
     filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 16%));
+
 }
+
+.route
+{
+    height: 100%;
+    width: 100%;
+}    
 
 /* Climber Select */
 
@@ -225,6 +262,26 @@ h4
     flex-direction: column;
     margin: 1vw;
     align-items: center;
+}
+
+.right-foot
+{
+    color: green;
+}
+
+.left-foot
+{
+    color: yellow;
+}
+
+.right-hand
+{
+    color: blue;
+}
+
+.left-hand
+{
+    color: red;
 }
 
 /*# sourceMappingURL=main.css.map*/
