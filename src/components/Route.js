@@ -19,7 +19,7 @@ export default class Route extends React.Component
     {
         let svgContainer = d3.select(this.ref.current)
         svgContainer.selectAll('*').remove()
-         d3.svg("../route.svg")
+         d3.svg("./route.svg")
             .then(data => {
                 //Load Route SVG and set it's id
                 data.documentElement.id= this.props.rid
