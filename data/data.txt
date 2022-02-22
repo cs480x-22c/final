@@ -1,0 +1,33 @@
+CS 1101/2 Intro to Program Design
+CS 2102/3 Obj-Oriented Design Concepts
+CS 2022 Discrete Math
+CS 2303 Systems Prog. Concepts
+CS 2011 Mach. Org. & Assem. Lang
+CS 2223 Algorithms
+CS 3133 Foundation Of Computer Science
+CS 3013 Operating Systems
+CS 3516 Computer Networks
+CS 3733 Software Engineering
+CS 3041 HCI
+CS 3431 Database System I
+CS 3043 Social Impl. of Info. Proc.
+CS 4233 Obj-Oriented Analysis & Design
+CS 4515 Computer Architecture
+CS 4513 Distr. Computer Systems
+CS 4516 Advanced Computer Networks
+CS 4518 Mobile Computing
+CS 4404 Network Security
+CS 4241 Webware
+CS 4401 Software Security Engineering
+CS 4445 Data Mining
+CS 4123 Theory of Computation
+CS 4120 Analysis of Algorithms
+CS 4533 Programing Language Translation
+CS 4536 Programming Languages
+CS 4731 Computer Graphics
+CS 4732 Computer Animation
+CS 4801 Intro to Cryptology
+CS 4342 Machine Learning
+CS 4100 AI in IMGD
+CS 4802 Biovisualization
+CS 4803 Biological Data Mining

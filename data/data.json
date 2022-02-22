@@ -1,0 +1,168 @@
+{
+  "nodes": [{
+    "id": 0,
+    "number": "CS 1101/2",
+    "name": "Intro to Program Design"
+  }, {
+    "id": 1,
+    "number": "CS 2102/3",
+    "name": "Obj-Oriented Design Concepts"
+  }, {
+    "id": 2,
+    "number": "CS 2022",
+    "name": "Discrete Math"
+  }, {
+    "id": 3,
+    "number": "CS 2023",
+    "name": "Systems Prog. Concepts"
+  }, {
+    "id": 4,
+    "number": "CS 2011",
+    "name": "Machine Org & Assembly Language"
+  }, {
+    "id": 5,
+    "number": "CS 2223",
+    "name": "Algorithms"
+  }, {
+    "id": 6,
+    "number": "CS 3133",
+    "name": "Foundations of Computer Science"
+  }, {
+    "id": 7,
+    "number": "CS 3013",
+    "name": "Operating Systems"
+  }, {
+    "id": 8,
+    "number": "CS 3516",
+    "name": "Computer Networks"
+  }, {
+    "id": 9,
+    "number": "CS 3733",
+    "name": "Software Engineering"
+  }, {
+    "id": 10,
+    "number": "CS 3041",
+    "name": "Human-Computer Interaction"
+  }, {
+    "id": 11,
+    "number": "CS 3431",
+    "name": "Database Systems I"
+  }, {
+    "id": 12,
+    "number": "CS 3043",
+    "name": "Social Implications of Information Processing"
+  }, {
+    "id": 13,
+    "number": "CS 4233",
+    "name": "Obj-Oriented Analysis & Design"
+  }, {
+    "id": 14,
+    "number": "CS 4515",
+    "name": "Computer Architecture"
+  }, {
+    "id": 14,
+    "number": "CS 4516",
+    "name": "Advanced Computer Networks"
+  }, {
+    "id": 15,
+    "number": "CS 4513",
+    "name": "Distributed Systems"
+  }, {
+    "id": 16,
+    "number": "CS 4518",
+    "name": "Mobile Computing"
+  }, {
+    "id": 17,
+    "number": "CS 4404",
+    "name": "Network Security"
+  }, {
+    "id": 18,
+    "number": "CS 4241",
+    "name": "Webware"
+  }, {
+    "id": 19,
+    "number": "CS 4401",
+    "name": "Software Security Engineering"
+  }, {
+    "id": 20,
+    "number": "CS 4445",
+    "name": "Data Mining"
+  }, {
+    "id": 21,
+    "number": "CS 4123",
+    "name": "Theory of Computation"
+  }, {
+    "id": 22,
+    "number": "CS 4120",
+    "name": "Analysis of Algorithms"
+  }, {
+    "id": 23,
+    "number": "CS 4533",
+    "name": "Programming Language Translation"
+  }, {
+    "id": 24,
+    "number": "CS 4536",
+    "name": "Programming Languages"
+  }, {
+    "id": 25,
+    "number": "CS 4731",
+    "name": "Computer Graphics"
+  }, {
+    "id": 26,
+    "number": "CS 4732",
+    "name": "Computer Animation"
+  }, {
+    "id": 27,
+    "number": "CS 4801",
+    "name": "Intro to Cryptography"
+  }, {
+    "id": 28,
+    "number": "CS 4342",
+    "name": "Machine Learning"
+  }, {
+    "id": 29,
+    "number": "CS 4100",
+    "name": "AI in IMGD"
+  }, {
+    "id": 30,
+    "number": "CS 4802",
+    "name": "Biovisualization"
+  }, {
+    "id": 31,
+    "number": "CS 4803",
+    "name": "Biological Data Mining"
+  }],
+  "links": [
+    {
+      "source": 1,
+      "target": 2
+    }, {
+      "source": 1,
+      "target": 5
+    }, {
+      "source": 1,
+      "target": 6
+    }, {
+      "source": 2,
+      "target": 3
+    }, {
+      "source": 2,
+      "target": 7
+    }, {
+      "source": 3,
+      "target": 4
+    }, {
+      "source": 8,
+      "target": 3
+    }, {
+      "source": 4,
+      "target": 5
+    }, {
+      "source": 4,
+      "target": 9
+    }, {
+      "source": 5,
+      "target": 10
+    }
+  ]
+}
