@@ -101,14 +101,12 @@ feMerge.append("feMergeNode")
     function mouseOverStar() {
         d3.select(this)
         .transition().duration(300)
-        .attr('r', 5)
         .style('fill', 'white');
     }
 
     function mouseOffStar() {
         d3.select(this)
         .transition().duration(300)
-        .attr('r', 5)
         .style('fill', 'white');
     }
 
