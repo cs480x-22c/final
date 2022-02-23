@@ -72,6 +72,7 @@ function createMap(data, stars, rotation, svgID) {
         .attr("fill", "none");
 }
 
+//search function
 Promise.all([
     d3.csv('StarDescriptions.csv')
 ]).then(([data]) => {
@@ -81,7 +82,7 @@ Promise.all([
 function appendConstellations(data){
     var divTag = document.getElementById("constellationDropdown");
     for(var i = 0; i < data.length; i++){
-        console.log(data[i]["Star Name"]);
+        //console.log(data[i]["Star Name"]);
         var option = document.createElement("option");
         option.value = data[i]["Star Name"];
         option.innerHTML = data[i]["Star Name"];
@@ -104,18 +105,22 @@ function showOptions() {
     document.getElementById("constellationDropdown").classList.toggle("show");
 }
   
-function filter() {
-    var input, filter, option;
-    input = document.getElementById("searchInput");
-    filter = input.value.toUpperCase();
-    div = document.getElementById("constellationDropdown");
-    option = div.getElementsByTagName("option");
-    for (i = 0; i < option.length; i++) {
-        txtValue = option[i].textContent || option[i].innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        option[i].style.display = "";
-        } else {
-        option[i].style.display = "none";
-        }
-    }
+function filter(e) {
+    let searchField = document.getElementById("searchInput").value.toUpperCase();
+    const div = document.getElementById("constellationDropdown");
+    const options = Array.from(div.getElementsByTagName("option"));
+
+    //show options that match search field
+    options.filter((option) => {
+        return option.value.toUpperCase().includes(searchField);
+    }).forEach(option => {
+        option.classList.remove("filtered");
+    });
+
+    //filter out options that don't match search field
+    options.filter((option) => {
+        return !option.value.toUpperCase().includes(searchField);
+    }).forEach(option => {
+        option.classList.add("filtered");
+    });
 }
