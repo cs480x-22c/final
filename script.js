@@ -82,7 +82,6 @@ Promise.all([
 function appendConstellations(data){
     var divTag = document.getElementById("constellationDropdown");
     for(var i = 0; i < data.length; i++){
-        //console.log(data[i]["Star Name"]);
         var option = document.createElement("option");
         option.value = data[i]["Star Name"];
         option.innerHTML = data[i]["Star Name"];
@@ -99,8 +98,6 @@ function changeValue(value){
     console.log("here");
 }
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
 function showOptions() {
     document.getElementById("constellationDropdown").classList.toggle("show");
 }
@@ -109,11 +106,17 @@ function filter(e) {
     let searchField = document.getElementById("searchInput").value.toUpperCase();
     const div = document.getElementById("constellationDropdown");
     const options = Array.from(div.getElementsByTagName("option"));
-
+    var dropdwn = document.getElementById("dropdown");
+    dropdwn.style.height = '200px';
+    var height = 200;
     //show options that match search field
     options.filter((option) => {
         return option.value.toUpperCase().includes(searchField);
     }).forEach(option => {
+        if(height <= 500){
+            height = height +50;
+            dropdwn.style.height = ''+height+'px';
+        }
         option.classList.remove("filtered");
     });
 
@@ -123,4 +126,12 @@ function filter(e) {
     }).forEach(option => {
         option.classList.add("filtered");
     });
+
+    if(options.length>10){
+
+    }
+
+    for(var i=0; i<options.length; i++){
+
+    }
 }
