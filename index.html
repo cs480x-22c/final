@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.min.js" integrity="sha512-cd6CHE+XWDQ33ElJqsi0MdNte3S+bQY819f7p3NUHgwQQLXSKjE4cPZTeGNI+vaxZynk1wVU3hoHmow3m089wA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <svg id="bubble-chart"></svg>
+    <script>
+      let courseDataURL = 'https://raw.githubusercontent.com/liamrathke/final/main/data/data.json'
+
+      let nodes = {}
+
+      let selected = []
+      let available = [0]
+
+      const styles = {
+        selected: {
+          color: 'green'
+        },
+        available: {
+          color: 'yellow'
+        },
+        unavailable: {
+          color: 'lightgrey'
+        }
+      }
+
+      const sizes = {
+        1: 40,
+        2: 30,
+        3: 20,
+        4: 10
+      }
+
+      const width = window.innerWidth
+      const height = window.innerHeight
+
+      function generateChart(nodes) {
+        // generate the chart!
+        console.log(nodes)
+
+        function bubble(data) {
+          return d3.pack()
+            .size([width, height])
+            .padding(2)(d3.hierarchy({ children: data }).sum(d => sizes[d.level]))
+        }
+
+        const svg = d3.select('#bubble-chart')
+          .style('width', width)
+          .style('height', height)
+
+        const root = bubble(nodes)
+
+        const node = svg.selectAll()
+          .data(root.children)
+          .enter().append('g')
+          .attr('transform', `translate(${width / 2}, ${height / 2})`)
+        
+        const circle = node.append('circle')
+          .attr('r', d => d.r)
+          .style('fill', d => {
+            if (selected.includes(d.data.id)) {
+              return styles.selected.color
+            } else if (available.includes(d.data.id)) {
+              return styles.available.color
+            } else {
+              return styles.unavailable.color
+            }
+          })
+        
+        const label = node.append('text')
+          .attr('dy', 2)
+          .text(d => d.data.name.substring(0, d.r / 3))
+
+        node.transition()
+          .ease(d3.easeExpInOut)
+          .duration(1000)
+          .attr('transform', d => `translate(${d.x}, ${d.y})`)
+      }
+
+      (async () => {
+          data = await d3.json(courseDataURL).then(data => data)
+          nodes = data.nodes
+          generateChart(nodes)
+      })()
+    </script>
+  </body>
+</html>
