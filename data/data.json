@@ -4,14 +4,14 @@
     "level": 1,
     "category": "",
     "number": "CS 1101/2",
-    "name": "Intro to Program Design",
+    "name": "Intro to Prog Design",
     "links": [1]
   }, {
     "id": 1,
     "level": 2,
     "category": "",
     "number": "CS 2102/3",
-    "name": "Obj-Oriented Design Concepts",
+    "name": "OO Design",
     "links": [3, 5, 9, 10, 11]
   }, {
     "id": 2,
@@ -25,14 +25,14 @@
     "level": 2,
     "category": "",
     "number": "CS 2023",
-    "name": "Systems Prog. Concepts",
+    "name": "Systems",
     "links": [4, 8, 13, 24, 25, 29]
   }, {
     "id": 4,
     "level": 2,
     "category": "",
     "number": "CS 2011",
-    "name": "Machine Org & Assembly Language",
+    "name": "Machine Org/Assembly",
     "links": [7, 32]
   }, {
     "id": 5,
@@ -46,7 +46,7 @@
     "level": 3,
     "category": "Theory & Languages",
     "number": "CS 3133",
-    "name": "Foundations of Computer Science",
+    "name": "Foundations",
     "links": [21, 23, 24, 33]
   }, {
     "id": 7,
@@ -60,49 +60,49 @@
     "level": 3,
     "category": "",
     "number": "CS 3516",
-    "name": "Computer Networks",
+    "name": "Networks",
     "links": [14, 15, 16, 17]
   }, {
     "id": 9,
     "level": 3,
     "category": "Design",
     "number": "CS 3733",
-    "name": "Software Engineering",
+    "name": "Soft Eng",
     "links": [13, 19, 20, 34]
   }, {
     "id": 10,
     "level": 3,
     "category": "Design",
     "number": "CS 3041",
-    "name": "Human-Computer Interaction",
+    "name": "HCI",
     "links": []
   }, {
     "id": 11,
     "level": 3,
     "category": "Design",
     "number": "CS 3431",
-    "name": "Database Systems I",
+    "name": "Database I",
     "links": [20, 34]
   }, {
     "id": 12,
     "level": 3,
-    "category": "Social Implications",
+    "category": "Social Imps",
     "number": "CS 3043",
-    "name": "Social Implications of Information Processing",
+    "name": "Social Imps",
     "links": []
   }, {
     "id": 13,
     "level": 4,
     "category": "Design",
     "number": "CS 4233",
-    "name": "Obj-Oriented Analysis & Design",
+    "name": "OO Analysis",
     "links": []
   }, {
     "id": 14,
     "level": 4,
     "category": "Systems",
     "number": "CS 4516",
-    "name": "Advanced Computer Networks",
+    "name": "Advanced Networks",
     "links": []
   }, {
     "id": 15,
@@ -137,7 +137,7 @@
     "level": 4,
     "category": "",
     "number": "CS 4401",
-    "name": "Software Security Engineering",
+    "name": "Software Security",
     "links": []
   }, {
     "id": 20,
@@ -165,28 +165,28 @@
     "level": 4,
     "category": "Theory & Languages",
     "number": "CS 4533",
-    "name": "Programming Language Translation",
+    "name": "Prog Language Translation",
     "links": []
   }, {
     "id": 24,
     "level": 4,
     "category": "Theory & Languages",
     "number": "CS 4536",
-    "name": "Programming Languages",
+    "name": "Prog Languages",
     "links": []
   }, {
     "id": 25,
     "level": 4,
     "category": "",
     "number": "CS 4731",
-    "name": "Computer Graphics",
+    "name": "Graphics",
     "links": [26]
   }, {
     "id": 26,
     "level": 4,
     "category": "",
     "number": "CS 4732",
-    "name": "Computer Animation",
+    "name": "Animation",
     "links": []
   }, {
     "id": 27,
@@ -221,7 +221,7 @@
     "level": 4,
     "category": "",
     "number": "CS 4803",
-    "name": "Biological Data Mining",
+    "name": "Bio Data Mining",
     "links": []
   }, {
     "id": 32,
@@ -235,28 +235,28 @@
     "level": 4,
     "category": "",
     "number": "CS 4341",
-    "name": "Artificial Intelligence",
+    "name": "AI",
     "links": []
   }, {
     "id": 34,
     "level": 4,
     "category": "",
     "number": "CS 4432",
-    "name": "Database Systems II",
+    "name": "Database II",
     "links": []
   }, {
     "id": 35,
     "level": 4,
     "category": "",
     "number": "CS 4032",
-    "name": "Numerical Methods for Linear & Non-Linear Systems",
+    "name": "(Non)Linear Systems",
     "links": []
   }, {
     "id": 36,
     "level": 4,
     "category": "",
     "number": "CS 4033",
-    "name": "Numerical Methods for Calculus & Differential Equations",
+    "name": "Num Meth for Calc & Diff Eq",
     "links": []
   }]
 }
