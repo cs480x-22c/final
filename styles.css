@@ -19,5 +19,88 @@ body {
     font-family: Georgia;
     font-size: 200%;
     font-weight: 20;
+}
 
+button {
+    width: 180px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: steelblue;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 232px;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: lightblue;
+}
+
+/* The search field */
+#searchInput {
+    box-sizing: border-box;
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    width:230px;
+}
+
+/* The search field when it gets focus/clicked on */
+#searchInput:focus {
+    outline: 3px solid #ddd;
+}
+
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position:absolute;
+    top:0;
+    right:0;
+    display: inline-block;
+    height: 500px;
+    width: 249px;
+    padding: 0px;
+    overflow-y:auto;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.constellationContent {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    width: 230px;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.constellationContent option {
+    color: black;
+    padding-left: 12px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 0px;
+    text-decoration: none;
+    display: block;
+    width:218px;
+    margin: 0px;
+}
+
+/* Change color of dropdown links on hover */
+.constellationContent a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.filtered {
+    display: none !important;
 }

@@ -1,5 +1,5 @@
 const svgSize = 500;
-
+var placeholder = "Search";
 //add svgs
 d3.select("#map-container")
     .append("svg")
@@ -97,29 +97,95 @@ feMerge.append("feMergeNode")
     .style("filter", "url(#glow)");
     //end glow
 
-    //functions for animations
-    function mouseOverStar() {
-        d3.select(this)
-        .transition().duration(300)
-        .style('fill', 'white');
+    
+}
+
+//functions for animations
+function mouseOverStar() {
+    d3.select(this)
+    .transition().duration(300)
+    .style('fill', 'white');
+}
+
+function mouseOffStar() {
+    d3.select(this)
+    .transition().duration(300)
+    .style('fill', 'white');
+}
+
+function mouseOverConstellation() {
+    d3.select(this)
+    .transition().duration(200)
+    .style('stroke-width', '5')
+    .style('stroke', '#ddaa11');
+}
+
+function mouseOffConstellation() {
+    d3.select(this)
+    .transition().duration(200)
+    .style('stroke-width', '2')
+}
+
+//search function
+Promise.all([
+    d3.csv('StarDescriptions.csv')
+]).then(([data]) => {
+    appendConstellations(data);
+});
+
+function appendConstellations(data){
+    var divTag = document.getElementById("constellationDropdown");
+    for(var i = 0; i < data.length; i++){
+        var option = document.createElement("option");
+        option.value = data[i]["Star Name"];
+        option.innerHTML = data[i]["Star Name"];
+        divTag.appendChild(option);
+        option.addEventListener("click", function(){
+            changeValue(this.innerHTML);
+        });
+    }
+}
+
+function changeValue(value){
+    var input = document.getElementById("searchInput");
+    input.value = value;
+    console.log("here");
+}
+
+function showOptions() {
+    document.getElementById("constellationDropdown").classList.toggle("show");
+}
+  
+function filter(e) {
+    let searchField = document.getElementById("searchInput").value.toUpperCase();
+    const div = document.getElementById("constellationDropdown");
+    const options = Array.from(div.getElementsByTagName("option"));
+    var dropdwn = document.getElementById("dropdown");
+    dropdwn.style.height = '200px';
+    var height = 200;
+    //show options that match search field
+    options.filter((option) => {
+        return option.value.toUpperCase().includes(searchField);
+    }).forEach(option => {
+        if(height <= 500){
+            height = height +50;
+            dropdwn.style.height = ''+height+'px';
+        }
+        option.classList.remove("filtered");
+    });
+
+    //filter out options that don't match search field
+    options.filter((option) => {
+        return !option.value.toUpperCase().includes(searchField);
+    }).forEach(option => {
+        option.classList.add("filtered");
+    });
+
+    if(options.length>10){
+
     }
 
-    function mouseOffStar() {
-        d3.select(this)
-        .transition().duration(300)
-        .style('fill', 'white');
-    }
+    for(var i=0; i<options.length; i++){
 
-    function mouseOverConstellation() {
-        d3.select(this)
-        .transition().duration(200)
-        .style('stroke-width', '5')
-        .style('stroke', '#ddaa11');
-    }
-
-    function mouseOffConstellation() {
-        d3.select(this)
-        .transition().duration(200)
-        .style('stroke-width', '2')
     }
 }
