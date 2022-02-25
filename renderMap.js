@@ -19,12 +19,6 @@ Promise.all(
   var gpath = d3.geoPath()
     .projection(proj);
 
-  var ccolor = 
-    d3.scaleSequential( d3.interpolateBlues )
-    .domain( 
-      d3.extent( fixed, d => gpath.area(d))
-      );
-
 
   // draw country boundaries
   d3.select('svg')
@@ -38,7 +32,7 @@ Promise.all(
       .attr('stroke-width', 1)
       .attr('stroke', 'steelblue')
       .attr('id', d => d.id)
-      .attr('fill', d => ccolor( gpath.area(d)) );
+      .attr('fill', "white");
 
 
    var mapZoom = d3.zoom()
