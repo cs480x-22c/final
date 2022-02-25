@@ -49,7 +49,7 @@ function createMap(data, stars, rotation, svgID) {
         .attr('d', function (d) { return gpath(d); })
         .attr('stroke-width', 2)
         .attr('stroke', 'steelblue')
-        .attr('id', d => d.id)
+        .attr('id', d => d.properties.name)
         .on("mouseover", mouseOverConstellation)
         .on("mouseout", mouseOffConstellation);
 
