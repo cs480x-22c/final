@@ -1,5 +1,16 @@
 const svgSize = 500;
 var placeholder = "Search";
+let activeConstellation = null;
+
+//for easy access
+const COLORS = 
+{
+    begin: 'black',
+    isActive: '#ee5533',
+    justActive: '#ddaa11',
+    inActive: '#74c3c4'
+
+}
 //add svgs
 d3.select("#map-container")
     .append("svg")
@@ -48,8 +59,8 @@ function createMap(data, stars, rotation, svgID) {
         .append('path')
         .attr('d', function (d) { return gpath(d); })
         .attr('stroke-width', 2)
-        .attr('stroke', 'steelblue')
-        .attr('id', d => d.id)
+        .attr('stroke', COLORS.begin)
+        .attr('id', d => d.properties.name.replace(" ", "_"))
         .on("mouseover", mouseOverConstellation)
         .on("mouseout", mouseOffConstellation);
 
@@ -118,16 +129,34 @@ function mouseOffStar() {
 }
 
 function mouseOverConstellation() {
-    d3.select(this)
-        .transition().duration(200)
-        .style('stroke-width', '5')
-        .style('stroke', '#ddaa11');
+    activateConstellation('#' + this.id, true)
 }
 
 function mouseOffConstellation() {
-    d3.select(this)
+    activateConstellation('#' + this.id, false)
+}
+
+
+
+function activateConstellation(path, active) {
+    if(active) {
+        //unactivate current constellation
+        activeConstellation ? activateConstellation(activeConstellation, false) : null
+        activeConstellation = path;
+        d3.selectAll(path)
+        .transition().duration(200)
+        .style('stroke-width', '5')
+        .style('stroke', COLORS.isActive);
+    }
+    else {
+        activeConstellation = null
+        d3.selectAll(path)
         .transition().duration(200)
         .style('stroke-width', '2')
+        .style('stroke', COLORS.justActive)
+        .transition().duration(5000)
+        .style('stroke', COLORS.inActive);
+    }
 }
 
 //search function
@@ -153,6 +182,7 @@ function appendConstellations(data) {
 function changeValue(value) {
     var input = document.getElementById("searchInput");
     input.value = value;
+    activateConstellation(('#' + value.replace(" ", "_")) , true);
     console.log(value);
 }
 
