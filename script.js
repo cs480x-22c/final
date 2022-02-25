@@ -77,53 +77,57 @@ function createMap(data, stars, rotation, svgID) {
         .attr("fill", "none");
 
 
-    //glow effect?
-    //Container for the gradients
-var defs = svg.append("defs");
+    addBlur(svg)
 
-//Filter for the outside glow
-var filter = defs.append("filter")
-    .attr("id","glow");
-filter.append("feGaussianBlur")
-    .attr("stdDeviation","3.5")
-    .attr("result","coloredBlur");
-var feMerge = filter.append("feMerge");
-feMerge.append("feMergeNode")
-    .attr("in","coloredBlur");
-feMerge.append("feMergeNode")
-    .attr("in","SourceGraphic");
+
+}
+
+function addBlur(svg){
+    //TODO:  find source
+    //Container for the gradients
+    let defs = svg.append("defs");
+
+    //Filter for the outside glow
+    let filter = defs.append("filter")
+        .attr("id", "glow");
+    filter.append("feGaussianBlur")
+        .attr("stdDeviation", "3.5")
+        .attr("result", "coloredBlur");
+    let feMerge = filter.append("feMerge");
+    feMerge.append("feMergeNode")
+        .attr("in", "coloredBlur");
+    feMerge.append("feMergeNode")
+        .attr("in", "SourceGraphic");
 
     d3.selectAll("path")
-    .style("filter", "url(#glow)");
+        .style("filter", "url(#glow)");
     //end glow
-
-    
 }
 
 //functions for animations
 function mouseOverStar() {
     d3.select(this)
-    .transition().duration(300)
-    .style('fill', 'white');
+        .transition().duration(300)
+        .style('fill', 'white');
 }
 
 function mouseOffStar() {
     d3.select(this)
-    .transition().duration(300)
-    .style('fill', 'white');
+        .transition().duration(300)
+        .style('fill', 'white');
 }
 
 function mouseOverConstellation() {
     d3.select(this)
-    .transition().duration(200)
-    .style('stroke-width', '5')
-    .style('stroke', '#ddaa11');
+        .transition().duration(200)
+        .style('stroke-width', '5')
+        .style('stroke', '#ddaa11');
 }
 
 function mouseOffConstellation() {
     d3.select(this)
-    .transition().duration(200)
-    .style('stroke-width', '2')
+        .transition().duration(200)
+        .style('stroke-width', '2')
 }
 
 //search function
@@ -133,29 +137,29 @@ Promise.all([
     appendConstellations(data);
 });
 
-function appendConstellations(data){
+function appendConstellations(data) {
     var divTag = document.getElementById("constellationDropdown");
-    for(var i = 0; i < data.length; i++){
+    for (var i = 0; i < data.length; i++) {
         var option = document.createElement("option");
         option.value = data[i]["Star Name"];
         option.innerHTML = data[i]["Star Name"];
         divTag.appendChild(option);
-        option.addEventListener("click", function(){
+        option.addEventListener("click", function () {
             changeValue(this.innerHTML);
         });
     }
 }
 
-function changeValue(value){
+function changeValue(value) {
     var input = document.getElementById("searchInput");
     input.value = value;
-    console.log("here");
+    console.log(value);
 }
 
 function showOptions() {
     document.getElementById("constellationDropdown").classList.toggle("show");
 }
-  
+
 function filter(e) {
     let searchField = document.getElementById("searchInput").value.toUpperCase();
     const div = document.getElementById("constellationDropdown");
@@ -167,9 +171,9 @@ function filter(e) {
     options.filter((option) => {
         return option.value.toUpperCase().includes(searchField);
     }).forEach(option => {
-        if(height <= 500){
-            height = height +50;
-            dropdwn.style.height = ''+height+'px';
+        if (height <= 500) {
+            height = height + 50;
+            dropdwn.style.height = '' + height + 'px';
         }
         option.classList.remove("filtered");
     });
@@ -181,11 +185,11 @@ function filter(e) {
         option.classList.add("filtered");
     });
 
-    if(options.length>10){
+    if (options.length > 10) {
 
     }
 
-    for(var i=0; i<options.length; i++){
+    for (var i = 0; i < options.length; i++) {
 
     }
 }
