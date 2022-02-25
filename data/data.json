@@ -4,7 +4,7 @@
     "level": 1,
     "category": "",
     "number": "CS 1101/2",
-    "name": "Intro to Prog Design",
+    "name": "Intro to Prog. Design",
     "links": [1]
   }, {
     "id": 1,
@@ -32,7 +32,7 @@
     "level": 2,
     "category": "",
     "number": "CS 2011",
-    "name": "Machine Org/Assembly",
+    "name": "Machine Org/ Assembly",
     "links": [7, 32]
   }, {
     "id": 5,
@@ -81,14 +81,14 @@
     "level": 3,
     "category": "Design",
     "number": "CS 3431",
-    "name": "Database I",
+    "name": "Databases I",
     "links": [20, 34]
   }, {
     "id": 12,
     "level": 3,
     "category": "Social Imps",
     "number": "CS 3043",
-    "name": "Social Imps",
+    "name": "Social Imps.",
     "links": []
   }, {
     "id": 13,
@@ -165,14 +165,14 @@
     "level": 4,
     "category": "Theory & Languages",
     "number": "CS 4533",
-    "name": "Prog Language Translation",
+    "name": "Prog. Language Translation",
     "links": []
   }, {
     "id": 24,
     "level": 4,
     "category": "Theory & Languages",
     "number": "CS 4536",
-    "name": "Prog Languages",
+    "name": "Prog. Languages",
     "links": []
   }, {
     "id": 25,
@@ -221,7 +221,7 @@
     "level": 4,
     "category": "",
     "number": "CS 4803",
-    "name": "Bio Data Mining",
+    "name": "Bio. Data Mining",
     "links": []
   }, {
     "id": 32,
@@ -242,21 +242,21 @@
     "level": 4,
     "category": "",
     "number": "CS 4432",
-    "name": "Database II",
+    "name": "Databases II",
     "links": []
   }, {
     "id": 35,
     "level": 4,
     "category": "",
     "number": "CS 4032",
-    "name": "(Non)Linear Systems",
+    "name": "(Non) Linear Systems",
     "links": []
   }, {
     "id": 36,
     "level": 4,
     "category": "",
     "number": "CS 4033",
-    "name": "Num Meth for Calc & Diff Eq",
+    "name": "Num. Meth. for Calc & Diff. Eq.",
     "links": []
   }]
 }
