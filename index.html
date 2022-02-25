@@ -26,6 +26,20 @@
       .unavailable:hover {
         fill: lightgreen;
       }
+      .text-wrapper {
+        z-index: 999;
+        pointer-events: none;
+      }
+      .text-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+      .text-layout {
+        width: auto;
+        text-align: center;
+      }
     </style>
     <script>
       let courseDataURL = 'https://raw.githubusercontent.com/liamrathke/final/main/data/data.json'
@@ -60,10 +74,7 @@
       const width = window.innerWidth
       const height = window.innerHeight
 
-      function generateChart(nodes) {
-        // generate the chart!
-        console.log(nodes)
-
+      function generateChart(nodes, animation) {
         function bubble(data) {
           return d3.pack()
             .size([width, height])
@@ -92,32 +103,36 @@
               return 'course unavailable'
             }
           })
-          .on('mousemove', e => {
-            console.log(e)
-          })
-          .on('mouseout', () => {
-            console.log('mouseout')
-          })
-          .on('mouseover', (e, d) => {
-            console.log(e, d)
+          .on('click', (e, d) => {
+            console.log('clicked!', e, d)
+            console.log('OLD', selected, available)
+            const courseID = d.data.id
+            selected.push(courseID)
+            const availableIndex = available.indexOf(courseID)
+            if (availableIndex >= 0) {
+              available.splice(availableIndex, 1)
+            }
+            d.data.links.forEach(link => {
+              if (available.indexOf(link) < 0) {
+                available.push(link)
+              }
+            })
+            document.getElementById('bubble-chart').innerHTML = ''
+            console.log('NEW', selected, available)
+            generateChart(nodes, false)
           })
 
         const course = node.append('g')
           .attr('transform', d => `translate(${-d.r}, ${-d.r})`)
-          .style('z-index', 999)
-          .style('pointer-events', 'none')
+          .attr('class', 'text-wrapper')
 
         const obj = course.append('foreignObject')
           .attr('width', d => 2 * d.r)
           .attr('height', d => 2 * d.r)
           .append('xhtml:div')
-          .style('display', 'flex')
-          .style('align-items', 'center')
-          .style('justify-content', 'center')
-          .style('height', '100%')
+          .attr('class', 'text-center')
           .append('xhtml:div')
-          .style('width', 'auto')
-          .style('text-align', 'center')
+          .attr('class', 'text-layout')
 
         // const div = obj.append('div')
         //   .style('display', 'flex')
@@ -132,26 +147,27 @@
         
         // const label = course.append('text')
         //   .text(d => d.data.name.substring(0, d.r / 3))
+        let animationTime = animation ? 1000 : 0
 
         node.transition()
           .ease(d3.easeExpInOut)
-          .duration(1000)
+          .duration(animationTime)
           .attr('transform', d => `translate(${d.x}, ${d.y})`)
 
         circle.transition()
           .ease(d3.easeExpInOut)
-          .duration(1000)
+          .duration(animationTime)
           .attr('r', d => d.r)
 
         course.transition()
           .ease(d3.easeExpInOut)
-          .duration(1000)
+          .duration(animationTime)
       }
 
       (async () => {
           data = await d3.json(courseDataURL).then(data => data)
           nodes = data.nodes
-          generateChart(nodes)
+          generateChart(nodes, true)
       })()
     </script>
   </body>
