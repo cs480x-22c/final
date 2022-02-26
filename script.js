@@ -13,56 +13,74 @@ const COLORS =
     isActive: '#ee5533',
     justActive: '#ddaa11',
     inActive: '#74c3c4'
-
 }
-//set svg size
-d3.select("#north")
-    .attr("width", svgSize)
-    .attr("height", svgSize);
 
-d3.select("#south")
-    .attr("width", svgSize)
-    .attr("height", svgSize);
-
-//draw maps
+//load files
 Promise.all([
+    d3.json('paths.geojson'),
+    d3.csv('stars.csv'),
     d3.json('paths_north.geojson'),
-    d3.csv('stars_north.csv')
-]).then(([data, stars]) => {
-    createMap(data, stars, [0, -90], "#north");
-});
-
-Promise.all([
+    d3.csv('stars_north.csv'),
     d3.json('paths_south.geojson'),
-    d3.csv('stars_south.csv')
-]).then(([data, stars]) => {
-    createMap(data, stars, [180, 90], "#south");
+    d3.csv('stars_south.csv'),
+    d3.csv('StarDescriptions.csv')
+]).then(([paths, stars, pathsN, starsN, pathsS, starsS, desc]) => {
+    createMap(pathsN, starsN, [0, -90], "#north"); //north hemisphere
+    createMap(pathsS, starsS, [180, 90], "#south"); //south hemisphere
+    appendConstellations(desc); //search
+
+    //store info in global variables for easy access
+    constellationInfo = desc;
+    fullPaths = paths;
+    fullStars = stars;
 });
 
+//draw stars in specified hemisphere
 function createMap(data, stars, rotation, svgID) {
-    const svg = d3.select(svgID);
-
     let proj = d3.geoAzimuthalEqualArea()
         .rotate(rotation)
         .fitExtent([[5, 5], [svgSize - 5, svgSize - 5]], data)
     let gpath = d3.geoPath().projection(proj);
+    const svg = d3.select(svgID);
+    drawConstellations(svg, data.features, stars, proj, gpath, COLORS.begin, true);
 
+    //draw border
+    svg.append("circle")
+        .attr("cx", svgSize / 2)
+        .attr("cy", svgSize / 2)
+        .attr("r", ((svgSize - 10) / 2))
+        .attr("stroke-width", 2)
+        .attr("stroke", "white")
+        .attr("fill", "none");
+}
+
+//draw constellations based on projection, paths, and stars
+function drawConstellations(svg, features, stars, proj, gpath, pathColor, attachEvent) {
+    //scale star radius based on brightness
     sizeScale = d3.scaleLinear()
         .domain([6.07, -1.46]) // unit: magnitude
         .range([1, 5]) // unit: pixels
 
     // draw constellation
-    d3.select(svgID)
-        .selectAll('path')
-        .data(data.features)
+    svg.selectAll('path')
+        .data(features)
         .enter()
         .append('path')
         .attr('d', function (d) { return gpath(d); })
         .attr('stroke-width', 2)
-        .attr('stroke', COLORS.begin)
-        .attr('id', d => d.properties.name.replace(" ", "_"))
-        .on("mouseover", e => mouseOverConstellation(e))
-        .on("mouseout", e => mouseOffConstellation(e));
+        .attr('stroke', pathColor)
+        .on("mouseover", e => {
+            if (attachEvent) //only call animations if path in map (not datatip)
+                mouseOverConstellation(e);
+        })
+        .on("mouseout", e => {
+            if (attachEvent)
+                mouseOffConstellation(e);
+        });
+
+    if (attachEvent)
+        svg.selectAll("path")
+            .attr('id', d => d.properties.name.replace(" ", "_"));
 
     // draw stars
     svg.selectAll('circle')
@@ -74,21 +92,19 @@ function createMap(data, stars, rotation, svgID) {
         .attr("r", d => sizeScale(d.Mag))
         .attr('class', d => d.Constellation.replace(" ", "_"))
         .attr("fill", "#aaaaaa")
-        .on("mouseover", e => mouseOverStar(e))
-        .on("mouseout", e => mouseOffStar(e));
-
-    //draw border
-    svg.append("circle")
-        .attr("cx", svgSize / 2)
-        .attr("cy", svgSize / 2)
-        .attr("r", ((svgSize - 10) / 2))
-        .attr("stroke-width", 2)
-        .attr("stroke", "white")
-        .attr("fill", "none");
+        .on("mouseover", e => {
+            if (attachEvent)
+                mouseOverStar(e);
+        })
+        .on("mouseout", e => {
+            if (attachEvent)
+                mouseOffStar(e);
+        });
 
     addBlur(svg);
 }
 
+//add blurs on paths
 function addBlur(svg) {
     //TODO:  find source
     //Container for the gradients
@@ -141,7 +157,7 @@ function activateConstellation(path, active) {
     }
     else {
         activeConstellation = null
-        hideDatatip(path);
+        hideDatatip();
         d3.selectAll(path)
             .transition().duration(200)
             .style('stroke-width', '2')
@@ -151,21 +167,8 @@ function activateConstellation(path, active) {
     }
 }
 
-//search function
-Promise.all([
-    d3.csv('StarDescriptions.csv'),
-    d3.csv("stars.csv"),
-    d3.json("paths.geojson")
-]).then(([data, stars, paths]) => {
-    appendConstellations(data, stars, paths);
-});
-
-function appendConstellations(data, stars, paths) {
-    //store information in global variables 
-    constellationInfo = data;
-    fullStars = stars;
-    fullPaths = paths;
-
+//add options to search dropdown
+function appendConstellations(data) {
     var divTag = document.getElementById("constellationDropdown");
     for (var i = 0; i < data.length; i++) {
         var option = document.createElement("option");
@@ -178,10 +181,7 @@ function appendConstellations(data, stars, paths) {
     }
 }
 
-function showOptions() {
-    document.getElementById("constellationDropdown").classList.toggle("hidden");
-}
-
+//search filter function
 function filter() {
     let searchField = document.getElementById("searchInput").value.toUpperCase();
     const div = document.getElementById("constellationDropdown");
@@ -202,8 +202,12 @@ function filter() {
     });
 }
 
-//datatips
+//draw datatips in side panel
 function showDatatip(constellation) {
+    //hide search
+    d3.select("#dropdown")
+        .classed("hidden", true);
+
     constellation = constellation.substring(1);
     constellation = constellation.replace("_", " ");
     info = constellationInfo.filter(item => item["Star Name"] == constellation)[0];
@@ -213,55 +217,33 @@ function showDatatip(constellation) {
 
     let html = `<p>${constellation}</p>
                 <p>The ${desc}</p>
-                <div><svg id="datatipImg" width=${datatipWidth} height=${datatipWidth}></svg></div>
+                <div><svg id="datatipImg" width=${datatipWidth - 10} height=${datatipWidth - 10}></svg></div>
                 <p class="history">${history}</p>`;
 
-    d3.select("#datatip")
-        .html(html)
-        .style("width", datatipWidth)
-        .classed("hidden", false);
-
-    d3.select("#datatipImg")
-        .append("rect")
-        .attr("width", datatipWidth)
-        .attr("height", datatipWidth)
-        .attr("fill", "black");
+    d3.select("#side-panel")
+        .html(html);
 
     //draw constellation in svg
+    //filter paths and stars for selected constellation
     let path = fullPaths.features.filter(feature => feature.properties.name == constellation)[0];
     let geojson = { "type": "FeatureCollection", "features": [path] };
     let stars = fullStars.filter(star => star["Constellation"] == constellation);
 
     let proj = d3.geoAzimuthalEqualArea()
         .rotate([0, -90])
-        .fitExtent([[5, 5], [datatipWidth - 5, datatipWidth - 5]], geojson)
+        .fitExtent([[5, 5], [datatipWidth - 15, datatipWidth - 15]], geojson)
     let gpath = d3.geoPath().projection(proj);
 
-    sizeScale = d3.scaleLinear()
-        .domain([6.07, -1.46]) // unit: magnitude
-        .range([1, 5]) // unit: pixels
-
-    d3.select("#datatipImg")
-        .selectAll('path')
-        .data(geojson.features)
-        .enter()
-        .append('path')
-        .attr('d', function (d) { return gpath(d); })
-        .attr('stroke-width', 2)
-        .attr('stroke', "#74c3c4");
-
-    d3.select("#datatipImg")
-        .selectAll('circle')
-        .data(stars)
-        .enter()
-        .append('circle')
-        .attr('cx', d => proj([d.Lon, d.Lat])[0])
-        .attr('cy', d => proj([d.Lon, d.Lat])[1])
-        .attr("r", d => sizeScale(d.Mag))
-        .attr("fill", "#aaaaaa");
+    let svg = d3.select("#datatipImg");
+    drawConstellations(svg, geojson.features, stars, proj, gpath, COLORS.inActive, false);
 }
 
 function hideDatatip() {
-    d3.select("#datatip")
-        .classed("hidden", true);
+    //show search
+    d3.select("#dropdown")
+        .classed("hidden", false);
+
+    //clear datatip
+    d3.select("#side-panel")
+        .html("");
 }
