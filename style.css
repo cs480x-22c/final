@@ -20,7 +20,7 @@ h1 {
   vertical-align: top;
   display: inline-block;
   font-size: 40px;
-  font-family: "AlienLeagueIiRegular";
+  font-family: "AlphacodeBeyondRegular";
   text-decoration: none;
   color: white;
 }
@@ -35,7 +35,7 @@ h1:hover {
   vertical-align: top;
   display: inline-block;
   font-size: 40px;
-  font-family: "AlphacodeBeyondRegular";
+  font-family: "AlienLeagueIiRegular";
   text-decoration: none;
   color: white;
 }
@@ -73,5 +73,4 @@ nav {
   height: 100%;
   font-size: 5em;
   color: white;
-  cursor: url("aliencursor.png"), auto;
 }
