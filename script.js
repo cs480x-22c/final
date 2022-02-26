@@ -1,5 +1,4 @@
 const svgSize = 500;
-var placeholder = "Search";
 let activeConstellation = null;
 
 //for easy access
@@ -167,53 +166,32 @@ function appendConstellations(data) {
         option.value = data[i]["Star Name"];
         option.innerHTML = data[i]["Star Name"];
         divTag.appendChild(option);
-        option.addEventListener("click", function () {
-            changeValue(this.innerHTML);
+        option.addEventListener("click", e => {
+            activateConstellation(('#' + e.target.value.replace(" ", "_")) , true);
         });
     }
 }
 
-function changeValue(value) {
-    var input = document.getElementById("searchInput");
-    input.value = value;
-    activateConstellation(('#' + value.replace(" ", "_")) , true);
-    console.log(value);
-}
-
 function showOptions() {
-    document.getElementById("constellationDropdown").classList.toggle("show");
+    document.getElementById("constellationDropdown").classList.toggle("hidden");
 }
 
-function filter(e) {
+function filter() {
     let searchField = document.getElementById("searchInput").value.toUpperCase();
     const div = document.getElementById("constellationDropdown");
     const options = Array.from(div.getElementsByTagName("option"));
-    var dropdwn = document.getElementById("dropdown");
-    dropdwn.style.height = '200px';
-    var height = 200;
+
     //show options that match search field
     options.filter((option) => {
         return option.value.toUpperCase().includes(searchField);
     }).forEach(option => {
-        if (height <= 500) {
-            height = height + 50;
-            dropdwn.style.height = '' + height + 'px';
-        }
-        option.classList.remove("filtered");
+        option.classList.remove("hidden");
     });
 
     //filter out options that don't match search field
     options.filter((option) => {
         return !option.value.toUpperCase().includes(searchField);
     }).forEach(option => {
-        option.classList.add("filtered");
+        option.classList.add("hidden");
     });
-
-    if (options.length > 10) {
-
-    }
-
-    for (var i = 0; i < options.length; i++) {
-
-    }
 }
