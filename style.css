@@ -1,0 +1,77 @@
+body {
+  background-color: #0e1e34;
+  background-image: url("https://github.com/alexiscaira/final/blob/main/starsDark.jpg?raw=true");
+  background-position: bottom-center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+}
+@font-face {
+  font-family: AlphacodeBeyondRegular;
+  src: url("AlphacodeBeyondRegular.ttf") format("truetype");
+}
+@font-face {
+  font-family: AlienLeagueIiRegular;
+  src: url("AlienLeagueIiRegular.otf") format("opentype");
+}
+
+h1 {
+  vertical-align: top;
+  display: inline-block;
+  font-size: 40px;
+  font-family: "AlienLeagueIiRegular";
+  text-decoration: none;
+  color: white;
+}
+p {
+  vertical-align: top;
+  font-size: 35px;
+  font-family: "AlienLeagueIiRegular";
+  text-decoration: none;
+  color: white;
+}
+h1:hover {
+  vertical-align: top;
+  display: inline-block;
+  font-size: 40px;
+  font-family: "AlphacodeBeyondRegular";
+  text-decoration: none;
+  color: white;
+}
+a {
+  display: inline-block;
+  width: 50px;
+  text-decoration: none;
+  color: white;
+}
+nav,
+.scroll-container {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+nav {
+  width: 339px;
+  padding: 5px;
+  border: 0px;
+  color: white;
+}
+.scroll-container {
+  width: 1000px;
+  height: 800px;
+  align-items: center;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  color: white;
+}
+.scroll-page {
+  display: flex;
+  align-items: top-center;
+  justify-content: center;
+  height: 100%;
+  font-size: 5em;
+  color: white;
+  cursor: url("aliencursor.png"), auto;
+}
