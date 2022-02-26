@@ -19,14 +19,21 @@ body {
 h1 {
   vertical-align: top;
   display: inline-block;
-  font-size: 40px;
-  font-family: "AlphacodeBeyondRegular";
+  font-size: 50px;
+  font-family: "AlienLeagueIiRegular";
   text-decoration: none;
   color: white;
 }
 p {
-  vertical-align: top;
-  font-size: 35px;
+  display: block;
+  font-size: 40px;
+  font-family: "AlienLeagueIiRegular";
+  text-decoration: none;
+  color: white;
+}
+text {
+  display: block;
+  font-size: 32px;
   font-family: "AlienLeagueIiRegular";
   text-decoration: none;
   color: white;
@@ -35,7 +42,7 @@ h1:hover {
   vertical-align: top;
   display: inline-block;
   font-size: 40px;
-  font-family: "AlienLeagueIiRegular";
+  font-family: "AlphacodeBeyondRegular";
   text-decoration: none;
   color: white;
 }
@@ -51,26 +58,51 @@ nav,
   margin: 0 auto;
   text-align: center;
   color: white;
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: white white;
 }
 nav {
+  display: block;
   width: 339px;
   padding: 5px;
   border: 0px;
   color: white;
 }
 .scroll-container {
+  display: block;
   width: 1000px;
   height: 800px;
   align-items: center;
   overflow-y: scroll;
   scroll-behavior: smooth;
   color: white;
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: white white;
+}
+.flex-container {
+  margin: 40px auto 0 auto;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  display: block;
+}
+
+.box {
+  margin: 40px auto 0 auto;
+  background-color: lightgray;
+  width: 140px;
+  margin: 20px;
+  text-align: center;
+  line-height: 140px;
+  font-size: 20px;
 }
 .scroll-page {
-  display: flex;
+  display: block;
   align-items: top-center;
   justify-content: center;
   height: 100%;
   font-size: 5em;
   color: white;
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: transparent white;
 }
