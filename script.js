@@ -60,8 +60,8 @@ function createMap(data, stars, rotation, svgID) {
         .attr('stroke-width', 2)
         .attr('stroke', COLORS.begin)
         .attr('id', d => d.properties.name.replace(" ", "_"))
-        .on("mouseover", mouseOverConstellation)
-        .on("mouseout", mouseOffConstellation);
+        .on("mouseover", e => mouseOverConstellation(e))
+        .on("mouseout", e => mouseOffConstellation(e));
 
     // draw stars
     svg.selectAll('circle')
@@ -71,10 +71,10 @@ function createMap(data, stars, rotation, svgID) {
         .attr('cx', d => proj([d.Lon, d.Lat])[0])
         .attr('cy', d => proj([d.Lon, d.Lat])[1])
         .attr("r", d => sizeScale(d.Mag))
-        .attr('id', d => d.HD)
+        .attr('class', d => d.Constellation)
         .attr("fill", "#aaaaaa")
-        .on("mouseover", mouseOverStar)
-        .on("mouseout", mouseOffStar);
+        .on("mouseover", e => mouseOverStar(e))
+        .on("mouseout", e => mouseOffStar(e));
 
     //draw border
     svg.append("circle")
@@ -111,24 +111,26 @@ function addBlur(svg){
 }
 
 //functions for animations
-function mouseOverStar() {
-    d3.select(this)
-        .transition().duration(300)
-        .style('fill', 'white');
+function mouseOverStar(e) {
+    //d3.select(e.target)
+    //   .transition().duration(300)
+    //    .style('fill', 'white');
+    activateConstellation('#' + e.target.classList[0], true)
 }
 
-function mouseOffStar() {
-    d3.select(this)
-        .transition().duration(300)
-        .style('fill', 'white');
+function mouseOffStar(e) {
+    //d3.select(e.target)
+    //    .transition().duration(300)
+    //    .style('fill', 'white');
+    activateConstellation('#' + e.target.classList[0], false)
 }
 
-function mouseOverConstellation() {
-    activateConstellation('#' + this.id, true)
+function mouseOverConstellation(e) {
+    activateConstellation('#' + e.target.id, true)
 }
 
-function mouseOffConstellation() {
-    activateConstellation('#' + this.id, false)
+function mouseOffConstellation(e) {
+    activateConstellation('#' + e.target.id, false)
 }
 
 function activateConstellation(path, active) {
