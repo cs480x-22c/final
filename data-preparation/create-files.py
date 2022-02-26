@@ -72,8 +72,6 @@ def makeGeoJSON(file, names, latMin, latMax):
     with open('../' + file, 'w') as f:
        json.dump(data, f)
        
-    return features
-       
 def makeStarCsv(file, latMin, latMax):
     start_df = paths[["Name", "Start"]]
     start_df.rename(columns={"Start": "Number", "Name": "Constellation"}, inplace=True)
@@ -100,7 +98,7 @@ makeStarCsv("stars.csv", -90, 90)
 
 #northern
 northern = names[names["Region"].isin(["Northern", "Equatorial"])]
-helpme = makeGeoJSON("paths_north.geojson", names.Name, 0, 90)
+makeGeoJSON("paths_north.geojson", names.Name, 0, 90)
 makeStarCsv("stars_north.csv", 0, 90)
 
 #southern

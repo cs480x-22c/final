@@ -72,7 +72,7 @@ function createMap(data, stars, rotation, svgID) {
         .attr('cx', d => proj([d.Lon, d.Lat])[0])
         .attr('cy', d => proj([d.Lon, d.Lat])[1])
         .attr("r", d => sizeScale(d.Mag))
-        .attr('id', d => {console.log(d.HD); d.HD;})
+        .attr('id', d => d.HD)
         .attr("fill", "#aaaaaa")
         .on("mouseover", mouseOverStar)
         .on("mouseout", mouseOffStar);
