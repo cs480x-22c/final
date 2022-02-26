@@ -9,19 +9,8 @@ The path to a good visualization is going to involve mistakes and wrong turns.
 It is therefore important to recognize that mistakes are valuable in finding the path to a solution, to broadly explore the design space, and to iterate designs to improve possible solutions. 
 To help you explore the design space, we will hold events such as feedback sessions in which you propose your idea and initial designs and receive feedback from the class and staff.
 
-Proposals / Idea Generation
----
-
-Submit project ideas using [this Google Form](https://docs.google.com/forms/d/e/1FAIpQLSepaCzjEq9AXwmJ8mJ-06ytkQUuLI1Z2QF5KGyhVnKaxBI-mA/viewform?usp=sf_link).
-
-You're encouraged to submit many ideas-- staff will help you identify the most promising ones and possible roadblocks.
-
-Please stick to 1-4 folks per team.
-
 Final Project Materials
 ---
-For your final project you must hand in the following items.
-
 ### Process Book
 
 An important part of your project is your process book. Your process book details your steps in developing your solution, including the alternative designs you tried, and the insights you got. Develop your process book out of the project proposal. Equally important to your final results is how you got there! Your process book is the place you describe and document the space of possibilities you explored at each step of your project. It is not, however, a journal or lab notebook that describes every detail - you should think carefully about the important decisions you made and insights you gained and present your reasoning in a concise way.
