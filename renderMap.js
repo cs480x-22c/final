@@ -1,15 +1,16 @@
 Promise.all(
-  [d3.json('map.geojson')]).then( ([countries]) => {
-  createMap(countries)
+  [d3.json('map.geojson')]).then( ([buildings]) => {
+  createMap(buildings)
 })
 	var width = 960,
     height = 600
 
-  function createMap(countries) {
-	features = countries.features
+  function createMap(buildings) {
+	features = buildings.features
 	var fixed = features.map(function(feature) {
         return turf.rewind(feature,{reverse:true});
     })
+		
   var proj = d3.geoMercator()
 	.center([0, 42.27375])
     .rotate([71.808444, 0])
@@ -23,7 +24,7 @@ Promise.all(
   // draw country boundaries
   d3.select('svg')
     .append('g')
-    .attr('id', 'countries')
+    .attr('id', 'buildings')
     .selectAll('path')
     .data(fixed)
     .enter()
@@ -31,7 +32,7 @@ Promise.all(
       .attr('d', function(d) { console.log(d); return gpath(d); })
       .attr('stroke-width', 1)
       .attr('stroke', 'steelblue')
-      .attr('id', d => d.id)
+      .attr('id', d => d.properties.name)
       .attr('fill', "white");
 
 
