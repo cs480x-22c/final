@@ -1,13 +1,7 @@
 Final Project - Interactive Data Visualization  
 ===
 
-The key learning experience of this course is the final project. 
-You will design a web site and interactive visualizations that answer questions you have, provide an exploratory interface to some topic of your own choosing, or take on a more ambitious experiment than A3. 
-You will acquire the data, design your visualizations, implement them, and critically evaluate the results. 
-
-The path to a good visualization is going to involve mistakes and wrong turns. 
-It is therefore important to recognize that mistakes are valuable in finding the path to a solution, to broadly explore the design space, and to iterate designs to improve possible solutions. 
-To help you explore the design space, we will hold events such as feedback sessions in which you propose your idea and initial designs and receive feedback from the class and staff.
+Hello! This is our project for the final project. It is a website dedicated to the alien abduction data we found online. To make this possible, we created several different displays based on the various types of data given to let us show off our D3 skills we learned from the class. 
 
 Final Project Materials
 ---
@@ -57,26 +51,6 @@ Use principles of good storytelling and presentations to get your key points acr
 What do you feel is the best part of your project? 
 What insights did you gain? 
 What is the single most important thing you would like your audience to take away? Make sure it is front and center rather than at the end.
-
-Outside Libraries/References
----
-
-For this project you *do not* have to write everything from scratch.
-
-You may *reference* demo programs from books or the web, and *include* popular web libraries like Material UI, React, Svelte, etcetera. 
-
-Please *do not* use libraries on top of d3 without consulting staff, however. 
-Libraries like nvd3.js look tempting, but such libraries often have poor defaults and result in poor visualizations.
-There may be exceptions.
-Instead, draw from the numerous existing d3 examples on the web.
-
-If you use outside sources please provide a References section with links at the end of your Readme.
-
-Resources
----
-The "[Data is Plural](https://tinyletter.com/data-is-plural/archive)" weekly letter often contains interesting datasets.
-
-Think of something you're interested in, go find data on it! Include data collection and processing as part of your work on this project.
 
 Requirements
 ---
