@@ -78,6 +78,8 @@ stars.drop_duplicates(subset="HD", inplace=True)
 
 #create combined file
 mappings = pathnums.merge(stars, how="inner", on="HD")
+mappings["vis.mag."] = mappings["vis.mag."].apply(lambda x: x.replace("−", "-"))
+mappings["vis.mag."] = mappings["vis.mag."].apply(lambda x: x.replace("4.70(4.60–4.79)", "4.70"))
 mappings = mappings[["Number", "Constellation_x", "HD", "RA", "Dec", "vis.mag."]]
 mappings.rename(columns={"Constellation_x":"Constellation", "vis.mag.":"Mag"}, inplace=True)
 

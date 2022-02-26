@@ -55,10 +55,24 @@ def makeGeoJSON(file, names, latMin, latMax):
     for name in names:
         feature = makeFeature(name, latMin, latMax)
         features.append(feature)
+        
+    #create dummy featuers around edges
+    extraFeature1 = {"type": "Feature", "id": "extra1", "properties": {"name": "extra1"}, "geometry": {"type": "MultiLineString", "coordinates": [[[-90,0],[-90,0]]]}}
+    extraFeature2 = {"type": "Feature", "id": "extra2", "properties": {"name": "extra2"}, "geometry": {"type": "MultiLineString", "coordinates": [[[0,0],[0,0]]]}}
+    extraFeature3 = {"type": "Feature", "id": "extra3", "properties": {"name": "extra3"}, "geometry": {"type": "MultiLineString", "coordinates": [[[90,0],[90,0]]]}}
+    extraFeature4 = {"type": "Feature", "id": "extra4", "properties": {"name": "extra4"}, "geometry": {"type": "MultiLineString", "coordinates": [[[180,0],[180,0]]]}}
+    
+    features.append(extraFeature1)
+    features.append(extraFeature2)
+    features.append(extraFeature3)
+    features.append(extraFeature4)
+    
     data = {"type":"FeatureCollection", "features":features}
     
     with open('../' + file, 'w') as f:
        json.dump(data, f)
+       
+    return features
        
 def makeStarCsv(file, latMin, latMax):
     start_df = paths[["Name", "Start"]]
@@ -86,7 +100,7 @@ makeStarCsv("stars.csv", -90, 90)
 
 #northern
 northern = names[names["Region"].isin(["Northern", "Equatorial"])]
-makeGeoJSON("paths_north.geojson", names.Name, 0, 90)
+helpme = makeGeoJSON("paths_north.geojson", names.Name, 0, 90)
 makeStarCsv("stars_north.csv", 0, 90)
 
 #southern

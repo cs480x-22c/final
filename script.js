@@ -29,21 +29,21 @@ Promise.all([
     d3.json('paths_north.geojson'),
     d3.csv('stars_north.csv')
 ]).then(([data, stars]) => {
-    createMap(data, stars, -90, "#north");
+    createMap(data, stars, [0, -90], "#north");
 });
 
 Promise.all([
     d3.json('paths_south.geojson'),
     d3.csv('stars_south.csv')
 ]).then(([data, stars]) => {
-    createMap(data, stars, 90, "#south");
+    createMap(data, stars, [180, 90], "#south");
 });
 
 function createMap(data, stars, rotation, svgID) {
     const svg = d3.select(svgID);
 
     let proj = d3.geoAzimuthalEqualArea()
-        .rotate([0, rotation, 0])
+        .rotate(rotation)
         .fitExtent([[5, 5], [svgSize - 5, svgSize - 5]], data)
     let gpath = d3.geoPath().projection(proj);
 
@@ -64,7 +64,6 @@ function createMap(data, stars, rotation, svgID) {
         .on("mouseover", mouseOverConstellation)
         .on("mouseout", mouseOffConstellation);
 
-
     // draw stars
     svg.selectAll('circle')
         .data(stars)
@@ -73,7 +72,7 @@ function createMap(data, stars, rotation, svgID) {
         .attr('cx', d => proj([d.Lon, d.Lat])[0])
         .attr('cy', d => proj([d.Lon, d.Lat])[1])
         .attr("r", d => sizeScale(d.Mag))
-        .attr('id', d => d.HD)
+        .attr('id', d => {console.log(d.HD); d.HD;})
         .attr("fill", "#aaaaaa")
         .on("mouseover", mouseOverStar)
         .on("mouseout", mouseOffStar);
@@ -87,10 +86,7 @@ function createMap(data, stars, rotation, svgID) {
         .attr("stroke", "white")
         .attr("fill", "none");
 
-
-    addBlur(svg)
-
-
+    addBlur(svg);
 }
 
 function addBlur(svg){
@@ -135,8 +131,6 @@ function mouseOverConstellation() {
 function mouseOffConstellation() {
     activateConstellation('#' + this.id, false)
 }
-
-
 
 function activateConstellation(path, active) {
     if(active) {
