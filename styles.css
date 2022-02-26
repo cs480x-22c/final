@@ -1,3 +1,9 @@
+* {
+    font-family: Georgia;
+    padding: 0;
+    margin: 0;
+}
+
 body {
     background-image: linear-gradient(rgb(12, 20, 0), #0f0038);
     display: flex;
@@ -14,7 +20,6 @@ body {
     opacity: 90%;
     margin: auto;
     text-align: center;
-    font-family: Georgia;
     font-size: 200%;
     font-weight: 20;
 }
@@ -66,6 +71,21 @@ body {
 #constellationDropdown option:hover {
     background-color: #f1f1f1;
 }
+
+/* datatip styles */
+#datatip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
 .hidden {
     display: none !important;
 }

@@ -1,5 +1,6 @@
 const svgSize = 500;
 let activeConstellation = null;
+let constellationInfo;
 
 //for easy access
 const COLORS = 
@@ -116,6 +117,7 @@ function mouseOverStar(e) {
     //   .transition().duration(300)
     //    .style('fill', 'white');
     activateConstellation('#' + e.target.classList[0], true)
+    showDatatip(e.target.classList[0], e.x, e.y);
 }
 
 function mouseOffStar(e) {
@@ -123,14 +125,17 @@ function mouseOffStar(e) {
     //    .transition().duration(300)
     //    .style('fill', 'white');
     activateConstellation('#' + e.target.classList[0], false)
+    //hideDatatip();
 }
 
 function mouseOverConstellation(e) {
     activateConstellation('#' + e.target.id, true)
+    showDatatip(e.target.id, e.x, e.y);
 }
 
 function mouseOffConstellation(e) {
     activateConstellation('#' + e.target.id, false)
+    //hideDatatip();
 }
 
 function activateConstellation(path, active) {
@@ -162,6 +167,8 @@ Promise.all([
 });
 
 function appendConstellations(data) {
+    constellationInfo = data;
+
     var divTag = document.getElementById("constellationDropdown");
     for (var i = 0; i < data.length; i++) {
         var option = document.createElement("option");
@@ -196,4 +203,28 @@ function filter() {
     }).forEach(option => {
         option.classList.add("hidden");
     });
+}
+
+//datatips
+function showDatatip(constellation, x, y) {
+    info = constellationInfo.filter(item => item["Star Name"] == constellation)[0   ];
+
+    let desc = info.Description;
+    let history = info.History;
+
+    console.log(constellation, desc, history);
+
+    let html = `<p>${constellation}</p>
+                <p>The ${desc}</p>
+                <p>${history}</p>`;
+    d3.select("#datatip")
+        .html(html)
+        .style("left", x)
+        .style("top", y)
+        .classed("hidden", false);
+}
+
+function hideDatatip() {
+    d3.select("#datatip")
+        .classed("hidden", true);
 }
