@@ -15,11 +15,15 @@ body {
   font-family: AlienLeagueIiRegular;
   src: url("AlienLeagueIiRegular.otf") format("opentype");
 }
+@font-face {
+  font-family: Raleway-ExtraLight;
+  src: url("Raleway-ExtraLight.ttf") format("truetype");
+}
 
 h1 {
   vertical-align: top;
   display: inline-block;
-  font-size: 50px;
+  font-size: 64px;
   font-family: "AlienLeagueIiRegular";
   text-decoration: none;
   color: white;
@@ -33,8 +37,8 @@ p {
 }
 text {
   display: block;
-  font-size: 32px;
-  font-family: "AlienLeagueIiRegular";
+  font-size: 30px;
+  font-family: "Raleway-ExtraLight";
   text-decoration: none;
   color: white;
 }
@@ -48,9 +52,10 @@ h1:hover {
 }
 a {
   display: inline-block;
-  width: 50px;
+  width: 32px;
   text-decoration: none;
   color: white;
+  font-family: "AlienLeagueIiRegular";
 }
 nav,
 .scroll-container {
@@ -78,6 +83,8 @@ nav {
   color: white;
   scrollbar-width: thin; /* "auto" or "thin" */
   scrollbar-color: white white;
+  font-family: "AlienLeagueIiRegular";
+  font-size: medium;
 }
 .flex-container {
   margin: 40px auto 0 auto;
