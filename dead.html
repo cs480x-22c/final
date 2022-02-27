@@ -460,7 +460,7 @@
                 return (parseInt(d.R) * WIDTH / runLimit) + WIDTH + 150;
             })
             .attr("cy", function (d) {
-                return (d.BB && d.H) ? HEIGHT * (parseInt(d.H) + parseInt(d.BB)) / hitLimit + 50 : 50;
+                return HEIGHT * (parseInt(d.H) + parseInt(d.BB)) + 50;
             })
             .attr("class", function (d, i) {
                 return "pt" + i;
@@ -538,7 +538,12 @@
                 return (parseInt(d.BB) * WIDTH / bbLimit) + 2*WIDTH + 250;
             })
             .attr("cy", function (d) {
-                return HEIGHT * parseInt(d.SO) / kLimit + 50;
+                if(d.SO == 0) {
+                    return 50;
+                }
+                else {
+                    return HEIGHT * parseInt(d.SO) / kLimit + 50;
+                }
             })
             .attr("class", function (d, i) {
                 return "pt" + i;
