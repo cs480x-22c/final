@@ -1,5 +1,5 @@
 const svgSize = 500;
-const datatipWidth = 200;
+const datatipWidth = 225;
 
 let activeConstellation = null;
 let constellationInfo;
@@ -39,7 +39,7 @@ Promise.all([
 function createMap(data, stars, rotation, svgID) {
     let proj = d3.geoAzimuthalEqualArea()
         .rotate(rotation)
-        .fitExtent([[5, 5], [svgSize - 5, svgSize - 5]], data)
+        .fitExtent([[5, 5], [svgSize - 5, svgSize - 5]], data);
     let gpath = d3.geoPath().projection(proj);
     const svg = d3.select(svgID);
     drawConstellations(svg, data.features, stars, proj, gpath, COLORS.begin, true);
@@ -157,7 +157,7 @@ function activateConstellation(path, active) {
     }
     else {
         activeConstellation = null
-        hideDatatip();
+        //hideDatatip();
         d3.selectAll(path)
             .transition().duration(200)
             .style('stroke-width', '2')
@@ -215,7 +215,8 @@ function showDatatip(constellation) {
     let desc = info.Description;
     let history = info.History;
 
-    let html = `<p>${constellation}</p>
+    let html = `<button id="returnToSearch" onclick="hideDatatip()">Return to Search</button>
+                <p>${constellation}</p>
                 <p>The ${desc}</p>
                 <div><svg id="datatipImg" width=${datatipWidth - 10} height=${datatipWidth - 10}></svg></div>
                 <p class="history">${history}</p>`;
@@ -229,9 +230,10 @@ function showDatatip(constellation) {
     let geojson = { "type": "FeatureCollection", "features": [path] };
     let stars = fullStars.filter(star => star["Constellation"] == constellation);
 
+    let imgPadding = 20;
     let proj = d3.geoAzimuthalEqualArea()
         .rotate([0, -90])
-        .fitExtent([[5, 5], [datatipWidth - 15, datatipWidth - 15]], geojson)
+        .fitExtent([[imgPadding, imgPadding], [datatipWidth - imgPadding - 10, datatipWidth - imgPadding - 10]], geojson)
     let gpath = d3.geoPath().projection(proj);
 
     let svg = d3.select("#datatipImg");
@@ -246,4 +248,7 @@ function hideDatatip() {
     //clear datatip
     d3.select("#side-panel")
         .html("");
+
+    //unactivate constellation
+    activateConstellation(activeConstellation, false);
 }
