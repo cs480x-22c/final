@@ -349,7 +349,7 @@
                 }
             })
     };
-    d3.csv("/core/Batting.csv").then(function (data) {
+    d3.csv("https://raw.githubusercontent.com/jacobadamsky/final/main/core/Batting.csv").then(function (data) {
         var xPos = 0;
         d3.selection.prototype.moveToFront = function () {
             return this.each(function () {
