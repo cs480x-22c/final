@@ -22,21 +22,39 @@
 }
 </style>
 <body>
+  <input type="text" placeholder="Type something..." id="myInput">
+  <input type="text1" placeholder="Type something..." id="myInputTime">
+    <button type="button" onclick="getInputValue();">Get Value</button>
+    
+    <button onclick=
+            "document.getElementById(
+             'myInput').value = ''">
+      Click here to clear
+  </button>
+</body>
+</html>
 
+<div class="results-container>
+<ul class="results-list" id="list">
+
+</ul>
+</div>
 <div id="calendar"></div>
 
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 <script>
+let inputObject = document.getElementById('searchTxt')
 
 function drawCalendar(myData) {
-
+  
   var calendarRows = function(month) {
     var m = d3.timeMonth.floor(month);
     return d3.timeWeeks(d3.timeWeek.floor(m), d3.timeMonth.offset(m,1)).length;
   }
 
-  var minDate = d3.min(myData, function(d) { return new Date(d.Day); });
+  var minDate = d3.min(myData, function(d) { 
+    return new Date(d.Day); });
   var maxDate = d3.max(myData, function(d) { return new Date(d.Day); });
 
   var cellMargin = 2,
@@ -44,14 +62,14 @@ function drawCalendar(myData) {
 
   var day = d3.timeFormat("%w"),
       week = d3.timeFormat("%U"),
-      format = d3.timeFormat("%Y-%m-%d"),
+      format = d3.timeFormat("%m/%d/%Y"),
       titleFormat = d3.utcFormat("%a, %d-%b"),
       monthName = d3.timeFormat("%B"),
       months= d3.timeMonth.range(d3.timeMonth.floor(minDate), maxDate);
-
-  for(var i=0; i<myData.length; i++){
-    myData[i].today =  myData[i].Day;
-  }
+    console.log(months)
+  // for(var i=0; i<myData.length; i++){
+  //   myData[i].today =  myData[i].Day;
+  // }
 
   var svg = d3.select("#calendar").selectAll("svg")
     .data(months)
@@ -73,6 +91,8 @@ function drawCalendar(myData) {
 
   var rect = svg.selectAll("rect.day")
     .data(function(d, i) {
+      console.log(d)
+     
       return d3.timeDays(d, new Date(d.getFullYear(), d.getMonth()+1, 1));
     })
     .enter().append("rect")
@@ -80,7 +100,8 @@ function drawCalendar(myData) {
       .attr("width", cellSize)
       .attr("height", cellSize)
       .attr("rx", 3).attr("ry", 3) // rounded corners
-      .attr("fill", 'blue') // default light grey fill
+      
+      .attr("fill", '#eaeaea')
       .attr("x", function(d) {
         return (day(d) * cellSize) + (day(d) * cellMargin) + cellMargin;
       })
@@ -95,27 +116,48 @@ function drawCalendar(myData) {
       .on("mouseout", function(d) {
         d3.select(this).classed('hover', false);
       })
-      .datum(format);
+      
 
   rect.append("title")
     .text(function(d) { return titleFormat(new Date(d)); });
-
+    
+   
+ 
   var lookup = d3.nest()
-    .key(function(d) { return d.today; })
-    .rollup(function(leaves) { return leaves.length; })
+    .key(function(d) { return new Date(d.Day); })
+    .rollup(function(leaves) { 
+      
+      return leaves.length; })
     .object(myData);
 
+
+   
   count = d3.nest()
-    .key(function(d) { return d.today; })
+    .key(function(d) { return new Date(d.Day); })
     .rollup(function(leaves) { return leaves.length; })
     .entries(myData);
+  
+  count1 = d3.nest()
+    .key(function(d) { return new Date(d.Day); })
+    .rollup(function(leaves) { 
+      console.log(leaves)
+      return leaves.length; })
+    .entries(myData);
+console.log(count1)
 
+   
   scale = d3.scaleLinear()
     .domain(d3.extent(count, function(d) { return d.value; }))
-    .range([0.4,1]); // the interpolate used for color expects a number in the range [0,1] but i don't want the lightest part of the color scheme
-
-  rect.filter(function(d) { return d in lookup; })
-    .style("fill", function(d) { return d3.interpolatePuBu(scale(lookup[d])); })
+    
+    .range([0,1]); // the interpolate used for color expects a number in the range [0,1] but i don't want the lightest part of the color scheme
+    
+    
+  rect.filter(function(d) {
+   
+    return d in lookup; })
+    .style("fill", function(d) { 
+   
+      return d3.interpolatePuBu(scale(lookup[d])); })
     .classed("clickable", true)
     .on("click", function(d){
       if(d3.select(this).classed('focus')){
@@ -126,13 +168,29 @@ function drawCalendar(myData) {
       // doSomething();
     })
     .select("title")
+
       .text(function(d) { return titleFormat(new Date(d)) + ":  " + lookup[d]; });
 
 }
 
-d3.csv("updated_25data.csv", function(response) {
-  drawCalendar(response);
+
+
+
+
+function getInputValue(){
+            // Selecting the input element and get its value 
+            var inputVal = document.getElementById("myInput").value;
+            var input = document.getElementById("myInputTime").value;
+            d3.csv("updated_25data.csv").then(function(data) {
+  data = data.filter(function(row) {
+    console.log(row['Event_Start'])
+        return (row['Event_Start'] == input) && (row['Location1'] == inputVal);
+    })
+  drawCalendar(data)
 })
+
+            
+        }
 
 </script>
 </body>
