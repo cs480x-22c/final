@@ -460,7 +460,7 @@
                 return (parseInt(d.R) * WIDTH / runLimit) + WIDTH + 150;
             })
             .attr("cy", function (d) {
-                return HEIGHT * (parseInt(d.H) + parseInt(d.BB)) / hitLimit + 50;
+                return (d.BB && d.H) ? HEIGHT * (parseInt(d.H) + parseInt(d.BB)) / hitLimit + 50 : 50;
             })
             .attr("class", function (d, i) {
                 return "pt" + i;
