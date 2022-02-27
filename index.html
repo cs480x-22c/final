@@ -6,11 +6,20 @@
 
 <body>
     <div id="vis">
-        <h1 id="heading">Stories in Our Stars</h1>
-        <div id="map-container"></div>
+        <div id="side-panel"></div>
+        <div id="map-container">
+            <h1>Stories in Our Stars</h1>
+            <div id="north-container">
+                <svg width=500 height=500 id="north"></svg>
+                <h2>Northern Hemisphere</h2>
+            </div>
+            <div id="south-container">
+                <svg width=500 height=500 id="south"></svg>
+                <h2>Southern Hemisphere</h2>
+            </div>
+        </div>
         <div id="dropdown">
-            <button onclick="showOptions()" id="dropbtn">Constellation Search</button>
-            <div id="constellationDropdown" class="hidden">
+            <div id="constellationDropdown">
                 <input autocomplete="off" type="text" placeholder="Search..." id="searchInput" onkeyup="filter()">
             </div>
         </div>
