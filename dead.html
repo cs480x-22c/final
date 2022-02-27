@@ -538,7 +538,7 @@
                 return (parseInt(d.BB) * WIDTH / bbLimit) + 2*WIDTH + 250;
             })
             .attr("cy", function (d) {
-                if(d.SO == "") {
+                if(d.SO == "" || d.SO == null) {
                     return 50;
                 }
                 else {
