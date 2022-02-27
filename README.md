@@ -3,6 +3,8 @@ Final Project - Interactive Data Visualization
 
 Hello! This is our project for the final project. It is a website dedicated to the alien abduction data we found online. To make this possible, we created several different displays based on the various types of data given to let us show off our D3 skills we learned from the class. 
 
+https://alexiscaira.github.io/final/
+
 Final Project Materials
 ---
 ### Process Book
