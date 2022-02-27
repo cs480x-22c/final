@@ -215,7 +215,7 @@ function showDatatip(constellation) {
     let desc = info.Description;
     let history = info.History;
 
-    let html = `<button id="returnToSearch" onclick="hideDatatip()">Return to Search</button>
+    let html = `<button id="returnToSearch" onclick="hideDatatip()"><i class="arrow left"></i> Return to Search</button>
                 <p>${constellation}</p>
                 <p>The ${desc}</p>
                 <div><svg id="datatipImg" width=${datatipWidth - 10} height=${datatipWidth - 10}></svg></div>
