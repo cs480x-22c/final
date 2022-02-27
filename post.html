@@ -38,6 +38,8 @@
         </form>
         <input id="searchID" placeholder="Type player ID for search">
         <button style="outline:2px" onclick="alerted = false; playerSearch(document.getElementById('searchID').value);">Search</button>
+        <br />
+        <button style="outline:2px" onclick='d3.selectAll("circle").style("opacity", 1).attr("visibility", "visible");'>Reset</button>
     </div>
 </body>
 </html>
