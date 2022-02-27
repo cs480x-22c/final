@@ -85,67 +85,65 @@
     <script>
       console.log(d3);
 
-      var svg = d3
-        .select("#chart")
-        .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      var svg = d3.select("#chart").append("svg").append("g");
 
-      var data = d3.csv("nuforc_reports.csv").then(function (data) {
-        var summary = [];
-        var city = [];
-        var state = [];
-        var date_time = [];
-        var shape = [];
-        var duration = [];
-        var stats = [];
-        var report_link = [];
-        var text = [];
-        var posted = [];
-        var city_latitude = [];
-        var city_longitude = [];
+      var data = d3
+        .csv(
+          "https://data.world/timothyrenner/ufo-sightings/workspace/file?filename=nuforc_reports.csv"
+        )
+        .then(function (data) {
+          var summary = [];
+          var city = [];
+          var state = [];
+          var date_time = [];
+          var shape = [];
+          var duration = [];
+          var stats = [];
+          var report_link = [];
+          var text = [];
+          var posted = [];
+          var city_latitude = [];
+          var city_longitude = [];
 
-        for (i = 0; i < data.length; i++) {
-          if (data[i].summary != "NA") {
-            reports.push(data[i]);
+          for (i = 0; i < data.length; i++) {
+            if (data[i].summary != "NA") {
+              reports.push(data[i]);
+            }
+            if (data[i].city != "NA") {
+              reports.push(data[i]);
+            }
+            if (data[i].state != "NA") {
+              reports.push(data[i]);
+            }
+            if (data[i].date_time != "NA") {
+              reports.push(data[i]);
+            }
+            if (data[i].shape != "NA") {
+              reports.push(data[i]);
+            }
+            if (data[i].duration != "NA") {
+              reports.push(data[i]);
+            }
+            if (data[i].stats != "NA") {
+              reports.push(data[i]);
+            }
+            if (data[i].report_link != "NA") {
+              reports.push(data[i]);
+            }
+            if (data[i].text != "NA") {
+              reports.push(data[i]);
+            }
+            if (data[i].posted != "NA") {
+              reports.push(data[i]);
+            }
+            if (data[i].city_latitude != "NA") {
+              reports.push(data[i]);
+            }
+            if (data[i].city_longitude != "NA") {
+              reports.push(data[i]);
+            }
           }
-          if (data[i].city != "NA") {
-            reports.push(data[i]);
-          }
-          if (data[i].state != "NA") {
-            reports.push(data[i]);
-          }
-          if (data[i].date_time != "NA") {
-            reports.push(data[i]);
-          }
-          if (data[i].shape != "NA") {
-            reports.push(data[i]);
-          }
-          if (data[i].duration != "NA") {
-            reports.push(data[i]);
-          }
-          if (data[i].stats != "NA") {
-            reports.push(data[i]);
-          }
-          if (data[i].report_link != "NA") {
-            reports.push(data[i]);
-          }
-          if (data[i].text != "NA") {
-            reports.push(data[i]);
-          }
-          if (data[i].posted != "NA") {
-            reports.push(data[i]);
-          }
-          if (data[i].city_latitude != "NA") {
-            reports.push(data[i]);
-          }
-          if (data[i].city_longitude != "NA") {
-            reports.push(data[i]);
-          }
-        }
-      });
+        });
     </script>
   </body>
 </html>
