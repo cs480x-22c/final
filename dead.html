@@ -232,7 +232,7 @@
                 }
             })
     };
-    d3.csv("/core/Batting.csv").then(function (data) {
+    d3.csv("./core/Batting.csv").then(function (data) {
         d3.selection.prototype.moveToFront = function () {
             return this.each(function () {
                 this.parentNode.appendChild(this);
