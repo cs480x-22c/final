@@ -47,8 +47,10 @@
 </html>
 <svg width="1550" height="740"></svg>
 <script>
+    var kLimit = 250; //chose this because its slightly above the single season strikeout record
+    var bbLimit = 250; //chose this because its slightly above the single season walk record
     var alerted;
-    var runLimit = 200
+    var runLimit = 200;  //chose this because its slightly above the single season run record
     var hitLimit = 550;
     var Y1 = 1961;
     var Y2 = 1976;
@@ -56,12 +58,12 @@
     var counter2 = 0;
     var scrubVal = 0;
     var scrub2;
-    var WIDTH = 640;
+    var WIDTH = 480;
     var HEIGHT = 640;
     var YMARK = WIDTH / (Y2 - Y1);
     var svg = d3.select("svg")
         .append("svg")
-        .attr("width", 1550)
+        .attr("width", 1750)
         .attr("height", 740)
         .append("g");
     var y = d3.scaleLinear()
@@ -80,7 +82,19 @@
         .attr("height", 6)
         .style("fill", "black");
     svg.append("rect")
+        .attr("x", 3*WIDTH - 236)
+        .attr("y", 44)
+        .attr("width", 6)
+        .attr("height", 6)
+        .style("fill", "black");
+    svg.append("rect")
         .attr("x", 50 + WIDTH)
+        .attr("y", 44)
+        .attr("width", 6)
+        .attr("height", HEIGHT + 6)
+        .style("fill", "black");
+    svg.append("rect")
+        .attr("x", 250 + 3 * WIDTH)
         .attr("y", 44)
         .attr("width", 6)
         .attr("height", HEIGHT + 6)
@@ -91,7 +105,7 @@
         .style("stroke-width", 1)
         .style("fill", "black")
         .selectAll('text')
-        .style('font-size', '12px');
+        .style('font-size', '9px');
     var x = d3.scaleLinear()
         .domain([Y1, Y2])
         .range([0, WIDTH]);
@@ -101,7 +115,7 @@
         .style("stroke-width", 1)
         .style("fill", "black")
         .selectAll('text')
-        .style('font-size', '12px');
+        .style('font-size', '9px');
 
     var y2 = d3.scaleLinear()
         .domain([0, hitLimit])
@@ -113,12 +127,12 @@
         .attr("height", HEIGHT + 6)
         .style("fill", "black");
     svg.append("g")
-        .attr("transform", "translate(790, 50)")
+        .attr("transform", "translate(" + `${WIDTH + 150}` + ", 50)")
         .call(d3.axisLeft(y2))
         .style("stroke-width", 1)
         .style("fill", "black")
         .selectAll('text')
-        .style('font-size', '12px');
+        .style('font-size', '9px');
     var x2 = d3.scaleLinear()
         .domain([0, runLimit])
         .range([WIDTH, 2 * WIDTH]);
@@ -128,7 +142,93 @@
         .style("stroke-width", 1)
         .style("fill", "black")
         .selectAll('text')
-        .style('font-size', '12px');
+        .style('font-size', '9px');
+    svg.append("rect")
+        .attr("x", 150 + WIDTH * 2)
+        .attr("y", 44)
+        .attr("width", 6)
+        .attr("height", HEIGHT + 6)
+        .style("fill", "black");
+    svg.append("rect")
+        .attr("x", 144 + WIDTH)
+        .attr("y", 44)
+        .attr("width", 6)
+        .attr("height", 6)
+        .style("fill", "black");
+    var axisLabelX = 25;
+    var axisLabelY = HEIGHT / 2 + 50;
+    d3.select("svg")
+        .append('g')
+        .attr('transform', 'translate(' + axisLabelX + ', ' + axisLabelY + ')')
+        .append('text')
+        .attr('text-anchor', 'middle')
+        .style('font-size', '16px')
+        .attr('transform', 'rotate(-90)')
+        .text('Batting Average');
+    d3.select("svg")
+        .append('g')
+        .attr('transform', 'translate(' + (axisLabelX + WIDTH + 100).toString() +  ', ' + axisLabelY + ')')
+        .append('text')
+        .attr('text-anchor', 'middle')
+        .style('font-size', '16px')
+        .attr('transform', 'rotate(-90)')
+        .text('Walks + Hits');
+    d3.select("svg")
+        .append('g')
+        .attr('transform', 'translate(' + (axisLabelX + 2 * WIDTH + 200).toString() + ', ' + axisLabelY + ')')
+        .append('text')
+        .attr('text-anchor', 'middle')
+        .style('font-size', '16px')
+        .attr('transform', 'rotate(-90)')
+        .text('Strikeouts');
+    d3.select("svg")
+        .append('g')
+        .attr('transform', 'translate(' + (50 + (WIDTH) / 2).toString() + ', ' + 25 + ')')
+        .append('text')
+        .attr('text-anchor', 'middle')
+        .style('font-size', '16px')
+        .text('Year');
+    d3.select("svg")
+        .append('g')
+        .attr('transform', 'translate(' + (WIDTH * 2 - 100).toString() + ', ' + 25 + ')')
+        .append('text')
+        .attr('text-anchor', 'middle')
+        .style('font-size', '16px')
+        .text('Runs');
+    d3.select("svg")
+        .append('g')
+        .attr('transform', 'translate(' + (WIDTH * 3).toString() + ', ' + 25 + ')')
+        .append('text')
+        .attr('text-anchor', 'middle')
+        .style('font-size', '16px')
+        .text('Walks');
+
+    var y3 = d3.scaleLinear()
+        .domain([0, kLimit])
+        .range([0, HEIGHT]);
+    svg.append("rect")
+        .attr("x", 50 + WIDTH)
+        .attr("y", 44)
+        .attr("width", 6)
+        .attr("height", HEIGHT + 6)
+        .style("fill", "black");
+    svg.append("g")
+        .attr("transform", "translate(" + `${WIDTH*2 + 250}` + ", 50)")
+        .call(d3.axisLeft(y3).tickFormat(d3.format("d")).ticks(26))
+        .style("stroke-width", 1)
+        .style("fill", "black")
+        .selectAll('text')
+        .style('font-size', '9px');
+    var x3 = d3.scaleLinear()
+        .domain([0, bbLimit])
+        .range([WIDTH, 2 * WIDTH]);
+    svg.append("g")
+        .attr("transform", "translate(730, 50)")
+        .call(d3.axisTop(x3).tickFormat(d3.format("d")).ticks(26))
+        .style("stroke-width", 1)
+        .style("fill", "black")
+        .selectAll('text')
+        .style('font-size', '9px');
     svg.append("rect")
         .attr("x", 150 + WIDTH * 2)
         .attr("y", 44)
@@ -180,6 +280,24 @@
                 .attr("y2", 50 + (HEIGHT / 55 * i))
         }
     }
+    for (let i = 1; i < kLimit / 10; i++) {
+        svg.append('line')
+            .style("stroke", "gray")
+                .style("stroke-width", 1)
+            .attr("x1", 250 + 2 *WIDTH + (WIDTH / 25) * i)
+            .attr("y1", 50)
+            .attr("x2", 250 + 2 *WIDTH + (WIDTH / 25) * i)
+            .attr("y2", 50 + HEIGHT);
+    }
+    for (let i = 1; i <= bbLimit / 10; i++) {
+            svg.append('line')
+                .style("stroke", "gray")
+                .style("stroke-width", 1)
+                .attr("x1", 250 + 2 * WIDTH)
+                .attr("y1", 50 + (HEIGHT / 25 * i))
+                .attr("x2", 250 + 3 * WIDTH)
+                .attr("y2", 50 + (HEIGHT / 25 * i))
+    }
 
     function updateVars(input) {
         scrubVal = parseInt(input);
@@ -220,19 +338,23 @@
                     if (!alerted) {
                         alert("Please enter a player name to search!");
                         alerted = true;
+                        return;
                     }
                 }
-                d3.select(this)
-                    .style("opacity", 0)
-                    .moveToBack();
-                if (d.playerID == input) {
-                    d3.selectAll("circle." + d3.select(this).attr('class'))
-                        .style("opacity", 1)
-                        .moveToFront();
+                else {
+                    d3.select(this)
+                        .style("opacity", 0)
+                        .moveToBack();
+                    if (d.playerID == input) {
+                        d3.selectAll("circle." + d3.select(this).attr('class'))
+                            .style("opacity", 1)
+                            .moveToFront();
+                    }
                 }
             })
     };
-    d3.csv("/core/Batting.csv").then(function (data) {
+    d3.csv("https://raw.githubusercontent.com/jacobadamsky/final/main/core/Batting.csv").then(function (data) {
+        var xPos = 0;
         d3.selection.prototype.moveToFront = function () {
             return this.each(function () {
                 this.parentNode.appendChild(this);
@@ -272,34 +394,57 @@
             })
             .style("stroke", "black")
             .on("click", function () {
-                if (counter == 5) {
-                    counter2++;
-                    counter = 0;
+                if (xPos != 3) {
+                    if (counter == 5) {
+                        counter2++;
+                        counter = 0;
+                    }
+                    if (counter2 == 50) {
+                        counter2 = 0;
+                        xPos++;
+                    }
+                    var xDisp = (WIDTH + 100) * xPos;
+                    if (d3.select(this).attr('r') == 3) {
+                        d3.selectAll("circle." + d3.select(this).attr('class'))
+                            .transition()
+                            .duration(500)
+                            .attr("r", 12)
+                            .style("fill",
+                                function () {
+                                    if (d3.select(this).style('fill') == "red") {
+                                        return new String("pink");
+                                    }
+                                    else if (d3.select(this).style('fill') == "green") {
+                                        return "lightgreen";
+                                    }
+                                    else if (d3.select(this).style('fill') == "blue") {
+                                        return "lightblue";
+                                    }
+                                })
+                            .each(function () {
+                                d3.select(this)
+                                    .moveToFront()
+                            });
+                    }
+                    else if (d3.select(this).attr('r') == 12) {
+                        counter++;
+                        svg.selectAll("circle." + d3.select(this).attr('class'))
+                            .transition()
+                            .duration(500)
+                            .attr("cx", WIDTH + 53 + (12 * counter) + xDisp)
+                            .attr("cy", 57 + (12 * counter2))
+                            .attr("r", 5);
+                        d3.select(this)
+                            .on('click', null);
+                    }
                 }
-                if (d3.select(this).attr('r') == 3) {
-                    d3.selectAll("circle." + d3.select(this).attr('class'))
-                        .transition()
-                        .duration(500)
-                        .attr("r", 12)
-                        .each(function () {
-                            d3.select(this).moveToFront()
-                        });
-                }
-                else if (d3.select(this).attr('r') == 12) {
-                    counter++;
-                    svg.selectAll("circle." + d3.select(this).attr('class'))
-                        .transition()
-                        .duration(500)
-                        .attr("cx", WIDTH + 53 + (12 * counter))
-                        .attr("cy", 57 + (12 * counter2))
-                        .attr("r", 5);
-                    d3.select(this)
-                        .on('click', null);
+                else {
+                    alert("You have reached the limit for viewed players! Please refresh the page to keep viewing player data.")
                 }
             })
             .append("svg:title")
             .text(function (d) {
-                return "Player ID: " + d.playerID + ", Year: " + d.yearID + ",\nAVG: " + (d.H / d.AB) + ", AB: " + d.AB + ", Hits: " + d.H + ",\nWalks: " + d.BB + ", Runs: " + d.R + ", SB: " + d.SB;
+                return "Player ID: " + d.playerID + ", Year: " + d.yearID + ",\nAVG: " + (d.H / d.AB) + ", AB: " + d.AB + ", Hits: " + d.H + ",\nWalks: " + d.BB + ", Runs: " + d.R + ", SO: " + d.SO;
             });
         //===============================================================//
         svg.selectAll("dot")
@@ -316,7 +461,7 @@
             })
             .attr("r", 3)
             .attr("cx", function (d) {
-                return (parseInt(d.R) * 3.2) + WIDTH + 150;
+                return (parseInt(d.R) * WIDTH / runLimit) + WIDTH + 150;
             })
             .attr("cy", function (d) {
                 return HEIGHT * (parseInt(d.H) + parseInt(d.BB)) / hitLimit + 50;
@@ -327,36 +472,135 @@
             .attr('type', function (d) { return d.playerID; })
             .style("stroke", "black")
             .on("click", function () {
-                if (counter == 5) {
-                    counter2++;
-                    counter = 0;
+                if (xPos != 3) {
+                    if (counter == 5) {
+                        counter2++;
+                        counter = 0;
+                    }
+                    if (counter2 == 50) {
+                        counter2 = 0;
+                        xPos++;
+                    }
+                    var xDisp = (WIDTH + 100) * xPos;
+                    if (d3.select(this).attr('r') == 3) {
+                        d3.selectAll("circle." + d3.select(this).attr('class'))
+                            .transition()
+                            .duration(500)
+                            .attr("r", 12)
+                            .style("fill",
+                                function () {
+                                    if (d3.select(this).style('fill') == "red") {
+                                        return new String("pink");
+                                    }
+                                    else if (d3.select(this).style('fill') == "green") {
+                                        return "lightgreen";
+                                    }
+                                    else if (d3.select(this).style('fill') == "blue") {
+                                        return "lightblue";
+                                    }
+                                })
+                            .each(function () {
+                                d3.select(this)
+                                    .moveToFront()
+                            });
+                    }
+                    else if (d3.select(this).attr('r') == 12) {
+                        counter++;
+                        svg.selectAll("circle." + d3.select(this).attr('class'))
+                            .transition()
+                            .duration(500)
+                            .attr("cx", WIDTH + 53 + (12 * counter) + xDisp)
+                            .attr("cy", 57 + (12 * counter2))
+                            .attr("r", 5);
+                        d3.select(this)
+                            .on('click', null);
+                    }
                 }
-                if (d3.select(this).attr('r') == 3) {
-                    d3.selectAll("circle." + d3.select(this).attr('class'))
-                        .transition()
-                        .duration(500)
-                        .attr("r", 12)
-                        .each(function () {
-                            d3.select(this).moveToFront()
-                        });
-                    d3.select(this)
-                        .moveToFront();
-                }
-                else if (d3.select(this).attr('r') == 12) {
-                    counter++;
-                    svg.selectAll("circle." + d3.select(this).attr('class'))
-                        .transition()
-                        .duration(500)
-                        .attr("cx", WIDTH + 53 + (12 * counter))
-                        .attr("cy", 57 + (12 * counter2))
-                        .attr("r", 5);
-                    d3.select(this)
-                        .on('click', null);
+                else {
+                    alert("You have reached the limit for viewed players! Please refresh the page to keep viewing player data.")
                 }
             })
             .append("svg:title")
             .text(function (d) {
-                return "Player ID: " + d.playerID + ", Year: " + d.yearID + ",\nAVG: " + (d.H / d.AB) + ", AB: " + d.AB + ", Hits: " + d.H + ",\nWalks: " + d.BB + ", Runs: " + d.R + ", SB: " + d.SB;
+                return "Player ID: " + d.playerID + ", Year: " + d.yearID + ",\nAVG: " + (d.H / d.AB) + ", AB: " + d.AB + ", Hits: " + d.H + ",\nWalks: " + d.BB + ", Runs: " + d.R + ", SO: " + d.SO;
+            });
+        //===============================================================//
+        svg.selectAll("dot")
+            .data(data)
+            .enter()
+            .append("circle")
+            .style("fill", function (d) {
+                if (d.AB >= 502) {
+                    return "green";
+                }
+                else {
+                    return "red";
+                }
+            })
+            .attr("r", 3)
+            .attr("cx", function (d) {
+                return (parseInt(d.BB) * WIDTH / bbLimit) + 2*WIDTH + 250;
+            })
+            .attr("cy", function (d) {
+                return HEIGHT * parseInt(d.SO) / kLimit + 50;
+            })
+            .attr("class", function (d, i) {
+                return "pt" + i;
+            })
+            .attr('type', function (d) { return d.playerID; })
+            .style("stroke", "black")
+            .on("click", function () {
+                if (xPos != 3) {
+                    if (counter == 5) {
+                        counter2++;
+                        counter = 0;
+                    }
+                    if (counter2 == 50) {
+                        counter2 = 0;
+                        xPos++;
+                    }
+                    var xDisp = (WIDTH + 100) * xPos;
+                    if (d3.select(this).attr('r') == 3) {
+                        d3.selectAll("circle." + d3.select(this).attr('class'))
+                            .transition()
+                            .duration(500)
+                            .attr("r", 12)
+                            .style("fill",
+                                function () {
+                                    if (d3.select(this).style('fill') == "red") {
+                                        return new String("pink");
+                                    }
+                                    else if (d3.select(this).style('fill') == "green") {
+                                        return "lightgreen";
+                                    }
+                                    else if (d3.select(this).style('fill') == "blue") {
+                                        return "lightblue";
+                                    }
+                                })
+                            .each(function () {
+                                d3.select(this)
+                                    .moveToFront()
+                            });
+                    }
+                    else if (d3.select(this).attr('r') == 12) {
+                        counter++;
+                        svg.selectAll("circle." + d3.select(this).attr('class'))
+                            .transition()
+                            .duration(500)
+                            .attr("cx", WIDTH + 53 + (12 * counter) + xDisp)
+                            .attr("cy", 57 + (12 * counter2))
+                            .attr("r", 5);
+                        d3.select(this)
+                            .on('click', null);
+                    }
+                }
+                else {
+                    alert("You have reached the limit for viewed players! Please refresh the page to keep viewing player data.")
+                }
+            })
+            .append("svg:title")
+            .text(function (d) {
+                return "Player ID: " + d.playerID + ", Year: " + d.yearID + ",\nAVG: " + (d.H / d.AB) + ", AB: " + d.AB + ", Hits: " + d.H + ",\nWalks: " + d.BB + ", Runs: " + d.R + ", SO: " + d.SO;
             });
     });
 </script>
