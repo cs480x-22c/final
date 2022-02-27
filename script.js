@@ -42,7 +42,7 @@ function createMap(data, stars, rotation, svgID) {
         .fitExtent([[5, 5], [svgSize - 5, svgSize - 5]], data);
     let gpath = d3.geoPath().projection(proj);
     const svg = d3.select(svgID);
-    drawConstellations(svg, data.features, stars, proj, gpath, COLORS.begin, true);
+    drawConstellations(svg, data.features, stars, proj, gpath, COLORS.inActive, true);
 
     //draw border
     svg.append("circle")
@@ -230,9 +230,34 @@ function showDatatip(constellation) {
     let geojson = { "type": "FeatureCollection", "features": [path] };
     let stars = fullStars.filter(star => star["Constellation"] == constellation);
 
+    //figure out what rotation to use (average lat and lon in path, removing duplicates)
+    lon1 = path.geometry.coordinates.map(x => x[0][0]);
+    lon2 = path.geometry.coordinates.map(x => x[1][0]);
+    lon = lon1.concat(lon2);
+    lon = [...new Set(lon)];
+
+    //if constellation crosses over longitude 180, need transformation
+    if (Math.max.apply(Math, lon) - Math.min.apply(Math, lon) > 180) {
+        lon = lon.map(x => {
+            if (x < 0) return 180 + (180 - Math.abs(x));
+            else return x;
+        })
+        avgLon = (lon.reduce((x, y) => x + y, 0) / lon.length);
+    }
+    else {
+        lon = lon.map(x => x + 180);
+        avgLon = (lon.reduce((x, y) => x + y, 0) / lon.length) - 180;
+    }
+
+    lat1 = path.geometry.coordinates.map(x => x[0][1])
+    lat2 = path.geometry.coordinates.map(x => x[1][1])
+    lat = lat1.concat(lat2);
+    lat = [...new Set(lat)];
+    avgLat = lat.reduce((x, y) => x + y, 0) / lat.length;
+
     let imgPadding = 20;
     let proj = d3.geoAzimuthalEqualArea()
-        .rotate([0, -90])
+        .rotate([-avgLon, -avgLat])
         .fitExtent([[imgPadding, imgPadding], [datatipWidth - imgPadding - 10, datatipWidth - imgPadding - 10]], geojson)
     let gpath = d3.geoPath().projection(proj);
 
