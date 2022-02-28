@@ -9,29 +9,43 @@
   </head>
   <body>
     <svg id="bubble-chart"></svg>
+    <div id="legend">
+      <div class="legend-wrapper">
+        <h1>WPI CS Course Planner</h1>
+        <p>Find out which CS classes you're ready for</p>
+        <div class="color-view">
+          <div class="color-view-element color-view-element-unavailable">Prerequisites not met</div>
+          <div class="color-view-element color-view-element-available">Prerequisites met</div>
+          <div class="color-view-element color-view-element-selected">Course completed</div>
+        </div>
+      </div>
+    </div>
     <style>
       body {
         font-family: 'Fredoka', sans-serif;
-        background-color: #d0646e;
+        background-color: #eaf2e3;
       }
       .wrapper, circle, .course {
         cursor: pointer;
         pointer-events: all;
       }
       .selected {
-        fill: green;
+        fill: #688b58;
       }
       .available {
-        fill: yellow;
+        fill: #6c91c2;
       }
       .available:hover {
-        fill: blue;
+        stroke: black;
+        stroke-width: 3px;
+        /* fill: blue; */
       }
       .unavailable {
         fill: lightgrey;
       }
       .unavailable:hover {
-        fill: lightgreen;
+        stroke: black;
+        stroke-width: 3px;
       }
       .text-wrapper {
         z-index: 999;
@@ -53,6 +67,43 @@
       }
       .course-name {
         margin-top: 0;
+      }
+      #legend {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .legend-wrapper {
+        padding: 1em;
+      }
+      .legend-wrapper > h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .legend-wrapper > p {
+        margin-top: 0;
+      }
+      .color-view-element {
+        font-size: 16px;
+      }
+      .color-view-element::before{
+       content: '';
+       display: inline-block;
+       width: 14px;
+       height: 14px;
+       -moz-border-radius: 7px;
+       -webkit-border-radius: 7px;
+       border-radius: 7px;
+       margin-right: 4px;
+      }
+      .color-view-element-unavailable::before {
+        background-color: lightgrey;
+      }
+      .color-view-element-available::before {
+        background-color: #6c91c2;
+      }
+      .color-view-element-selected::before {
+        background-color: #688b58;
       }
     </style>
     <script>
@@ -93,7 +144,7 @@
         function bubble(data) {
           return d3.pack()
             .size([width, height])
-            .padding(2)(d3.hierarchy({ children: data }).sum(d => sizes[d.level]))
+            .padding(4)(d3.hierarchy({ children: data }).sum(d => sizes[d.level]))
         }
 
         const svg = d3.select('#bubble-chart')
