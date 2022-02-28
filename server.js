@@ -8,6 +8,13 @@ app.use((req, res, next) => {
   next();
 });
 
+var data = {};
+app.get("world-countries.json", (req, res) => {
+  console.log(res);
+
+  res.sendFile(path.join(__dirname, "/world-countries.json"));
+});
+
 app.get("/", (req, res) => {
   request(
     { url: "https://alexiscaira.github.io/final/" },
