@@ -61,7 +61,8 @@
       let nodes = {}
 
       let selected = []
-      let available = [0, 2, 12]
+      let availableStart = [0, 2, 12]
+      let available = JSON.parse(JSON.stringify(availableStart))
 
       const styles = {
         selected: {
@@ -121,16 +122,31 @@
             console.log('clicked!', e, d)
             console.log('OLD', selected, available)
             const courseID = d.data.id
-            selected.push(courseID)
-            const availableIndex = available.indexOf(courseID)
-            if (availableIndex >= 0) {
-              available.splice(availableIndex, 1)
-            }
-            d.data.links.forEach(link => {
-              if (available.indexOf(link) < 0) {
-                available.push(link)
+            const selectedIndex = selected.indexOf(courseID)
+
+            if (selectedIndex < 0) {
+              selected.push(courseID)
+              const availableIndex = available.indexOf(courseID)
+              if (availableIndex >= 0) {
+                available.splice(availableIndex, 1)
               }
-            })
+              d.data.links.forEach(link => {
+                if (available.indexOf(link) < 0) {
+                  available.push(link)
+                }
+              })
+            } else {
+              selected.splice(selectedIndex, 1)
+              available = JSON.parse(JSON.stringify(availableStart))
+              console.log(availableStart)
+              selected.forEach(courseID => {
+                let courseData = nodes[courseID]
+                courseData.links.forEach(link => {
+                  available.push(link)
+                })
+              })
+            }
+
             document.getElementById('bubble-chart').innerHTML = ''
             console.log('NEW', selected, available)
             generateChart(nodes, false)
