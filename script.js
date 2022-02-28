@@ -1,4 +1,4 @@
-const svgSize = 700;
+const svgSize = 550;
 const datatipWidth = 250;
 
 let activeConstellation = null;
