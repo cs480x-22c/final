@@ -4,6 +4,7 @@ Number,Constellation,Name
 28,Aquarius,104 Aquarii
 9,Aries,HD 20644
 16,Auriga,Beta Tauri
+17,Auriga,Eta Aurigae
 1,Caelum,Alpha Caeli
 2,Caelum,Beta Caeli
 3,Caelum,Gamma-1 Caeli
@@ -13,6 +14,8 @@ Number,Constellation,Name
 7,Camelopardalis,BE Camelopardalis
 8,Camelopardalis,7 Camelopardalis
 8,Cancer,Iota Cancri
+12,Canis Major,Omicron-1 Canis Majoris
+13,Canis Major,Nu-2 Canis Majoris
 10,Carina,p Carinae
 11,Carina,V337 Carinae
 12,Carina,l Carinae
@@ -22,7 +25,12 @@ Number,Constellation,Name
 18,Centaurus,Psi Centauri
 19,Centaurus,n Centauri
 20,Centaurus,d Centauri
+21,Centaurus,Nu-1 Centauri
 4,Circinus,Theta Circini
+1,Crux,Beta Crucis
+2,Crux,Alpha Crucis
+3,Crux,Gamma Crucis
+4,Crux,Delta Crucis
 7,Dorado,HD 40409
 28,Eridanus,Upsilon-3 Eridani
 29,Eridanus,Upsilon-4 Eridani
@@ -31,6 +39,7 @@ Number,Constellation,Name
 32,Eridanus,82 G. Eri[3]
 33,Eridanus,Pi Ceti
 19,Gemini,1 Geminorum
+24,Hercules,29 Herculis
 20,Hydra,58 Hydrae
 21,Hydra,Beta Crateris
 22,Hydra,Alpha Crateris
@@ -43,21 +52,53 @@ Number,Constellation,Name
 6,Lynx,31 Lyncis
 7,Lynx,21 Lyncis
 8,Lynx,15 Lyncis
-7,Monoceros,Epsilon Monocerotis A
-8,Monoceros,13 Monocerotis
+7,Monoceros,18 Monocerotis
+8,Monoceros,Epsilon Monocerotis A
+9,Monoceros,13 Monocerotis
+10,Monoceros,S Monocerotis
 1,Norma,Gamma-2 Normae
 2,Norma,Epsilon Normae
 5,Norma,Delta Normae
 4,Norma,Eta Normae
 7,Norma,Gamma-1 Normae
+19,Ophiuchus,Theta Ophiuchi
+20,Ophiuchus,45 Ophiuchi
+21,Ophiuchus,Phi Ophiuchi
+22,Ophiuchus,Chi Ophiuchi
+23,Ophiuchus,Psi Ophiuchi
+24,Ophiuchus,Rho Ophiuchi A
 15,Pegasus,Alpha Andromedae
+22,Perseus,Phi Persei
+23,Perseus,48 Persei
+24,Perseus,HD 26961
 14,Phoenix,Theta Phoenicis
 15,Phoenix,Sigma Phoenicis
-11,Puppis,11 Puppis
-12,Puppis,k1 Puppis
+11,Puppis,k1 Puppis
+12,Puppis,L2 Puppis
 23,Scorpius,Zeta-2 Scorpii
-16,Serpens,Mu Serpentis
-17,Taurus,5 Tauri
+5,Scorpius,Antares
+6,Scorpius,Shaula
+7,Scorpius,Sargas
+8,Scorpius,Dschubba
+9,Scorpius,Wei
+10,Scorpius,Girtab
+11,Scorpius,Acrab
+12,Scorpius,Lesath
+13,Scorpius,Tau Scorpii
+14,Scorpius,Sigma Scorpii
+15,Scorpius,Pi Scorpii
+16,Scorpius,Apollyon
+17,Scorpius,Mu-1 Scorpii
+18,Scorpius,Eta Scorpii
+19,Scorpius,Mu-2 Scorpii
+20,Scorpius,Rho Scorpii
+21,Scorpius,Nu Scorpii
+22,Scorpius,Graffias
+24,Scorpius,G Scorpii
+16,Serpens,Nu Ophiuchi
+17,Serpens,Eta Ophiuchi
+18,Serpens,Delta Ophiuchi
+17,Taurus,10 Tauri
 27,Ursa Major,23 Ursae Majoris
 8,Vela,HD 88955
 21,Virgo,109 Virginis
@@ -65,9 +106,3 @@ Number,Constellation,Name
 23,Virgo,Theta Virginis
 24,Virgo,Omicron Virginis
 25,Virgo,Nu Virginis
-12,Canis Major,Omicron-1 Canis Majoris
-13,Canis Major,Nu-2 Canis Majoris
-17,Auriga,Eta Aurigae
-22,Perseus,Phi Persei
-23,Perseus,48 Persei
-24,Perseus,HD 26961
