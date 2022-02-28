@@ -1,4 +1,4 @@
-event-id,timestamp,location-long,location-lat,study-name
+id,timestamp,x,y,name
 20981623586,2021-07-15 18:02:00,-90.45663,-0.7012369,ICARUS Galapagos tortoises
 20981623587,2021-07-17 18:01:00,-90.455643,-0.7002498,ICARUS Galapagos tortoises
 20981623588,2021-07-18 18:02:00,-90.4563726,-0.700164,ICARUS Galapagos tortoises
