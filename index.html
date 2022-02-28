@@ -12,13 +12,16 @@
     <div id="legend">
       <div class="legend-wrapper">
         <h1>WPI CS Course Planner</h1>
-        <p>Find out which CS classes you're ready for</p>
+        <p>Find out which CS classes you're ready for*</p>
         <div class="color-view">
           <div class="color-view-element color-view-element-unavailable">Prerequisites not met</div>
           <div class="color-view-element color-view-element-available">Prerequisites met</div>
           <div class="color-view-element color-view-element-selected">Course completed</div>
         </div>
       </div>
+    </div>
+    <div id="disclaimer">
+      <p>*Non-CS prerequisites not accounted for</p>
     </div>
     <style>
       body {
@@ -104,6 +107,12 @@
       }
       .color-view-element-selected::before {
         background-color: #688b58;
+      }
+      #disclaimer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding-left: 1em;
       }
     </style>
     <script>
