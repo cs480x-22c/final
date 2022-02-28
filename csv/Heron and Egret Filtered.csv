@@ -1,4 +1,4 @@
-event-id,timestamp,location-long,location-lat,study-name
+id,timestamp,x,y,name
 3250410900,00:33.0,-122.9230113,38.2174969,ACR Heron and Egret telemetry project
 3250410913,00:31.0,-122.9234415,38.2177747,ACR Heron and Egret telemetry project
 3260801331,00:37.0,-122.9236608,38.2177485,ACR Heron and Egret telemetry project
