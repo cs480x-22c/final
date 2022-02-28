@@ -1,4 +1,4 @@
-event-id,timestamp,location-long,location-lat,study-name
+id,timestamp,x,y,name
 16657539833,1/13/2018 5:15,77.569267,-37.7953,"ECOPATH, Brown skua, Boulinier et al., Amsterdam Island"
 16657539843,1/13/2018 6:08,77.572483,-37.795017,"ECOPATH, Brown skua, Boulinier et al., Amsterdam Island"
 16657539853,1/13/2018 7:00,77.554283,-37.878183,"ECOPATH, Brown skua, Boulinier et al., Amsterdam Island"

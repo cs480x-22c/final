@@ -1,4 +1,4 @@
-event-id,timestamp,location-long,location-lat,study-name
+id,timestamp,x,y,name
 679429032,2008-06-06 14:00:00,-28.53582,38.42509,Azores Great Whales Satellite Telemetry Program 
 679429033,2008-06-14 19:22:28,-33.92967497,47.97479344,Azores Great Whales Satellite Telemetry Program 
 679429034,2008-06-14 23:22:30,-33.99442794,47.99805743,Azores Great Whales Satellite Telemetry Program 
