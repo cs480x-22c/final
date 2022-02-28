@@ -18,7 +18,7 @@
 
 Promise.all([
   d3.json('world.geojson'),
-  d3.csv('cities.csv')
+  d3.csv('csv/Roe Deer.csv')
 ]).then( ([countries, cities]) => {
   createMap(countries,cities)
 })
@@ -63,6 +63,7 @@ Promise.all([
       .attr('fill', d => ccolor( gpath.area(d)) );
 
 
+    console.log("cities: "+cities);
     d3.select('svg')
       .selectAll('circle')
       .data(cities)
@@ -76,8 +77,8 @@ Promise.all([
       .attr('fill', '#FCBC34')
       .on('mouseover', function(e, d) {
         console.log(d);
-              d3.select('#info').text(d.label);
-            })
+              d3.select('#info').text(d.name);
+            }) 
 
    var mapZoom = d3.zoom()
     .on('zoom', zoomed);
