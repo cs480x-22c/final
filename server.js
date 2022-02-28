@@ -4,7 +4,9 @@ const app = express();
 
 var corsOptions = {
   origin: "https://alexiscaira.github.io/final/",
-  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+  optionsSuccessStatus: 200, 
+  Access-Control-Allow-Headers: *
+  Access-Control-Allow-Origin: "https://alexiscaira.github.io/final/"
 };
 
 app.get("/", cors(corsOptions), function (req, res, next) {
