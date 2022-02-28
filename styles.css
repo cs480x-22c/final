@@ -76,6 +76,10 @@ h2 {
     font-size: 14px;
     overflow-y: scroll;
 }
+.link {
+    position: absolute;
+    bottom: 5;
+}
 #returnToSearch {
     position: relative;
     width: 300px;

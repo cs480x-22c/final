@@ -1,0 +1,27 @@
+<head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <link href="styles.css" , rel="stylesheet">
+</head>
+
+<body>
+    <div id="vis">
+        <div id="side-panel"></div>
+        <div id="map-container">
+            <h1>Stories in Our Stars</h1>
+            <div id="north-container">
+                <svg width=550 height=550 id="north"></svg>
+                <h2>Northern Hemisphere</h2>
+            </div>
+            <div id="south-container">
+                <svg width=550 height=550 id="south"></svg>
+                <h2>Southern Hemisphere</h2>
+            </div>
+        </div>
+        <div id="dropdown">
+            <div id="constellationDropdown">
+                <input autocomplete="off" type="text" placeholder="Search..." id="searchInput" onkeyup="filter()">
+            </div>
+        </div>
+        <script src="script.js"></script>
+</body>

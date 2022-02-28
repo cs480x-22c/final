@@ -133,7 +133,7 @@ function mouseOverStar(e) {
 }
 
 function mouseOffStar(e) {
-    activateConstellation('#' + e.target.classList[0], false)
+    //activateConstellation('#' + e.target.classList[0], false)
 }
 
 function mouseOverConstellation(e) {
@@ -141,7 +141,7 @@ function mouseOverConstellation(e) {
 }
 
 function mouseOffConstellation(e) {
-    activateConstellation('#' + e.target.id, false)
+    //activateConstellation('#' + e.target.id, false)
 }
 
 function activateConstellation(path, active) {
@@ -219,7 +219,8 @@ function showDatatip(constellation) {
                 <p class="title">${constellation}</p>
                 <p class="desc">The ${desc}</p>
                 <div><svg id="datatipImg" width=${datatipWidth - 10} height=${datatipWidth - 10}></svg></div>
-                <p class="history">${history}</p>`;
+                <p class="history">${history}</p>
+                <a class="link" href="http://www.seasky.org/constellations/constellations.html">Source: Sea and Sky</a>`;
 
     d3.select("#side-panel")
         .html(html);
