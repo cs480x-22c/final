@@ -1,5 +1,5 @@
 const svgSize = 500;
-const datatipWidth = 225;
+const datatipWidth = 250;
 
 let activeConstellation = null;
 let constellationInfo;
