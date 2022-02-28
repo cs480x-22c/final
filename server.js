@@ -5,7 +5,6 @@ const app = express();
 var corsOptions = {
   origin: "https://alexiscaira.github.io/final/",
   optionsSuccessStatus: 200, 
-  Access-Control-Allow-Headers: *
   Access-Control-Allow-Origin: "https://alexiscaira.github.io/final/"
 };
 
