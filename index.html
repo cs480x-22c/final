@@ -1,7 +1,44 @@
 <head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
     <link href="styles.css" , rel="stylesheet">
 </head>
 
 <body>
-    <h1>Stories in Our Stars</h1>
+    <div id="container">
+        <div id="column">
+            <div>
+                <svg height=200 width=200 id="homeConstellation"></svg>
+            </div>
+
+            <h1 id="homeHeading">Stories in Our Stars</h1>
+
+            <div id="homeNames">
+                <h2>Kaamil Lokhandwala</h2>
+                <h2>Veronica Melican</h2>
+                <h2>Hayden Smith</h2>
+            </div>
+
+            <p id="homeOverview">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Dolor sit amet consectetur
+                adipiscing elit ut aliquam. Laoreet sit amet cursus sit amet dictum. Mattis rhoncus
+                urna neque viverra justo nec. Massa vitae tortor condimentum lacinia. Nunc scelerisque
+                viverra mauris in aliquam sem fringilla. Ac turpis egestas maecenas pharetra convallis
+                posuere morbi. Tempus quam pellentesque nec nam aliquam sem et tortor. A diam maecenas
+                sed enim ut sem viverra. Cursus vitae congue mauris rhoncus aenean vel elit scelerisque
+                mauris. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Id ornare arcu
+                odio ut sem nulla pharetra diam. Turpis egestas sed tempus urna et pharetra pharetra.
+                Massa id neque aliquam vestibulum morbi blandit.
+            </p>
+
+            <img onclick="location.href = 'vis.html'" id="homeImage" src="home-image.PNG">
+            <p onclick="location.href = 'vis.html'" id="textOverlay">Click to view the visualization.</p>
+
+            <a href="">Process Book</a>
+            <a href="https://github.com/vrmelican/final/tree/main/datasets">Data</a>
+            <a href="">Video</a>
+        </div>
+    </div>
+    <script src="home-script.js"></script>
 </body>
