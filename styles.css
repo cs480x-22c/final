@@ -11,19 +11,19 @@ body {
 }
 #vis {
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 300px 1fr;
     width: 100%;
     height: 100%;
 }
 #side-panel {
     background-color: white;
     display: flex;
-    width: 250px;
+    width: 300px;
     flex-direction: column;
     align-items: center;
     padding: 10px;
     padding-top: 0px;
-    font-size: 16px;
+    font-size: 20px;
     height: 100%;
 }
 #map-container {
@@ -50,7 +50,7 @@ h1 {
     color: aliceblue;
     opacity: 90%;
     text-align: center;
-    font-size: 250%;
+    font-size: 300%;
     font-weight: 20;
     padding-top: 50px;
 }
@@ -58,22 +58,22 @@ h2 {
     color: aliceblue;
     opacity: 90%;
     text-align: center;
-    font-size: 100%;
+    font-size: 125%;
     font-weight: 20;
     padding: 10px;
 }
 /* datatip styles */
 #datatipImg {
     margin: 10px 0px;
-    background-color: black;
+    background-image: linear-gradient(rgb(12, 20, 0), #0f0038);
 }
 .history {
-    font-size: 14px;
+    font-size: 16px;
     overflow-y: scroll;
 }
 #returnToSearch {
     position: relative;
-    width: 250px;
+    width: 300px;
     margin-bottom: 10px;
     height: 30px;
 }
@@ -103,7 +103,7 @@ h2 {
     padding: 14px 20px 12px 12px;
     border: none;
     border-bottom: 1px solid #ddd;
-    width:250px;
+    width: 300px;
     position: sticky;
     top: 0;
 }
@@ -118,7 +118,7 @@ h2 {
     padding: 8px 12px; 
     text-decoration: none;
     display: block;
-    width:250px;
+    width: 300px;
     margin: 0px;
     font-size: 14px;
 }

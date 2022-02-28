@@ -1,4 +1,4 @@
-const svgSize = 500;
+const svgSize = 700;
 const datatipWidth = 250;
 
 let activeConstellation = null;
@@ -183,7 +183,7 @@ function appendConstellations(data) {
 
 //search filter function
 function filter() {
-    let searchField = document.getElementById("searchInput").value.toUpperCase();
+    let searchField = document.getElementById("searchInput").value.toUpperCase().trim();
     const div = document.getElementById("constellationDropdown");
     const options = Array.from(div.getElementsByTagName("option"));
 
