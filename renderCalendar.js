@@ -165,7 +165,8 @@ function getInputValue(){
 
             // Selecting the input element and get its value 
             var mylist = document.getElementById("myList");  
-            var inputVal = document.getElementById("favourite").value = mylist.options[mylist.selectedIndex].text;  
+            var inputVal = document.getElementById('building').options[document.getElementById('building').selectedIndex].value;
+			console.log(inputVal)
             var input = document.getElementById("myInputTime").value;
             console.log(input)
             var foo = input == "quit"

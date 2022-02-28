@@ -8,51 +8,52 @@
 <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
 </head>
 <body>
-<div id ="input">
-	<form>  
-    <b> Select a Building</b>  
-    <select id = "myList" onchange = "favTutorial()" >  
-    <option> ---Choose Building--- </option>  
-    <option> CC </option>  
-    <option> AK </option>  
-    <option> RC </option>  
-    <option> FL </option> 
-    <option> 37I </option> 
-    <option> 50P </option> 
-    <option> AF </option> 
-    <option> AH </option> 
-    <option> ATHL </option> 
-    <option> BARTLETT </option> 
-    <option> CRC </option>
-    <option> DH </option>  
-    <option> FBC </option> 
-    <option> FH </option>
-    <option> GH </option>  
-    <option> FREEMAN </option>
-    <option> GOAT </option>  
-    <option> GP </option>
-    <option> HH </option>
-    <option> HA </option>   
-    <option> HIS </option>
-    <option> HL </option> 
-    <option> IS </option>
-    <option> KH </option>  
-    <option> LITTLE </option> 
-    <option> MARQUEE </option>
-    <option> OASIS </option>  
-    <option> OH </option>
-    <option> PARK </option>  
-    <option> PARKING </option> 
-    <option> QUAD </option> 
-    <option> RC </option> 
-    <option> RILEY </option> 
-    <option> RT </option> 
-    <option> SH </option> 
-    <option> SL </option> 
-    <option> UH </option> 
-    <option> WEB </option> 
-    <option> WEST </option> 
-    </select>  
+	<div id ="input">
+		<form>  
+			<b>Select a Building</b>  
+			<select id="building">  
+				<option> ---Choose Building--- </option>  
+				<option> CC </option>  
+				<option> AK </option>  
+				<option> RC </option>  
+				<option> FL </option> 
+				<option> 37I </option> 
+				<option> 50P </option> 
+				<option> AF </option> 
+				<option> AH </option> 
+				<option> ATHL </option> 
+				<option> BARTLETT </option> 
+				<option> CRC </option>
+				<option> DH </option>  
+				<option> FBC </option> 
+				<option> FH </option>
+				<option> GH </option>  
+				<option> FREEMAN </option>
+				<option> GOAT </option>  
+				<option> GP </option>
+				<option> HH </option>
+				<option> HA </option>   
+				<option> HIS </option>
+				<option> HL </option> 
+				<option> IS </option>
+				<option> KH </option>  
+				<option> LITTLE </option> 
+				<option> MARQUEE </option>
+				<option> OASIS </option>  
+				<option> OH </option>
+				<option> PARK </option>  
+				<option> PARKING </option> 
+				<option> QUAD </option> 
+				<option> RC </option> 
+				<option> RILEY </option> 
+				<option> RT </option> 
+				<option> SH </option> 
+				<option> SL </option> 
+				<option> UH </option> 
+				<option> WEB </option> 
+				<option> WEST </option> 
+			</select>   
+		</form> 
 	<input type="text1" placeholder="Type something..." id="myInputTime">
     <button type="button" onclick="getInputValue();">Get Value</button>
     <button onclick="document.getElementById('myInput').value = ''">Click here to clear</button>
