@@ -1,6 +1,34 @@
 let inputObject = document.getElementById('searchTxt')
 
 function drawCalendar(myData) {
+  var dict = {};
+  tempArr = []
+  let tempArr1 = []
+  let current = myData[0];
+  
+  for(let i=0; i<myData.length; i++)
+  {
+    tempArr.push(myData[i].Day)
+  }
+  var unique = [...new Set(tempArr)]
+  
+  for(let i=0; i<unique.length; i++)
+  {
+    tempArr1 = []
+    
+    for(let j=0; j<myData.length; j++)
+    {
+     
+
+      if(myData[j].Day == unique[i])
+      {
+        tempArr1.push(myData[j].Event_Name)
+        dict[new Date(myData[j].Day)] = tempArr1
+      }
+    }
+  }
+
+  
   
   var calendarRows = function(month) {
     var m = d3.timeMonth.floor(month);
@@ -20,7 +48,7 @@ function drawCalendar(myData) {
       titleFormat = d3.utcFormat("%a, %d-%b"),
       monthName = d3.timeFormat("%B"),
       months= d3.timeMonth.range(d3.timeMonth.floor(minDate), maxDate);
-    console.log(months)
+    
   // for(var i=0; i<myData.length; i++){
   //   myData[i].today =  myData[i].Day;
   // }
@@ -45,7 +73,7 @@ function drawCalendar(myData) {
 
   var rect = svg.selectAll("rect.day")
     .data(function(d, i) {
-      console.log(d)
+    
      
       return d3.timeDays(d, new Date(d.getFullYear(), d.getMonth()+1, 1));
     })
@@ -90,6 +118,14 @@ function drawCalendar(myData) {
     .key(function(d) { return new Date(d.Day); })
     .rollup(function(leaves) { return leaves.length; })
     .entries(myData);
+  
+  // count1 = d3.nest()
+  //   .key(function(d) { return new Date(d.Day); })
+  //   .rollup(function(leaves) { 
+    
+  //     return leaves.length; })
+  //   .entries(myData);
+
 
    
   scale = d3.scaleLinear()
@@ -106,6 +142,8 @@ function drawCalendar(myData) {
       return d3.interpolatePuBu(scale(lookup[d])); })
     .classed("clickable", true)
     .on("click", function(d){
+      alert(dict[d])
+      
       if(d3.select(this).classed('focus')){
         d3.select(this).classed('focus', false);
       } else {
@@ -114,8 +152,8 @@ function drawCalendar(myData) {
       // doSomething();
     })
     .select("title")
-
-      .text(function(d) { return titleFormat(new Date(d)) + ":  " + lookup[d]; });
+      .text(function(d) { return "There are " + lookup[d] + " Events on " + titleFormat(new Date(d))});
+      
 
 }
 
@@ -124,16 +162,26 @@ function drawCalendar(myData) {
 
 
 function getInputValue(){
+
             // Selecting the input element and get its value 
-            var inputVal = document.getElementById("myInput").value;
+            var mylist = document.getElementById("myList");  
+            var inputVal = document.getElementById("favourite").value = mylist.options[mylist.selectedIndex].text;  
             var input = document.getElementById("myInputTime").value;
-            d3.csv("updated_25data.csv").then(function(data) {
+            console.log(input)
+            var foo = input == "quit"
+            console.log(foo)
+       
+
+    
+          d3.csv("updated_25data.csv").then(function(data) {
   data = data.filter(function(row) {
-    console.log(row['Event_Start'])
-        return (row['Event_Start'] == input) && (row['Location1'] == inputVal);
+        
+          return (row['Event_Start'] == input) && (row['Location1'] == inputVal);
+         
+        
+
+        
     })
   drawCalendar(data)
 })
-
-            
         }
