@@ -17,13 +17,13 @@ const COLORS =
 
 //load files
 Promise.all([
-    d3.json('paths.geojson'),
-    d3.csv('stars.csv'),
-    d3.json('paths_north.geojson'),
-    d3.csv('stars_north.csv'),
-    d3.json('paths_south.geojson'),
-    d3.csv('stars_south.csv'),
-    d3.csv('StarDescriptions.csv')
+    d3.json('datasets/paths.geojson'),
+    d3.csv('datasets/stars.csv'),
+    d3.json('datasets/paths_north.geojson'),
+    d3.csv('datasets/stars_north.csv'),
+    d3.json('datasets/paths_south.geojson'),
+    d3.csv('datasets/stars_south.csv'),
+    d3.csv('datasets/StarDescriptions.csv')
 ]).then(([paths, stars, pathsN, starsN, pathsS, starsS, desc]) => {
     createMap(pathsN, starsN, [0, -90], "#north"); //north hemisphere
     createMap(pathsS, starsS, [180, 90], "#south"); //south hemisphere
@@ -216,8 +216,8 @@ function showDatatip(constellation) {
     let history = info.History;
 
     let html = `<button id="returnToSearch" onclick="hideDatatip()"><i class="arrow left"></i> Return to Search</button>
-                <p>${constellation}</p>
-                <p>The ${desc}</p>
+                <p class="title">${constellation}</p>
+                <p class="desc">The ${desc}</p>
                 <div><svg id="datatipImg" width=${datatipWidth - 10} height=${datatipWidth - 10}></svg></div>
                 <p class="history">${history}</p>`;
 
