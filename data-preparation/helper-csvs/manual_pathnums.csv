@@ -57,7 +57,7 @@ Number,Constellation,Name
 12,Puppis,k1 Puppis
 23,Scorpius,Zeta-2 Scorpii
 16,Serpens,Mu Serpentis
-17,Taurus,17 Tauri
+17,Taurus,5 Tauri
 27,Ursa Major,23 Ursae Majoris
 8,Vela,HD 88955
 21,Virgo,109 Virginis
@@ -65,3 +65,9 @@ Number,Constellation,Name
 23,Virgo,Theta Virginis
 24,Virgo,Omicron Virginis
 25,Virgo,Nu Virginis
+12,Canis Major,Omicron-1 Canis Majoris
+13,Canis Major,Nu-2 Canis Majoris
+17,Auriga,Eta Aurigae
+22,Perseus,Phi Persei
+23,Perseus,48 Persei
+24,Perseus,HD 26961

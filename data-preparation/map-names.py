@@ -102,13 +102,16 @@ def decToDegree(dec):
     
     degree = float(dec.split("°")[0])
     rest = dec.split("°")[1]
-    
+
     minutes = float(rest.split("′")[0])
     rest = rest.split("′")[1]
     
     seconds = float(rest.split("″")[0])
     
-    decimal = degree + minutes / 60 + seconds / 3600
+    if degree < 0:
+        decimal = degree - minutes / 60 - seconds / 3600
+    else:
+        decimal = degree + minutes / 60 + seconds / 3600
     
     return decimal
 
