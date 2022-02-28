@@ -104,6 +104,27 @@
           var city_longitude = [];
           var reports = [];
 
+          var mapSVG = d3.select("#page-2")
+            .append("svg")
+            .attr("width", 960)
+            .attr("height", 500)
+            .style("border-style", "solid");
+
+          var proj = d3.geoMercator()
+            .scale(130)
+            .translate([960 / 2, 500 / 2 + 50]);
+          var path = d3.geoPath().projection(proj);
+
+          d3.json("world-countries.json")
+            .then(world => {
+              mapSVG.append("g")
+                .selectAll("path")
+                .data(world.features)
+                .enter()
+                .append("path")
+                  .attr("d", path);
+          });
+
           for (i = 0; i < data.length; i++) {
             if (data[i].summary != "NA") {
               reports.push(data[i]);
@@ -142,6 +163,8 @@
               reports.push(data[i]);
             }
           }
+
+
         });
     </script>
   </body>
