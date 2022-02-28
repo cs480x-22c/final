@@ -88,9 +88,7 @@
       var svg = d3.select("#chart").append("svg").append("g");
 
       var data = d3
-        .csv(
-          "https://data.world/timothyrenner/ufo-sightings/workspace/file?filename=nuforc_reports.csv"
-        )
+        .csv("https://480xfinal.s3.us-east-2.amazonaws.com/nuforc_reports.csv")
         .then(function (data) {
           var summary = [];
           var city = [];

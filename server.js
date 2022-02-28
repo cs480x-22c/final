@@ -1,16 +1,24 @@
 const express = require("express");
+const request = require("request");
 var cors = require("cors");
 const app = express();
 
-var corsOptions = {
-  origin: "https://alexiscaira.github.io/final/",
-  optionsSuccessStatus: 200, 
-  Access-Control-Allow-Origin: "https://alexiscaira.github.io/final/"
-};
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  next();
+});
 
-app.get("/", cors(corsOptions), function (req, res, next) {
-  response.sendFile(__dirname + "/index.html");
-  res.json({ msg: "This is CORS-enabled req" });
+app.get("/", (req, res) => {
+  request(
+    { url: "https://alexiscaira.github.io/final/" },
+    (error, response, body) => {
+      if (error || response.statusCode !== 200) {
+        return res.status(500).json({ type: "error", message: err.message });
+      }
+
+      res.json(JSON.parse(body));
+    }
+  );
 });
 
 const listener = app.listen(process.env.PORT, () => {
