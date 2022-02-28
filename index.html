@@ -3,10 +3,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.min.js" integrity="sha512-cd6CHE+XWDQ33ElJqsi0MdNte3S+bQY819f7p3NUHgwQQLXSKjE4cPZTeGNI+vaxZynk1wVU3hoHmow3m089wA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
   </head>
   <body>
     <svg id="bubble-chart"></svg>
     <style>
+      body {
+        font-family: 'Fredoka', sans-serif;
+        background-color: #d0646e;
+      }
       .wrapper, circle, .course {
         cursor: pointer;
         pointer-events: all;
@@ -18,7 +25,7 @@
         fill: yellow;
       }
       .available:hover {
-        fill: yellowgreen;
+        fill: blue;
       }
       .unavailable {
         fill: lightgrey;
@@ -40,6 +47,13 @@
         width: auto;
         text-align: center;
       }
+      .course-number {
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+      .course-name {
+        margin-top: 0;
+      }
     </style>
     <script>
       let courseDataURL = 'https://raw.githubusercontent.com/liamrathke/final/main/data/data.json'
@@ -47,7 +61,7 @@
       let nodes = {}
 
       let selected = []
-      let available = [0]
+      let available = [0, 2, 12]
 
       const styles = {
         selected: {
@@ -140,9 +154,11 @@
         //   .style('justify-content', 'center')
 
         const number = obj.append('p')
+          .attr('class', 'course-number')
           .text(d => d.data.number)
 
         const name = obj.append('p')
+          .attr('class', 'course-name')
           .text(d => d.data.name)
         
         // const label = course.append('text')
