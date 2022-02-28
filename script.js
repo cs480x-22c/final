@@ -42,7 +42,7 @@ function createMap(data, stars, rotation, svgID) {
         .fitExtent([[5, 5], [svgSize - 5, svgSize - 5]], data);
     let gpath = d3.geoPath().projection(proj);
     const svg = d3.select(svgID);
-    drawConstellations(svg, data.features, stars, proj, gpath, COLORS.inActive, true);
+    drawConstellations(svg, data.features, stars, proj, gpath, COLORS.begin, true);
 
     //draw border
     svg.append("circle")
