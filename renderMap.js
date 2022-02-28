@@ -1,4 +1,3 @@
-
 Promise.all(
   [d3.json('map.geojson')]).then( ([buildings]) => {
   createMap(buildings)
@@ -16,7 +15,7 @@ Promise.all(
 	.center([0, 42.27375])
     .rotate([71.808444, 0])
     .translate([250, 250])
-    .scale(300000);
+    .scale(3000000);
 
   var gpath = d3.geoPath()
     .projection(proj);
@@ -62,42 +61,6 @@ function colorBuildings(idArray, dataArray){
     document.getElementById(idArray[i]).style.fill = "yellow";
   }
 }
-// var rcData = filteredSelection.filter(function(d){return d.Location1 === "RC"})
-// console.log(rcData)
-// if(rcData.length > 1) document.getElementById("RC").style.fill = "yellow";
 colorBuildings(buildingIDArray, generateBuildingData(buildingIDArray, buildingDataArray));
-
-  });
-
-
-
-   var mapZoom = d3.zoom()
-    .on('zoom', zoomed);
-
-  var zoomSettings = d3.zoomIdentity
-    .translate(250, 250)
-    .scale(3000000);
-
-  d3.select('svg')
-    .call(mapZoom)
-    .call(mapZoom.transform, zoomSettings);
-
-  function zoomed(e) {
-    proj
-      .translate([e.transform.x, e.transform.y])
-      .scale(e.transform.k);
-
-    console.log(e.transform.k);
-
-    if( e.transform.k > 400 ) 
-      console.log('toggle adaptive map feature');
-
-    // redraw map with new projection settings
-    d3.selectAll('path')
-      .attr('d', gpath);
-
-    d3.selectAll('circle')
-      .attr('cx', d => proj([d.x, d.y])[0])
-      .attr('cy', d => proj([d.x, d.y])[1])
-  }
+});
 }
