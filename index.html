@@ -6,64 +6,54 @@
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
 <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 </head>
 <body>
 	<div id ="input">
-		<form>  
+		<form id="myForm">  
 			<b>Select a Building</b>  
 			<select id="building">  
 				<option> ---Choose Building--- </option>  
-				<option> CC </option>  
 				<option> AK </option>  
-				<option> RC </option>  
-				<option> FL </option> 
-				<option> 37I </option> 
-				<option> 50P </option> 
-				<option> AF </option> 
-				<option> AH </option> 
-				<option> ATHL </option> 
-				<option> BARTLETT </option> 
-				<option> CRC </option>
-				<option> DH </option>  
-				<option> FBC </option> 
-				<option> FH </option>
-				<option> GH </option>  
-				<option> FREEMAN </option>
-				<option> GOAT </option>  
-				<option> GP </option>
-				<option> HH </option>
-				<option> HA </option>   
-				<option> HIS </option>
-				<option> HL </option> 
-				<option> IS </option>
+				<option> FL </option>  
 				<option> KH </option>  
-				<option> LITTLE </option> 
-				<option> MARQUEE </option>
-				<option> OASIS </option>  
-				<option> OH </option>
-				<option> PARK </option>  
-				<option> PARKING </option> 
-				<option> QUAD </option> 
+				<option> SL </option>  
+				<option> WB </option> 
+				<option> UH </option>  
+				<option> SH </option>
+				<option> AH </option> 
+				<option> RILEY </option>
+				<option> FBC </option>  
+				<option> WEST </option>
+				<option> HA </option>
+				<option> IS </option>   
 				<option> RC </option> 
-				<option> RILEY </option> 
+				<option> QUAD </option>
+				<option> HL </option>  
+				<option> CC </option>  
+				<option> OH </option>
+				<option> GH </option> 
+				<option> HH </option> 
+				<option> MORGAN </option> 
+				<option> CRC </option> 
+				<option> AF </option> 
+				<option> GP </option> 
 				<option> RT </option> 
-				<option> SH </option> 
-				<option> SL </option> 
-				<option> UH </option> 
-				<option> WEB </option> 
-				<option> WEST </option> 
+				<option> OASIS </option> 
 			</select>   
 		</form> 
-	<input type="text1" placeholder="Type something..." id="myInputTime">
-    <button type="button" onclick="getInputValue();">Get Value</button>
-    <button onclick="document.getElementById('myInput').value = ''">Click here to clear</button>
-	<div class="results-container>
-		<ul class="results-list" id="list"></ul>
+		<input type="time" id="myInputTime">
+    	<button type="button" onclick="getInputValue();">See Calendar</button>
+    	<button onclick="reset();">Reset</button>
+		<div class="results-container>
+			<ul class="results-list" id="list"></ul>
+		</div>
 	</div>
-<div id="calendar"></div>
+	<div id="calendar"></div>
+	<h2 id="time"></h2>
+	<svg width=960 height=600 id="map"></svg>
+	
 
-<svg width=960 height=600 id="map"></svg>
-
-<script src="renderMap.js"></script>
-<script src="renderCalendar.js"></script>
+	<script src="renderMap.js"></script>
+	<script src="renderCalendar.js"></script>
 </body>
