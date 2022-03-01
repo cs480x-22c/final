@@ -18,7 +18,7 @@
 
 Promise.all([
   d3.json('world.geojson'),
-  d3.csv('csv/Roe Deer.csv')
+  d3.csv('test.csv')
 ]).then( ([countries, cities]) => {
   createMap(countries,cities)
 })
@@ -66,12 +66,16 @@ Promise.all([
     var firsty = cities[0].y;
     d3.select('svg')
       .selectAll('circle')
-     // .data(cities[0])
+      .data(cities)
       .enter()
       .append('circle')
       .attr('r', 10)
-      .attr('cx', d => proj([firstx, firsty])[0])
-      .attr('cy', d => proj([firstx, firsty])[1])
+      .attr('cx', function(d){
+        if (d.rank == 1){
+          d => proj([d.x, d.y])[0]}})
+      .attr('cy', function(d){
+        if (d.rank == 1){
+          d => proj([firstx, firsty])[1]}})
       .attr('stroke-width', 1)
       .attr('stroke', '#4F442B')
       .attr('fill', '#FCBC34')
