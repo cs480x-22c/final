@@ -10,10 +10,31 @@
 <div id="info">
 </div>
 
-
+<button onClick="update(countries_data,cities_data,geese_data,tort_data,whales_data,heron_data,seals_data,deer_data,doves_data,shark_data,eagle_data);">Update data</button>
 
 <script>
 var count = 1;
+var cities_data;
+var geese_data;
+var tort_data;
+var whales_data;
+var heron_data;
+var seals_data;
+var deer_data;
+var doves_data;
+var shark_data;
+var eagle_data;
+var countries_data;
+var circle1 = d3.select('svg').selectAll('circle1');
+var circle2 = d3.select('svg').selectAll('circle2');
+var circle3 = d3.select('svg').selectAll('circle3');
+var circle4 = d3.select('svg').selectAll('circle4');
+var circle5 = d3.select('svg').selectAll('circle5');
+var circle6 = d3.select('svg').selectAll('circle6');
+var circle7 = d3.select('svg').selectAll('circle7');
+var circle8 = d3.select('svg').selectAll('circle8');
+var circle9 = d3.select('svg').selectAll('circle9');
+var circle10 = d3.select('svg').selectAll('circle10');
   // Also see TOPOJSON
 Promise.all([
   d3.json('world.geojson'),
@@ -28,14 +49,14 @@ Promise.all([
   d3.csv('csv w rank/Whale_Shark.csv'),
   d3.csv('csv w rank/White_Tailed_Eagle.csv')
 ]).then( ([countries, cities, geese, tort, whales, heron, seals, deer, doves, shark, eagle]) => {
-  createMap(countries,cities, geese, tort, whales, heron, seals, deer, doves, shark, eagle)
+  createMap(countries,cities, geese, tort, whales, heron, seals, deer, doves, shark, eagle);
+  
 })
 
   function createMap(countries, cities, geese, tort, whales, heron, seals, deer, doves, shark, eagle) {
-   // d3.selectAll('circle').remove();
-  var proj = d3.geoEquirectangular()
-    .translate([250, 250])
-    .scale(120);
+    var proj = d3.geoEquirectangular()
+      .translate([250, 250])
+      .scale(120);
 
 //  var proj = d3.geoSatellite()
 //      .scale(1330)
@@ -54,7 +75,7 @@ Promise.all([
       d3.extent( countries.features, d => gpath.area(d))
       );
 
-
+  countries_data = countries;
   // draw country boundaries
   d3.select('svg')
     .append('g')
@@ -100,12 +121,12 @@ Promise.all([
       .attr('cy', d => proj([d.x, d.y])[1])
   }
   
-     d3.select('svg')
-      .selectAll('circle1')
-      .data(geese.filter(function(d){ return d.rank == count }))
+     geese_data = geese;
+     
+      circle1.data(geese.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
-      .attr('r', 10)
+      .attr('r', 5)
       .attr('cx', d => proj([d.x, d.y])[0])
       .attr('cy', d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
@@ -116,12 +137,12 @@ Promise.all([
               d3.select('#info').text(d.name);
             });
  
-    d3.select('svg')
-      .selectAll('circle2')
+    cities_data = cities
+    circle2
       .data(cities.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
-      .attr('r', 10)
+      .attr('r', 5)
       .attr('cx', d => proj([d.x, d.y])[0])
       .attr('cy', d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
@@ -132,12 +153,12 @@ Promise.all([
               d3.select('#info').text(d.name);
             });
 
-   d3.select('svg')
-      .selectAll('circle3')
+   tort_data = tort;
+   circle3
       .data(tort.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
-      .attr('r', 10)
+      .attr('r', 5)
       .attr('cx', d => proj([d.x, d.y])[0])
       .attr('cy', d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
@@ -148,12 +169,12 @@ Promise.all([
               d3.select('#info').text(d.name);
             });
 
-       d3.select('svg')
-      .selectAll('circle4')
+      whales_data = whales
+      circle4
       .data(whales.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
-      .attr('r', 10)
+      .attr('r', 5)
       .attr('cx', d => proj([d.x, d.y])[0])
       .attr('cy', d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
@@ -163,12 +184,13 @@ Promise.all([
         console.log("mouseover: "+d);
               d3.select('#info').text(d.name);
             });
-     d3.select('svg')
-      .selectAll('circle5')
+     
+     heron_data = heron;
+     circle5
       .data(heron.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
-      .attr('r', 10)
+      .attr('r', 5)
       .attr('cx', d => proj([d.x, d.y])[0])
       .attr('cy', d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
@@ -178,12 +200,13 @@ Promise.all([
         console.log("mouseover: "+d);
               d3.select('#info').text(d.name);
             });
-     d3.select('svg')
-      .selectAll('circle6')
+     
+     seals_data = seals;
+     circle6
       .data(seals.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
-      .attr('r', 10)
+      .attr('r', 5)
       .attr('cx', d => proj([d.x, d.y])[0])
       .attr('cy', d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
@@ -193,12 +216,13 @@ Promise.all([
         console.log("mouseover: "+d);
               d3.select('#info').text(d.name);
             });
-       d3.select('svg')
-      .selectAll('circle7')
+      
+      deer_data = deer;
+      circle7
       .data(deer.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
-      .attr('r', 10)
+      .attr('r', 5)
       .attr('cx', d => proj([d.x, d.y])[0])
       .attr('cy', d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
@@ -209,12 +233,12 @@ Promise.all([
               d3.select('#info').text(d.name);
             });
          
-    d3.select('svg')
-      .selectAll('circle8')
+    doves_data = doves
+    circle8
       .data(doves.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
-      .attr('r', 10)
+      .attr('r', 5)
       .attr('cx', d => proj([d.x, d.y])[0])
       .attr('cy', d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
@@ -225,12 +249,12 @@ Promise.all([
               d3.select('#info').text(d.name);
             });
             
-     d3.select('svg')
-      .selectAll('circle9')
+     shark_data = shark
+     circle9
       .data(shark.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
-      .attr('r', 10)
+      .attr('r', 5)
       .attr('cx', d => proj([d.x, d.y])[0])
       .attr('cy', d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
@@ -241,12 +265,12 @@ Promise.all([
               d3.select('#info').text(d.name);
             });
             
-    d3.select('svg')
-      .selectAll('circle10')
+    eagle_data = eagle
+    circle10
       .data(eagle.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
-      .attr('r', 10)
+      .attr('r', 5)
       .attr('cx', d => proj([d.x, d.y])[0])
       .attr('cy',  d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
@@ -258,6 +282,217 @@ Promise.all([
             });
     count++;
 }
-//setInterval(createMap(countries,cities, geese, tort, whales, heron, seals, deer, doves, shark, eagle),100)
+function update(countries_data,cities_data,geese_data,tort_data,whales_data,heron_data,seals_data,deer_data,doves_data,shark_data,eagle_data){
+  d3.selectAll('circle').remove();
+  console.log("count: "+count);
+      var proj = d3.geoEquirectangular()
+      .translate([250, 250])
+      .scale(120);
+      
+  var gpath = d3.geoPath()
+    .projection(proj);
+
+  var ccolor = 
+    d3.scaleSequential( d3.interpolateBlues )
+    .domain( 
+      d3.extent( countries_data.features, d => gpath.area(d))
+      );
+
+
+  // draw country boundaries
+  d3.select('svg')
+    .append('g')
+    .attr('id', 'countries')
+    .selectAll('path')
+    .data(countries_data.features)
+    .enter()
+    .append('path')
+      .attr('d', function(d) { return gpath(d); })
+      .attr('stroke-width', 1)
+      .attr('stroke', 'steelblue')
+      .attr('id', d => d.id)
+      .attr('fill', d => ccolor( gpath.area(d)) );
+      
+  
+   var mapZoom = d3.zoom()
+    .on('zoom', zoomed);
+
+  var zoomSettings = d3.zoomIdentity
+    .translate(250, 250)
+    .scale(120);
+
+  d3.select('svg')
+    .call(mapZoom)
+    .call(mapZoom.transform, zoomSettings);
+
+  function zoomed(e) {
+    proj
+      .translate([e.transform.x, e.transform.y])
+      .scale(e.transform.k);
+
+    console.log(e.transform.k);
+
+    if( e.transform.k > 400 ) 
+      console.log('toggle adaptive map feature');
+
+    // redraw map with new projection settings
+    d3.selectAll('path')
+      .attr('d', gpath);
+
+    d3.selectAll('circle')
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+  }
+     
+      circle1.data(geese_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#645452')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+
+    circle2
+      .data(cities_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#b2beb5')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+
+   circle3
+      .data(tort_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#8db600')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+
+      circle4
+      .data(whales_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#007fff')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+     
+     circle5
+      .data(heron_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#ff9966')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+     
+     circle6
+      .data(seals_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 1)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#321414')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+
+      circle7
+      .data(deer_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#cd7f32')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+         
+    circle8
+      .data(doves_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '	#ffffff')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+            
+     circle9
+      .data(shark_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#0000ff')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+            
+    circle10
+      .data(eagle_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy',  d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#ffef00')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+    count++;
+}
 
 </script>
