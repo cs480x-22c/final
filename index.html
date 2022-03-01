@@ -13,7 +13,7 @@
 
 
 <script>
-
+var count = 1;
   // Also see TOPOJSON
 Promise.all([
   d3.json('world.geojson'),
@@ -68,8 +68,7 @@ Promise.all([
       .attr('id', d => d.id)
       .attr('fill', d => ccolor( gpath.area(d)) );
       
-              
-    d3.select('svg')
+     d3.select('svg')
       .selectAll('circle1')
       .data(geese)
       .enter()
@@ -79,15 +78,15 @@ Promise.all([
       .attr('cy', d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
       .attr('stroke', '#4F442B')
-      .attr('fill', '#FCBC34')
+      .attr('fill', '#645452')
       .on('mouseover', function(e, d) {
         console.log("mouseover: "+d);
               d3.select('#info').text(d.name);
             });
-
+ 
     d3.select('svg')
       .selectAll('circle2')
-      .data(cities)
+      .data(cities.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
       .attr('r', 10)
@@ -95,7 +94,7 @@ Promise.all([
       .attr('cy', d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
       .attr('stroke', '#4F442B')
-      .attr('fill', '#FCBC34')
+      .attr('fill', '#b2beb5')
       .on('mouseover', function(e, d) {
         console.log("mouseover: "+d);
               d3.select('#info').text(d.name);
@@ -111,7 +110,7 @@ Promise.all([
       .attr('cy', d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
       .attr('stroke', '#4F442B')
-      .attr('fill', '#FCBC34')
+      .attr('fill', '#8db600')
       .on('mouseover', function(e, d) {
         console.log("mouseover: "+d);
               d3.select('#info').text(d.name);
@@ -127,7 +126,7 @@ Promise.all([
       .attr('cy', d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
       .attr('stroke', '#4F442B')
-      .attr('fill', '#FCBC34')
+      .attr('fill', '#007fff')
       .on('mouseover', function(e, d) {
         console.log("mouseover: "+d);
               d3.select('#info').text(d.name);
@@ -142,7 +141,7 @@ Promise.all([
       .attr('cy', d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
       .attr('stroke', '#4F442B')
-      .attr('fill', '#FCBC34')
+      .attr('fill', '#ff9966')
       .on('mouseover', function(e, d) {
         console.log("mouseover: "+d);
               d3.select('#info').text(d.name);
@@ -157,7 +156,7 @@ Promise.all([
       .attr('cy', d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
       .attr('stroke', '#4F442B')
-      .attr('fill', '#FCBC34')
+      .attr('fill', '#321414')
       .on('mouseover', function(e, d) {
         console.log("mouseover: "+d);
               d3.select('#info').text(d.name);
@@ -172,7 +171,7 @@ Promise.all([
       .attr('cy', d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
       .attr('stroke', '#4F442B')
-      .attr('fill', '#FCBC34')
+      .attr('fill', '#cd7f32')
       .on('mouseover', function(e, d) {
         console.log("mouseover: "+d);
               d3.select('#info').text(d.name);
@@ -188,7 +187,7 @@ Promise.all([
       .attr('cy', d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
       .attr('stroke', '#4F442B')
-      .attr('fill', '#FCBC34')
+      .attr('fill', '	#ffffff')
       .on('mouseover', function(e, d) {
         console.log("mouseover: "+d);
               d3.select('#info').text(d.name);
@@ -204,7 +203,7 @@ Promise.all([
       .attr('cy', d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
       .attr('stroke', '#4F442B')
-      .attr('fill', '#FCBC34')
+      .attr('fill', '#0000ff')
       .on('mouseover', function(e, d) {
         console.log("mouseover: "+d);
               d3.select('#info').text(d.name);
@@ -217,10 +216,10 @@ Promise.all([
       .append('circle')
       .attr('r', 10)
       .attr('cx', d => proj([d.x, d.y])[0])
-      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('cy',  d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
       .attr('stroke', '#4F442B')
-      .attr('fill', '#FCBC34')
+      .attr('fill', '#ffef00')
       .on('mouseover', function(e, d) {
         console.log("mouseover: "+d);
               d3.select('#info').text(d.name);
