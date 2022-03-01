@@ -1,0 +1,42 @@
+{
+    "climbers": [
+        {
+            "uuid" : "00000",
+            "firstName": "Travis",
+            "lastName": "Thompson",
+            "routeMoves": {
+                "leftHand":
+                    {"0": "002", "1": "001", "2": "003", "3": "004", "4": "005", "5": "006"}
+                ,
+                "rightHand":
+                    {"0": "002", "1": "001"}
+                ,
+                "leftFoot": 
+                    {"0": "002", "1": "001"}
+                ,
+                "rightFoot": 
+                    {"0": "002", "1": "001"}
+            }
+        },
+
+        {
+            "uuid" : "00001",
+            "firstName": "Colby",
+            "lastName": "Frechette",
+            "routeMoves": {
+                "leftHand":
+                    {"0": "002", "1": "001"}
+                ,
+                "rightHand":
+                    {"0": "002", "1": "001"}
+                ,
+                "leftFoot": 
+                    {"0": "002", "1": "001"}
+                ,
+                "rightFoot": 
+                    {"0": "002", "1": "001"}
+            }
+        }
+    ]
+   
+}

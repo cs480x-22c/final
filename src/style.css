@@ -27,7 +27,7 @@ body,
 
 #content
 {
-    height: 93%;
+    height: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,19 +43,34 @@ body,
     align-items: center;
 }
 
+.play-timestamp
+{
+    color: #ECB16D;
+}
+
 .play-button
 {
     border-radius: 1em;
     text-align: center;
     width: 2em;
     height: 2em;
-    margin: 1em;
 }
 
 .play-bar
 {
     width: 100%;
-    background-color: #ECB16D;
+    -webkit-appearance: none;
+    background-color: #F0F4EF;
+    margin: 1em;
+}
+
+.play-bar::-webkit-slider-runnable-track
+{
+    background-color: #EBCCA9;
+}
+.play-bar::-moz-range-track
+{
+    background-color: #EBCCA9;
 }
 
 /*Typography*/
@@ -102,7 +117,7 @@ h4
 
 .climber-panel-container
 {
-    height: 50%;
+    height: 60%;
     width: 40%;
     padding: 1rem;
 }
@@ -115,11 +130,12 @@ h4
     height: 100%;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 
 .climber-name-display
 {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     text-transform: capitalize;
 }
 
@@ -129,7 +145,8 @@ h4
     padding: 1em;
     width: 10vw;
     height: 10vw;
-    margin-top: 1em;
+    margin-top: .5em;
+    margin-bottom: 1em;
 }
 
 .avatar
@@ -258,6 +275,7 @@ h4
     word-wrap: break-word;
     margin: auto;
     min-height: 200px;
+    text-align: center;
 }
 
 .info-popup button

@@ -43,10 +43,11 @@ export default class Route extends React.Component
         let holds = this.props.routeMoves.getHoldsTouching(this.props.currentTime)
 
         const drawLimb = (holdID, color, radius) => {
+            let hold = this.svg.select('#c' + holdID)
+
             if(isNaN(holdID) || holdID == "")
                 return
 
-            let hold = this.svg.select('#c' + holdID)
             let cx = hold.attr('cx')
             let cy = hold.attr('cy')
 

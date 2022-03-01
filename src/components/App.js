@@ -10,14 +10,45 @@ export default class App extends React.Component
     {
         super(props)
         this.climbers = [
-            new Climber("00000", "travis", 'thompson'),
-            new Climber("00001", "colby", 'frechette'),
-            new Climber("00002", "ben", 'mills'),
-            new Climber("00003", "elliot", 'irving'),
+            
         ]
         this.state = {
-            currentTime: 0
+            currentTime: 0,
+            dataLoaded: false
         }
+
+        this.loadData()
+    }
+
+    loadData()
+    {
+        fetch('./climber-data.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("HTTP error " + response.status);
+            }
+            return response.json();
+        })
+        .then(json => {
+            // Parse climber data
+            json.climbers.forEach(climber => {
+                this.climbers.push(new Climber(
+                    climber.uuid,
+                    climber.firstName,
+                    climber.lastName,
+                    climber.routeMoves
+                ));
+            });
+           
+            //Update state to load app
+            this.setState({
+                dataLoaded: true
+            })
+        })
+        .catch(() => {
+            console.error("ERROR LOADING CLIMBER DATA!")
+            this.dataError = true;
+        })
     }
 
     setCurrentTime(time)
@@ -27,6 +58,9 @@ export default class App extends React.Component
 
     render()
     {
+        if(!this.state.dataLoaded)
+            return null
+
         return (
             <div id="app">
                 <div id="content">

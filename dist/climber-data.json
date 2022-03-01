@@ -1,0 +1,24 @@
+{
+    "climbers": [
+        {
+            "id" : "0000",
+            "firstName": "Travis",
+            "lastName": "Travis",
+            "routeMoves": {
+                "leftHand": [
+                    [0, "00001"]
+                ],
+                "rightHand": [
+                    [0, "00001"]
+                ],
+                "leftFoot": [
+                    [0, "00001"]
+                ],
+                "rightFoot": [
+                    [0, "00001"]
+                ]
+            }
+        }
+    ]
+   
+}

@@ -1,41 +1,34 @@
 export default class Climber 
 {
-    constructor(uuid, firstName, lastName)
+    constructor(uuid, firstName, lastName, routeMoves)
     {
         this.uuid = uuid
         this.firstName = firstName
         this.lastName = lastName
-        this.routeMoves = new RouteMoves()
+        this.routeMoves = new RouteMoves(routeMoves)
     }
+
+
 }
 
 class RouteMoves
 {
-    constructor()
+    constructor(routeMoves)
     {
-        //seconds - holdid
+        this.leftHand = this._parseJsonToMap(routeMoves.leftHand)
+        this.rightHand = this._parseJsonToMap(routeMoves.rightHand)
+        this.rightFoot = this._parseJsonToMap(routeMoves.rightFoot)
+        this.leftFoot = this._parseJsonToMap(routeMoves.leftFoot)
+    }
 
-        //Time - Hold id
-        this.leftHand = new Map()
-        this.rightHand = new Map()
-        this.rightFoot = new Map()
-        this.leftFoot = new Map()
+    _parseJsonToMap(jsonMap)
+    {
+        let map = new Map()
+        Object.entries(jsonMap).forEach(move => {
+            map.set(+move[0], move[1])
+        })
 
-        this.leftHand.set(0, "003")
-        this.leftHand.set(6, "")
-        this.leftHand.set(10, "006")
-
-        this.rightHand.set(0, "003")
-        this.rightHand.set(5, "004")
-        this.rightHand.set(10, "")
-        this.rightHand.set(11, "006")
-
-        this.leftFoot.set(0, "001")
-        this.leftFoot.set(5, "")
-
-        this.rightFoot.set(0, "002")
-        this.rightFoot.set(9, "005")
-
+        return map
     }
 
     getHoldsTouching(time)
@@ -55,7 +48,7 @@ class RouteMoves
 
         for(let time of limb.keys())
         {
-            if(time > desiredTime)
+            if(+time > desiredTime)
                 return limb.get(earlierTime)
             
             earlierTime = time;

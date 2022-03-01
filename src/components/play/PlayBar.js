@@ -1,4 +1,3 @@
-import { tickFormat } from "d3";
 import React from "react";
 
 export default class PlayBar extends React.Component
@@ -14,25 +13,29 @@ export default class PlayBar extends React.Component
         clearInterval(this.timerID);
     }
 
-    tick() {
-        this.setState((state) => ({
-            seconds: state.seconds + 1
+    tick()
+    {
+        let seconds = this.state.seconds + 1
+        this.setState(() => ({
+            seconds: seconds
         }))
 
         if(this.state.seconds >= this.props.totalSeconds)
              this.endTimer()
 
-        this.updateTime()
+        
+        this.props.setTime(seconds)
     }
 
     handleSlide(event)
     {   
-        //this.endTimer()
+        let seconds = +event.target.value
         this.setState({
-            seconds: +event.target.value
+            seconds: seconds
         })
 
-        this.updateTime()
+        this.props.setTime(seconds)
+
     }
 
     startTimer()
@@ -40,9 +43,15 @@ export default class PlayBar extends React.Component
         if(this.timerID)
             return
 
-        this.setState({
-            playing: true
-        })
+        if(this.state.seconds >= this.props.totalSeconds)
+            this.setState({
+                seconds: 0,
+                playing: true
+            })
+        else
+            this.setState({
+                playing: true
+            })
 
         this.timerID = setInterval(
             () => this.tick(),
@@ -68,7 +77,7 @@ export default class PlayBar extends React.Component
             this.startTimer()
     }
 
-    updateTime()
+    updateTime(time)
     {
         this.props.setTime(this.state.seconds)
     }

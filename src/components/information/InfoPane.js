@@ -38,7 +38,6 @@ export default class InfoPane extends React.Component
             <div>
                 <InfoButton togglePopup={this.togglePopup.bind(this)}/>
                 {this.state.showPopup && <InfoPopup closePopup={this.closePopup.bind(this)}/>}
-                
             </div>
         )
     }
