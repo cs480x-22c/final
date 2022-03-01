@@ -53,14 +53,10 @@ a {
     color: gray;
     font-size: 18px;
     position: relative;
-    bottom: 175px;
+    bottom: 170px;
     background-color: white;
     padding: 5px;
     border-radius: 5px;
-}
-#homeLinks {
-    display: flex;
-    gap: 25px;
 }
 
 /******************** Visualization-Specific Styles ********************/
@@ -142,6 +138,12 @@ a {
     margin-bottom: 10px;
     height: 30px;
 }
+#returnToHome {
+    position: relative;
+    width: 300px;
+    margin-bottom: 10px;
+    height: 30px;
+}
 .arrow {
     border: solid black;
     border-width: 0 3px 3px 0;
@@ -170,7 +172,7 @@ a {
     border-bottom: 1px solid #ddd;
     width: 300px;
     position: sticky;
-    top: 0;
+    top: 30px;
 }
 #searchInput:focus {
     outline: 3px solid #ddd;
@@ -181,6 +183,7 @@ a {
 #constellationDropdown option {
     color: black;
     padding: 8px 12px; 
+    padding-top:0px;
     text-decoration: none;
     display: block;
     width: 300px;
