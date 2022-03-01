@@ -17,21 +17,22 @@ var count = 1;
   // Also see TOPOJSON
 Promise.all([
   d3.json('world.geojson'),
-  d3.csv('csv updated/Grey_Wolf.csv'),
-  d3.csv('csv updated/Canada_Geese.csv'),
-  d3.csv('csv updated/Galapagos_Tortoises.csv'),
-  d3.csv('csv updated/Great_Whales.csv'),
-  d3.csv('csv updated/Heron_and_Egret.csv'),
-  d3.csv('csv updated/Ringed_Seals.csv'),
-  d3.csv('csv updated/Roe_Deer.csv'),
-  d3.csv('csv updated/Turtle_Doves.csv'),
-  d3.csv('csv updated/Whale_Shark.csv'),
-  d3.csv('csv updated/White_Tailed_Eagle.csv')
+  d3.csv('csv w rank/Grey_Wolf.csv'),
+  d3.csv('csv w rank/Canada_Geese.csv'),
+  d3.csv('csv w rank/Galapagos_Tortoises.csv'),
+  d3.csv('csv w rank/Great_Whales.csv'),
+  d3.csv('csv w rank/Heron_and_Egret.csv'),
+  d3.csv('csv w rank/Ringed_Seals.csv'),
+  d3.csv('csv w rank/Roe_Deer.csv'),
+  d3.csv('csv w rank/Turtle_Doves.csv'),
+  d3.csv('csv w rank/Whale_Shark.csv'),
+  d3.csv('csv w rank/White_Tailed_Eagle.csv')
 ]).then( ([countries, cities, geese, tort, whales, heron, seals, deer, doves, shark, eagle]) => {
   createMap(countries,cities, geese, tort, whales, heron, seals, deer, doves, shark, eagle)
 })
 
   function createMap(countries, cities, geese, tort, whales, heron, seals, deer, doves, shark, eagle) {
+   // d3.selectAll('circle').remove();
   var proj = d3.geoEquirectangular()
     .translate([250, 250])
     .scale(120);
@@ -68,9 +69,40 @@ Promise.all([
       .attr('id', d => d.id)
       .attr('fill', d => ccolor( gpath.area(d)) );
       
+  
+   var mapZoom = d3.zoom()
+    .on('zoom', zoomed);
+
+  var zoomSettings = d3.zoomIdentity
+    .translate(250, 250)
+    .scale(120);
+
+  d3.select('svg')
+    .call(mapZoom)
+    .call(mapZoom.transform, zoomSettings);
+
+  function zoomed(e) {
+    proj
+      .translate([e.transform.x, e.transform.y])
+      .scale(e.transform.k);
+
+    console.log(e.transform.k);
+
+    if( e.transform.k > 400 ) 
+      console.log('toggle adaptive map feature');
+
+    // redraw map with new projection settings
+    d3.selectAll('path')
+      .attr('d', gpath);
+
+    d3.selectAll('circle')
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+  }
+  
      d3.select('svg')
       .selectAll('circle1')
-      .data(geese)
+      .data(geese.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
       .attr('r', 10)
@@ -102,7 +134,7 @@ Promise.all([
 
    d3.select('svg')
       .selectAll('circle3')
-      .data(tort)
+      .data(tort.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
       .attr('r', 10)
@@ -118,7 +150,7 @@ Promise.all([
 
        d3.select('svg')
       .selectAll('circle4')
-      .data(whales)
+      .data(whales.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
       .attr('r', 10)
@@ -133,7 +165,7 @@ Promise.all([
             });
      d3.select('svg')
       .selectAll('circle5')
-      .data(heron)
+      .data(heron.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
       .attr('r', 10)
@@ -148,7 +180,7 @@ Promise.all([
             });
      d3.select('svg')
       .selectAll('circle6')
-      .data(seals)
+      .data(seals.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
       .attr('r', 10)
@@ -163,7 +195,7 @@ Promise.all([
             });
        d3.select('svg')
       .selectAll('circle7')
-      .data(deer)
+      .data(deer.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
       .attr('r', 10)
@@ -179,7 +211,7 @@ Promise.all([
          
     d3.select('svg')
       .selectAll('circle8')
-      .data(doves)
+      .data(doves.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
       .attr('r', 10)
@@ -195,7 +227,7 @@ Promise.all([
             
      d3.select('svg')
       .selectAll('circle9')
-      .data(shark)
+      .data(shark.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
       .attr('r', 10)
@@ -211,7 +243,7 @@ Promise.all([
             
     d3.select('svg')
       .selectAll('circle10')
-      .data(eagle)
+      .data(eagle.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
       .attr('r', 10)
@@ -224,38 +256,8 @@ Promise.all([
         console.log("mouseover: "+d);
               d3.select('#info').text(d.name);
             });
-
-   var mapZoom = d3.zoom()
-    .on('zoom', zoomed);
-
-  var zoomSettings = d3.zoomIdentity
-    .translate(250, 250)
-    .scale(120);
-
-  d3.select('svg')
-    .call(mapZoom)
-    .call(mapZoom.transform, zoomSettings);
-
-  function zoomed(e) {
-    proj
-      .translate([e.transform.x, e.transform.y])
-      .scale(e.transform.k);
-
-    console.log(e.transform.k);
-
-    if( e.transform.k > 400 ) 
-      console.log('toggle adaptive map feature');
-
-    // redraw map with new projection settings
-    d3.selectAll('path')
-      .attr('d', gpath);
-
-    d3.selectAll('circle')
-      .attr('cx', d => proj([d.x, d.y])[0])
-      .attr('cy', d => proj([d.x, d.y])[1])
-  }
-
+    count++;
 }
-
+//setInterval(createMap(countries,cities, geese, tort, whales, heron, seals, deer, doves, shark, eagle),100)
 
 </script>
