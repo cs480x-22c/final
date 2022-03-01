@@ -53,10 +53,14 @@ a {
     color: gray;
     font-size: 18px;
     position: relative;
-    bottom: 170px;
+    bottom: 175px;
     background-color: white;
     padding: 5px;
     border-radius: 5px;
+}
+#homeLinks {
+    display: flex;
+    gap: 25px;
 }
 
 /******************** Visualization-Specific Styles ********************/

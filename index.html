@@ -20,24 +20,25 @@
             </div>
 
             <p id="homeOverview">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Dolor sit amet consectetur
-                adipiscing elit ut aliquam. Laoreet sit amet cursus sit amet dictum. Mattis rhoncus
-                urna neque viverra justo nec. Massa vitae tortor condimentum lacinia. Nunc scelerisque
-                viverra mauris in aliquam sem fringilla. Ac turpis egestas maecenas pharetra convallis
-                posuere morbi. Tempus quam pellentesque nec nam aliquam sem et tortor. A diam maecenas
-                sed enim ut sem viverra. Cursus vitae congue mauris rhoncus aenean vel elit scelerisque
-                mauris. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Id ornare arcu
-                odio ut sem nulla pharetra diam. Turpis egestas sed tempus urna et pharetra pharetra.
-                Massa id neque aliquam vestibulum morbi blandit.
+                Anyone who steps outside on a clear night can see the stars, but not everyone 
+                knows which stars to connect to form constellations. Even fewer are aware of the 
+                history surrounding constellations, some of which date back to ancient Greece. In 
+                this project we developed an interactive visualization that presents the constellations
+                and their stories. Using a dataset we created by scraping and combining information from 
+                multiple sources, we leveraged JavaScript and d3-geo-projection to create the visualization.
+                The constellations are initially hidden, and you can mouse over the star maps to reveal them or 
+                view a specific one by selecting a name in the side panel. Once you reveal all the 
+                constellations, you'll be well on your way to understanding the stories in our stars!
             </p>
 
             <img onclick="location.href = 'vis.html'" id="homeImage" src="home-image.PNG">
-            <p onclick="location.href = 'vis.html'" id="textOverlay">Click to view the visualization.</p>
+            <p onclick="location.href = 'vis.html'" id="textOverlay">Click here to see the visualization</p>
 
-            <a href="">Process Book</a>
-            <a href="https://github.com/vrmelican/final/tree/main/datasets">Data</a>
-            <a href="">Video</a>
+            <div id="homeLinks">
+                <a href="">Process Book</a>
+                <a href="https://github.com/vrmelican/final/tree/main/datasets">Data</a>
+                <a href="">Video</a>
+            </div>
         </div>
     </div>
     <script src="home-script.js"></script>
