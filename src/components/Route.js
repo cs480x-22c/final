@@ -77,7 +77,7 @@ export default class Route extends React.Component
         
 
         const drawRightFoot = (holdID) => {
-            drawLimb(holdID, 'green', 10)
+            drawLimb(holdID, 'purple', 10)
         }
         
         const drawLeftFoot = (holdID) => {
