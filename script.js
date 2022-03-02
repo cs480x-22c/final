@@ -8,10 +8,10 @@ function makeNodeLinkGraph() {
       // response.json();
       var nodes = [];
       var links = [];
-      for(var i = 0; i < response.length; i++){
-        nodes.push(response.species.map(d => {
-          return {species: d, index: response[i].index, typeA: response[i].typeA, typeB: response[i].typeB}
-        }))
+      for(var i = 0; i < response.species.length; i++){
+        nodes.push(
+          {species: response.species[i], index: response.index[i], typeA: response.typeA[i], typeB: response.typeB[i]}
+        )
       }
       console.log("nodes: " + JSON.stringify(nodes));
     });
