@@ -93,8 +93,10 @@ function makeNodeLinkGraph() {
       links.push(addLinks(ghost, "ghost"));
       links.push(addLinks(dragon, "dragon"));
 
+      console.log("links: " + JSON.stringify(links));
+
     });
-    console.log("links: " + JSON.stringify(links));
+    
   
   const nodes = data.nodes.map(d => Object.create(d));
   const index = new Map(nodes.map(d => [d.id, d]));
