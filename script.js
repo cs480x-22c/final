@@ -107,6 +107,8 @@ function makeNodeLinkGraph() {
       console.log(index);
       console.log("nodes.species: " + nodes.species);
       console.log("nodes.id: " + nodes.id);
+      console.log("nodes: \n");
+      console.log(nodes);
 
       // const svg = d3.select(DOM.svg(width, height));
       const svg = d3.select("#graph").append("svg")
