@@ -2,8 +2,11 @@
 
 ## Team Team
 Jacob Bissonette
+
 Sean Horton
+
 Victoria Mirecki
+
 Samantha Mora
 
 # Submission Overview
