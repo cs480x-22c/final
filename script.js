@@ -1,4 +1,5 @@
 function makeNodeLinkGraph() {
+	
   const color = d3.scaleOrdinal(d3.schemeCategory10),
         height = 500,
         width = 500;
@@ -129,6 +130,39 @@ function makeNodeLinkGraph() {
         .attr("width", width)
         .attr("height", height)
         .append("g")
+		
+	const legend = svg.append("g")
+          .attr("stroke", "#fff")
+          .attr("stroke-width", 1.5);
+	
+	const types = ["Grass","Fire","Water","Bug","Normal","Poison","Electric","Ground","Fairy","Fighting","Psychic","Rock","Ghost","Ice","Dragon","Flying","Steel"];
+	
+	legend.append("rect")
+		.attr("stroke","black")
+		.attr("fill", "none")
+		.attr("x",(width-50))
+		.attr("y",0)
+		.attr("width",50)
+		.attr("height",height);
+		
+	legend
+		.selectAll("circle")
+		.data(types)
+		.enter().append("circle")
+		  .attr("r", 5)
+		  .attr("fill", d => color(d))
+		  .attr("cx", (width-40))
+		  .attr("cy", (d,i) => ((i+1) * height/18));
+		  
+	legend
+		.selectAll("text")
+		.data(types)
+		.enter().append("text")
+		  .attr("x", (width-25))
+		  .attr("y", (d,i) => ((i+1) * height/18))
+		  .attr("class", "legend")
+		  .text(d => d);
+	
 
       const layout = cola.d3adaptor(d3)
           .size([width, height])
