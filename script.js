@@ -10,6 +10,7 @@ function makeNodeLinkGraph() {
         return {species: d, index: response.index, typeA: response.typeA, typeB: response.typeB}
       });
       console.log("species: " + species.toString());
+      console.log("species: " + species[0].toString());
     });
   
   // chart = {
