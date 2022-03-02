@@ -22,5 +22,6 @@ Samantha Mora
 [Screencast Video](tbd)
 
 # Features
- - Hovering over dots displays the animal you are viewing.
+ - Pressing the "Update data" bottom will cause the dots to start moving on their paths.
+ - Hovering over the different colored dots displays the animal you are viewing.
  - Zooming is enabled to better see animal paths.
