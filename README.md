@@ -17,7 +17,7 @@ Samantha Mora
 # Links
 [Project Website(GitHub Pages)](https://jbiss4.github.io/final/)
 
-[Process Book](Process_Book.pdf)
+[Process Book](https://docs.google.com/document/d/1_JWxuHCLJCEP-DQQ2yrrMmI9l7LnQM0E0gDquMhUY84/edit#heading=h.d74yh6rkk556)
 
 [Screencast Video](tbd)
 
