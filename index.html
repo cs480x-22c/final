@@ -113,17 +113,18 @@
 
           var proj = d3.geoMercator()
             .scale(130)
-            .translate([960 / 2, 500 / 2 + 50]);
+            .translate([960 / 2, 500 / 2 + 80]);
           var path = d3.geoPath().projection(proj);
 
-          d3.json("world-countries.json")
+          d3.json("https://480xfinal.s3.us-east-2.amazonaws.com/world-countries.json")
             .then(world => {
               mapSVG.append("g")
                 .selectAll("path")
                 .data(world.features)
                 .enter()
                 .append("path")
-                  .attr("d", path);
+                  .attr("d", path)
+                  .attr("fill", "white");
           });
 
           for (i = 0; i < data.length; i++) {
