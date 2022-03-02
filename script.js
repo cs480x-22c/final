@@ -98,9 +98,16 @@ function makeNodeLinkGraph() {
     });
     
   
-  const nodes = data.nodes.map(d => Object.create(d));
+  // const nodes = data.nodes.map(d => Object.create(d));
+  // const index = new Map(nodes.map(d => [d.id, d]));
+  // const links = data.links.map(d => Object.assign(Object.create(d), {
+  //   source: index.get(d.source),
+  //   target: index.get(d.target)
+  // }));
+
+  const nodes = species.map(d => Object.create(d));
   const index = new Map(nodes.map(d => [d.id, d]));
-  const links = data.links.map(d => Object.assign(Object.create(d), {
+  const links2 = links.map(d => Object.assign(Object.create(d), {
     source: index.get(d.source),
     target: index.get(d.target)
   }));
@@ -110,7 +117,7 @@ function makeNodeLinkGraph() {
   const layout = cola.d3adaptor(d3)
       .size([width, height])
       .nodes(nodes)
-      .links(links)
+      .links(links2)
       .jaccardLinkLengths(40, 0.7)
       .start(30);
   
@@ -118,7 +125,7 @@ function makeNodeLinkGraph() {
       .attr("stroke", "#999")
       .attr("stroke-opacity", 0.6)
     .selectAll("line")
-    .data(links)
+    .data(links2)
     .enter().append("line")
       .attr("stroke-width", d => Math.sqrt(d.value));
 
