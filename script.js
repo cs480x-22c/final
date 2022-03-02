@@ -2,7 +2,7 @@ function makeNodeLinkGraph() {
 	
   const color = d3.scaleOrdinal(d3.schemeCategory10),
         height = 500,
-        width = 500;
+        width = 750;
         
   const data = d3.json("data.json")
     .then((response) => {
@@ -140,9 +140,9 @@ function makeNodeLinkGraph() {
 	legend.append("rect")
 		.attr("stroke","black")
 		.attr("fill", "none")
-		.attr("x",(width-50))
+		.attr("x",(width-100))
 		.attr("y",0)
-		.attr("width",50)
+		.attr("width",100)
 		.attr("height",height);
 		
 	legend
@@ -151,15 +151,15 @@ function makeNodeLinkGraph() {
 		.enter().append("circle")
 		  .attr("r", 5)
 		  .attr("fill", d => color(d))
-		  .attr("cx", (width-40))
+		  .attr("cx", (width-90))
 		  .attr("cy", (d,i) => ((i+1) * height/18));
 		  
 	legend
 		.selectAll("text")
 		.data(types)
 		.enter().append("text")
-		  .attr("x", (width-25))
-		  .attr("y", (d,i) => ((i+1) * height/18))
+		  .attr("x", (width-75))
+		  .attr("y", (d,i) => ((i+1) * height/18 + 5))
 		  .attr("class", "legend")
 		  .text(d => d);
 	
