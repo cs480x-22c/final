@@ -4,6 +4,7 @@ function makeNodeLinkGraph() {
         data = d3.json("data.json");
 
   console.log(data);
+  console.log(data.species);
   
   // chart = {
   const species = data.species.map(d => Object.create(d));
