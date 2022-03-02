@@ -1,10 +1,19 @@
 function makeNodeLinkGraph() {
   const color = d3.scaleOrdinal(d3.schemeCategory10),
-        height = 500,
-        data = d3.json("data.json");
+        height = 500;
+        
+  const data = d3.json("data.json")
+    .then((response) => response.json())
+    .then((json) => {
+      return json;
+    });
 
-  console.log(data);
-  console.log(data.species);
+  const printData = () => {
+    data.then((d) => {
+      console.log(d);
+      console.log(d.species);
+    });
+  };
   
   // chart = {
   const species = data.species.map(d => Object.create(d));
