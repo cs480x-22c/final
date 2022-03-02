@@ -42,7 +42,7 @@ export default class Route extends React.Component
         this.svg.selectAll('.limb').remove()
         let holds = this.props.routeMoves.getHoldsTouching(this.props.currentTime, this.props.currentFrame)
 
-        const drawLimb = (holdID, color, radius) => {
+        const drawLimb = (holdID, color, radius, isLeft) => {
             if(holdID == "")
                 return
 
@@ -54,8 +54,8 @@ export default class Route extends React.Component
                 return
             }
 
-            let cx = hold.attr('cx')
-            let cy = hold.attr('cy')
+            let cx = +hold.attr('cx')
+            let cy = +hold.attr('cy')
 
             this.svg.append('circle')
                 .attr('cx', cx)
@@ -65,23 +65,33 @@ export default class Route extends React.Component
                 .style('fill', 'none')
                 .style('stroke-width', 6)
                 .attr('class', 'limb')
+
+               
+            this.svg.append('text')
+                .attr('x', isLeft ? cx - radius : cx + radius)
+                .attr('y', cy - radius)
+                .text(isLeft ? "L" : "R")
+                .attr('font-size', "2em")
+                .style('fill', color)
+                .attr('class', 'limb')
+
         }
 
         const drawLeftHand = (holdID) => {
-           drawLimb(holdID, 'red', 28)
+           drawLimb(holdID, 'red', 28, true)
         }
 
         const drawRightHand = (holdID) => {
-            drawLimb(holdID, 'blue', 26)
+            drawLimb(holdID, 'blue', 26, false)
         }
         
 
         const drawRightFoot = (holdID) => {
-            drawLimb(holdID, 'purple', 10)
+            drawLimb(holdID, 'purple', 10, false)
         }
         
         const drawLeftFoot = (holdID) => {
-            drawLimb(holdID, 'yellow', 12)
+            drawLimb(holdID, 'yellow', 12, true)
         }
 
        drawLeftHand(holds.leftHand)
