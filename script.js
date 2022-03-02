@@ -5,25 +5,97 @@ function makeNodeLinkGraph() {
   const data = d3.json("data.json")
     .then((response) => {
       console.log(response);
-      // response.json();
-      var nodes = [];
+      var species = [];
       var links = [];
-      for(var i = 0; i < response.species.length; i++){
-        nodes.push(
+      var grass = [];
+      var fire = [];
+      var water = [];
+      var bug = [];
+      var normal = [];
+      var poison = [];
+      var electric = [];
+      var ground = [];
+      var fairy = [];
+      var fighting = [];
+      var psychic = [];
+      var rock = [];
+      var ghost = [];
+      var ice = [];
+      var dragon = [];
+      for(let i = 0; i < response.species.length; i++){
+        species.push(
           {species: response.species[i], index: response.index[i], typeA: response.typeA[i], typeB: response.typeB[i]}
         )
       }
-      console.log("nodes: " + JSON.stringify(nodes));
-    });
-  
-  // chart = {
-  const species = data.species.map(d => Object.create(d));
-  const typeA = data.typeA.map(d => Object.create(d));
-  const typeB = data.typeB.map(d => Object.create(d));
-  console.log("species: " + species);
-  console.log("typeA: " + typeA);
-  console.log("typeB: " + typeB);
+      console.log("species: " + JSON.stringify(species));
+      //add species to their type arrays
+      for(let i = 0; i < nodes.length; i ++){
+        if((species[i].typeA === "Grass") || (species[i].typeB === "Grass")){
+          grass.push(species[i].species);
+        }
+        if((species[i].typeA === "Fire") || (species[i].typeB === "Fire")){
+          fire.push(species[i].species);
+        }
+        if((species[i].typeA === "Water") || (species[i].typeB === "water")){
+          water.push(species[i].species);
+        }
+        if((species[i].typeA === "Bug") || (species[i].typeB === "Bug")){
+          bug.push(species[i].species);
+        }
+        if((species[i].typeA === "Normal") || (species[i].typeB === "Normal")){
+          normal.push(species[i].species);
+        }
+        if((species[i].typeA === "Poison") || (species[i].typeB === "Poison")){
+          poison.push(species[i].species);
+        }
+        if((species[i].typeA === "Electric") || (species[i].typeB === "Electric")){
+          electric.push(species[i].species);
+        }
+        if((species[i].typeA === "Ground") || (species[i].typeB === "Ground")){
+          ground.push(species[i].species);
+        }
+        if((species[i].typeA === "Fairy") || (species[i].typeB === "Fairy")){
+          fairy.push(species[i].species);
+        }
+        if((species[i].typeA === "Fighting") || (species[i].typeB === "Fighting")){
+          fighting.push(species[i].species);
+        }
+        if((species[i].typeA === "Psychic") || (species[i].typeB === "Psychic")){
+          psychic.push(species[i].species);
+        }
+        if((species[i].typeA === "Rock") || (species[i].typeB === "Rock")){
+          rock.push(species[i].species);
+        }
+        if((species[i].typeA === "Ghost") || (species[i].typeB === "Ghost")){
+          ghost.push(species[i].species);
+        }
+        if((species[i].typeA === "Ice") || (species[i].typeB === "Ice")){
+          ice.push(species[i].species);
+        }
+        if((species[i].typeA === "Dragon") || (species[i].typeB === "Dragon")){
+          dragon.push(species[i].species);
+        }
+      }
+      console.log("grass: " + JSON.stringify(grass));
+      links.push(addLinks(grass, "grass"));
+      links.push(addLinks(fire, "fire"));
+      links.push(addLinks(water, "water"));
+      links.push(addLinks(bug, "bug"));
+      links.push(addLinks(normal, "normal"));
+      links.push(addLinks(poison, "poison"));
+      links.push(addLinks(electric, "electric"));
+      links.push(addLinks(ground, "ground"));
+      links.push(addLinks(fairy, "fairy"));
+      links.push(addLinks(fighting, "fighting"));
+      links.push(addLinks(psychic, "psychic"));
+      links.push(addLinks(rock, "rock"));
+      links.push(addLinks(ice, "ice"));
+      links.push(addLinks(ghost, "ghost"));
+      links.push(addLinks(dragon, "dragon"));
 
+    });
+    console.log("links: " + JSON.stringify(links));
+  
   const nodes = data.nodes.map(d => Object.create(d));
   const index = new Map(nodes.map(d => [d.id, d]));
   const links = data.links.map(d => Object.assign(Object.create(d), {
@@ -76,6 +148,16 @@ function makeNodeLinkGraph() {
   invalidation.then(() => layout.stop());
 
   return svg.node();
-  // }
+}
 
+function addLinks(d, type) {
+  var newLinks = [];
+  for(let i = 0; i < d.length-1; i++){
+    for(let j = i+1; j<d.length; j++){
+      newLinks.push({
+        source: d[i].species, target: d[j].species, value: type
+      })
+    }
+  }
+  return newLinks;
 }
