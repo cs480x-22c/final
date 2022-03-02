@@ -22,6 +22,8 @@ Samantha Mora
 [Screencast Video](tbd)
 
 # Features
- - Pressing the "Update data" bottom will cause the dots to start moving on their paths.
+ - Pressing the "Update data" button will cause the dots to start moving on their paths.
+ - Pressing the "Plot" button will display the dot(s) for the selected animal(s).
+ - Pressing the "Stop" button will display both the starting and ending dot for each animal.
  - Hovering over the different colored dots displays the animal you are viewing.
  - Zooming is enabled to better see animal paths.
