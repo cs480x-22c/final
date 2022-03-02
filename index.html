@@ -1,0 +1,267 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.min.js" integrity="sha512-cd6CHE+XWDQ33ElJqsi0MdNte3S+bQY819f7p3NUHgwQQLXSKjE4cPZTeGNI+vaxZynk1wVU3hoHmow3m089wA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta charset="UTF-8">
+    <title>WPI CS Course Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <svg id="bubble-chart"></svg>
+    <div id="legend">
+      <div class="legend-wrapper">
+        <h1>WPI CS Course Planner</h1>
+        <p>Find out which CS classes you're ready for*</p>
+        <div class="color-view">
+          <div class="color-view-element color-view-element-unavailable">Prerequisites not met</div>
+          <div class="color-view-element color-view-element-available">Prerequisites met</div>
+          <div class="color-view-element color-view-element-selected">Course completed</div>
+        </div>
+      </div>
+    </div>
+    <div id="disclaimer">
+      <p>*Non-CS prerequisites not accounted for</p>
+    </div>
+    <style>
+      body {
+        font-family: 'Fredoka', sans-serif;
+        background-color: #eaf2e3;
+      }
+      .wrapper, circle, .course {
+        cursor: pointer;
+        pointer-events: all;
+      }
+      .selected {
+        fill: #688b58;
+      }
+      .available {
+        fill: #6c91c2;
+      }
+      .available:hover {
+        stroke: black;
+        stroke-width: 3px;
+        /* fill: blue; */
+      }
+      .unavailable {
+        fill: lightgrey;
+      }
+      .unavailable:hover {
+        stroke: black;
+        stroke-width: 3px;
+      }
+      .text-wrapper {
+        z-index: 999;
+        pointer-events: none;
+      }
+      .text-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+      .text-layout {
+        width: auto;
+        text-align: center;
+      }
+      .course-number {
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+      .course-name {
+        margin-top: 0;
+      }
+      #legend {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .legend-wrapper {
+        padding: 1em;
+      }
+      .legend-wrapper > h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .legend-wrapper > p {
+        margin-top: 0;
+      }
+      .color-view-element {
+        font-size: 16px;
+      }
+      .color-view-element::before{
+       content: '';
+       display: inline-block;
+       width: 14px;
+       height: 14px;
+       -moz-border-radius: 7px;
+       -webkit-border-radius: 7px;
+       border-radius: 7px;
+       margin-right: 4px;
+      }
+      .color-view-element-unavailable::before {
+        background-color: #afafaf;
+      }
+      .color-view-element-available::before {
+        background-color: #6c91c2;
+      }
+      .color-view-element-selected::before {
+        background-color: #688b58;
+      }
+      #disclaimer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding-left: 1em;
+      }
+    </style>
+    <script>
+      let courseDataURL = 'https://raw.githubusercontent.com/liamrathke/final/main/data/data.json'
+
+      let nodes = {}
+
+      let selected = []
+      let availableStart = [0, 2, 12]
+      let available = JSON.parse(JSON.stringify(availableStart))
+
+      const styles = {
+        selected: {
+          color: 'green'
+        },
+        available: {
+          color: 'yellow'
+        },
+        unavailable: {
+          color: 'lightgrey'
+        },
+        hover: {
+          color: 'lightgreen'
+        }
+      }
+
+      const sizes = {
+        1: 100,
+        2: 90,
+        3: 80,
+        4: 70
+      }
+
+      const width = window.innerWidth
+      const height = window.innerHeight
+
+      function generateChart(nodes, animation) {
+        function bubble(data) {
+          return d3.pack()
+            .size([width, height])
+            .padding(4)(d3.hierarchy({ children: data }).sum(d => sizes[d.level]))
+        }
+
+        const svg = d3.select('#bubble-chart')
+          .style('width', width)
+          .style('height', height)
+
+        const root = bubble(nodes)
+
+        const node = svg.selectAll()
+          .data(root.children)
+          .enter().append('g')
+          .attr('class', 'wrapper')
+          .attr('transform', `translate(${width / 2}, ${height / 2})`)
+        
+        const circle = node.append('circle')
+          .attr('class', d => {
+            if (selected.includes(d.data.id)) {
+              return 'course selected'
+            } else if (available.includes(d.data.id)) {
+              return 'course available'
+            } else {
+              return 'course unavailable'
+            }
+          })
+          .on('click', (e, d) => {
+            console.log('clicked!', e, d)
+            console.log('OLD', selected, available)
+            const courseID = d.data.id
+            const selectedIndex = selected.indexOf(courseID)
+
+            if (selectedIndex < 0) {
+              selected.push(courseID)
+              const availableIndex = available.indexOf(courseID)
+              if (availableIndex >= 0) {
+                available.splice(availableIndex, 1)
+              }
+              d.data.links.forEach(link => {
+                if (available.indexOf(link) < 0) {
+                  available.push(link)
+                }
+              })
+            } else {
+              selected.splice(selectedIndex, 1)
+              available = JSON.parse(JSON.stringify(availableStart))
+              console.log(availableStart)
+              selected.forEach(courseID => {
+                let courseData = nodes[courseID]
+                courseData.links.forEach(link => {
+                  available.push(link)
+                })
+              })
+            }
+
+            document.getElementById('bubble-chart').innerHTML = ''
+            console.log('NEW', selected, available)
+            generateChart(nodes, false)
+          })
+
+        const course = node.append('g')
+          .attr('transform', d => `translate(${-d.r}, ${-d.r})`)
+          .attr('class', 'text-wrapper')
+
+        const obj = course.append('foreignObject')
+          .attr('width', d => 2 * d.r)
+          .attr('height', d => 2 * d.r)
+          .append('xhtml:div')
+          .attr('class', 'text-center')
+          .append('xhtml:div')
+          .attr('class', 'text-layout')
+
+        // const div = obj.append('div')
+        //   .style('display', 'flex')
+        //   .style('align-items', 'center')
+        //   .style('justify-content', 'center')
+
+        const number = obj.append('p')
+          .attr('class', 'course-number')
+          .text(d => d.data.number)
+
+        const name = obj.append('p')
+          .attr('class', 'course-name')
+          .text(d => d.data.name)
+        
+        // const label = course.append('text')
+        //   .text(d => d.data.name.substring(0, d.r / 3))
+        let animationTime = animation ? 1000 : 0
+
+        node.transition()
+          .ease(d3.easeExpInOut)
+          .duration(animationTime)
+          .attr('transform', d => `translate(${d.x}, ${d.y})`)
+
+        circle.transition()
+          .ease(d3.easeExpInOut)
+          .duration(animationTime)
+          .attr('r', d => d.r)
+
+        course.transition()
+          .ease(d3.easeExpInOut)
+          .duration(animationTime)
+      }
+
+      (async () => {
+          data = await d3.json(courseDataURL).then(data => data)
+          nodes = data.nodes
+          generateChart(nodes, true)
+      })()
+    </script>
+  </body>
+</html>
