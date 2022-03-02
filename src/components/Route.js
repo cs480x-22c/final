@@ -40,9 +40,12 @@ export default class Route extends React.Component
         
         //clear current positions
         this.svg.selectAll('.limb').remove()
-        let holds = this.props.routeMoves.getHoldsTouching(this.props.currentTime)
+        let holds = this.props.routeMoves.getHoldsTouching(this.props.currentTime, this.props.currentFrame)
 
         const drawLimb = (holdID, color, radius) => {
+            if(holdID == "")
+                return
+
             let hold = this.svg.select('#c' + holdID)
           
             if(hold._groups[0][0] == undefined)

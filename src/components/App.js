@@ -14,6 +14,7 @@ export default class App extends React.Component
         ]
         this.state = {
             currentTime: 0,
+            currentFrame: 0,
             dataLoaded: false
         }
 
@@ -51,9 +52,12 @@ export default class App extends React.Component
         })
     }
 
-    setCurrentTime(time)
+    setCurrentTime(time, frame)
     {
-        this.setState({currentTime: time})
+        this.setState({
+            currentTime: time,
+            currentFrame: frame
+        })
     }
 
     render()
@@ -65,10 +69,10 @@ export default class App extends React.Component
             <div id="app">
                 <div id="content">
                     <InfoPane/>
-                    <ClimbPanel currentTime={this.state.currentTime} climbers={this.climbers}/>
-                    <ClimbPanel currentTime={this.state.currentTime} climbers={this.climbers} reversed={true} />
+                    <ClimbPanel currentTime={this.state.currentTime} currentFrame={this.state.currentFrame} climbers={this.climbers}/>
+                    <ClimbPanel currentTime={this.state.currentTime} currentFrame={this.state.currentFrame} climbers={this.climbers} reversed={true} />
                 </div>
-                <PlayBar setTime={this.setCurrentTime.bind(this)} totalSeconds={15}/>
+                <PlayBar setTime={this.setCurrentTime.bind(this)} totalSeconds={30}/>
             </div>
         )
         

@@ -6,7 +6,9 @@ export default class PlayBar extends React.Component
     {
         super(props)
         this.state = {playing: false,
-                      seconds: 0}
+                      seconds: 0,
+                      frame: 0}
+        this.fps = 24
     }
 
     componentWillUnmount() {
@@ -15,26 +17,38 @@ export default class PlayBar extends React.Component
 
     tick()
     {
-        let seconds = this.state.seconds + 1
+        let frame = this.state.frame + 1
+
+        let seconds = this.state.seconds
+        
+        if(this.fps <= frame)
+        {
+            seconds += 1
+            frame = 0
+        }
+
         this.setState(() => ({
-            seconds: seconds
+            seconds: seconds,
+            frame: frame
         }))
 
         if(this.state.seconds >= this.props.totalSeconds)
              this.endTimer()
 
-        
-        this.props.setTime(seconds)
+        this.props.setTime(seconds, frame)
     }
 
     handleSlide(event)
     {   
-        let seconds = +event.target.value
+        let seconds = Math.floor(+event.target.value / this.fps)
+        let frame = +event.target.value % this.fps
+
         this.setState({
-            seconds: seconds
+            seconds: seconds,
+            frame: frame
         })
 
-        this.props.setTime(seconds)
+        this.props.setTime(seconds, frame)
 
     }
 
@@ -46,6 +60,7 @@ export default class PlayBar extends React.Component
         if(this.state.seconds >= this.props.totalSeconds)
             this.setState({
                 seconds: 0,
+                frame: 0,
                 playing: true
             })
         else
@@ -55,7 +70,7 @@ export default class PlayBar extends React.Component
 
         this.timerID = setInterval(
             () => this.tick(),
-            1000
+            (1000/this.fps)
         )
     }
 
@@ -77,17 +92,12 @@ export default class PlayBar extends React.Component
             this.startTimer()
     }
 
-    updateTime(time)
-    {
-        this.props.setTime(this.state.seconds)
-    }
-
     render()
     {
         return (
             <div className="play-container">
                 <button className="play-button button" onClick={this.handleClick.bind(this)} >{this.state.playing ? "⏸" : '⏵'}</button>
-                <input className='play-bar' onChange={this.handleSlide.bind(this)} type="range" value={this.state.seconds} min='0' max={this.props.totalSeconds}></input>
+                <input className='play-bar' onChange={this.handleSlide.bind(this)} type="range" value={this.state.seconds * this.fps + this.state.frame} min='0' max={this.props.totalSeconds * this.fps}></input>
                 <h3 className="play-timestamp">{this.state.seconds}/{this.props.totalSeconds}</h3>
             </div>
         )

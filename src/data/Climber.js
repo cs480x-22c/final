@@ -31,8 +31,9 @@ class RouteMoves
         return map
     }
 
-    getHoldsTouching(time)
+    getHoldsTouching(seconds, frame)
     {
+        let time = seconds + (frame * .01)
         return {
             leftHand: this.getHold(this.leftHand, time),
             rightHand: this.getHold(this.rightHand, time),

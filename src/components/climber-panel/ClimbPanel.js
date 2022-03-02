@@ -25,7 +25,7 @@ export default class ClimbPanel extends React.Component
         {
             return (
                 <div className="climb-panel">
-                    <Route rid={'left'} routeMoves={this.state.climber.routeMoves} currentTime={this.props.currentTime} />
+                    <Route rid={'left'} routeMoves={this.state.climber.routeMoves} currentTime={this.props.currentTime} currentFrame={this.props.currentFrame}/>
                     <ClimberPanel climber={this.state.climber} climbers={this.props.climbers} setClimber={this.setClimber.bind(this)}/>
                 </div>
             )
@@ -35,7 +35,7 @@ export default class ClimbPanel extends React.Component
             return (
                 <div className="climb-panel">
                     <ClimberPanel climber={this.state.climber} climbers={this.props.climbers} setClimber={this.setClimber.bind(this)}/>
-                    <Route rid='right' routeMoves={this.state.climber.routeMoves} currentTime={this.props.currentTime} />
+                    <Route rid='right' routeMoves={this.state.climber.routeMoves} currentTime={this.props.currentTime} currentFrame={this.props.currentFrame}/>
                 </div>
             )
         }
