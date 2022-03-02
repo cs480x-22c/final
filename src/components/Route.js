@@ -44,9 +44,12 @@ export default class Route extends React.Component
 
         const drawLimb = (holdID, color, radius) => {
             let hold = this.svg.select('#c' + holdID)
-
-            if(isNaN(holdID) || holdID == "")
+          
+            if(hold._groups[0][0] == undefined)
+            {
+                console.warn('Bad hold data')
                 return
+            }
 
             let cx = hold.attr('cx')
             let cy = hold.attr('cy')
@@ -57,25 +60,25 @@ export default class Route extends React.Component
                 .attr('r', radius)
                 .style('stroke', color)
                 .style('fill', 'none')
-                .style('stroke-width', 2)
+                .style('stroke-width', 6)
                 .attr('class', 'limb')
         }
 
         const drawLeftHand = (holdID) => {
-           drawLimb(holdID, 'red', 12)
+           drawLimb(holdID, 'red', 28)
         }
 
         const drawRightHand = (holdID) => {
-            drawLimb(holdID, 'blue', 13)
+            drawLimb(holdID, 'blue', 26)
         }
         
 
         const drawRightFoot = (holdID) => {
-            drawLimb(holdID, 'green', 5)
+            drawLimb(holdID, 'green', 10)
         }
         
         const drawLeftFoot = (holdID) => {
-            drawLimb(holdID, 'yellow', 6)
+            drawLimb(holdID, 'yellow', 12)
         }
 
        drawLeftHand(holds.leftHand)
