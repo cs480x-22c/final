@@ -145,7 +145,7 @@ function makeNodeLinkGraph() {
           .call(layout.drag);
 
       node.append("title")
-          .text(d => d.species);
+          .text(d => (d.species + ", " + d.typeA + ", " + d.typeB));
 
       layout.on("tick", () => {
         link
