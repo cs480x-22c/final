@@ -6,25 +6,12 @@ function makeNodeLinkGraph() {
     .then((response) => {
       console.log(response);
       // response.json();
-      const species = response.species.map(d => Object.create(response));
-      // const typeA = response.typeA.map(d => Object.create(d));
-      // const typeB = response.typeB.map(d => Object.create(d));
+      const species = response.species.map(d => {
+        return {species: d, index: response.index, typeA: response.typeA, typeB: response.typeB}
+      });
       console.log("species: " + species);
-      // console.log("typeA: " + typeA);
-      // console.log("typeB: " + typeB);
+      console.log("species: " + species[0]);
     });
-  //   .then((json) => {
-  //     return json;
-  //   });
-
-  // const printData = () => {
-  //   data.then((d) => {
-  //     console.log(d);
-  //     console.log(d.species);
-  //   });
-  // };
-
-  // printData();
   
   // chart = {
   const species = data.species.map(d => Object.create(d));
