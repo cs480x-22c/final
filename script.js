@@ -7,7 +7,7 @@ function makeNodeLinkGraph() {
     .then((response) => {
       console.log(response);
       var species = [];
-      var links = [];
+      var links2 = [];
       var grass = [];
       var fire = [];
       var water = [];
@@ -78,27 +78,27 @@ function makeNodeLinkGraph() {
         }
       }
       console.log("grass: " + JSON.stringify(grass));
-      links.push(addLinks(grass, "grass"));
-      links.push(addLinks(fire, "fire"));
-      links.push(addLinks(water, "water"));
-      links.push(addLinks(bug, "bug"));
-      links.push(addLinks(normal, "normal"));
-      links.push(addLinks(poison, "poison"));
-      links.push(addLinks(electric, "electric"));
-      links.push(addLinks(ground, "ground"));
-      links.push(addLinks(fairy, "fairy"));
-      links.push(addLinks(fighting, "fighting"));
-      links.push(addLinks(psychic, "psychic"));
-      links.push(addLinks(rock, "rock"));
-      links.push(addLinks(ice, "ice"));
-      links.push(addLinks(ghost, "ghost"));
-      links.push(addLinks(dragon, "dragon"));
+      links2.push(addLinks(grass, "grass"));
+      links2.push(addLinks(fire, "fire"));
+      links2.push(addLinks(water, "water"));
+      links2.push(addLinks(bug, "bug"));
+      links2.push(addLinks(normal, "normal"));
+      links2.push(addLinks(poison, "poison"));
+      links2.push(addLinks(electric, "electric"));
+      links2.push(addLinks(ground, "ground"));
+      links2.push(addLinks(fairy, "fairy"));
+      links2.push(addLinks(fighting, "fighting"));
+      links2.push(addLinks(psychic, "psychic"));
+      links2.push(addLinks(rock, "rock"));
+      links2.push(addLinks(ice, "ice"));
+      links2.push(addLinks(ghost, "ghost"));
+      links2.push(addLinks(dragon, "dragon"));
 
-      console.log("links: " + JSON.stringify(links));
+      console.log("links2: " + JSON.stringify(links2));
 
       const nodes = species.map(d => Object.create(d));
-      const index = new Map(nodes.map(d => [d.id, d]));
-      const links2 = links.map(d => Object.assign(Object.create(d), {
+      const index = new Map(nodes.map(d => [d.species, d]));
+      const links = links.map(d => Object.assign(Object.create(d), {
         source: index.get(d.source),
         target: index.get(d.target)
       }));
@@ -112,7 +112,7 @@ function makeNodeLinkGraph() {
       const layout = cola.d3adaptor(d3)
           .size([width, height])
           .nodes(nodes)
-          .links(links2)
+          .links(links)
           .jaccardLinkLengths(40, 0.7)
           .start(30);
       
@@ -120,7 +120,7 @@ function makeNodeLinkGraph() {
           .attr("stroke", "#999")
           .attr("stroke-opacity", 0.6)
         .selectAll("line")
-        .data(links2)
+        .data(links)
         .enter().append("line")
           .attr("stroke-width", d => Math.sqrt(d.value));
 
