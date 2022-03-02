@@ -5,20 +5,26 @@ function makeNodeLinkGraph() {
   const data = d3.json("data.json")
     .then((response) => {
       console.log(response);
-      response.json();
-    })
-    .then((json) => {
-      return json;
+      // response.json();
+      const species = response.species.map(d => Object.create(d));
+      const typeA = response.typeA.map(d => Object.create(d));
+      const typeB = response.typeB.map(d => Object.create(d));
+      console.log("species: " + species);
+      console.log("typeA: " + typeA);
+      console.log("typeB: " + typeB);
     });
+  //   .then((json) => {
+  //     return json;
+  //   });
 
-  const printData = () => {
-    data.then((d) => {
-      console.log(d);
-      console.log(d.species);
-    });
-  };
+  // const printData = () => {
+  //   data.then((d) => {
+  //     console.log(d);
+  //     console.log(d.species);
+  //   });
+  // };
 
-  printData();
+  // printData();
   
   // chart = {
   const species = data.species.map(d => Object.create(d));
