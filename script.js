@@ -103,7 +103,8 @@ function makeNodeLinkGraph() {
         target: index.get(d.target)
       }));
 
-      console.log("index: " + JSON.stringify(index));
+      console.log("index: \n");
+      console.log(index);
 
       // const svg = d3.select(DOM.svg(width, height));
       const svg = d3.select("#graph").append("svg")
