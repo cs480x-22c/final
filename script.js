@@ -98,7 +98,7 @@ function makeNodeLinkGraph() {
 
       const nodes = species.map(d => Object.create(d));
       const index = new Map(nodes.map(d => [d.species, d]));
-      const links = links.map(d => Object.assign(Object.create(d), {
+      const links = links2.map(d => Object.assign(Object.create(d), {
         source: index.get(d.source),
         target: index.get(d.target)
       }));
