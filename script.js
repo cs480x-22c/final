@@ -3,6 +3,8 @@ function makeNodeLinkGraph() {
         height = 500,
         data = d3.json("data.json");
 
+  console.log(data);
+  
   // chart = {
   const species = data.species.map(d => Object.create(d));
   const typeA = data.typeA.map(d => Object.create(d));
