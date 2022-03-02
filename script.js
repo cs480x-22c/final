@@ -157,7 +157,7 @@ function addLinks(d, type) {
   for(let i = 0; i < d.length-1; i++){
     for(let j = i+1; j<d.length; j++){
       newLinks.push({
-        source: d[i].species, target: d[j].species, value: type
+        source: d[i], target: d[j], value: type
       })
     }
   }
