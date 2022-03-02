@@ -10,7 +10,8 @@
 <div id="info">
 </div>
 
-<button onClick="update(countries_data,cities_data,geese_data,tort_data,whales_data,heron_data,seals_data,deer_data,doves_data,shark_data,eagle_data);">Update data</button>
+<button onClick="start();">Update data</button>
+<button onClick="end();">Stop</button>
 
 <script>
 var count = 1;
@@ -25,6 +26,7 @@ var doves_data;
 var shark_data;
 var eagle_data;
 var countries_data;
+var interval_id = 0;
 var circle1 = d3.select('svg').selectAll('circle1');
 var circle2 = d3.select('svg').selectAll('circle2');
 var circle3 = d3.select('svg').selectAll('circle3');
@@ -81,7 +83,30 @@ Promise.all([
     .append('g')
     .attr('id', 'countries')
     .selectAll('path')
-    .data(countries.features)
+      .data(countries.features)
+    .enter()
+    .append('path')
+      .attr('d', function(d) { return gpath(d); })
+      .attr('stroke-width', 1)
+      .attr('stroke', 'steelblue')
+      .attr('id', d => d.id)
+      .attr('fill', d => ccolor( gpath.area(d)) );
+      
+  var geojson = [];
+  var points = cities.map(function(d) { return [d.x,d.y] })
+  for(i=0; i<points.length; i++){
+    geojson.push(points[i]);
+  }
+
+  console.log(geojson);
+  
+  //draw animal paths
+  //here is my issue
+  d3.select('svg')
+    .append('g')
+    .attr('id', 'countries')
+    .selectAll('path')
+      .data(cities.map(function(d) { return [d.x,d.y] }))
     .enter()
     .append('path')
       .attr('d', function(d) { return gpath(d); })
@@ -283,7 +308,10 @@ Promise.all([
     count++;
 }
 function update(countries_data,cities_data,geese_data,tort_data,whales_data,heron_data,seals_data,deer_data,doves_data,shark_data,eagle_data){
-  d3.selectAll('circle').remove();
+    console.log("here");
+    d3.selectAll('circle').remove(); 
+  
+  
   console.log("count: "+count);
       var proj = d3.geoEquirectangular()
       .translate([250, 250])
@@ -422,7 +450,7 @@ function update(countries_data,cities_data,geese_data,tort_data,whales_data,hero
       .data(seals_data.filter(function(d){ return d.rank == count }))
       .enter()
       .append('circle')
-      .attr('r', 1)
+      .attr('r', 5)
       .attr('cx', d => proj([d.x, d.y])[0])
       .attr('cy', d => proj([d.x, d.y])[1])
       .attr('stroke-width', 1)
@@ -493,6 +521,19 @@ function update(countries_data,cities_data,geese_data,tort_data,whales_data,hero
               d3.select('#info').text(d.name);
             });
     count++;
+}
+
+//also here setInterval is not working
+function start(){
+  interval_id = setInterval(
+    function(){
+      update(countries_data,cities_data,geese_data,tort_data,whales_data,heron_data,seals_data,deer_data,doves_data,shark_data,eagle_data)
+    }
+  ,100);
+}
+
+function end(){
+  clearInterval(interval_id);
 }
 
 </script>
