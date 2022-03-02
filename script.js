@@ -1,6 +1,7 @@
 function makeNodeLinkGraph() {
   const color = d3.scaleOrdinal(d3.schemeCategory10),
-        height = 500;
+        height = 500,
+        width = 500;
         
   const data = d3.json("data.json")
     .then((response) => {
@@ -104,7 +105,7 @@ function makeNodeLinkGraph() {
 
       // const svg = d3.select(DOM.svg(width, height));
       const svg = d3.select("#graph").append("svg")
-        .attr("width", 500)
+        .attr("width", width)
         .attr("height", height)
 
       const layout = cola.d3adaptor(d3)
