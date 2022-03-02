@@ -26,7 +26,18 @@ function makeNodeLinkGraph() {
       var flying = [];
       for(let i = 0; i < response.species.length; i++){
         species.push(
-          {species: response.species[i], index: response.index[i], typeA: response.typeA[i], typeB: response.typeB[i]}
+          {species: response.species[i],
+             index: response.index[i],
+             typeA: response.typeA[i],
+             typeB: response.typeB[i],
+             baseHP: response.baseHP[i],
+             baseAttack: response.baseAttack[i],
+             baseDefense: response.baseDefense[i],
+             baseSpeed: response.baseSpeed[i],
+             baseSpecial: response.baseSpecial[i],
+             total: response.total[i],
+             sprite: response.sprite[i]
+            }
         )
       }
       console.log("species: " + JSON.stringify(species));
