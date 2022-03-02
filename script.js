@@ -102,7 +102,10 @@ function makeNodeLinkGraph() {
         target: index.get(d.target)
       }));
 
-      const svg = d3.select(DOM.svg(width, height));
+      // const svg = d3.select(DOM.svg(width, height));
+      const svg = d3.select("#graph").append("svg")
+        .attr("width", width)
+        .attr("height", height)
 
       const layout = cola.d3adaptor(d3)
           .size([width, height])
