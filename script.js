@@ -78,27 +78,26 @@ function makeNodeLinkGraph() {
         }
       }
       console.log("grass: " + JSON.stringify(grass));
-      links2.push(addLinks(grass, "grass"));
-      links2.push(addLinks(fire, "fire"));
-      links2.push(addLinks(water, "water"));
-      links2.push(addLinks(bug, "bug"));
-      links2.push(addLinks(normal, "normal"));
-      links2.push(addLinks(poison, "poison"));
-      links2.push(addLinks(electric, "electric"));
-      links2.push(addLinks(ground, "ground"));
-      links2.push(addLinks(fairy, "fairy"));
-      links2.push(addLinks(fighting, "fighting"));
-      links2.push(addLinks(psychic, "psychic"));
-      links2.push(addLinks(rock, "rock"));
-      links2.push(addLinks(ice, "ice"));
-      links2.push(addLinks(ghost, "ghost"));
-      links2.push(addLinks(dragon, "dragon"));
+      links2 = addLinks(grass, "grass", links2);
+      links2 = addLinks(fire, "fire", links2);
+      links2 = addLinks(water, "water", links2);
+      links2 = addLinks(bug, "bug", links2);
+      links2 = addLinks(normal, "normal", links2);
+      links2 =addLinks(poison, "poison", links2);
+      links2 =addLinks(electric, "electric", links2);
+      links2 =addLinks(ground, "ground", links2);
+      links2 =addLinks(fairy, "fairy", links2);
+      links2 =addLinks(fighting, "fighting", links2);
+      links2 =addLinks(psychic, "psychic", links2);
+      links2 =addLinks(rock, "rock", links2);
+      links2 =addLinks(ice, "ice", links2);
+      links2 =addLinks(ghost, "ghost", links2);
+      links2 =addLinks(dragon, "dragon", links2);
 
       console.log("links2: " + JSON.stringify(links2));
 
       const nodes = species.map(d => Object.create(d));
-      const index = new Map(nodes.map(d => [d.id, d]));
-      const index2 = new Map(nodes.map(d => [d.species, d]));
+      const index = new Map(nodes.map(d => [d.species, d]));
       const links = links2.map(d => Object.assign(Object.create(d), {
         source: index.get(d.source),
         target: index.get(d.target)
@@ -106,10 +105,6 @@ function makeNodeLinkGraph() {
 
       console.log("index: \n");
       console.log(index);
-      console.log("index2: \n");
-      console.log(index2);
-      // console.log("nodes.species: " + nodes.species);
-      // console.log("nodes.id: " + nodes.id);
       console.log("nodes: \n");
       console.log(nodes);
 
@@ -226,14 +221,14 @@ function makeNodeLinkGraph() {
   // return svg.node();
 }
 
-function addLinks(d, type) {
-  var newLinks = [];
+function addLinks(d, type, links2) {
+  // var newLinks = [];
   for(let i = 0; i < d.length-1; i++){
     for(let j = i+1; j<d.length; j++){
-      newLinks.push({
+      links2.push({
         source: d[i], target: d[j], value: type
       })
     }
   }
-  return newLinks;
+  return links2;
 }
