@@ -27,3 +27,4 @@ Samantha Mora
  - Pressing the "Stop" button will display both the starting and ending dot for each animal.
  - Hovering over the different colored dots displays the animal you are viewing.
  - Zooming is enabled to better see animal paths.
+ - Choosing which animals you want to see on the map.
