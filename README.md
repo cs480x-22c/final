@@ -20,4 +20,7 @@
 # References
 
 - Initial bubble chart adapted from https://www.webtips.dev/how-to-make-interactive-bubble-charts-in-d3-js
+- Font: https://fonts.google.com/specimen/Fredoka
 - Data sourced from the 2021-22 WPI CS course catalog and adapted for use in project
+
+*D3 v6.7.0 is the only library used; there are no other code dependencies.*
