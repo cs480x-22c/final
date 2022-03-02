@@ -29,7 +29,7 @@ function makeNodeLinkGraph() {
       }
       console.log("species: " + JSON.stringify(species));
       //add species to their type arrays
-      for(let i = 0; i < nodes.length; i ++){
+      for(let i = 0; i < species.length; i ++){
         if((species[i].typeA === "Grass") || (species[i].typeB === "Grass")){
           grass.push(species[i].species);
         }
