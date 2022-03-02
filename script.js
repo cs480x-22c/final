@@ -8,7 +8,7 @@ function makeNodeLinkGraph() {
       // response.json();
       var nodes = [];
       var links = [];
-      for(var i = 0; i < response.size(); i++){
+      for(var i = 0; i < response.length; i++){
         nodes.push(response.species.map(d => {
           return {species: d, index: response[i].index, typeA: response[i].typeA, typeB: response[i].typeB}
         }))
