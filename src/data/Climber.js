@@ -1,11 +1,11 @@
 export default class Climber 
 {
-    constructor(uuid, firstName, lastName, routeMoves)
+    constructor(uuid, firstName, lastName, climbLength, routeMoves)
     {
         this.uuid = uuid
         this.firstName = firstName
         this.lastName = lastName
-        this.routeMoves = new RouteMoves(routeMoves)
+        this.routeMoves = new RouteMoves(routeMoves, climbLength)
     }
 
 
@@ -13,8 +13,9 @@ export default class Climber
 
 class RouteMoves
 {
-    constructor(routeMoves)
+    constructor(routeMoves, climbLength)
     {
+        this.climbLength = +climbLength
         this.leftHand = this._parseJsonToMap(routeMoves.leftHand)
         this.rightHand = this._parseJsonToMap(routeMoves.rightHand)
         this.rightFoot = this._parseJsonToMap(routeMoves.rightFoot)

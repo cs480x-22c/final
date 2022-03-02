@@ -67,9 +67,10 @@ export default class Route extends React.Component
                 .attr('class', 'limb')
 
                
+            let textMargin = 10;
             this.svg.append('text')
-                .attr('x', isLeft ? cx - radius : cx + radius)
-                .attr('y', cy - radius)
+                .attr('x', isLeft ? cx - radius-textMargin : cx + radius + textMargin)
+                .attr('y', cy - radius-textMargin)
                 .text(isLeft ? "L" : "R")
                 .attr('font-size', "2em")
                 .style('fill', color)
@@ -91,7 +92,7 @@ export default class Route extends React.Component
         }
         
         const drawLeftFoot = (holdID) => {
-            drawLimb(holdID, 'yellow', 12, true)
+            drawLimb(holdID, 'orange', 12, true)
         }
 
        drawLeftHand(holds.leftHand)

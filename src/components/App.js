@@ -9,9 +9,7 @@ export default class App extends React.Component
     constructor(props)
     {
         super(props)
-        this.climbers = [
-            
-        ]
+        this.climbers = []
         this.state = {
             currentTime: 0,
             currentFrame: 0,
@@ -37,6 +35,7 @@ export default class App extends React.Component
                     climber.uuid,
                     climber.firstName,
                     climber.lastName,
+                    climber.climbLength,
                     climber.routeMoves
                 ));
             });
