@@ -4,6 +4,13 @@ function makeNodeLinkGraph() {
         data = d3.json("data.json");
 
   // chart = {
+  const species = data.species.map(d => Object.create(d));
+  const typeA = data.typeA.map(d => Object.create(d));
+  const typeB = data.typeB.map(d => Object.create(d));
+  console.log("species: " + species);
+  console.log("typeA: " + typeA);
+  console.log("typeB: " + typeB);
+
   const nodes = data.nodes.map(d => Object.create(d));
   const index = new Map(nodes.map(d => [d.id, d]));
   const links = data.links.map(d => Object.assign(Object.create(d), {
