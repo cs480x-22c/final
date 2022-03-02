@@ -3,7 +3,10 @@ function makeNodeLinkGraph() {
         height = 500;
         
   const data = d3.json("data.json")
-    .then((response) => response.json())
+    .then((response) => {
+      console.log(response);
+      response.json();
+    })
     .then((json) => {
       return json;
     });
@@ -14,6 +17,8 @@ function makeNodeLinkGraph() {
       console.log(d.species);
     });
   };
+
+  printData();
   
   // chart = {
   const species = data.species.map(d => Object.create(d));
