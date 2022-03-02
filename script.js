@@ -23,6 +23,7 @@ function makeNodeLinkGraph() {
       var ghost = [];
       var ice = [];
       var dragon = [];
+      var flying = [];
       for(let i = 0; i < response.species.length; i++){
         species.push(
           {species: response.species[i], index: response.index[i], typeA: response.typeA[i], typeB: response.typeB[i]}
@@ -76,6 +77,9 @@ function makeNodeLinkGraph() {
         if((species[i].typeA === "Dragon") || (species[i].typeB === "Dragon")){
           dragon.push(species[i].species);
         }
+        if((species[i].typeA === "Flying") || (species[i].typeB === "Flying")){
+          flying.push(species[i].species);
+        }
       }
       console.log("grass: " + JSON.stringify(grass));
       links2 = addLinks(grass, "grass", links2);
@@ -93,6 +97,7 @@ function makeNodeLinkGraph() {
       links2 =addLinks(ice, "ice", links2);
       links2 =addLinks(ghost, "ghost", links2);
       links2 =addLinks(dragon, "dragon", links2);
+      links2 =addLinks(flying, "flying", links2);
 
       console.log("links2: " + JSON.stringify(links2));
 
