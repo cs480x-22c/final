@@ -9,8 +9,8 @@ function makeNodeLinkGraph() {
       const species = response.species.map(d => {
         return {species: d, index: response.index, typeA: response.typeA, typeB: response.typeB}
       });
-      console.log("species: " + species.toString());
-      console.log("species: " + species[0].toString());
+      console.log("species: " + JSON.stringify(species));
+      console.log("species: " + JSON.stringify(species[0]));
     });
   
   // chart = {
