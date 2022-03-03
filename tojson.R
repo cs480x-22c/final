@@ -1,0 +1,10 @@
+library("rjson")
+library("stringr")
+library("tidyr")
+url <- "https://raw.githubusercontent.com/JuniorJedi490/final/main/csv_data.csv"
+data_csv = read.csv(url,stringsAsFactors = FALSE)
+data_df <- as.data.frame(data_csv)
+data_json <- toJSON(data_csv)
+data_json2 <- toJSON(unname(split(data_df, 1:nrow(data_df))))
+write(data_json, "data.json")
+write(data_json2, "data2.json")
