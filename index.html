@@ -99,7 +99,7 @@
             yScale.domain([
               0,
               d3.max(data, function (d) {
-                return d.count;
+                return d.value;
               }),
             ]);
 
@@ -117,12 +117,13 @@
               .style("text-anchor", "end")
               .attr("dx", "-.8em")
               .attr("dy", ".15em")
+              .attr("font-size", "12")
               .attr("transform", "rotate(-65)")
               .append("text")
               .attr("y", height - 250)
               .attr("x", width - 100)
               .attr("text-anchor", "end")
-              .attr("stroke", "black")
+              .attr("stroke", "white")
               .text("Shape");
 
             g.append("g")
@@ -139,7 +140,7 @@
               .attr("y", 6)
               .attr("dy", "-5.1em")
               .attr("text-anchor", "end")
-              .attr("stroke", "black")
+              .attr("stroke", "white")
               .text("Number of Reports");
 
             g.selectAll(".bar")
@@ -151,11 +152,11 @@
                 return xScale(d.shape);
               })
               .attr("y", function (d) {
-                return yScale(d.count);
+                return yScale(d.value);
               })
               .attr("width", xScale.bandwidth())
               .attr("height", function (d) {
-                return height - yScale(d.count);
+                return height - yScale(d.value);
               });
           });
         </script>
