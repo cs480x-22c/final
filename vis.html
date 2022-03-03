@@ -1,0 +1,29 @@
+<head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <link href="styles.css" , rel="stylesheet">
+    <title>Stories in Our Stars</title>
+</head>
+
+<body>
+    <div id="vis">
+        <div id="side-panel"></div>
+        <div id="map-container">
+            <h1 class="heading">Stories in Our Stars</h1>
+            <div id="north-container">
+                <svg width=550 height=550 id="north"></svg>
+                <h2 class="subheading">Northern Hemisphere</h2>
+            </div>
+            <div id="south-container">
+                <svg width=550 height=550 id="south"></svg>
+                <h2 class="subheading">Southern Hemisphere</h2>
+            </div>
+        </div>
+        <div id="dropdown">
+            <button id="returnToHome" onclick="location.href = 'index.html'"><i class="arrow left"></i> Return to Home</button>
+            <div id="constellationDropdown">
+                <input autocomplete="off" type="text" placeholder="Search..." id="searchInput" onkeyup="filter()">
+            </div>
+        </div>
+        <script src="script.js"></script>
+</body>

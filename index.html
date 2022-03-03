@@ -1,0 +1,46 @@
+<head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <link href="styles.css" , rel="stylesheet">
+    <title>Stories in Our Stars</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="column">
+            <div>
+                <svg height=200 width=200 id="homeConstellation"></svg>
+            </div>
+
+            <h1 id="homeHeading">Stories in Our Stars</h1>
+
+            <div id="homeNames">
+                <h2>Kaamil Lokhandwala</h2>
+                <h2>Veronica Melican</h2>
+                <h2>Hayden Smith</h2>
+            </div>
+
+            <p id="homeOverview">
+                Anyone who steps outside on a clear night can see the stars, but not everyone 
+                knows which stars to connect to form constellations. Even fewer are aware of the 
+                history surrounding constellations, some of which date back to ancient Greece. In 
+                this project we developed an interactive visualization that presents the constellations
+                and their stories. Using a dataset we created by scraping and combining information from 
+                multiple sources, we leveraged JavaScript and d3-geo-projection to create the visualization.
+                The constellations are initially hidden, and you can mouse over the star maps to reveal them or 
+                view a specific one by selecting a name in the side panel. Once you reveal all the 
+                constellations, you'll be well on your way to understanding the stories in our stars!
+            </p>
+
+            <img onclick="location.href = 'vis.html'" id="homeImage" src="home-image.PNG">
+            <p onclick="location.href = 'vis.html'" id="textOverlay">Click here to see the visualization</p>
+
+            <div id="homeLinks">
+                <a href="https://github.com/vrmelican/final/blob/main/CS480X%20Final%20Project.pdf">Process Book</a>
+                <a href="https://github.com/vrmelican/final/tree/main/datasets">Data</a>
+                <a href="https://www.youtube.com/watch?v=kMGT6WDc_fk">Video</a>
+            </div>
+        </div>
+    </div>
+    <script src="home-script.js"></script>
+</body>

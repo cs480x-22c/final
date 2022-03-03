@@ -1,0 +1,205 @@
+* {
+    font-family: Georgia;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+/******************** Home-Specific Syles ********************/
+#container {
+    display: flex;
+    justify-content: center;
+    background-color: #eeeeee;
+    width: 100%;
+    height: 100%;
+}
+#column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    background-color: white;
+    padding: 10px 0px;
+    color: gray;
+    row-gap: 5px;
+    overflow-y: scroll;
+}
+#homeNames {
+    padding: 20px;
+}
+#homeNames h2 {
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+}
+a {
+    color: gray;
+}
+#homeOverview {
+    padding: 20px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+#homeImage {
+    opacity: 0.75;
+    border-radius: 100%;
+    padding: 20px;
+}
+#textOverlay {
+    color: gray;
+    font-size: 18px;
+    position: relative;
+    bottom: 170px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/******************** Visualization-Specific Styles ********************/
+#vis {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    width: 100%;
+    height: 100%;
+}
+#side-panel {
+    background-color: white;
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    padding-top: 0px;
+    height: 100%;
+}
+#map-container {
+    background-image: linear-gradient(rgb(12, 20, 0), #0f0038);
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+}
+#north-container {
+    grid-column: 1;
+    grid-row : 2;
+    text-align: center;
+    align-self: center;
+}
+#south-container {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+    align-self: center;
+}
+.heading {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    color: aliceblue;
+    opacity: 90%;
+    text-align: center;
+    font-size: 300%;
+    font-weight: 20;
+    padding-top: 50px;
+}
+.subheading {
+    color: aliceblue;
+    opacity: 90%;
+    text-align: center;
+    font-size: 125%;
+    font-weight: 20;
+    padding: 10px;
+}
+/* datatip styles */
+#datatipImg {
+    margin: 10px 0px;
+    background-image: linear-gradient(rgb(12, 20, 0), #0f0038);
+}
+.title {
+    font-size: 20px;
+}
+.desc {
+    font-size: 16px;
+}
+.history {
+    font-size: 14px;
+    overflow-y: scroll;
+}
+.link {
+    position: absolute;
+    bottom: 5;
+}
+#returnToSearch {
+    position: relative;
+    width: 300px;
+    margin-bottom: 10px;
+    height: 30px;
+}
+#returnToHome {
+    position: fixed;
+    top: 0px;
+    width: 300px;
+    margin-bottom: 10px;
+    height: 30px;
+    z-index: 4;
+}
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    left: 10px;
+}
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+/* searching styles */
+#dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: scroll;
+}
+#searchInput {
+    font-size: 14px;
+    padding: 14px 20px 12px 12px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    width: 300px;
+    top: 30px;
+    position: sticky;
+}
+#searchInput:focus {
+    outline: 3px solid #ddd;
+}
+#constellationDropdown {
+    position: relative;
+    top: 30px;
+    background-color: #ffffff;
+}	
+#constellationDropdown option {
+    color: black;
+    padding: 8px 12px; 
+    text-decoration: none;
+    display: block;
+    width: 300px;
+    margin: 0px;
+    font-size: 16px;
+}
+#constellationDropdown option:hover {
+    background-color: #eeeeee;
+}
+.hidden {
+    display: none !important;
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
+  

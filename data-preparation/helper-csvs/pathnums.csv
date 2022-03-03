@@ -1,0 +1,809 @@
+Number,Name,Constellation
+4,Alpheratz,Andromeda
+5,Mirach,Andromeda
+6,Almach,Andromeda
+7,Delta Andromedae,Andromeda
+8,Nembus,Andromeda
+9,Omicron Andromedae,Andromeda
+10,Lambda Andromedae,Andromeda
+11,Mu Andromedae,Andromeda
+12,Zeta Andromedae,Andromeda
+13,Upsilon Andromedae,Andromeda
+14,Kappa Andromedae,Andromeda
+15,Phi Andromedae,Andromeda
+16,Iota Andromedae,Andromeda
+17,Pi Andromedae,Andromeda
+18,Epsilon Andromedae,Andromeda
+19,Eta Andromedae,Andromeda
+20,Sigma Andromedae,Andromeda
+21,Nu Andromedae,Andromeda
+22,Theta Andromedae,Andromeda
+23,Adhil,Andromeda
+1,Alpha Antilae,Antlia
+2,Epsilon Antilae,Antlia
+3,Iota Antilae,Antlia
+4,Theta Antilae,Antlia
+1,Alpha Apodis,Apus
+2,Gamma Apodis,Apus
+3,Beta Apodis,Apus
+4,Delta-1 Apodis,Apus
+5,Delta-2 Apodis,Apus
+4,Sadalsuud,Aquarius
+5,Sadalmelik,Aquarius
+6,Skat,Aquarius
+7,Sadaltager,Aquarius
+8,Lambda Aquarii,Aquarius
+9,Albali,Aquarius
+10,Sadachbia,Aquarius
+11,Eta Aquarii,Aquarius
+12,Tau-2 Aquarii,Aquarius
+13,Ancha,Aquarius
+14,Phi Aquarii,Aquarius
+15,Iota Aquarii,Aquarius
+16,Psi-1 Aquarii,Aquarius
+17,Psi-2 Aquarii,Aquarius
+18,Omega-2 Aquarii,Aquarius
+19,Nu Aquarii,Aquarius
+20,Pi Aquarii,Aquarius
+21,Mu Aquarii,Aquarius
+22,Sigma Aquarii,Aquarius
+23,Omega-1 Aquarii,Aquarius
+24,Psi-3 Aquarii,Aquarius
+25,Situla,Aquarius
+1,Altair,Aquila
+2,Tarazed,Aquila
+3,Deneb el Okab Australis,Aquila
+4,Tseen Foo,Aquila
+5,Delta Aquilae,Aquila
+6,Lambda Aquilae,Aquila
+7,Alshain,Aquila
+8,Bezek,Aquila
+9,Deneb el Okab Borealis,Aquila
+10,Al Thalimain,Aquila
+1,Beta Arae,Ara
+2,Alpha Arae,Ara
+3,Zeta Arae,Ara
+4,Gamma Arae,Ara
+5,Delta Arae,Ara
+6,Theta Arae,Ara
+7,Eta Arae,Ara
+8,Epsilon-1 Arae,Ara
+1,Hamal,Aries
+2,Sheratan,Aries
+3,41 Arietis,Aries
+4,Mesarthim,Aries
+5,Botein,Aries
+6,Epsilon Arietis,Aries
+7,Lambda Arietis,Aries
+8,Zeta Arietis,Aries
+4,Capella,Auriga
+5,Menkalinan,Auriga
+6,Mahasim,Auriga
+7,Hassaleh,Auriga
+8,Almaaz,Auriga
+9,Haedus II,Auriga
+10,Prijipati,Auriga
+11,Haedus,Auriga
+12,Nu Aurigae,Auriga
+13,Tau Aurigae,Auriga
+14,Upsilon Aurigae,Auriga
+1,Arcturus,Boötes
+2,Izar,Boötes
+3,Muphrid,Boötes
+4,Seginus,Boötes
+5,Delta Boötis,Boötes
+6,Nekkar,Boötes
+7,Sigma Boötis,Boötes
+8,Rho Boötis,Boötes
+9,Zeta Boötis,Boötes
+10,Asellus Primus,Boötes
+11,Upsilon Boötis,Boötes
+12,Lambda Boötis,Boötes
+13,Alkalurops,Boötes
+14,Tau Boötis,Boötes
+15,Nadlat,Boötes
+16,Asellus Tertius,Boötes
+17,Xi Boötis,Boötes
+18,Asellus Secondus,Boötes
+19,Merga,Boötes
+1,Beta Camelopardalis,Camelopardalis
+2,CS Camelopardalis,Camelopardalis
+3,Alpha Camelopardalis,Camelopardalis
+4,Gamma Camelopardalis,Camelopardalis
+3,Altarf,Cancer
+4,Asellus Australis,Cancer
+5,Acubens,Cancer
+6,Asellus Borealis,Cancer
+7,Tegmen,Cancer
+6,Cor Caroli,Canes Venatici
+7,Chara,Canes Venatici
+8,La Superba,Canes Venatici
+2,Sirius,Canis Major
+3,Adhara,Canis Major
+4,Wezen,Canis Major
+5,Mirzam,Canis Major
+6,Aludra,Canis Major
+7,Furud,Canis Major
+8,Kappa Canis Majoris,Canis Major
+9,Theta Canis Majoris,Canis Major
+10,Muliphen,Canis Major
+11,Iota Canis Majoris,Canis Major
+1,Procyon,Canis Minor
+2,Gomeisa,Canis Minor
+3,Gamma Canis Minoris,Canis Minor
+4,Epsilon Canis Minoris,Canis Minor
+2,Deneb Algedi,Capricornus
+3,Dabih,Capricornus
+4,Algiedi Secunda,Capricornus
+5,Nashira,Capricornus
+6,Yen,Capricornus
+7,Dorsum,Capricornus
+8,Omega Algiedi,Capricornus
+9,Psi Capricorni,Capricornus
+10,Algiedi Prima,Capricornus
+11,Iota Capricorni,Capricornus
+12,Alshat,Capricornus
+1,Canopis,Carina
+2,Miaplacidus,Carina
+3,Avior,Carina
+4,Aspidiske,Carina
+5,Theta Carinae,Carina
+6,Upsilon Carinae,Carina
+7,Omega Carinae,Carina
+8,Foramen,Carina
+9,Chi Carinae,Carina
+3,Shedar,Cassiopeia
+4,Caph,Cassiopeia
+5,Navi,Cassiopeia
+6,Ruchbah,Cassiopeia
+7,Segin,Cassiopeia
+8,Achird,Cassiopeia
+9,Zeta Cassiopeiae,Cassiopeia
+10,Kappa Cassiopeiae,Cassiopeia
+11,Marfak,Cassiopeia
+12,Chi Cassiopeiae,Cassiopeia
+13,Castula,Cassiopeia
+1,Rigel Kentaurus,Centaurus
+2,Hadar,Centaurus
+3,Menkent,Centaurus
+4,Muhlifain,Centaurus
+5,Epsilon Centauri,Centaurus
+6,Eta Centauri,Centaurus
+7,Alnair,Centaurus
+8,Ma Wei,Centaurus
+9,Alhakim,Centaurus
+10,Ke Kwan,Centaurus
+11,Nu Centauri,Centaurus
+12,Mu Centauri,Centaurus
+13,Pi Centauri,Centaurus
+14,Sigma Centauri,Centaurus
+1,Alderamin,Cepheus
+2,Alfirk,Cepheus
+3,Alrai,Cepheus
+4,Zeta Cephei,Cepheus
+5,Eta Cephei,Cepheus
+6,Iota Cephei,Cepheus
+7,Delta Cephei,Cepheus
+8,Herschel's Garnet Star,Cepheus
+9,Epsilon Cephei,Cepheus
+10,Theta Cephei,Cepheus
+11,Nu Cephei,Cepheus
+12,Alkurhah,Cepheus
+13,Pi Cephei,Cepheus
+14,Al Kalb al Rai,Cepheus
+2,Diphda,Cetus
+3,Menkar,Cetus
+4,Dheneb Algenubi,Cetus
+5,Kaffaljidhma,Cetus
+6,Mira,Cetus
+7,Tau Ceti,Cetus
+8,Deneb Kaitos Shemali,Cetus
+9,Theya Ceti,Cetus
+10,Baten Kaitos,Cetus
+11,Upsilon Ceti,Cetus
+12,Delta Ceti,Cetus
+13,Mu Ceti,Cetus
+14,Xi-2 Ceti,Cetus
+15,Lambda Ceti,Cetus
+1,Alpha Chamaeleontis,Chamaeleon
+2,Gamma Chamaeleontis,Chamaeleon
+3,Beta Chamaeleontis,Chamaeleon
+4,Theta Chamaeleontis,Chamaeleon
+5,Epsilon Chamaeleontis,Chamaeleon
+6,Delta-1 Chamaeleontis,Chamaeleon
+1,Alpha Circini,Circinus
+2,Beta Circini,Circinus
+3,Gamma Circini,Circinus
+1,Phact,Columba
+2,Wezn,Columba
+3,Ghusn al Zaitun,Columba
+4,Epsilon Columbae,Columba
+5,Eta Columbae,Columba
+6,Gamma Columbae,Columba
+7,Kappa Columbae,Columba
+8,Lambda Columbae,Columba
+9,Xi Columbae,Columba
+10,Theta Columbae,Columba
+9,Beta Comae Berenices,Coma Berenices
+10,Diadem,Coma Berenices
+11,Gamma Comae Berenices,Coma Berenices
+1,Alfecca Meridiana,Corona Australis
+2,Beta Coronae Australis,Corona Australis
+3,Gamma Coronae Australis,Corona Australis
+4,Delta Coronae Australis,Corona Australis
+5,Zeta Coronae Australis,Corona Australis
+6,Theta Coronae Australis,Corona Australis
+1,Alphecca,Corona Borealis
+2,Nusakan,Corona Borealis
+3,Gamma Coronae Borealis,Corona Borealis
+4,Epsilon Coronae Borealis,Corona Borealis
+5,Theta Coronae Borealis,Corona Borealis
+6,Delta Coronae Borealis,Corona Borealis
+7,Iota Coronae Borealis,Corona Borealis
+1,Gienah,Corvus
+2,Kraz,Corvus
+3,Algorab,Corvus
+4,Minkar,Corvus
+5,Alchiba,Corvus
+1,Labrum,Crater
+2,Alkes,Crater
+3,Gamma Crateris,Crater
+4,Al Sharas,Crater
+5,Theta Crateris,Crater
+6,Zeta Crateris,Crater
+7,Epsilon Crateris,Crater
+8,Eta Crateris,Crater
+3,Deneb,Cygnus
+4,Sadr,Cygnus
+5,Gienah,Cygnus
+6,Rukh,Cygnus
+7,Albireo,Cygnus
+8,Zeta Cygni,Cygnus
+9,Omicron-1 Cygni,Cygnus
+10,Xi Cygni,Cygnus
+11,Iota Cygni,Cygnus
+12,Tau Cygni,Cygnus
+13,Kappa Cygni,Cygnus
+14,Eta Cygni,Cygnus
+15,Nu Cygni,Cygnus
+16,Omicron-2 Cygni,Cygnus
+17,Pennae Caudalis,Cygnus
+18,Sigma Cygni,Cygnus
+19,Azelfafage,Cygnus
+20,Ruchba,Cygnus
+1,Rotanev,Delphinus
+2,Sualocin,Delphinus
+3,Gamma Delphini,Delphinus
+4,Deneb Dulfim,Delphinus
+5,Delta Delphini,Delphinus
+2,Alpha Doradus,Dorado
+3,Beta Doradus,Dorado
+4,Gamma Doradus,Dorado
+5,Delta Doradus,Dorado
+6,Zeta Doradus,Dorado
+2,Etamin,Draco
+3,Aldibain,Draco
+4,Rastaban,Draco
+5,Altais,Draco
+6,Aldhibah,Draco
+7,Ed Asich,Draco
+8,Batentaban Borealis,Draco
+9,Thuban,Draco
+10,Grumium,Draco
+11,Kappa Draconis,Draco
+12,Tyl,Draco
+13,Gianfar,Draco
+14,Theta Draconis,Draco
+15,Phi Draconis,Draco
+16,Dsiban,Draco
+17,Alsafi,Draco
+18,Upsilon Draconis,Draco
+19,Kuma,Draco
+20,Arrakis,Draco
+1,Kitalpha,Equuleus
+2,Delta Equulei,Equuleus
+3,Gamma Equulei,Equuleus
+1,Achernar,Eridanus
+2,Cursa,Eridanus
+3,Zaurak,Eridanus
+4,Acamar,Eridanus
+5,Rana,Eridanus
+6,Tau-4 Eridani,Eridanus
+7,Chi Eridani,Eridanus
+8,Sadira,Eridanus
+9,Theemim,Eridanus
+10,Azha,Eridanus
+11,Sceptrum,Eridanus
+12,Nu Eridani,Eridanus
+13,Mu Eridani,Eridanus
+14,Beid,Eridanus
+15,Tau-3 Eridani,Eridanus
+16,Iota Eridani,Eridanus
+17,Tau-6 Eridani,Eridanus
+18,Kappa Eridani,Eridanus
+19,Tau-5 Eridani,Eridanus
+20,Pi Eridani,Eridanus
+21,Keid,Eridanus
+22,Tau-1 Eridani,Eridanus
+23,Upsilon-1 Eridani,Eridanus
+24,Tau-9 Eridani,Eridanus
+25,Tau-8 Eridani,Eridanus
+26,Angetenar,Eridanus
+27,Zeta Eridani,Eridanus
+1,Dalim,Fornax
+2,Beta Fornacis,Fornax
+3,Nu Fornacis,Fornax
+4,Omega Fornacis,Fornax
+2,Pollux,Gemini
+3,Castor,Gemini
+4,Alhena,Gemini
+5,Tejat Posterior,Gemini
+6,Mebsuta,Gemini
+7,Propus,Gemini
+8,Eta Geminorum,Gemini
+9,Alzirr,Gemini
+10,Wasat,Gemini
+11,Kappa Geminorum,Gemini
+12,Lambda Geminorum,Gemini
+13,Theta Geminorum,Gemini
+14,Mekbuda,Gemini
+15,Upsilon Geminorum,Gemini
+16,Nu Geminorum,Gemini
+17,Rho Geminorum,Gemini
+18,Tau Geminorum,Gemini
+1,Alnair,Grus
+2,Gruid,Grus
+3,Aldhanab,Grus
+4,Epsilon Gruis,Grus
+5,Iota Gruis,Grus
+6,Delta-1 Gruis,Grus
+7,Zeta Gruis,Grus
+8,Delta-2 Gruis,Grus
+9,Theta Gruis,Grus
+10,Lambda Gruis,Grus
+11,Mu-1 Gruis,Grus
+12,Rho Gruis,Grus
+3,Kornephoros,Hercules
+4,Zeta Herculis,Hercules
+5,Sarin,Hercules
+6,Pi Herculis,Hercules
+7,Marfak Al Jathih Aisr,Hercules
+8,Rasalgethi,Hercules
+9,Sophian,Hercules
+10,Xi Herculis,Hercules
+11,Gamma Herculis,Hercules
+12,Iota Herculis,Hercules
+13,Atia,Hercules
+14,Rukbalgethi Genubi,Hercules
+15,Rukbalgethi Shemali,Hercules
+16,Epsilon Herculis,Hercules
+17,Rho Herculis,Hercules
+18,Sigma Herculis,Hercules
+19,Phi Herculis,Hercules
+20,Maasym,Hercules
+21,Kajam,Hercules
+22,Chi Herculis,Hercules
+23,Marfik,Hercules
+1,Alpha Horologii,Horologium
+2,R Horologii,Horologium
+3,Beta Horologii,Horologium
+4,Mu Horologii,Horologium
+5,Zeta Horologii,Horologium
+6,Eta Horologii,Horologium
+7,Iota Horologii,Horologium
+4,Alphard,Hydra
+5,Gamma Hydrae,Hydra
+6,Hydrobius,Hydra
+7,Nu Hydrae,Hydra
+8,Pi Hydrae,Hydra
+9,Ashlesha,Hydra
+10,Xi Hydrae,Hydra
+11,Lambda Hydrae,Hydra
+12,Mu Hydrae,Hydra
+13,Theta Hydrae,Hydra
+14,Iota Hydrae,Hydra
+15,Upsilon-1 Hydrae,Hydra
+16,Delta Hydrae,Hydra
+17,Beta Hydrae,Hydra
+18,Eta Hydrae,Hydra
+19,Minchir,Hydra
+1,Beta Hydri,Hydrus
+2,Head of Hydrus,Hydrus
+3,Gamma Hydri,Hydrus
+4,Delta Hydri,Hydrus
+5,Epsilon Hydri,Hydrus
+6,Eta-2 Hydri,Hydrus
+7,Nu Hydri,Hydrus
+8,Zeta Hydri,Hydrus
+1,The Persian,Indus
+2,Beta Indi,Indus
+3,Delta Indi,Indus
+4,Theta Indi,Indus
+5,Eta Indi,Indus
+1,Alpha Lacertae,Lacerta
+2,Beta Lacertae,Lacerta
+3,1 Lacertae,Lacerta
+4,5 Lacertae,Lacerta
+5,2 Lacertae,Lacerta
+6,4 Lacertae,Lacerta
+6,Regulus,Leo
+7,Algiebra,Leo
+8,Denebola,Leo
+9,Zosma,Leo
+10,Ras Elased Australis,Leo
+11,Chertan,Leo
+12,Adhafera,Leo
+13,Eta Leonis,Leo
+14,Subra,Leo
+15,Rho Leonis,Leo
+16,Ras Elased Borealis,Leo
+17,Iota Leonis,Leo
+18,Sigma Leonis,Leo
+19,Alterf,Leo
+20,Al Minliar al Asad,Leo
+21,Chi Leonis,Leo
+22,Pi Leonis,Leo
+1,Praecipua,Leo Minor
+2,Beta Leonis Minoris,Leo Minor
+3,21 Leonis Minoris,Leo Minor
+4,10 Leonis Minoris,Leo Minor
+2,Arneb,Lepus
+3,Nihal,Lepus
+4,Sasin,Lepus
+5,Neshmet,Lepus
+6,Theta Leporus,Lepus
+7,Zeta Leporus,Lepus
+8,Gamma Leporus,Lepus
+9,Eta Leporus,Lepus
+10,Delta Leporus,Lepus
+11,Lambda Leporus,Lepus
+12,Kappa Leporus,Lepus
+1,Zuben Elschemali,Libra
+2,Zuben Elgenubi,Libra
+3,Brachium,Libra
+4,Upsilon Librae,Libra
+5,Tau Librae,Libra
+6,Zuben Elakrab,Libra
+7,Theta Librae,Libra
+8,Zuben Elakribi,Libra
+1,Men,Lupus
+2,Kekouan,Lupus
+3,Gamma Lupi,Lupus
+4,Delta Lupi,Lupus
+5,Epsilon Lupi,Lupus
+6,Zeta Lupi,Lupus
+7,Eta Lupi,Lupus
+8,Iota Lupi,Lupus
+9,Phi-1 Lupi,Lupus
+10,Pi Lupi,Lupus
+11,Chi Lupi,Lupus
+1,Alpha Lyncis,Lynx
+2,38 Lyncis,Lynx
+3,Alsciaukat,Lynx
+4,2 Lyncis,Lynx
+3,Vega,Lyra
+4,Sulafat,Lyra
+5,Sheliak,Lyra
+6,Delta-2 Lyrae,Lyra
+7,Theya Lyrae,Lyra
+8,Aladfar,Lyra
+9,Zeta Lyrae,Lyra
+10,Epsilon Lyrae,Lyra
+11,Lambda Lyrae,Lyra
+12,Alathfar,Lyra
+1,Alpha Mensae,Mensa
+2,Beta Mensae,Mensa
+3,Gamma Mensae,Mensa
+4,Eta Mensae,Mensa
+1,Gamma Microscopii,Microscopium
+2,Epsilon Microscopii,Microscopium
+3,Theta-1 Microscopii,Microscopium
+4,Alpha Microscopii,Microscopium
+5,Iota Microscopii,Microscopium
+2,Alpha Monocerotis,Monoceros
+3,Gamma Monocerotis,Monoceros
+4,Delta Monocerotis,Monoceros
+5,Zeta Monocerotis,Monoceros
+6,Beta Monocerotis,Monoceros
+1,Alpha Muscae,Musca
+2,Beta Muscae,Musca
+3,Delta Muscae,Musca
+4,Lambda Muscae,Musca
+5,Gamma Muscae,Musca
+6,Epsilon Muscae,Musca
+1,Nu Octantis,Octans
+2,Beta Octantis,Octans
+3,Delta Octantis,Octans
+4,Theta Octantis,Octans
+5,Epsilon Octantis,Octans
+6,Polaris Australis,Octans
+8,Rasalhague,Ophiuchus
+9,Sabik,Ophiuchus
+10,Han,Ophiuchus
+11,Yed Prior,Ophiuchus
+12,Cebalrai,Ophiuchus
+13,Kappa Ophichi,Ophiuchus
+14,Yed Posterior,Ophiuchus
+15,Theta Ophichi,Ophiuchus
+16,Sinistra,Ophiuchus
+17,Gamma Ophichi,Ophiuchus
+18,Marfic,Ophiuchus
+4,Betelgeuse,Orion
+5,Rigel,Orion
+6,Bellatrix,Orion
+7,Alnilam,Orion
+8,Alnitak,Orion
+9,Saif,Orion
+10,Mintaka,Orion
+11,Nair al Saif,Orion
+12,Pi-3 Orionis,Orion
+13,Eta Orionis,Orion
+14,Meissa,Orion
+15,Pi-4 Orionis,Orion
+16,Sigma Orionis,Orion
+17,Pi-5 Orionis,Orion
+18,Omicron-2 Orionis,Orion
+19,Mu Orionis,Orion
+20,Pi-2 Orionis,Orion
+21,Chi-1 Orionis,Orion
+22,Nu Orionis,Orion
+23,Xi Orionis,Orion
+24,Thabit,Orion
+25,Chi-2 Orionis,Orion
+26,Pi-1 Orionis,Orion
+27,Pi-6 Orionis,Orion
+28,Omicron-1 Orionis,Orion
+1,Peacock,Pavo
+2,Beta Pavonis,Pavo
+3,Delta Pavonis,Pavo
+4,Eta Pavonis,Pavo
+5,Epsilon Pavonis,Pavo
+6,Lambda Pavonis,Pavo
+7,Zeta Pavonis,Pavo
+8,Gamma Pavonis,Pavo
+9,Pi Pavonis,Pavo
+10,Kappa Pavonis,Pavo
+11,Xi Pavonis,Pavo
+2,Enif,Pegasus
+3,Scheat,Pegasus
+4,Markab,Pegasus
+5,Algenib,Pegasus
+6,Matar,Pegasus
+7,Homam,Pegasus
+8,Sadalbari,Pegasus
+9,Baham,Pegasus
+10,Iota Pegasi,Pegasus
+11,Sadalpheris,Pegasus
+12,Jih,Pegasus
+13,Pi-1 Pegasi,Pegasus
+14,Salm,Pegasus
+3,Mirphak,Perseus
+4,Algol,Perseus
+5,Zeta Persei,Perseus
+6,Epsilon Persei,Perseus
+7,Gamma Persei,Perseus
+8,Delta Persei,Perseus
+9,Gorgonea Tertia,Perseus
+10,Nu Persei,Perseus
+11,Miram,Perseus
+12,Misam,Perseus
+13,Atik,Perseus
+14,Tau Persei,Perseus
+15,Menkib,Perseus
+16,Iota Persei,Perseus
+17,Mu Persei,Perseus
+18,Theta Persei,Perseus
+19,Lambda Persei,Perseus
+20,Gorgonea Quata,Perseus
+21,Gorgonea Secunda,Perseus
+1,Ankaa,Phoenix
+2,Beta Phoenicis,Phoenix
+3,Gamma Phoenicis,Phoenix
+4,Epsilon Phoenicis,Phoenix
+5,Delta Phoenicis,Phoenix
+6,Kappa Phoenicis,Phoenix
+7,Zeta Phoenicis,Phoenix
+8,Eta Phoenicis,Phoenix
+9,Psi Phoenicis,Phoenix
+10,Mu Phoenicis,Phoenix
+11,Iota Phoenicis,Phoenix
+12,Lambda-1 Phoenicis,Phoenix
+13,Nu Phoenicis,Phoenix
+1,Alpha Pictoris,Pictor
+2,Beta Pictoris,Pictor
+3,Gamma Pictoris,Pictor
+4,Delta Pictoris,Pictor
+2,Kallat Nunu,Pisces
+3,Gamma Piscium,Pisces
+4,Alrischa,Pisces
+5,Omega Piscium,Pisces
+6,Iota Piscium,Pisces
+7,Omicron Piscium,Pisces
+8,Theta Piscium,Pisces
+9,Epsilon Piscium,Pisces
+10,Delta Piscium,Pisces
+11,Nu Piscium,Pisces
+12,Lambda Piscium,Pisces
+13,Tau Piscium,Pisces
+14,Fum al Samakah,Pisces
+15,Xi Piscium,Pisces
+16,Chi Piscium,Pisces
+17,Phi Piscium,Pisces
+18,Upsilon Piscium,Pisces
+19,Mu Piscium,Pisces
+20,Kappa Piscium,Pisces
+1,Fomalhaut,Piscis Austrinus
+2,Epsilon Piscis Austrini,Piscis Austrinus
+3,Delta Piscis Austrini,Piscis Austrinus
+4,Beta Piscis Austrini,Piscis Austrinus
+5,Iota Piscis Austrini,Piscis Austrinus
+6,Gamma Piscis Austrini,Piscis Austrinus
+7,Mu Piscis Austrini,Piscis Austrinus
+8,Tau Piscis Austrini,Piscis Austrinus
+9,Upsilon Piscis Austrini,Piscis Austrinus
+10,Theta Piscis Austrini,Piscis Austrinus
+4,Naos,Puppis
+5,Tureis,Puppis
+6,Turais,Puppis
+7,Tau Puppis,Puppis
+8,Nu Puppis,Puppis
+9,Hadir,Puppis
+10,Azmidiske,Puppis
+1,Alpha Pyxidis,Pyxis
+2,Beta Pyxidis,Pyxis
+3,Gamma Pyxidis,Pyxis
+4,Kappa Pyxidis,Pyxis
+5,Lambda Pyxidis,Pyxis
+6,Theta Pyxidis,Pyxis
+7,Zeta Pyxidis,Pyxis
+8,Delta Pyxidis,Pyxis
+1,Alpha Reticuli,Reticulum
+2,Beta Reticuli,Reticulum
+3,Epsilon Reticuli,Reticulum
+4,Gamma Reticuli,Reticulum
+5,Delta Reticuli,Reticulum
+6,Kappa Reticuli,Reticulum
+7,Iota Reticuli,Reticulum
+2,Gamma Sagittae,Sagitta
+3,Delta Sagittae,Sagitta
+4,Sham,Sagitta
+5,Beta Sagittae,Sagitta
+16,Kaus Australis,Sagittarius
+17,Nunki,Sagittarius
+18,Ascella,Sagittarius
+19,Kaus Media,Sagittarius
+20,Kaus Borealis,Sagittarius
+21,Albaldah,Sagittarius
+22,Alnasl,Sagittarius
+23,Sephdar,Sagittarius
+24,Phi Sagittarii,Sagittarius
+25,Tau Sagittarii,Sagittarius
+26,Omicron Sagittarii,Sagittarius
+27,Polis,Sagittarius
+28,Rho-1 Sagittarii,Sagittarius
+29,Arkab Prior,Sagittarius
+30,Rukbat,Sagittarius
+31,Iota Sagittarii,Sagittarius
+32,Arkab Posterior,Sagittarius
+33,Theta-1 Sagittarii,Sagittarius
+34,Omega Sagittarii,Sagittarius
+35,Ain al Rami,Sagittarius
+1,Alpha Sculptoris,Sculptor
+2,Beta Sculptoris,Sculptor
+3,Gamma Sculptoris,Sculptor
+4,Delta Sculptoris,Sculptor
+5,Eta Sculptoris,Sculptor
+3,Ionnina,Scutum
+4,Beta Scuti,Scutum
+5,Delta Scuti,Scutum
+6,Gamma Scuti,Scutum
+7,Zeta Scuti,Scutum
+8,Epsilon Scuti,Scutum
+3,Unukalhai,Serpens
+4,Eta Serpentis,Serpens
+5,Mu Serpentis,Serpens
+6,Xi Serpentis,Serpens
+7,Beta Serpentis,Serpens
+8,Epsilon Serpentis,Serpens
+9,Delta Serpentis,Serpens
+10,Gamma Serpentis,Serpens
+11,Kappa Serpentis,Serpens
+12,Nu Serpentis,Serpens
+13,Lambda Serpentis,Serpens
+14,Iota Serpentis,Serpens
+15,Alya,Serpens
+1,Alpha Sextantis,Sextans
+2,Beta Sextantis,Sextans
+3,Gamma Sextantis,Sextans
+4,Delta Sextantis,Sextans
+3,Aldebaran,Taurus
+4,Elnath,Taurus
+5,Alcyone,Taurus
+6,Zeta Tauri,Taurus
+7,Lambda Tauri,Taurus
+8,Ain,Taurus
+9,Hyadum I,Taurus
+10,Xi Tauri,Taurus
+11,Hyadum II,Taurus
+12,Theta Tauri,Taurus
+13,Nu Tauri,Taurus
+14,Tau Tauri,Taurus
+15,Mu Tauri,Taurus
+16,Omicron Tauri,Taurus
+1,Alpha Telescopii,Telescopium
+2,Zeta Telescopii,Telescopium
+3,Epsilon Telescopii,Telescopium
+4,Lambda Telescopii,Telescopium
+5,Xi Telescopii,Telescopium
+6,Iota Telescopii,Telescopium
+2,Beta Trianguli,Triangulum
+3,Mothalla,Triangulum
+4,Gamma Trianguli,Triangulum
+5,Delta Trianguli,Triangulum
+1,Atria,Triangulum Australe
+2,Betria,Triangulum Australe
+3,Gatria,Triangulum Australe
+4,Delta Triangulum Australis,Triangulum Australe
+5,Epsilon Triangulum Australis,Triangulum Australe
+1,Alpha Tucanae,Tucana
+2,Gamma Tucanae,Tucana
+3,Zeta Tucanae,Tucana
+4,Beta Tucanae,Tucana
+5,Epsilon Tucanae,Tucana
+6,Delta Tucanae,Tucana
+7,Nu Tucanae,Tucana
+8,Eta Tucanae,Tucana
+8,Alioth,Ursa Major
+9,Dubhe,Ursa Major
+10,Alkaid,Ursa Major
+11,Mizar,Ursa Major
+12,Merak,Ursa Major
+13,Phad,Ursa Major
+14,Psi Ursae Majoris,Ursa Major
+15,Talitha,Ursa Major
+16,Theta Ursae Majoris,Ursa Major
+17,Megrez,Ursa Major
+18,Muscida,Ursa Major
+19,Tania Borealis,Ursa Major
+20,Aula Borealis,Ursa Major
+21,Tania Australis,Ursa Major
+22,Kappa Ursae Majoris,Ursa Major
+23,Chi Ursae Majoris,Ursa Major
+24,Upsilon Ursae Majoris,Ursa Major
+25,Aula Australis,Ursa Major
+26,Alcor,Ursa Major
+1,Polaris,Ursa Minor
+2,Kocab,Ursa Minor
+3,Pherkad,Ursa Minor
+4,Epsilon Ursae Minoris,Ursa Minor
+5,Akhfa al Farkadain,Ursa Minor
+6,Yildun,Ursa Minor
+7,Anwar al Farkadain,Ursa Minor
+1,Suhail al Muhlif,Vela
+2,Koo She,Vela
+3,Suhail,Vela
+4,Markeb,Vela
+5,Mu Velorum,Vela
+6,Tseen Kee,Vela
+7,Psi Velorum,Vela
+12,Spica,Virgo
+13,Porrima,Virgo
+14,Vindemiatrix,Virgo
+15,Heze,Virgo
+16,Auva,Virgo
+17,Zavijava,Virgo
+18,Rijl al Awwa,Virgo
+19,Zaniah,Virgo
+20,Syrma,Virgo
+1,Beta Volantis,Volans
+2,Gamma Volantis,Volans
+3,Zeta Volantis,Volans
+4,Delta Volantis,Volans
+5,Alpha Volantis,Volans
+6,Epsilon Volantis,Volans
+2,Anser,Vulpecula
+3,23 Vulpeculae,Vulpecula
+4,13 Vulpeculae,Vulpecula
+5,31 Vulpeculae,Vulpecula
+6,15 Vulpeculae,Vulpecula
+7,1 Vulpeculae,Vulpecula
