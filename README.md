@@ -4,6 +4,8 @@ In this project, we created an interactive constellation visualization using d3.
 
 Link to the website: https://vrmelican.github.io/final/
 
+Link to the screencast: https://www.youtube.com/watch?v=kMGT6WDc_fk
+
 ## References
 
 Data scraping tutorial: https://medium.com/analytics-vidhya/web-scraping-a-wikipedia-table-into-a-dataframe-c52617e1f451
