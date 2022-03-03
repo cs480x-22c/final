@@ -58,7 +58,7 @@ function makeNodeLinkGraph() {
         if((species[i].typeA === "Fire") || (species[i].typeB === "Fire")){
           fire.push(species[i].species);
         }
-        if((species[i].typeA === "Water") || (species[i].typeB === "water")){
+        if((species[i].typeA === "Water") || (species[i].typeB === "Water")){
           water.push(species[i].species);
         }
         if((species[i].typeA === "Bug") || (species[i].typeB === "Bug")){
