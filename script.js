@@ -175,7 +175,8 @@ function makeNodeLinkGraph() {
           .size([width, height])
           .nodes(nodes)
           .links(links)
-          .jaccardLinkLengths(60, 0.7)
+          .jaccardLinkLengths(40, 0.7)
+      	  .avoidOverlaps(true)
           .start(30);
       
       const link = svg.append("g")
