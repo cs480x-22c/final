@@ -112,10 +112,7 @@
               .style("text-anchor", "end");
 
             // Add Y axis
-            var y = d3
-              .scaleLinear()
-              .domain([0, d3.max(d.value)])
-              .range([height, 0]);
+            var y = d3.scaleLinear().domain([0, 3000]).range([height, 0]);
             svg.append("g").call(d3.axisLeft(y)).style("font-size", "14px");
 
             // Bars
