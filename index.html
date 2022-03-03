@@ -74,17 +74,24 @@
         <div class="scroll-page2" id="page-3">Abductions By Type</div>
 
         <p>Freqency of Shapes Reported</p>
-        <div id="shape"><svg width="600" height="700"></svg></div>
+        <div id="shape"></svg></div>
 
         <script>
-          var svg = d3.select("svg"),
-            margin = 200,
-            width = svg.attr("width") - margin,
-            height = svg.attr("height") - margin;
+          var margin = { top: 30, right: 30, bottom: 70, left: 60 },
+            width = 460 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
 
-          var g = svg
+          // append the svg object to the body of the page
+          var svg = d3
+            .select("#shape")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
             .append("g")
-            .attr("transform", "translate(" + 100 + "," + 100 + ")");
+            .attr(
+              "transform",
+              "translate(" + margin.left + "," + margin.top + ")"
+            );
 
           d3.csv("shape.csv").then(function (data) {
             var x = d3
