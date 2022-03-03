@@ -20,6 +20,8 @@ Describes how to convert RA/Dec to Lon/Lat: https://skyandtelescope.org/astronom
 
 Path glow tutorial: https://www.visualcinnamon.com/2016/06/glow-filter-d3-visualization/
 
+Search tutorial: https://www.w3schools.com/howto/howto_js_search_menu.asp 
+
 
 
 
