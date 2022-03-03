@@ -191,7 +191,7 @@ function makeNodeLinkGraph() {
         .selectAll("circle")
         .data(nodes)
         .enter().append("circle")
-          .attr("r", d => r_scale(d.total))
+          .attr("r", 8)
           .attr("fill", d => color(d.typeA, 0))
       	  .attr("stroke", function(d){if(d.typeB){return color(d.typeB, 1);} else{return color(d.typeA, 1);}})
           .attr("stroke-width", 4)
