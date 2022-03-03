@@ -26,7 +26,7 @@ function MainFooter() {
                                     <a href="https://github.com/dacs30">Danilo Correia </a>
                                 </Typography>
                                 <Typography variant="subtitle1" color="white" >
-                                    <a href="https://github.com/dcjdunn2">Craig James Dunn </a>
+                                    <a href="https://github.com/cjdunn2">Craig James Dunn </a>
                                 </Typography>
                                 <Typography variant="subtitle1" color="white" >
                                     <a href="https://github.com/orestropi">Orest Ropi</a>
