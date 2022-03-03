@@ -9,6 +9,8 @@ Spotify is one of, if not the most popular music streaming service used today. W
 
 We want to use this data on the top tracks throughout recent years in order to answer questions on what makes a song popular.
 
+All files in this repository are original except for the Gotham Bold Regular font file 
+
 Links
 ---
 
