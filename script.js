@@ -180,7 +180,7 @@ function makeNodeLinkGraph() {
           .nodes(nodes)
           .links(links)
           .jaccardLinkLengths(55, 0.7)
-      	  .symmetricDiffLinkLengths(10)
+      	  .symmetricDiffLinkLengths(20)
           .start(30,30,30);
       
       const link = svg.append("g")
@@ -196,8 +196,6 @@ function makeNodeLinkGraph() {
         .data(nodes)
         .enter().append("circle")
           .attr("r", d => r_scale(d.total))
-      	  .attr("height", function() {return 3 * this.getAttribute("r");})
-      	  .attr("width", function() {return 3 * this.getAttribute("r");})
           .attr("fill", d => color(d.typeA, 0))
       	  .attr("stroke", function(d){if(d.typeB){return color(d.typeB, 1);} else{return color(d.typeA, 1);}})
           .attr("stroke-width", 4)
