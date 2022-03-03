@@ -174,12 +174,12 @@ function makeNodeLinkGraph() {
 		  .text(d => d);
 
       const layout = cola.d3adaptor(d3)
+      	  .convergenceThreshold(0.001)
+      	  .avoidOverlaps(true)
           .size([width, height])
           .nodes(nodes)
           .links(links)
           .jaccardLinkLengths(55, 0.7)
-      	  .defaultNodeSize(15)
-      	  .avoidOverlaps(true)
           .start(30,30,30);
       
       const link = svg.append("g")
@@ -202,8 +202,6 @@ function makeNodeLinkGraph() {
           .attr("stroke-width", 4)
           .call(layout.drag);
 	
-	 layout.avoidOverlaps(true);
-
       node.append("title")
 		.html(d => {
 	      		if (d.typeB) {
