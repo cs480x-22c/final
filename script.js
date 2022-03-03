@@ -239,7 +239,7 @@ function makeNodeLinkGraph() {
             .attr("cy", function(d){
 		if(d.y>800){return d.y - 1;}
 		else if(d.y<0){return d.y + 1;}
-		else{return d.y;}});
+		else{return d.y;})};
       });
 
       invalidation.then(() => layout.stop());
