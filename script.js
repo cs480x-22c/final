@@ -195,10 +195,11 @@ function makeNodeLinkGraph() {
           .call(layout.drag);
 
       node.append("title")
-		  .html(d => ("<img src='" + d.sprite + "' />\n" + d.species + "\n"
+		  .html(d => ("<div><img src='" + d.sprite + "' />\n" + d.species + "\n"
 		  + d.typeA + "/" + d.typeB + "\nStats:\n  HP: " + d.baseHP + "\n  Attack: " + d.baseAttack
 		  + "\n  Defense: " + d.baseDefense + "\n  Speed: " + d.baseSpeed
-		  + "\n  Special: " + d.baseSpecial + "\n  Total: " + d.total));
+		  + "\n  Special: " + d.baseSpecial + "\n  Total: " + d.total
+      + "</div>"));
 	  
 	  
           //.text(d => (d.species + ", " + d.typeA + ", " + d.typeB));
