@@ -137,8 +137,8 @@
 
 <style>
 	svg {
-		width: 1200px;
-		height: 650px;
+		width: 500px;
+		height: 250px;
 		float: left;
 	}
 

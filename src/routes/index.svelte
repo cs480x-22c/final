@@ -56,6 +56,10 @@
 		margin: 0;
 	}
 	#video {
-		width: 100vw;
+		width: 100%;
 	}
+    #plots {
+        display: flex;
+        width: 100%;
+    }
 </style>
