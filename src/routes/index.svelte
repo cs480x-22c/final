@@ -1,5 +1,6 @@
 <script>
-	import { afterUpdate, onMount } from 'svelte';
+    import { onMount } from 'svelte';
+    import ParallelPlot from '../components/ParallelPlot.svelte';
 	import Scatterplot from '../components/Scatterplot.svelte';
 
 	let points;
@@ -38,6 +39,11 @@
 		}}
 
 />
+<ParallelPlot
+	{...{
+		points: data
+	}}
+/>
 
 <style>
 	:global(body) {
@@ -45,6 +51,5 @@
 	}
 	#video {
 		width: 100vw;
-		margin-left: 0;
 	}
 </style>

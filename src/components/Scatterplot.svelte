@@ -1,9 +1,9 @@
 <script>
 	import { onMount } from 'svelte';
 	import { scaleLinear } from 'd3-scale';
-
+	
 	export let points;
-
+	
 	let svg;
 	let width = 500;
 	let height = 200;
@@ -20,7 +20,7 @@
 
 
 	onMount(resize);
-
+	
 	function resize() {
 		({ width, height } = svg.getBoundingClientRect());
 	}
@@ -36,6 +36,70 @@
 		}
 		return arr;
 	}
+
+	// import GMM from 'gaussian-mixture-model/index.js';
+	// 	var clust_num = 3;
+	
+	// 	var data = [
+		// 		[11,42],[19,45],[15,36],[25,38],[24,33],
+		// 		[-24,3],[-31,-4],[-34,-14],[-25,-5],[-16,7]
+// 	];
+// 	const dim_num = data[1].length;
+
+// 	//weights must sum to 1, one per cluster
+// 	var weights_arr = new Array(clust_num).fill(1/clust_num);
+	
+// 	var means_arr = new Array(clust_num);
+
+// 	for (var i = 0; i < clust_num; i++) {
+// 		means[i] = data[Math.floor(Math.random() * data.length)]
+// 	}
+
+// 	//variance clacualtions using method from demo
+// 	var dim_max_min = new Array(dim_num);
+// 	for (var i = 0; i < dim_num; i++) {
+//   		ardim_max_minr[i] = new Array(2);
+// 	}
+
+// 	//find max and min for each dimetion
+// 	for (var i = 0; i < data.length; i++) {
+// 		for (var j = 0; i < dim_num; i++) {
+// 			if(data[i][j] > dim_max_min[J][0]){
+// 				dim_max_min[J][0] = data[i][j];
+// 			}
+// 			if(data[i][j] < dim_max_min[J][1]){
+// 				dim_max_min[J][1] = data[i][j];
+// 			}
+// 		}
+// 	}
+
+// 	var dx = dim_max_min[0][0] - dim_max_min[0][1];
+// 	var dy = dim_max_min[1][0] - dim_max_min[1][1];
+
+// 	var covariance_arr = [
+// 			[[dx*dx*.01,0],[0,dy*dy*.01]],
+// 			[[dx*dx*.01,0],[0,dy*dy*.01]]
+// 		];
+
+	
+// 	var origional_covariance_arr = [
+// 			[[400,0],[0,400]],
+// 			[[400,0],[0,400]]
+// 		];
+
+
+// 	var gmm = new GMM({
+// 		weights: weights_arr,
+// 		means: means_arr,
+// 		covariances: covariance_arr
+// });
+
+// data.forEach(p => gmm.addPoint(p));
+// gmm.runEM(5);
+
+// //generate probabilites of categories
+// var probNorm = gmm.predictNormalize([-5, 25]);  // [0.8161537535012295, 0.18384624649877046]
+
 </script>
 
 <svelte:window on:resize='{resize}'/>
