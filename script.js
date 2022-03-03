@@ -1,8 +1,13 @@
 function makeNodeLinkGraph() {
 	
-  const color = d3.scaleOrdinal(d3.schemeCategory10),
-        height = 500,
-        width = 750;
+	const types = ["Grass","Fire","Water","Bug","Normal","Poison","Electric","Ground","Fairy","Fighting","Psychic","Rock","Ghost","Ice","Dragon","Flying"];
+	const scheme = ["#52AD18","#C72100","#0C66C1","#87950D","#B2B2B2","#6D2470","#E79302","#B18F34","#E28FE2","#682714","#DF366C","#A38A3F","#454592","#71D5F5","#6751C9","#5D73D4"];
+	const height = 500;
+  const width = 750;
+	
+  function color(type) {
+		for( int i = 0 ; i < types.length ; i++ ) { if(type.localeCompare(types[i])) { return scheme[i]; } }
+		return "#000000"; }
         
   const data = d3.json("data.json")
     .then((response) => {
@@ -99,17 +104,17 @@ function makeNodeLinkGraph() {
       links2 = addLinks(water, "water", links2);
       links2 = addLinks(bug, "bug", links2);
       links2 = addLinks(normal, "normal", links2);
-      links2 =addLinks(poison, "poison", links2);
-      links2 =addLinks(electric, "electric", links2);
-      links2 =addLinks(ground, "ground", links2);
-      links2 =addLinks(fairy, "fairy", links2);
-      links2 =addLinks(fighting, "fighting", links2);
-      links2 =addLinks(psychic, "psychic", links2);
-      links2 =addLinks(rock, "rock", links2);
-      links2 =addLinks(ice, "ice", links2);
-      links2 =addLinks(ghost, "ghost", links2);
-      links2 =addLinks(dragon, "dragon", links2);
-      links2 =addLinks(flying, "flying", links2);
+      links2 = addLinks(poison, "poison", links2);
+      links2 = addLinks(electric, "electric", links2);
+      links2 = addLinks(ground, "ground", links2);
+      links2 = addLinks(fairy, "fairy", links2);
+      links2 = addLinks(fighting, "fighting", links2);
+      links2 = addLinks(psychic, "psychic", links2);
+      links2 = addLinks(rock, "rock", links2);
+      links2 = addLinks(ice, "ice", links2);
+      links2 = addLinks(ghost, "ghost", links2);
+      links2 = addLinks(dragon, "dragon", links2);
+      links2 = addLinks(flying, "flying", links2);
 
       console.log("links2: " + JSON.stringify(links2));
 
@@ -134,8 +139,6 @@ function makeNodeLinkGraph() {
 	const legend = svg.append("g")
           .attr("stroke", "#fff")
           .attr("stroke-width", 1.5);
-	
-	const types = ["Grass","Fire","Water","Bug","Normal","Poison","Electric","Ground","Fairy","Fighting","Psychic","Rock","Ghost","Ice","Dragon","Flying","Steel"];
 	
 	legend.append("rect")
 		.attr("stroke","black")
