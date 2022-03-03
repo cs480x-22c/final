@@ -78,8 +78,8 @@
 
         <script>
           var margin = { top: 30, right: 30, bottom: 70, left: 60 },
-            width = 460 - margin.left - margin.right,
-            height = 400 - margin.top - margin.bottom;
+            width = 660 - margin.left - margin.right,
+            height = 600 - margin.top - margin.bottom;
 
           var svg = d3
             .select("#shape")
@@ -107,6 +107,7 @@
               .attr("transform", "translate(0," + height + ")")
               .call(d3.axisBottom(x))
               .selectAll("text")
+              .attr("font", "14px")
               .attr("transform", "translate(-10,0)rotate(-45)")
               .style("text-anchor", "end");
 
