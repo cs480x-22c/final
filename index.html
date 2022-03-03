@@ -69,89 +69,78 @@
           </div>
         </div>
 
-        <div class="scroll-page" id="page-2">Abductions By Location</div>
+        <div class="scroll-page" id="page-2">
+          Abductions By Location
 
-        <div class="scroll-page" id="page-3">Abductions By Type</div>
+          <svg width="960" height="600" id="mapsvg1"></svg>
+          <br />
+          <p>Where are you most likely to get abducted? (populations based on 2019 census data)</p>
+          <svg width="960" height="600" id="mapsvg2"></svg>
+        </div>
+
+        <div class="scroll-page2" id="page-3">Abductions By Type</div>
 
         <p>Freqency of Shapes Reported</p>
-        <div id="shape"><svg width="600" height="700"></svg></div>
+        <div id="shape"></svg></div>
 
         <script>
-          var svg = d3.select("svg"),
-            margin = 200,
-            width = svg.attr("width") - margin,
-            height = svg.attr("height") - margin;
+          var margin = { top: 30, right: 30, bottom: 70, left: 60 },
+            width = 460 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
 
-          var x = d3.scaleBand().range([0, width]).padding(0.4),
-            y = d3.scaleLinear().range([height, 0]);
-
-          var xScale = d3.scaleBand().range([0, width]).padding(0.4),
-            yScale = d3.scaleLinear().range([height, 0]);
-          var g = svg
+          // append the svg object to the body of the page
+          var svg = d3
+            .select("#shape")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
             .append("g")
-            .attr("transform", "translate(" + 100 + "," + 100 + ")");
-
-          d3.csv("shape.csv").then(function (data) {
-            xScale.domain(
-              data.map(function (d) {
-                return d.shape;
-              })
+            .attr(
+              "transform",
+              "translate(" + margin.left + "," + margin.top + ")"
             );
-            yScale.domain([
-              0,
-              d3.max(data, function (d) {
-                return data.value;
-              }),
-            ]);
-            g.append("g")
-              .attr("transform", "translate(0," + height + ")")
-              .call(d3.axisBottom(xScale))
-              .selectAll("text")
-              .style("text-anchor", "end")
-              .attr("dx", "-.8em")
-              .attr("dy", ".15em")
-              .style("font", "14px times")
-              .attr("transform", "rotate(-65)")
-              .append("text")
-              .attr("y", height - 250)
-              .attr("x", width - 100)
-              .attr("text-anchor", "end")
-              .attr("stroke", "white")
-              .text("Shape");
 
-            g.append("g")
-              .call(
-                d3
-                  .axisLeft(yScale)
-                  .tickFormat(function (d) {
-                    return d;
-                  })
-                  .ticks(10)
+          if(false) d3.csv("shape.csv").then(function (data) {
+            var x = d3
+              .scaleBand()
+              .range([0, width])
+              .domain(
+                data.map(function (d) {
+                  return d.shape;
+                })
               )
-              .append("text")
-              .attr("transform", "rotate(-90)")
-              .attr("y", 6)
-              .attr("dy", "-5.1em")
-              .attr("text-anchor", "end")
-              .attr("stroke", "white")
-              .text("Number of Reports");
+              .padding(0.2);
+            svg
+              .append("g")
+              .attr("transform", "translate(0," + height + ")")
+              .call(d3.axisBottom(x))
+              .selectAll("text")
+              .attr("transform", "translate(-10,0)rotate(-45)")
+              .style("text-anchor", "end");
 
-            g.selectAll(".bar")
+            // Add Y axis
+            var y = d3.scaleLinear().domain([0, 3000]).range([height, 0]);
+            svg.append("g").call(d3.axisLeft(y));
+
+            // Bars
+            svg
+              .selectAll("mybar")
               .data(data)
               .enter()
               .append("rect")
-              .attr("class", "bar")
               .attr("x", function (d) {
-                return xScale(d.year);
+                return x(d.shape);
               })
               .attr("y", function (d) {
-                return yScale(d.value);
+                return y(d.value);
               })
-              .attr("width", xScale.bandwidth())
+              .attr("width", x.bandwidth())
               .attr("height", function (d) {
-                return height - yScale(d.value);
-              });
+                return height - y(d.value);
+              })
+              .attr("fill", "#ffffff");
           });
+
           function onMouseOver(d, i) {
             d3.select(this).attr("class", "highlight");
             d3.select(this)
@@ -198,19 +187,13 @@
         </script>
 
         <p>Freqency of Duration of Abduction</p>
-        <div class="duration">
-          <svg width="600" height="500"></svg>
-        </div>
+        <div class="duration"></div>
 
         <p>Freqency of Date of Report</p>
-        <div class="date">
-          <svg width="600" height="500"></svg>
-        </div>
+        <div class="date"></div>
 
         <p>Freqency of Time of Report</p>
-        <div class="time">
-          <svg width="600" height="500"></svg>
-        </div>
+        <div class="time"></div>
         <div class="scroll-page" id="page-4">Get Me Abducted</div>
       </div>
     </div>
@@ -267,6 +250,8 @@
           var sightingsByState = {};
           var sightingsByCity = {};
 
+          var sightingsByStatePerCapita = {};
+
           for (let j = 0; j < data.length; j++) {
             if (sightingsByState[data[j].state])
               sightingsByState[data[j].state]++;
@@ -276,18 +261,27 @@
             else sightingsByCity[data[j].city] = 1;
           }
 
-          console.log(sightingsByState);
+          for(var key in sightingsByState) {
+            if(attr_state_convert[key])
+              sightingsByStatePerCapita[key] = sightingsByState[key] / census_pop[attr_state_convert[key]];
+          }
 
           var maxSightingsByState = Math.max(
             ...Object.values(sightingsByState)
           );
+          console.log(sightingsByStatePerCapita);
+
+          var maxSightingsByStatePerCapita = Math.max(
+            ...Object.values(sightingsByStatePerCapita)
+          );
+          console.log(maxSightingsByStatePerCapita);
 
           // second step: perform actual drawing
           var mapSVG = d3
-            .select("#page-2")
-            .append("svg")
-            .attr("width", 960)
-            .attr("height", 600);
+            .select("#mapsvg1");
+
+          var mapSVG2 = d3
+            .select("#mapsvg2");
 
           var path = d3.geoPath();
 
@@ -307,6 +301,22 @@
                     maxSightingsByState
                 );
               });
+
+            mapSVG2
+              .append("g")
+                .selectAll("path")
+                .data(topojson.feature(world, world.objects.states).features)
+                .enter()
+                .append("path")
+                .attr("d", path)
+                .attr("fill", (d) => {
+                  return interpolate(
+                    "#ffffff",
+                    "#ff0000",
+                    sightingsByStatePerCapita[state_attr_convert[d.properties.name]] /
+                      maxSightingsByStatePerCapita
+                  );
+                });
           });
 
           for (i = 0; i < data.length; i++) {
