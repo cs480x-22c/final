@@ -69,16 +69,19 @@
           </div>
         </div>
 
-        <div class="scroll-page" id="page-2">
+        <div class="scroll-page2" id="page-2">
           Abductions By Location
 
           <svg width="960" height="600" id="mapsvg1"></svg>
           <br />
-          <p>Where are you most likely to get abducted? (populations based on 2019 census data)</p>
+          <p>
+            Where are you most likely to get abducted? (populations based on
+            2019 census data)
+          </p>
           <svg width="960" height="600" id="mapsvg2"></svg>
         </div>
 
-        <div class="scroll-page2" id="page-3">Abductions By Type</div>
+        <div class="scroll-page" id="page-3">Abductions By Type</div>
 
         <p>Freqency of Shapes Reported</p>
         <div id="shape"></div>
@@ -333,9 +336,10 @@
             else sightingsByCity[data[j].city] = 1;
           }
 
-          for(var key in sightingsByState) {
-            if(attr_state_convert[key])
-              sightingsByStatePerCapita[key] = sightingsByState[key] / census_pop[attr_state_convert[key]];
+          for (var key in sightingsByState) {
+            if (attr_state_convert[key])
+              sightingsByStatePerCapita[key] =
+                sightingsByState[key] / census_pop[attr_state_convert[key]];
           }
 
           var maxSightingsByState = Math.max(
@@ -349,11 +353,9 @@
           console.log(maxSightingsByStatePerCapita);
 
           // second step: perform actual drawing
-          var mapSVG = d3
-            .select("#mapsvg1");
+          var mapSVG = d3.select("#mapsvg1");
 
-          var mapSVG2 = d3
-            .select("#mapsvg2");
+          var mapSVG2 = d3.select("#mapsvg2");
 
           var path = d3.geoPath();
 
@@ -376,19 +378,20 @@
 
             mapSVG2
               .append("g")
-                .selectAll("path")
-                .data(topojson.feature(world, world.objects.states).features)
-                .enter()
-                .append("path")
-                .attr("d", path)
-                .attr("fill", (d) => {
-                  return interpolate(
-                    "#ffffff",
-                    "#ff0000",
-                    sightingsByStatePerCapita[state_attr_convert[d.properties.name]] /
-                      maxSightingsByStatePerCapita
-                  );
-                });
+              .selectAll("path")
+              .data(topojson.feature(world, world.objects.states).features)
+              .enter()
+              .append("path")
+              .attr("d", path)
+              .attr("fill", (d) => {
+                return interpolate(
+                  "#ffffff",
+                  "#ff0000",
+                  sightingsByStatePerCapita[
+                    state_attr_convert[d.properties.name]
+                  ] / maxSightingsByStatePerCapita
+                );
+              });
           });
 
           for (i = 0; i < data.length; i++) {

@@ -107,7 +107,6 @@ nav {
   display: block;
   align-items: top-center;
   justify-content: center;
-  height: 100%;
   font-size: 5em;
   color: white;
   scrollbar-width: thin; /* "auto" or "thin" */
@@ -118,6 +117,7 @@ nav {
   display: block;
   align-items: top-center;
   font-size: 5em;
+  height: 220%;
   color: white;
   scrollbar-width: thin; /* "auto" or "thin" */
   scrollbar-color: transparent white;
