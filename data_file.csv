@@ -1,0 +1,251 @@
+artist,album,track_name,track_id,release_year,explicit,popularity,danceability,energy,key,loudness,mode,speechiness,instrumentalness,liveness,valence,tempo,duration_ms,time_signature
+Drake,Scorpion,God's Plan,6DCZcSspjsKoFjzjrWoCdn,2018,True,85,0.754,0.449,7,-9.211,1,0.109,8.29e-05,0.552,0.357,77.169,198973,4
+XXXTENTACION,?,SAD!,3ee8Jmje8o58CHK66QrVC2,2018,True,87,0.74,0.613,8,-4.88,1,0.145,0.00372,0.123,0.473,75.023,166606,4
+Post Malone,beerbongs & bentleys,rockstar (feat. 21 Savage),0e7ipj03S05BNilyu5bRzt,2018,True,87,0.585,0.52,5,-6.136,0,0.0712,7.01e-05,0.131,0.129,159.801,218147,4
+Post Malone,beerbongs & bentleys,Psycho (feat. Ty Dolla $ign),3swc6WTsr7rl9DqQKQA55C,2018,True,81,0.75,0.56,8,-8.094,1,0.105,0.0,0.111,0.459,140.06,221440,4
+Drake,Scorpion,In My Feelings,2G7V7zsVDxg1yRsu7Ew9RJ,2018,True,79,0.835,0.626,1,-5.833,1,0.125,6e-05,0.396,0.35,91.03,217925,4
+Post Malone,beerbongs & bentleys,Better Now,7dt6x5M1jzdTEt8oCbisTK,2018,True,84,0.68,0.578,10,-5.804,1,0.04,0.0,0.135,0.341,145.038,231267,4
+Cardi B,Invasion of Privacy,I Like It,58q2HKrzhC3ozto2nDdN4z,2018,True,83,0.816,0.726,5,-3.998,0,0.129,0.0,0.372,0.65,136.048,253390,4
+Calvin Harris,One Kiss (with Dua Lipa),One Kiss (with Dua Lipa),7ef4DlsgrMEH11cDZd32M6,2018,False,85,0.791,0.862,9,-3.24,0,0.11,2.19e-05,0.0814,0.592,123.994,214847,4
+Dua Lipa,Dua Lipa (Deluxe),IDGAF,76cy1WJvNGJTj78UqeA5zr,2018,True,81,0.836,0.544,7,-5.975,1,0.0943,0.0,0.0824,0.51,97.028,217947,4
+Marshmello,FRIENDS,FRIENDS,08bNPGLD8AhKpnnERrAc6G,2018,True,82,0.626,0.88,9,-2.384,0,0.0504,0.0,0.128,0.534,95.079,202621,4
+Camila Cabello,Camila,Havana (feat. Young Thug),1rfofaqEpACxVEHIZBJe6W,2018,False,83,0.765,0.523,2,-4.333,1,0.03,3.56e-05,0.132,0.394,104.988,217307,4
+Juice WRLD,Goodbye & Good Riddance,Lucid Dreams,0s3nnoMeVWz3989MkNQiRf,2018,True,3,0.511,0.566,6,-7.23,0,0.2,0.0,0.34,0.218,83.903,239836,4
+Drake,Scorpion,Nice For What,3CA9pLiwRIGtUBiMjbZmRw,2018,True,80,0.585,0.909,8,-6.474,1,0.0707,9.7e-05,0.119,0.758,93.372,210747,4
+Maroon 5,Red Pill Blues (Deluxe),Girls Like You (feat. Cardi B) - Cardi B Version,7fa9MBXhVfQ8P8Df9OEbD8,2018,True,77,0.851,0.541,0,-6.825,1,0.0505,0.0,0.13,0.448,124.959,235545,4
+Zedd,The Middle,The Middle,09IStsImFySgyp0pIQdqAc,2018,False,84,0.753,0.657,7,-3.061,1,0.0449,0.0,0.112,0.437,107.01,184732,4
+Kendrick Lamar,Black Panther The Album Music From And Inspired By,All The Stars (with SZA),3GCdLUSnKSMJhs4Tj6CV3s,2018,True,84,0.698,0.633,8,-4.946,1,0.0597,0.000194,0.0926,0.552,96.924,232187,4
+Ariana Grande,Sweetener,no tears left to cry,2qT1uLXPVPzGgFOx4jtEuo,2018,False,81,0.699,0.713,9,-5.507,0,0.0594,3.11e-06,0.294,0.354,121.993,205920,4
+Nicky Jam,X,X,39N9RPD9MRb5WmoLzNzPeA,2018,False,3,0.595,0.773,9,-4.736,0,0.0549,0.00108,0.334,0.711,180.073,173628,4
+XXXTENTACION,?,Moonlight,0JP9xo3adEtGSdUEISiszL,2018,True,86,0.921,0.537,9,-5.723,0,0.0804,0.00404,0.102,0.711,128.009,135090,4
+BlocBoy JB,Look Alive (feat. Drake),Look Alive (feat. Drake),4qKcDkK6siZ7Jp1Jb4m0aL,2018,True,77,0.922,0.581,10,-7.495,1,0.27,5.86e-05,0.105,0.595,140.022,181263,4
+Rudimental,"These Days (feat. Jess Glynne, Macklemore & Dan Caplen)","These Days (feat. Jess Glynne, Macklemore & Dan Caplen)",5CLGzJsGqhCEECcpnFQA8x,2018,False,77,0.653,0.809,0,-4.057,1,0.0474,0.0,0.165,0.55,92.213,210773,4
+Nio Garcia,Te Boté (Remix),Te Boté - Remix,3V8UKqhEK5zBkBb6d6ub8i,2018,True,81,0.903,0.675,11,-3.445,0,0.214,1.28e-05,0.0595,0.442,96.507,417920,4
+Bazzi,COSMIC,Mine,7uzmGiiJyRfuViKKK3lVmR,2018,True,79,0.71,0.789,4,-3.874,1,0.0722,2.77e-06,0.451,0.717,142.929,131064,4
+5 Seconds of Summer,Youngblood (Deluxe),Youngblood,2iUXsYOEPhVqEBwsqP70rE,2018,False,84,0.596,0.854,7,-5.114,0,0.463,0.0,0.124,0.152,120.274,203418,4
+Dua Lipa,Dua Lipa (Complete Edition),New Rules,2xJCMIJfcNYDc5iR0sAm2O,2018,False,58,0.762,0.7,9,-6.021,0,0.0694,1.56e-05,0.153,0.608,116.073,209320,4
+Ed Sheeran,÷ (Deluxe),Shape of You,7qiZfU4dY1lWllzX7mPBI3,2018,False,88,0.825,0.652,1,-3.183,0,0.0802,0.0,0.0931,0.931,95.977,233713,4
+Khalid,Love Lies (with Normani),Love Lies (with Normani),45Egmo7icyopuzJN0oMEdk,2018,False,77,0.708,0.648,6,-5.626,1,0.0449,0.0,0.134,0.338,143.955,201707,4
+Bebe Rexha,Expectations,Meant to Be (feat. Florida Georgia Line),4e4fqjx0Izh4svvTef1z7e,2018,False,74,0.642,0.772,10,-6.61,1,0.0848,0.0,0.0646,0.589,153.995,164205,4
+XXXTENTACION,17,Jocelyn Flores,7m9OqQk4RVRkw9JJdeAw96,2018,True,88,0.872,0.391,0,-9.144,0,0.242,4.13e-06,0.297,0.437,134.021,119133,4
+Ed Sheeran,÷ (Deluxe),Perfect,0tgVpDi06FyKpA1z0VMD4v,2018,False,89,0.599,0.448,8,-6.312,1,0.0232,0.0,0.106,0.168,95.05,263400,3
+Tyga,Taste (feat. Offset),Taste (feat. Offset),5IaHrVsrferBYDm0bDyABy,2018,True,77,0.884,0.559,0,-7.442,1,0.12,0.0,0.101,0.342,97.994,232959,4
+Clean Bandit,Solo (feat. Demi Lovato),Solo (feat. Demi Lovato),6kPJZM97LwdG9QIsT7khp6,2018,False,75,0.737,0.636,11,-4.546,0,0.0437,6.66e-05,0.35,0.565,105.005,222653,4
+Post Malone,Stoney (Deluxe),I Fall Apart,75ZvA4QfFiZvzhj2xkaWAh,2018,True,82,0.556,0.538,8,-5.408,0,0.0382,0.0,0.196,0.291,143.95,223347,4
+Dennis Lloyd,Nevermind,Nevermind,63SevszngYpZOwf63o61K4,2018,False,78,0.6,0.688,5,-8.339,0,0.201,1.29e-05,0.409,0.0793,99.977,156600,4
+Luis Fonsi,Échame La Culpa,Échame La Culpa,2hl6q70unbviGo3g1R7uFx,2018,False,66,0.733,0.892,0,-3.641,1,0.0417,0.0,0.137,0.675,95.989,173720,4
+benny blanco,Eastside (with Halsey & Khalid),Eastside (with Halsey & Khalid),0d2iYfpKoM0QCKvcLCkBao,2018,False,79,0.56,0.68,6,-7.648,0,0.321,0.0,0.116,0.319,89.391,173800,4
+Camila Cabello,Camila,Never Be the Same,4eWQlBRaTjPPUlzacqEeoQ,2018,False,78,0.637,0.713,0,-4.333,1,0.0747,0.000637,0.137,0.243,129.923,226973,4
+Selena Gomez,Wolves,Wolves,0tBbt8CrmxbjRP0pueQkyU,2018,False,83,0.724,0.804,11,-4.614,0,0.0448,0.0,0.204,0.306,124.987,197993,4
+XXXTENTACION,?,changes,7AFASza1mXqntmGtbxXprO,2018,False,83,0.669,0.308,11,-10.068,1,0.029,0.0,0.0984,0.52,64.934,121887,4
+Dynoro,In My Mind,In My Mind,0E9ZjEAyAwOXZ7wJC0PD33,2018,False,82,0.694,0.77,6,-5.335,1,0.149,1.1e-05,0.118,0.163,125.905,184560,4
+Eminem,Revival,River (feat. Ed Sheeran),1cS0TgbR263ey9jn0MwD2s,2018,True,77,0.748,0.749,8,-5.916,0,0.516,0.0,0.0713,0.659,90.09,221013,4
+Daddy Yankee,Dura,Dura,6KuqAtoeVzxAYOaMveLNpH,2018,False,74,0.783,0.84,1,-3.416,1,0.051,0.0,0.412,0.839,95.001,200480,4
+Travis Scott,ASTROWORLD,SICKO MODE,2xLMifQCjDGFmkHkpNLD9h,2018,True,85,0.834,0.73,8,-3.714,1,0.222,0.0,0.124,0.446,155.008,312820,4
+Imagine Dragons,Evolve,Thunder,1zB4vmk8tFRmM9UULNzbLB,2018,False,86,0.605,0.822,0,-4.833,1,0.0438,0.134,0.147,0.288,167.997,187147,4
+Reik,Me Niego (feat. Ozuna & Wisin),Me Niego (feat. Ozuna & Wisin),6jA8JUuPCGYjFcgw0AoM5T,2018,False,3,0.777,0.779,0,-4.449,0,0.0972,0.0,0.636,0.768,94.023,221653,4
+Tiësto,Jackie Chan,Jackie Chan,4kWO6O1BUXcZmaxitpVUwp,2018,True,75,0.747,0.834,3,-2.867,0,0.045,0.0,0.0586,0.687,128.005,215760,4
+Bruno Mars,Finesse (Remix) [feat. Cardi B],Finesse - Remix; feat. Cardi B,3Vo4wInECJQuz9BIBMOu8i,2018,False,77,0.704,0.859,5,-4.877,0,0.0996,0.0,0.0215,0.926,105.115,217289,4
+Selena Gomez,Back To You (From 13 Reasons Why – Season 2 Soundtrack),Back To You - From 13 Reasons Why – Season 2 Soundtrack,4hQ6UGyWQIGJmHSo0J88JW,2018,False,77,0.601,0.724,6,-4.856,1,0.0486,1.68e-06,0.12,0.508,102.061,207905,4
+NF,Perception,Let You Down,52okn5MNA47tk87PeZJLEL,2018,False,84,0.662,0.714,5,-5.68,0,0.121,0.0,0.179,0.464,147.997,212120,4
+The Weeknd,"My Dear Melancholy,",Call Out My Name,1gm616Plq4ScqNi7TVkZ5N,2018,False,0,0.489,0.598,1,-4.929,1,0.036,0.0,0.35,0.172,134.045,228373,3
+21 Savage,Without Warning,Ric Flair Drip (with Metro Boomin),7sO5G9EABYOXQKNPNiE9NR,2018,True,85,0.88,0.428,9,-8.28,1,0.206,5.05e-05,0.114,0.333,100.007,172800,4
+Marshmello,Happier,Happier,2dpaYNEQHiRxtZbfNsse99,2018,False,86,0.687,0.792,5,-2.749,1,0.0452,0.0,0.167,0.671,100.015,214290,4
+Sam Smith,The Thrill Of It All (Special Edition),Too Good At Goodbyes,1mXVgsBdtIVeCLJnSnmtdV,2018,False,83,0.681,0.372,5,-8.237,1,0.0432,0.0,0.169,0.476,91.873,201000,4
+Lil Dicky,Freaky Friday (feat. Chris Brown),Freaky Friday (feat. Chris Brown),10Igtw8bSDyyFs7KIsKngZ,2018,True,73,0.755,0.599,8,-5.042,1,0.224,0.0,0.109,0.755,133.123,216632,4
+Imagine Dragons,Evolve,Believer,0pqnGHJpmpxLKifKRmU6WP,2018,False,90,0.776,0.78,10,-4.374,0,0.128,0.0,0.081,0.666,124.949,204347,4
+6ix9ine,FEFE (feat. Nicki Minaj & Murda Beatz),FEFE (feat. Nicki Minaj & Murda Beatz),2E124GmJRnBJuXbTb4cPUB,2018,True,1,0.931,0.387,1,-9.127,1,0.412,0.0,0.136,0.376,125.978,179405,4
+Jonas Blue,Blue,Rise,3KLygy1YWhmrQx0GRs7IOx,2018,False,0,0.687,0.785,1,-4.65,1,0.0333,0.0,0.203,0.655,106.046,194408,4
+Loud Luxury,Body (feat. brando),Body (feat. brando),7K7MUBCnzgBAvMVW2RTWNs,2018,False,0,0.752,0.764,1,-4.399,1,0.038,9.44e-05,0.0543,0.582,121.958,163216,4
+Lil Uzi Vert,Luv Is Rage 2,XO Tour Llif3,7GX5flRQZVHRAGd6B4TmDO,2018,True,86,0.732,0.75,11,-6.366,0,0.231,0.0,0.109,0.401,155.096,182707,4
+Becky G,Sin Pijama,Sin Pijama,2ijef6ni2amuunRoKTlgww,2018,False,73,0.791,0.745,11,-3.695,0,0.0464,2.93e-05,0.104,0.82,94.014,188560,4
+Anne-Marie,Speak Your Mind (Deluxe),2002,2BgEsaKNfHUdlh97KmvFyo,2018,False,84,0.697,0.683,1,-2.881,0,0.117,0.0,0.137,0.603,96.133,186987,4
+Drake,Scorpion,Nonstop,0TlLq3lA83rQOYtrqBqSct,2018,True,81,0.912,0.412,7,-8.074,1,0.123,0.0126,0.104,0.423,154.983,238614,4
+XXXTENTACION,17,Fuck Love (feat. Trippie Redd),7AQim7LbvFVZJE3O8TYgf2,2018,True,85,0.797,0.533,0,-9.74,0,0.0412,0.000152,0.103,0.329,131.036,146520,4
+Shawn Mendes,Shawn Mendes,In My Blood,2QZ7WLBE8h2y1Y5Fb8RYbH,2018,False,79,0.622,0.712,5,-7.321,1,0.066,0.0,0.13,0.487,140.025,211360,4
+Marshmello,Silence,Silence,7vGuf3Y35N4wmASOKLUVVU,2018,False,83,0.52,0.761,4,-3.093,1,0.0853,4.96e-06,0.17,0.286,141.971,180823,4
+Ariana Grande,Sweetener,God is a woman,5OCJzvD7sykQEKHH7qAC3C,2018,True,82,0.602,0.658,1,-5.934,1,0.0558,6e-05,0.237,0.268,145.031,197547,4
+Piso 21,Ubuntu,Déjala Que Vuelva (feat. Manuel Turizo),1j6xOGusnyXq3l6IryKF3G,2018,False,75,0.681,0.788,1,-4.323,1,0.0785,0.0,0.0753,0.839,170.019,220117,4
+David Guetta,7,Flames,66BjcDhhwWCcQIBxHMpKXh,2018,False,63,0.631,0.649,5,-5.892,0,0.0385,3.8e-06,0.0934,0.421,93.95,194680,4
+Maroon 5,Red Pill Blues (Deluxe),What Lovers Do,0WdGQhoAP2LBsqr5Jhit2g,2018,False,36,0.799,0.597,5,-5.131,0,0.0611,5.66e-06,0.1,0.419,110.001,199849,4
+DJ Snake,"Taki Taki (with Selena Gomez, Ozuna & Cardi B)","Taki Taki (with Selena Gomez, Ozuna & Cardi B)",4w8niZpiMy6qz1mntFA5uM,2018,True,79,0.842,0.801,8,-4.167,0,0.228,4.82e-06,0.0642,0.617,95.881,212500,4
+Hailee Steinfeld,"Let Me Go (with Alesso, Florida Georgia Line & watt)","Let Me Go (with Alesso, Florida Georgia Line & watt)",5Gu0PDLN4YJeW75PpBSg9p,2018,False,81,0.664,0.708,8,-4.154,1,0.0474,0.0,0.0841,0.742,103.07,174800,4
+Portugal. The Man,Woodstock,Feel It Still,6QgjcU0zLnzq5OrUoSZ3OK,2018,False,80,0.801,0.795,1,-5.115,0,0.0504,0.000113,0.0717,0.754,79.028,163253,4
+Kendrick Lamar,Black Panther The Album Music From And Inspired By,Pray For Me (with Kendrick Lamar),77UjLW8j5UAGAGVGhR5oUK,2018,True,73,0.735,0.677,2,-4.979,1,0.093,2.17e-05,0.111,0.188,100.584,211440,4
+Migos,Culture II,Walk It Talk It,6n4U3TlzUGhdSFbUUhTvLP,2018,True,79,0.907,0.633,2,-5.145,1,0.184,2.6e-06,0.106,0.395,145.914,276147,4
+G-Eazy,The Beautiful & Damned,Him & I (with Halsey),5k38wzpLb15YgncyWdTZE4,2018,True,79,0.589,0.731,2,-6.343,1,0.0868,0.0,0.308,0.191,87.908,268867,4
+Post Malone,beerbongs & bentleys,Candy Paint,32lItqlMi4LBhb4k0BaSaC,2018,True,78,0.664,0.667,4,-5.941,1,0.154,1.22e-06,0.0753,0.381,180.064,227533,4
+Post Malone,Stoney (Deluxe),Congratulations,3a1lNhkSLSkpJE4MSHpDu9,2018,True,84,0.63,0.804,6,-4.183,1,0.0363,0.0,0.253,0.492,123.146,220293,4
+Sofía Reyes,"1, 2, 3 (feat. Jason Derulo & De La Ghetto)","1, 2, 3 (feat. Jason Derulo & De La Ghetto)",4QtiVmuA88tPQiCOHZuQ5b,2018,False,70,0.792,0.895,1,-3.112,0,0.0589,0.0,0.0501,0.794,94.968,201526,4
+Natti Natasha,Criminal,Criminal,6Za3190Sbw39BBC77WSS1C,2018,False,78,0.814,0.813,2,-3.023,0,0.0561,9.33e-05,0.255,0.839,79.997,232550,4
+Rich The Kid,The World Is Yours,Plug Walk,1ZAyjvIk9YiD76yYy0TEG6,2018,True,77,0.876,0.519,11,-6.531,1,0.143,0.0,0.108,0.158,94.981,175230,4
+Billie Eilish,lovely (with Khalid),lovely (with Khalid),0u2P5u6lvoDfwTYjAADbn4,2018,False,90,0.351,0.296,4,-10.109,0,0.0333,0.0,0.095,0.12,115.284,200186,4
+Migos,Culture II,Stir Fry,2UVbBKQOdFAekPTRsnkzcf,2018,True,74,0.817,0.816,2,-5.402,1,0.269,0.0,0.159,0.508,181.982,190288,4
+Kendrick Lamar,DAMN.,HUMBLE.,7KXjTSCq5nL1LoYtL7XAwS,2018,True,87,0.908,0.621,1,-6.638,0,0.102,5.39e-05,0.0958,0.421,150.011,177000,4
+Ozuna,Aura,Vaina Loca,48zFZh27QU5qsrBjn4C2FA,2018,False,76,0.754,0.805,6,-4.249,1,0.0752,0.0,0.203,0.555,93.982,176133,4
+Ed Sheeran,Perfect Duet (Ed Sheeran & Beyoncé),Perfect Duet (Ed Sheeran & Beyoncé),1bhUWB0zJMIKr9yVPrkEuI,2018,False,83,0.587,0.299,8,-7.365,1,0.0263,0.0,0.123,0.356,94.992,259550,3
+Maluma,F.A.M.E.,Corazón (feat. Nego do Borel),5cepAtqnEQ6yVG6088zMMu,2018,False,73,0.722,0.738,9,-6.073,0,0.247,1.47e-05,0.198,0.748,198.075,184720,4
+Khalid,American Teen,Young Dumb & Broke,5Z3GHaZ6ec9bsiI5BenrbY,2018,False,83,0.799,0.539,1,-6.351,1,0.0421,1.66e-05,0.165,0.394,136.948,202547,4
+Ozuna,Odisea,Síguelo Bailando,5Y9fnynLlIvqtM710MHzfz,2018,False,72,0.855,0.664,9,-7.11,0,0.0607,3.97e-05,0.0937,0.626,98.015,226800,4
+Anitta,Downtown,Downtown,3Ga6eKrUFf12ouh9Yw3v2D,2018,False,75,0.775,0.679,4,-4.985,0,0.135,7.26e-05,0.068,0.619,166.008,193456,4
+Wolfine,Bella,Bella,3xcCix7Jv1Rp90YVmgo35D,2018,False,4,0.909,0.493,3,-6.688,1,0.0735,0.000147,0.127,0.844,94.016,197120,4
+Calvin Harris,Promises (with Sam Smith),Promises (with Sam Smith),5N5k9nd479b1xpDZ4usjrg,2018,False,79,0.781,0.768,11,-5.991,1,0.0394,4.91e-06,0.325,0.486,123.07,213309,4
+Lil Baby,Harder Than Ever,Yes Indeed,6vN77lE9LK6HP2DewaN6HZ,2018,True,83,0.963,0.346,5,-9.309,0,0.53,0.0,0.108,0.562,119.957,142273,4
+Lauv,I met you when I was 18. (the playlist),I Like Me Better,2P91MQbaiQOfbiz9VqhqKQ,2018,False,85,0.752,0.505,9,-7.621,1,0.253,2.55e-06,0.104,0.419,91.97,197437,4
+Keala Settle,This Is Me,This Is Me,2xGjteMU3E1tkEPVFBO08U,2018,False,68,0.284,0.704,2,-7.276,1,0.186,0.000115,0.0424,0.1,191.702,234707,4
+XXXTENTACION,17,Everybody Dies In Their Nightmares,3GVkPk8mqxz0itaAriG1L7,2018,True,87,0.734,0.57,7,-7.066,0,0.133,2.14e-05,0.112,0.689,129.953,95467,4
+Zac Efron,Rewrite The Stars,Rewrite The Stars,630sXRhIcfwr2e4RdNtjKN,2018,False,76,0.684,0.619,10,-7.005,1,0.0386,0.0,0.122,0.284,125.046,217440,4
+Clean Bandit,I Miss You (feat. Julia Michaels),I Miss You (feat. Julia Michaels),2xmrfQpmS2iJExTlklLoAL,2018,False,1,0.638,0.658,3,-6.318,1,0.0456,3.77e-06,0.0919,0.33,105.076,205748,4
+DJ Khaled,No Brainer,No Brainer,5WvAo7DNuPRmk4APhdPzi8,2018,True,70,0.552,0.76,0,-4.706,1,0.342,0.0,0.0865,0.639,135.702,260000,5
+ZAYN,Dusk Till Dawn (feat. Sia) [Radio Edit],Dusk Till Dawn (feat. Sia) - Radio Edit,1j4kHkkpqZRBwE0A4CN4Yv,2018,False,82,0.259,0.437,11,-6.589,0,0.0386,1.32e-06,0.106,0.0951,180.042,239000,4
+Dean Lewis,Be Alright,Be Alright,3EPXxR3ImUwfayaurPi3cm,2018,True,83,0.553,0.586,11,-6.319,1,0.0362,0.0,0.0813,0.443,126.684,196373,4
+Gilli,Kiko,Vai Amor,7nPTjuVySLIUlgKrzTIFdb,2019,False,52,0.89,0.662,0,-5.462,1,0.199,0.0258,0.0594,0.837,129.988,166353,4
+Lady Gaga,A Star Is Born Soundtrack (Without Dialogue),Shallow - Radio Edit,6QfS2wq5sSC1xAJCQsTSlj,2019,False,76,0.575,0.33,7,-6.557,1,0.031,0.0,0.0872,0.277,95.801,217213,4
+Lord Siva,Paris,Paris,1NgeW6kFhdqAvEKgKYhf1s,2019,False,53,0.818,0.533,6,-6.05,0,0.0428,6.66e-06,0.133,0.774,114.97,170645,4
+Tones And I,The Kids Are Coming,Dance Monkey,5ZULALImTm80tzUbYQYM9d,2019,False,77,0.824,0.588,6,-6.4,0,0.0924,0.000104,0.149,0.513,98.027,209438,4
+Lewis Capaldi,Divinely Uninspired To A Hellish Extent,Someone You Loved,7qEHsqek33rTcFNT9PFqLf,2019,False,89,0.501,0.405,1,-5.679,1,0.0319,0.0,0.105,0.446,109.891,182161,4
+Billie Eilish,"WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",bad guy,2Fxmhks0bxGSBdJ92vM42m,2019,False,87,0.701,0.425,7,-10.965,1,0.375,0.13,0.1,0.562,135.128,194088,4
+Shawn Mendes,Señorita,Señorita,0TK2YIli7K1leLovkQiNik,2019,False,84,0.759,0.54,9,-6.039,0,0.0287,0.0,0.0945,0.75,116.947,190960,4
+Ed Sheeran,I Don't Care (with Justin Bieber),I Don't Care (with Justin Bieber),3HVWdVOQ0ZA45FuZGSfvns,2019,False,82,0.798,0.675,6,-5.041,1,0.0442,0.0,0.0894,0.842,101.956,219947,4
+Post Malone,Hollywood's Bleeding,Wow.,7xQAfvXzm3AkraOtGPWIZg,2019,True,83,0.829,0.539,11,-7.359,0,0.208,1.78e-06,0.103,0.388,99.96,149547,4
+Suspekt,Gonzo,Gonzo,6bh20cEbXMNJ5JPUvbGSYq,2019,True,0,0.75,0.557,1,-8.407,1,0.262,5.15e-05,0.173,0.322,99.977,172500,4
+Ava Max,Sweet but Psycho,Sweet but Psycho,25sgk305KZfyuqVBQIahim,2019,False,9,0.719,0.704,1,-4.724,1,0.0476,0.0,0.166,0.628,133.002,187436,4
+Emil Stabil,En Sang (feat. Gucci Mane),En Sang (feat. Gucci Mane),1hwYGaUz6V4odyt0u0QlKf,2019,True,50,0.874,0.573,2,-4.768,0,0.0816,0.0,0.0612,0.46,94.989,148242,4
+Post Malone,Hollywood's Bleeding,Sunflower - Spider-Man: Into the Spider-Verse,0RiRZpuVRbi7oqRdSMwhQY,2019,False,83,0.755,0.522,2,-4.368,1,0.0575,0.0,0.0685,0.925,89.96,157560,4
+Lil Nas X,7 EP,Old Town Road - Remix,2YpeDb67231RjR0MgVLzsG,2019,False,82,0.878,0.619,6,-5.56,1,0.102,0.0,0.113,0.639,136.041,157067,4
+TopGunn,1991,Nik & Jay (feat. Benjamin Hav),151GbWJcajt35sN4T309vF,2019,False,50,0.879,0.489,9,-8.271,0,0.217,0.0,0.11,0.423,94.939,174080,4
+KESI,X,X,7iNiRaxUOvd4seviLprqeb,2019,False,45,0.756,0.596,0,-5.473,0,0.0359,0.0,0.216,0.683,102.005,181691,4
+MEDUZA,Piece Of Your Heart,Piece Of Your Heart,1DFD5Fotzgn6yYXkYsKiGs,2019,False,80,0.677,0.744,10,-6.806,0,0.0295,0.00016,0.074,0.631,124.08,152913,4
+Ariana Grande,"thank u, next",7 rings,6ocbgoVGwYJhOv1GgI9NsF,2019,True,87,0.778,0.317,1,-10.732,0,0.334,0.0,0.0881,0.327,140.048,178627,4
+Ed Sheeran,Beautiful People (feat. Khalid),Beautiful People (feat. Khalid),4evmHXcjt3bTUHD1cvny97,2019,False,79,0.64,0.648,5,-8.113,0,0.187,0.0,0.0802,0.548,92.977,197867,4
+Branco,All In,All In,59iEMlCecSDtur0rlSOmvX,2019,False,49,0.805,0.637,5,-5.501,0,0.0472,0.0,0.0716,0.321,99.983,168282,4
+Sam Smith,Dancing With A Stranger (with Normani),Dancing With A Stranger (with Normani),6Qs4SXO9dwPj5GKvVOv8Ki,2019,False,79,0.741,0.52,8,-7.513,1,0.0656,1.97e-06,0.222,0.347,102.998,171030,4
+Avicii,SOS (feat. Aloe Blacc),SOS,0n2nEtLP3OzDdi12ziIekx,2019,False,64,0.802,0.645,5,-6.181,0,0.0715,0.0,0.119,0.376,100.001,157202,4
+Halsey,Without Me,Without Me,5p7ujcrUXASCNwRaWNHR1C,2019,True,82,0.752,0.488,6,-7.05,1,0.0705,9.11e-06,0.0936,0.533,136.041,201661,4
+Dean Lewis,Be Alright,Be Alright,3EPXxR3ImUwfayaurPi3cm,2019,True,83,0.553,0.586,11,-6.319,1,0.0362,0.0,0.0813,0.443,126.684,196373,4
+Mabel,Ivy To Roses (Mixtape),Don't Call Me Up,5WHTFyqSii0lmT9R21abT8,2019,False,82,0.674,0.881,9,-2.853,1,0.147,3.01e-06,0.0793,0.234,98.994,178480,4
+Lukas Graham,3 (The Purple Album),Love Someone,3id2EVGKc3eFAMn9nFnB0r,2019,False,65,0.538,0.409,9,-6.581,0,0.0505,0.0,0.11,0.265,171.838,205440,4
+Gilli,Kiko,Culo (feat. Branco),49vQclrdXkZXMJnD0VN3qZ,2019,False,52,0.9,0.66,8,-3.782,1,0.179,1.15e-06,0.109,0.584,92.013,145872,4
+Alec Benjamin,Narrated For You,Let Me Down Slowly,2qxmye6gAegTMjLKEBoR3d,2019,False,87,0.652,0.557,1,-5.714,0,0.0318,0.0,0.124,0.483,150.073,169354,4
+Jonas Brothers,Sucker,Sucker,4y3OI86AEP6PQoDE6olYhO,2019,False,6,0.842,0.734,1,-5.065,0,0.0588,0.0,0.106,0.952,137.958,181040,4
+Citybois,Sig Mig,Sig Mig,2kDVTfMiMP8ignU2hU2yCB,2019,False,0,0.703,0.812,7,-4.744,1,0.245,0.0,0.228,0.626,92.037,194707,4
+Gilli,Kolde Nætter,Kolde Nætter,6OuXYdo2VotwVcV9kEBqS9,2019,False,43,0.746,0.541,10,-6.967,0,0.145,2.98e-06,0.19,0.478,97.024,173790,4
+MellemFingaMuzik,JUNGLE,JUNGLE,0VWTSWZVask2dSMShSphvM,2019,False,51,0.793,0.551,6,-5.909,0,0.0795,0.0,0.186,0.572,142.066,209266,4
+Billie Eilish,"WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",bury a friend,4SSnFejRGlZikf02HLewEF,2019,False,79,0.905,0.389,8,-14.505,1,0.332,0.162,0.106,0.196,120.046,193143,4
+Billie Eilish,"WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",when the party's over,43zdsphuZLzwA9k4DJhU0I,2019,False,84,0.367,0.111,4,-14.084,1,0.0972,3.97e-05,0.0897,0.198,82.642,196077,4
+Khalid,Talk,Talk,0rTV5WefWd1J3OwIheTzxM,2019,False,73,0.9,0.4,0,-8.443,1,0.124,0.0,0.0876,0.338,136.001,197487,4
+Specktors,Unz Unz,Unz Unz,2vjKei86vFPZBodhXEqEmX,2019,False,52,0.898,0.663,6,-6.455,0,0.0557,1.77e-05,0.081,0.928,124.016,175316,4
+Citybois,Finde Tilbage,Finde Tilbage,2PULF2IhwRZg7Qpx3x4lHg,2019,False,0,0.785,0.67,9,-4.928,0,0.063,0.0,0.164,0.491,100.024,186733,4
+TopGunn,1991,Hyg Hver Dag (feat. Citybois),5EGO6sCOZuracSGyAPvu3F,2019,False,45,0.861,0.447,10,-8.351,0,0.11,0.0,0.113,0.494,102.04,151251,4
+TopGunn,1991,Detaljen (feat. Fouli),7FXfrOsoBv8AU9E7hWRTbH,2019,True,47,0.798,0.612,5,-7.072,0,0.262,0.0,0.127,0.792,162.015,174734,4
+benny blanco,Eastside (with Halsey & Khalid),Eastside (with Halsey & Khalid),0d2iYfpKoM0QCKvcLCkBao,2019,False,79,0.56,0.68,6,-7.648,0,0.321,0.0,0.116,0.319,89.391,173800,4
+Post Malone,Hollywood's Bleeding,Goodbyes (feat. Young Thug),0t3ZvGKlmYmVsDzBJAXK8C,2019,True,81,0.548,0.653,5,-3.875,1,0.081,0.0,0.103,0.163,150.068,174853,4
+Shawn Mendes,If I Can't Have You,If I Can't Have You,6LsAAHotRLMOHfCsSfYCsz,2019,False,77,0.692,0.809,2,-4.198,1,0.0602,0.0,0.147,0.864,123.911,190800,4
+Scarlet Pleasure,24/7,24/7,7Gh29sTql3Yln7gzOB6QZG,2019,False,48,0.836,0.553,10,-5.566,0,0.0629,0.0,0.0764,0.675,126.051,169540,4
+Lil Nas X,7 EP,Old Town Road,0F7FA14euOIX8KcbEturGH,2019,False,79,0.907,0.53,1,-6.112,1,0.127,2.23e-06,0.101,0.507,135.998,113000,4
+Sivas,Oui,Oui,7j8K8PE1tO2TvhY15E8ZcD,2019,True,54,0.837,0.802,4,-6.507,0,0.188,0.00874,0.307,0.453,127.008,188273,4
+Calvin Harris,Giant (with Rag'n'Bone Man),Giant (with Rag'n'Bone Man),5itOtNx0WxtJmi1TQ3RuRd,2019,False,77,0.807,0.887,1,-4.311,0,0.0361,0.000503,0.0811,0.606,122.015,229184,4
+Ed Sheeran,Cross Me (feat. Chance the Rapper & PnB Rock),Cross Me (feat. Chance the Rapper & PnB Rock),543bCW2ruMPmxUBWirQ3MR,2019,True,68,0.746,0.787,4,-6.373,1,0.12,0.0,0.0669,0.607,95.005,206187,4
+Loud Luxury,Body (feat. brando),Body (feat. brando),7K7MUBCnzgBAvMVW2RTWNs,2019,False,0,0.752,0.764,1,-4.399,1,0.038,9.44e-05,0.0543,0.582,121.958,163216,4
+R3HAB,All Around The World (La La La),All Around The World (La La La),02itaCXOdC54J0ISjqqFAp,2019,False,77,0.733,0.859,9,-5.03,0,0.033,0.0645,0.105,0.52,124.948,147840,4
+Panic! At The Disco,Pray for the Wicked,High Hopes,1rqqCSm0Qe4I9rUvWncaom,2019,False,84,0.579,0.904,5,-2.729,1,0.0618,0.0,0.064,0.681,82.014,190947,4
+The Weeknd,After Hours,Blinding Lights,0VjIjW4GlUZAMYd2vXMi3b,2020,False,94,0.514,0.73,1,-5.934,1,0.0598,9.54e-05,0.0897,0.334,171.005,200040,4
+Tones And I,Dance Monkey,Dance Monkey,1rgnBhdG2JDFTbYkYRZAku,2020,False,67,0.826,0.593,6,-6.401,0,0.0976,0.000161,0.17,0.541,98.083,209755,4
+Roddy Ricch,Please Excuse Me for Being Antisocial,The Box,0nbXyq5TXYPCO7pr3N8S4I,2020,True,85,0.896,0.586,10,-6.687,0,0.0559,0.0,0.79,0.642,116.971,196653,4
+SAINt JHN,Roses (Imanbek Remix),Roses - Imanbek Remix,2Wo6QQD1KMDWeFkkjLqwx5,2020,True,64,0.785,0.721,8,-5.457,1,0.0506,0.00432,0.285,0.894,121.962,176219,4
+Dua Lipa,Future Nostalgia,Don't Start Now,3PfIrDoz19wz7qK7tYeu62,2020,False,85,0.793,0.793,11,-4.521,0,0.083,0.0,0.0951,0.679,123.95,183290,4
+DaBaby,BLAME IT ON BABY,ROCKSTAR (feat. Roddy Ricch),7ytR5pFWmSjzHJIeQkgog4,2020,True,85,0.746,0.69,11,-7.956,1,0.164,0.0,0.101,0.497,89.977,181733,4
+Harry Styles,Fine Line,Watermelon Sugar,6UelLqGlWMcVH1E5c4H7lY,2020,False,91,0.548,0.816,0,-4.209,1,0.0465,0.0,0.335,0.557,95.39,174000,4
+Powfu,death bed (coffee for your head),death bed (coffee for your head),7eJMfftS33KTjuF7lTsMCx,2020,False,87,0.726,0.431,8,-8.765,0,0.135,0.0,0.696,0.348,144.026,173333,4
+Trevor Daniel,Nicotine,Falling,2rRJrJEo19S2J82BDsQ3F7,2020,False,10,0.784,0.43,10,-8.756,0,0.0364,0.0,0.0887,0.236,127.087,159382,4
+Lewis Capaldi,Divinely Uninspired To A Hellish Extent,Someone You Loved,7qEHsqek33rTcFNT9PFqLf,2020,False,89,0.501,0.405,1,-5.679,1,0.0319,0.0,0.105,0.446,109.891,182161,4
+KAROL G,Tusa,Tusa,7k4t7uLgtOxPwTpFmtJNTY,2020,False,82,0.803,0.715,2,-3.28,1,0.298,0.000134,0.0574,0.574,101.085,200960,4
+Arizona Zervas,ROXANNE,ROXANNE,696DnlkuDOXcMAnKlTgXXK,2020,True,83,0.621,0.601,6,-5.616,0,0.148,0.0,0.46,0.457,116.735,163636,5
+Post Malone,Hollywood's Bleeding,Circles,21jGcNKet2qwijlDFuPiPb,2020,False,88,0.695,0.762,0,-3.497,1,0.0395,0.00244,0.0863,0.553,120.042,215280,4
+Lil Mosey,Certified Hitmaker,Blueberry Faygo,22LAwLoDA5b4AaGSkg6bKW,2020,True,80,0.774,0.554,0,-7.909,1,0.0383,0.0,0.132,0.349,99.034,162547,4
+Justin Bieber,Changes,Intentions (feat. Quavo),4umIPjkehX1r7uhmGvXiSV,2020,False,79,0.806,0.546,9,-6.637,1,0.0575,0.0,0.102,0.874,147.986,212867,4
+Drake,Dark Lane Demo Tapes,Toosie Slide,466cKvZn1j45IpxDdYZqdA,2020,True,73,0.83,0.49,1,-8.82,0,0.209,3.04e-06,0.113,0.845,81.604,247059,4
+Lewis Capaldi,Divinely Uninspired To A Hellish Extent (Extended Edition),Before You Go,2gMXnyrvIjhVBUZwvLZDMP,2020,False,86,0.459,0.575,3,-4.858,1,0.0573,0.0,0.0885,0.183,111.881,215107,4
+Doja Cat,Hot Pink,Say So,3Dv1eDb0MEgF93GpLXlucZ,2020,True,84,0.787,0.673,11,-4.583,0,0.159,3.35e-06,0.0904,0.779,110.962,237893,4
+Maroon 5,Memories,Memories,2b8fOow8UzyDFAE27YhOZM,2020,False,36,0.764,0.32,11,-7.209,1,0.0546,0.0,0.0822,0.575,91.019,189486,4
+Future,High Off Life,Life Is Good (feat. Drake),1K5KBOgreBi5fkEHvg5ap3,2020,True,77,0.795,0.574,2,-6.903,0,0.487,0.0,0.15,0.537,142.053,237918,4
+Jawsh 685,Savage Love (Laxed - Siren Beat),Savage Love (Laxed - Siren Beat),1xQ6trAsedVPCdbtDAmk0c,2020,True,82,0.767,0.481,0,-8.52,0,0.0803,0.0,0.269,0.761,150.076,171375,4
+Harry Styles,Fine Line,Adore You,3jjujdWJ72nww5eGnfs2E7,2020,False,86,0.676,0.771,8,-3.675,1,0.0483,7e-06,0.102,0.569,99.048,207133,4
+Topic,Breaking Me,Breaking Me,3H7ihDc1dqLriiWXwsc2po,2020,False,84,0.789,0.72,8,-5.652,0,0.218,0.0,0.129,0.664,122.031,166794,4
+24kGoldn,Mood (feat. iann dior),Mood (feat. iann dior),3tjFYV6RSFtuktYl3ZtYcq,2020,True,17,0.7,0.722,7,-3.558,0,0.0369,0.0,0.272,0.756,90.989,140526,4
+Billie Eilish,everything i wanted,everything i wanted,3ZCTVFBt2Brf31RLEnCkWJ,2020,False,84,0.704,0.225,6,-14.454,0,0.0994,0.657,0.106,0.243,120.006,245426,4
+Shawn Mendes,Shawn Mendes (Deluxe),Señorita,6v3KW9xbzN5yKLt9YKDYA2,2020,False,82,0.759,0.548,9,-6.049,0,0.029,0.0,0.0828,0.749,116.967,190800,4
+Billie Eilish,"WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",bad guy,2Fxmhks0bxGSBdJ92vM42m,2020,False,87,0.701,0.425,7,-10.965,1,0.375,0.13,0.1,0.562,135.128,194088,4
+Cardi B,WAP (feat. Megan Thee Stallion),WAP (feat. Megan Thee Stallion),4Oun2ylbjFKMPTiaSbbCih,2020,True,85,0.935,0.454,1,-7.509,1,0.375,0.0,0.0824,0.357,133.073,187541,4
+Surfaces,Where the Light Is,Sunday Best,1Cv1YLb4q0RzL6pybtaMLo,2020,False,81,0.878,0.525,5,-6.832,1,0.0578,0.0,0.0714,0.694,112.022,158571,4
+Eminem,Music To Be Murdered By,Godzilla (feat. Juice WRLD),7FIWs0pqAYbP91WWM0vlTQ,2020,True,88,0.808,0.745,10,-5.26,0,0.342,0.0,0.292,0.829,165.995,210800,4
+Justin Bieber,Changes,Yummy,16wAOAZ2OkqoIDN7TpChjR,2020,False,74,0.676,0.506,9,-6.652,0,0.0958,0.0,0.118,0.497,145.842,208520,4
+Dua Lipa,Future Nostalgia,Break My Heart,017PF4Q3l4DBUiWoXk4OWT,2020,False,82,0.73,0.729,4,-3.434,0,0.0884,1.39e-06,0.349,0.467,113.011,221820,4
+BTS,Dynamite (DayTime Version),Dynamite,0t1kP63rueHleOhQkYSXFY,2020,False,51,0.746,0.765,6,-4.41,0,0.0993,0.0,0.0936,0.737,114.044,199054,4
+BENEE,Hey u x,Supalonely (feat. Gus Dapperton),3GZoWLVbmxcBys6g0DLFLf,2020,True,66,0.862,0.631,7,-4.746,1,0.0515,0.000209,0.123,0.841,128.978,223488,4
+Surf Mesa,ily (i love you baby) (feat. Emilee),ily (i love you baby) (feat. Emilee),62aP9fBQKYKxi7PDXwcUAS,2020,False,81,0.674,0.774,11,-7.567,0,0.0892,0.00188,0.393,0.33,112.05,176547,4
+Lady Gaga,Chromatica,Rain On Me (with Ariana Grande),7ju97lgwC2rKQ6wwsf9no9,2020,False,79,0.672,0.855,9,-3.764,1,0.0397,0.0,0.323,0.646,123.056,182200,4
+Travis Scott,HIGHEST IN THE ROOM,HIGHEST IN THE ROOM,3eekarcy7kvN4yt5ZFzltW,2020,True,86,0.598,0.427,7,-8.764,0,0.0317,5.83e-06,0.21,0.0605,76.469,175721,4
+Post Malone,Hollywood's Bleeding,Sunflower - Spider-Man: Into the Spider-Verse,0RiRZpuVRbi7oqRdSMwhQY,2020,False,83,0.755,0.522,2,-4.368,1,0.0575,0.0,0.0685,0.925,89.96,157560,4
+Maluma,PAPI JUANCHO,Hawái,1yoMvmasuxZfqHEipJhRbp,2020,False,81,0.783,0.727,6,-3.454,0,0.389,2.46e-05,0.0626,0.558,180.067,199112,4
+Regard,Ride It,Ride It,2tnVG71enUj33Ic2nFN6kZ,2020,False,85,0.88,0.751,7,-4.258,0,0.0874,6.43e-05,0.106,0.884,117.948,157606,4
+Travis Scott,Birds In The Trap Sing McKnight,goosebumps,6gBFPUFcJLzWGx4lenP6h2,2020,True,88,0.841,0.728,7,-3.37,1,0.0484,0.0,0.149,0.43,130.049,243837,4
+Black Eyed Peas,Translation,RITMO (Bad Boys For Life),4NCsrTzgVfsDo8nWyP8PPc,2020,True,48,0.723,0.704,10,-7.088,0,0.0571,0.00109,0.792,0.684,105.095,214935,4
+THE SCOTTS,THE SCOTTS,THE SCOTTS,39Yp9wwQiSRIDOvrVg7mbk,2020,True,80,0.716,0.537,0,-7.648,0,0.0514,0.0,0.157,0.28,129.979,165978,4
+Bad Bunny,YHLQMDLG,Safaera,2DEZmgHKAvm41k4J3R2E9Y,2020,True,84,0.607,0.829,2,-4.074,1,0.379,0.0,0.107,0.685,96.172,295177,4
+Billie Eilish,lovely (with Khalid),lovely (with Khalid),0u2P5u6lvoDfwTYjAADbn4,2020,False,90,0.351,0.296,4,-10.109,0,0.0333,0.0,0.095,0.12,115.284,200186,4
+Juice WRLD,Goodbye & Good Riddance,Lucid Dreams,285pBltuF7vW8TeWk8hdRR,2020,True,88,0.511,0.566,6,-7.23,0,0.2,0.0,0.34,0.218,83.903,239836,4
+Ariana Grande,Stuck with U,Stuck with U (with Justin Bieber),4HBZA5flZLE435QTztThqH,2020,False,86,0.597,0.45,8,-6.658,1,0.0418,0.0,0.382,0.537,178.765,228482,3
+JP Saxe,If the World Was Ending (feat. Julia Michaels),If the World Was Ending (feat. Julia Michaels),2kJwzbxV2ppxnQoYw4GLBZ,2020,False,83,0.464,0.473,1,-10.086,1,0.129,0.0,0.109,0.604,75.801,208687,4
+Dua Lipa,Future Nostalgia,Physical,3AzjcOeAmA57TIOr9zF1ZW,2020,False,79,0.647,0.844,0,-3.756,1,0.0457,0.000658,0.102,0.746,146.967,193829,4
+Travis Scott,ASTROWORLD,SICKO MODE,2xLMifQCjDGFmkHkpNLD9h,2020,True,85,0.834,0.73,8,-3.714,1,0.222,0.0,0.124,0.446,155.008,312820,4
+Olivia Rodrigo,SOUR,drivers license,5wANPM4fQCJwkGd4rN57mH,2020,True,92,0.561,0.431,10,-8.81,1,0.0578,1.42e-05,0.106,0.137,143.875,242013,4
+Lil Nas X,MONTERO,MONTERO (Call Me By Your Name),1SC5rEoYDGUK4NfG82494W,2020,True,90,0.593,0.503,8,-6.725,0,0.22,0.0,0.405,0.71,178.781,137704,4
+The Kid LAROI,F*CK LOVE 3: OVER YOU,STAY (with Justin Bieber),5PjdY0CKGZdEuoNab3yDmX,2020,True,93,0.591,0.764,1,-5.484,1,0.0483,0.0,0.103,0.478,169.928,141806,4
+Olivia Rodrigo,SOUR,good 4 u,4ZtFanR9U6ndgddUvNcjcG,2020,True,95,0.563,0.664,9,-5.044,1,0.154,0.0,0.0849,0.688,166.928,178147,4
+Dua Lipa,Future Nostalgia,Levitating (feat. DaBaby),5nujrmhLynf4yMoMtj8AQF,2020,False,89,0.702,0.825,6,-3.787,0,0.0601,0.0,0.0674,0.915,102.977,203064,4
+Justin Bieber,Justice,Peaches (feat. Daniel Caesar & Giveon),4iJyoBOLtHqaGxP12qzhQI,2020,True,91,0.677,0.696,0,-6.181,1,0.119,0.0,0.42,0.464,90.03,198082,4
+Doja Cat,Planet Her,Kiss Me More (feat. SZA),3DarAbFujv6eYNliUTyqtz,2020,True,88,0.764,0.705,8,-3.463,1,0.0284,8.92e-05,0.12,0.781,110.97,208667,4
+The Weeknd,After Hours,Blinding Lights,0VjIjW4GlUZAMYd2vXMi3b,2020,False,94,0.514,0.73,1,-5.934,1,0.0598,9.54e-05,0.0897,0.334,171.005,200040,4
+Glass Animals,Dreamland (+ Bonus Levels),Heat Waves,02MWAaffLxlfxAUY7c5dvx,2020,False,95,0.761,0.525,11,-6.9,1,0.0944,6.7e-06,0.0921,0.531,80.87,238805,4
+Måneskin,Chosen,Beggin',3Wrjm47oTz2sjIgck11l5e,2020,False,92,0.714,0.8,11,-4.808,0,0.0504,0.0,0.359,0.589,134.002,211560,4
+Masked Wolf,Astronomical,Astronaut In The Ocean,6E90gq0KO6FYZVOXx8kCcC,2020,True,77,0.778,0.695,4,-6.865,0,0.0913,0.0,0.15,0.472,149.996,132780,4
+Bad Bunny,EL ÚLTIMO TOUR DEL MUNDO,DÁKITI,4MzXwWMhyBbmu6hOcLVD49,2020,True,87,0.731,0.573,4,-10.059,0,0.0544,5.22e-05,0.113,0.145,109.928,205090,4
+Lil Nas X,MONTERO,INDUSTRY BABY (feat. Jack Harlow),5Z9KJZvQzH6PFmb8SNkxuk,2020,True,90,0.741,0.691,10,-7.395,0,0.0672,0.0,0.0476,0.892,150.087,212353,4
+Ed Sheeran,=,Bad Habits,3rmo8F54jFF8OgYsqTxm5d,2020,False,95,0.807,0.893,11,-3.745,0,0.0347,2.79e-05,0.366,0.537,126.011,230747,4
+The Weeknd,After Hours,Save Your Tears,5QO79kh1waicV47BqGRL3g,2020,True,90,0.68,0.826,0,-5.487,1,0.0309,1.24e-05,0.543,0.644,118.051,215627,4
+BTS,"Butter (Hotter, Sweeter, Cooler)",Butter,2bgTY4UwhfBYhGT4HUYStN,2020,False,66,0.759,0.459,8,-5.187,1,0.0948,0.0,0.0906,0.695,109.997,164442,4
+Bruno Mars,Leave The Door Open,Leave The Door Open,7MAibcTli4IisCtbHKrGMh,2020,False,87,0.586,0.616,5,-7.964,1,0.0324,0.0,0.0927,0.719,148.088,242096,4
+Olivia Rodrigo,SOUR,deja vu,6HU7h9RYOaPRFeh0R3UeAr,2020,True,90,0.442,0.612,2,-7.222,1,0.112,5.7e-06,0.37,0.178,180.917,215507,4
+Rauw Alejandro,VICE VERSA,Todo De Ti,5RwV8BvLfX5injfqYodke9,2020,True,64,0.78,0.719,3,-3.613,0,0.0506,0.000196,0.0931,0.336,127.962,199604,4
+24kGoldn,El Dorado,Mood (feat. iann dior),4jPy3l0RUwlUI9T5XHBW2m,2020,True,89,0.701,0.716,7,-3.671,0,0.0361,0.0,0.324,0.732,91.007,140533,4
+Tiësto,The Business,The Business,6f3Slt0GbA2bPZlz0aIFXN,2020,False,88,0.798,0.62,8,-7.079,0,0.232,0.0192,0.112,0.235,120.031,164000,4
+BTS,BE,Dynamite,4saklk6nie3yiGePpBwUoc,2020,False,62,0.746,0.765,6,-4.41,0,0.0993,0.0,0.0936,0.737,114.044,199054,4
+Bad Bunny,Yonaguni,Yonaguni,2JPLbjOn0wPCngEot2STUS,2020,True,94,0.644,0.648,1,-4.601,1,0.118,0.0,0.135,0.44,179.951,206710,4
+Harry Styles,Fine Line,Watermelon Sugar,6UelLqGlWMcVH1E5c4H7lY,2020,False,91,0.548,0.816,0,-4.209,1,0.0465,0.0,0.335,0.557,95.39,174000,4
+Riton,Friday (feat. Mufasa & Hypeman) [Dopamine Re-Edit],Friday (feat. Mufasa & Hypeman) - Dopamine Re-Edit,4cG7HUWYHBV6R6tHn1gxrl,2020,False,88,0.824,0.862,2,-3.424,1,0.126,0.000132,0.303,0.801,122.98,169153,4
+Kali Uchis,Sin Miedo (del Amor y Otros Demonios) ∞,telepatía,6tDDoYIxWvMLTdKpjFkc1B,2020,False,87,0.653,0.524,11,-9.016,0,0.0502,0.0,0.203,0.553,83.97,160191,4
+The Kid LAROI,F*CK LOVE (SAVAGE),WITHOUT YOU,27OeeYzk6klgBh83TSvGMA,2020,True,85,0.662,0.413,0,-7.357,1,0.0299,0.0,0.134,0.467,93.005,161385,4
+Giveon,TAKE TIME,Heartbreak Anniversary,3FAJ6O0NOHQV8Mc5Ri6ENp,2020,False,87,0.449,0.465,0,-8.964,1,0.0791,1.02e-06,0.303,0.543,89.087,198371,3
+Olivia Rodrigo,SOUR,traitor,5CZ40GBx1sQ9agT82CLQCT,2020,False,93,0.38,0.339,3,-7.885,1,0.0338,0.0,0.12,0.0849,100.607,229227,4
+Farruko,La 167,Pepas,2B4GHvToeLTOBB4QLzW3Ni,2020,True,86,0.762,0.766,7,-3.955,1,0.0343,6.98e-05,0.128,0.442,130.001,287120,4
+Ariana Grande,Positions,positions,35mvY5S1H3J2QZyna3TFe0,2020,True,88,0.737,0.802,0,-4.771,1,0.0878,0.0,0.0931,0.682,144.015,172325,4
+Lewis Capaldi,Divinely Uninspired To A Hellish Extent,Someone You Loved,7qEHsqek33rTcFNT9PFqLf,2020,False,89,0.501,0.405,1,-5.679,1,0.0319,0.0,0.105,0.446,109.891,182161,4
+Myke Towers,Bandido,Bandido,1xK1Gg9SxG8fy2Ya373oqb,2020,False,82,0.713,0.617,8,-4.637,1,0.0887,0.0,0.0962,0.682,168.021,232853,4
+Måneskin,Teatro d'ira - Vol. I,I WANNA BE YOUR SLAVE,4pt5fDVTg5GhEvEtlz9dKk,2020,True,88,0.75,0.608,1,-4.008,1,0.0387,0.0,0.178,0.958,132.507,173347,4
+Polo G,Hall of Fame,RAPSTAR,18vXApRmJSgQ6wG2ll9AOg,2020,True,82,0.789,0.536,6,-6.862,1,0.242,0.0,0.129,0.437,81.039,165926,4
+Bad Bunny,EL ÚLTIMO TOUR DEL MUNDO,LA NOCHE DE ANOCHE,2XIc1pqjXV3Cr2BQUGNBck,2020,False,87,0.856,0.618,7,-4.892,1,0.286,0.0,0.0866,0.391,81.993,203201,4
+Doja Cat,Hot Pink,Streets,60ynsPSSKe6O3sfwRnIBRf,2020,True,88,0.749,0.463,11,-8.433,1,0.0842,0.0382,0.338,0.189,90.035,226987,4
+The Neighbourhood,I Love You.,Sweater Weather,2QjOHCTQ1Jl3zawyYOpxh6,2020,False,93,0.612,0.807,10,-2.81,1,0.0336,0.0177,0.101,0.398,124.053,240400,4
+Los Legendarios,Los Legendarios 001,Fiel,7Bk0uXKk1uPT0XuQbpFzvs,2020,False,82,0.849,0.701,6,-4.407,0,0.06,0.0,0.112,0.505,98.005,261667,4
+Doja Cat,Planet Her,Need to Know,3Vi5XqYrmQgOYBajMWSvCi,2020,True,93,0.664,0.609,1,-6.509,1,0.0707,0.0,0.0926,0.194,130.041,210560,4
+Dua Lipa,Future Nostalgia,Don't Start Now,3PfIrDoz19wz7qK7tYeu62,2020,False,85,0.793,0.793,11,-4.521,0,0.083,0.0,0.0951,0.679,123.95,183290,4
+Internet Money,B4 The Storm,"Lemonade (feat. Gunna, Don Toliver & NAV)",7hxHWCCAIIxFLCzvDgnQHX,2020,True,82,0.8,0.658,1,-6.142,0,0.079,0.0,0.111,0.462,140.042,195429,4
+Doja Cat,Planet Her,Woman,6Uj1ctrBOjOas8xZXGqKk4,2020,True,95,0.824,0.764,5,-4.175,0,0.0854,0.00294,0.117,0.881,107.998,172627,4
+Duncan Laurence,Small Town Boy (Track By Track),Arcade,1J14CdDAvBTE1AJYUOwl6C,2020,False,78,0.453,0.35,9,-11.639,0,0.0425,0.00122,0.144,0.279,72.017,185147,3
+SZA,Good Days,Good Days,3YJJjQPAbDT7mGpX3WtQ9A,2020,True,86,0.436,0.655,1,-8.37,0,0.0583,8.1e-06,0.688,0.412,121.002,279204,4
+J Balvin,JOSE,Qué Más Pues?,6D2TCm4nf5nxAcdGJ7w3QP,2020,False,80,0.903,0.817,8,-3.972,1,0.095,0.000311,0.242,0.732,102.014,217360,4
+Joel Corry,Head & Heart (feat. MNEK),Head & Heart (feat. MNEK),6cx06DFPPHchuUAcTxznu9,2020,False,86,0.734,0.874,8,-3.158,1,0.0662,1.14e-05,0.0489,0.905,122.953,166028,4
+Ariana Grande,Positions,34+35,6Im9k8u9iIzKMrmV7BWtlF,2020,True,86,0.83,0.585,0,-6.476,1,0.094,0.0,0.248,0.485,109.978,173711,4
+Tate McRae,you broke me first,you broke me first,45bE4HXI0AwGZXfZtMp8JR,2020,False,88,0.667,0.373,4,-9.389,1,0.05,0.0,0.0906,0.0823,124.148,169266,4
+Sebastian Yatra,Pareja Del Año,Pareja Del Año,2rCbl9naJYhaxjLsfx88uM,2020,False,86,0.715,0.622,4,-5.102,0,0.046,0.0,0.0948,0.808,80.015,195053,4
