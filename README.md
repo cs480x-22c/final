@@ -12,8 +12,9 @@ Links
 ---
 
 - GitHub Repository: https://github.com/MilesGregg/final
-- Video Link: TBD
-- Book: TBD
+- Github Pages: https://milesgregg.github.io/final/ 
+- Video Link: https://www.youtube.com/watch?v=42jXF928klU
+- Book: Please Reference "CS 480X Final Project Process Book"
 
 Contributors
 ---
