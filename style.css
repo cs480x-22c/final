@@ -122,6 +122,17 @@ nav {
   scrollbar-width: thin; /* "auto" or "thin" */
   scrollbar-color: transparent white;
 }
+
+.scroll-page3 {
+  display: block;
+  align-items: top-center;
+  font-size: 5em;
+  height: 100%;
+  color: white;
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: transparent white;
+}
+
 .bar {
   fill: whitesmoke;
 }
