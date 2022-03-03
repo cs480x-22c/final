@@ -233,12 +233,12 @@ function makeNodeLinkGraph() {
 
         node
             .attr("cx", function(d){
-		if(d.x>1000){return d.x - 10;}
-		else if(d.x<0){return d.x + 10;}
+		if(d.x>900){return d.x - 8;}
+		else if(d.x<100){return d.x + 8;}
 		else{return d.x;}})
             .attr("cy", function(d){
-		if(d.y>800){return d.y - 10;}
-		else if(d.y<0){return d.y + 10;}
+		if(d.y>700){return d.y - 8;}
+		else if(d.y<100){return d.y + 8;}
 		else{return d.y;}});
       });
 
