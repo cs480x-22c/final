@@ -23,16 +23,16 @@ function MainFooter() {
                                     Contributors
                                 </Typography>
                                 <Typography variant="subtitle1" color="white" >
-                                    <a href="https://github.com/dacs30">Danilo Correia </a>
+                                    <a target={'_blank'} href="https://github.com/dacs30">Danilo Correia </a>
                                 </Typography>
                                 <Typography variant="subtitle1" color="white" >
-                                    <a href="https://github.com/cjdunn2">Craig James Dunn </a>
+                                    <a target={'_blank'} href="https://github.com/cjdunn2">Craig James Dunn </a>
                                 </Typography>
                                 <Typography variant="subtitle1" color="white" >
-                                    <a href="https://github.com/orestropi">Orest Ropi</a>
+                                    <a target={'_blank'} href="https://github.com/orestropi">Orest Ropi</a>
                                 </Typography>
                                 <Typography variant="subtitle1" color="white" >
-                                    <a href="https://github.com/orestropi">Maddison Caten</a>
+                                    <a target={'_blank'} href="https://github.com/mcaten">Maddison Caten</a>
                                 </Typography>
                             </Grid>
                             <Grid item xs={12} sm={6} md={6}>
