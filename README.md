@@ -9,6 +9,21 @@ All of the code is our own except a simple skeleton for a treemap(in d3.js) and 
 ### Technologies used
 The website is made with React and Material UI. Besided D3, there was also a Chart JS code in the earlt versions of the app. The code architecture follows the classic structure with components for each section of the website.
 
+The introduction section contains the title and a background gif.
+![intro page](./intro-page.png)
+
+Staked area chart
+
+![first chart](./first-chart.png)
+
+Tree map chart
+
+![first chart](./second-chart.png)
+
+Footer
+
+![first chart](./last-pic.png)
+
 ### Project Website(s):
 
 Link to main website:https://dacs30.github.io/final/
