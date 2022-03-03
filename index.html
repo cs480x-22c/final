@@ -112,10 +112,7 @@
               .style("text-anchor", "end");
 
             // Add Y axis
-            var y = d3
-              .scaleLinear()
-              .domain([0, 3000])
-              .range([height - margin.bottom, margin.top]);
+            var y = d3.scaleLinear().domain([0, 3000]).range([height, 0]);
             svg.append("g").call(d3.axisLeft(y)).style("font-size", "14px");
 
             // Bars
@@ -184,59 +181,84 @@
 
         <p>Abduction Report</p>
         <div class="report">
-          <script
-            type="text/javascript"
-            src="https://prod-useast-a.online.tableau.com/javascripts/api/viz_v1.js"
-          ></script>
-          <div class="tableauPlaceholder" style="width: 1424px; height: 649px">
-            <object
-              class="tableauViz"
-              width="800"
-              height="649"
-              style="display: none"
-            >
-              <param
-                name="host_url"
-                value="https%3A%2F%2Fprod-useast-a.online.tableau.com%2F"
-              />
-              <param name="embed_code_version" value="3" />
-              <param name="site_root" value="&#47;t&#47;acaira" />
-              <param name="name" value="total&#47;Sheet2" />
-              <param name="tabs" value="no" />
-              <param name="toolbar" value="yes" />
-              <param name="showAppBanner" value="false" />
-            </object>
-          </div>
-        </div>
-
-        <p>Freqency of Date of Report</p>
-        <div class="date">
-          <script
-            type="text/javascript"
-            src="https://prod-useast-a.online.tableau.com/javascripts/api/viz_v1.js"
-          ></script>
           <div
             class="tableauPlaceholder"
-            style="width: 800px; height: 649px; content: center"
+            id="viz1646309124173"
+            style="position: relative"
           >
             <object
               class="tableauViz"
-              width="800"
-              height="649"
-              style="display: none"
+              style="display: none; width: 800px; height: 649px"
             >
               <param
                 name="host_url"
-                value="https%3A%2F%2Fprod-useast-a.online.tableau.com%2F"
+                value="https%3A%2F%2Fpublic.tableau.com%2F"
               />
               <param name="embed_code_version" value="3" />
-              <param name="site_root" value="&#47;t&#47;acaira" />
-              <param name="name" value="total&#47;Sheet1" />
+              <param name="site_root" value="" />
+              <param name="name" value="total_16463086574710&#47;Sheet2" />
               <param name="tabs" value="no" />
               <param name="toolbar" value="yes" />
-              <param name="showAppBanner" value="false" />
+              <param name="animate_transition" value="yes" />
+              <param name="display_static_image" value="yes" />
+              <param name="display_spinner" value="yes" />
+              <param name="display_overlay" value="yes" />
+              <param name="display_count" value="yes" />
+              <param name="language" value="en-US" />
+              <param name="filter" value="publish=yes" />
             </object>
           </div>
+          <script type="text/javascript">
+            var divElement = document.getElementById("viz1646309124173");
+            var vizElement = divElement.getElementsByTagName("object")[0];
+            vizElement.style.width = 800;
+            vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+            var scriptElement = document.createElement("script");
+            scriptElement.src =
+              "https://public.tableau.com/javascripts/api/viz_v1.js";
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+          </script>
+        </div>
+
+        <p>Freqency of Year Reported</p>
+        <div class="date">
+          <div
+            class="tableauPlaceholder"
+            id="viz1646308668234"
+            style="position: relative"
+          >
+            <object
+              class="tableauViz"
+              style="display: none; width: 800px; height: 649px"
+            >
+              <param
+                name="host_url"
+                value="https%3A%2F%2Fpublic.tableau.com%2F"
+              />
+              <param name="embed_code_version" value="3" />
+              <param name="site_root" value="" />
+              <param name="name" value="total_16463086574710&#47;Sheet1" />
+              <param name="tabs" value="no" />
+              <param name="toolbar" value="yes" />
+              <param name="animate_transition" value="yes" />
+              <param name="display_static_image" value="yes" />
+              <param name="display_spinner" value="yes" />
+              <param name="display_overlay" value="yes" />
+              <param name="display_count" value="yes" />
+              <param name="language" value="en-US" />
+              <param name="filter" value="publish=yes" />
+            </object>
+          </div>
+          <script type="text/javascript">
+            var divElement = document.getElementById("viz1646308668234");
+            var vizElement = divElement.getElementsByTagName("object")[0];
+            vizElement.style.width = 800;
+            vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+            var scriptElement = document.createElement("script");
+            scriptElement.src =
+              "https://public.tableau.com/javascripts/api/viz_v1.js";
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+          </script>
         </div>
         <br />
 
