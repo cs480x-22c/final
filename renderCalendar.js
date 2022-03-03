@@ -1,6 +1,6 @@
 let inputObject = document.getElementById('searchTxt')
 
-function drawCalendar(myData, time) {
+function drawCalendar(myData, time, location) {
   var dict = {};
   tempArr = []
   let tempArr1 = []
@@ -105,42 +105,40 @@ function drawCalendar(myData, time) {
 
   scale = d3.scaleLinear()
     .domain(d3.extent(count, function (d) { return d.value; }))
-    .range([0, 1]); // the interpolate used for color expects a number in the range [0,1] but i don't want the lightest part of the color scheme
+    .range([0.4, 1]); // the interpolate used for color expects a number in the range [0,1] but i don't want the lightest part of the color scheme
 
   rect.filter(function (d) {
     return d in lookup;
   })
     .style("fill", function (d) {
-      return d3.interpolatePuBu(scale(lookup[d]));
+      return d3.interpolateBlues(scale(lookup[d]));
     })
-    .classed("clickable", true)
+    .attr('stroke', 'steelblue')
     .on("click", function (d) {
-      alert(dict[d])
-      if (d3.select(this).classed('focus')) {
-        d3.select(this).classed('focus', false);
-      } else {
-        d3.select(this).classed('focus', true)
-      }
+      console.log(d)
+      d3.select("#events").html("")
+      dict[d].forEach(function(element) {
+        d3.select("#events").append("p").text(element)
+      })
       selectedDate = new Date(d).toLocaleDateString('en-US')
+      d3.select("#time").text(`Showing events on ${selectedDate} in ${location} starting at ${time}`)
       colorBuildings(selectedDate, time)
     })
     .select("title")
     .text(function (d) { return "There are " + lookup[d] + " Events on " + titleFormat(new Date(d)) });
 }
 
-function getInputValue() {
+function getInputValue(location = document.getElementById('building').options[document.getElementById('building').selectedIndex].value, time = moment(document.getElementById("myInputTime").value, 'HH:mm').format('h:mm A')) {
   // Selecting the input element and get its value
   d3.select("#calendar").html("")
-  var inputVal = document.getElementById('building').options[document.getElementById('building').selectedIndex].value;
-  console.log(inputVal)
-  var input = document.getElementById("myInputTime").value;
-  input = moment(input, 'HH:mm').format('h:mm A')
-  console.log(input)
-
-  d3.csv("updated_25data.csv").then(function (data) {
+  d3.select("#events").html("")
+  d3.select("#time").html("")
+  d3.csv("filtered_25live.csv").then(function (data) {
     data = data.filter(function (row) {
-      return (row['Event_Start'] == input) && (row['Location1'] == inputVal);
+      console.log(moment(row['Event_Start'], 'h:mm A').startOf('hour').format('h:mm A'))
+      return (row['Event_Start'] == time) && (row['Location1'] == location);
     })
-    drawCalendar(data, input)
+    d3.select("#info").text(`Calendar of events starting at ${time} in ${location}. Click a date to see details`)
+    drawCalendar(data, time, location)
   })
 }

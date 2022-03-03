@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="index.css">
-<script src="https://d3js.org/d3.v5.min.js"></script>
-<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
-<script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+	<script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 </head>
 <body>
 	<div id ="input">
@@ -49,11 +49,11 @@
 			<ul class="results-list" id="list"></ul>
 		</div>
 	</div>
+	<h2 id="info"></h2>
 	<div id="calendar"></div>
 	<h2 id="time"></h2>
+	<p id="events"></p>
 	<svg width=960 height=600 id="map"></svg>
-	
-
 	<script src="renderMap.js"></script>
 	<script src="renderCalendar.js"></script>
 </body>
