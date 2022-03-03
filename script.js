@@ -143,13 +143,16 @@ function makeNodeLinkGraph() {
           .attr("stroke", "#fff")
           .attr("stroke-width", 1.5);
 	
+	var legend_height = 200;
+	var legend_top_y = (height - legend_height)/2;
+	
 	legend.append("rect")
 		.attr("stroke","black")
 		.attr("fill", "none")
 		.attr("x",(width-100))
-		.attr("y",0)
+		.attr("y",legend_top_y)
 		.attr("width",100)
-		.attr("height",height);
+		.attr("height",legend_height);
 		
 	legend
 		.selectAll("circle")
@@ -159,14 +162,14 @@ function makeNodeLinkGraph() {
 		  .attr("fill", d => color(d, 0))
 			.attr("stroke", d => color(d, 1))
 		  .attr("cx", (width-90))
-		  .attr("cy", (d,i) => ((i+1) * height/18));
+		  .attr("cy", (d,i) => (legend_top_y + (i+1) * legend_height/18));
 		  
 	legend
 		.selectAll("text")
 		.data(types)
 		.enter().append("text")
 		  .attr("x", (width-75))
-		  .attr("y", (d,i) => ((i+1) * height/18 + 5))
+		  .attr("y", (d,i) => (legend_top_y + (i+1) * legend_height/18 + 5))
 		  .attr("class", "legend")
 		  .text(d => d);
 
