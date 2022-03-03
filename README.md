@@ -7,7 +7,7 @@ Summary
 Links
 ---
 
-- GitHub Repository: TBD
+- GitHub Repository: https://github.com/MilesGregg/final
 - Video Link: TBD
 - Book: TBD
 
