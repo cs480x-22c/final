@@ -2,6 +2,7 @@ Final Project - Video Game Sales vs Scores
 ===
 
 Website Link: https://matthewaguiar.github.io/final/
+
 Screencast Link: https://www.dropbox.com/s/pjiz37nf492a70d/screencast_cs480x.mp4?dl=0
 
 Repository Overview
