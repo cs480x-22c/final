@@ -57,7 +57,12 @@ function createMap(buildings) {
         d3.select('#tooltip').style('left', (d3.event.pageX+10) + 'px').style('top', (d3.event.pageY+10) + 'px')
         })
       .on('click', function(d) {
-        getInputValue(d.properties.name)
+        if(document.getElementById("myInputTime").value === ''){
+          getInputValue(d.properties.name, initialHour)
+        }
+        else {
+          getInputValue(d.properties.name)
+        }
         document.getElementById('building').value = ''
         })
 }
