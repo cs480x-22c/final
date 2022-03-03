@@ -180,7 +180,7 @@ function makeNodeLinkGraph() {
           .nodes(nodes)
           .links(links)
           .jaccardLinkLengths(55, 0.7)
-      	  .symmetricDiffLinkLengths(20)
+      	  .symmetricDiffLinkLengths(15)
           .start(30,30,30);
       
       const link = svg.append("g")
@@ -226,25 +226,25 @@ function makeNodeLinkGraph() {
       layout.on("tick", () => {
         link
             .attr("x1", function(d){
-		if(d.source.x>975){return 975;}
+		if(d.source.x>875){return 875;}
 		else if(d.source.x<25){return 25;}
 		else{return d.source.x;}})
             .attr("y1", function(d){
-		if(d.source.y>975){return 975;}
+		if(d.source.y>775){return 775;}
 		else if(d.source.y<25){return 25;}
 		else{return d.source.y;}})
             .attr("x2", function(d){
-		if(d.target.x>975){return 975;}
+		if(d.target.x>875){return 875;}
 		else if(d.target.x<25){return 25;}
 		else{return d.target.x;}})
             .attr("y2", function(d){
-		if(d.target.y>975){return 975;}
+		if(d.target.y>775){return 775;}
 		else if(d.target.y<25){return 25;}
 		else{return d.target.y;}});
 
         node
             .attr("cx", function(d){
-		if(d.x>975){return 975;}
+		if(d.x>875){return 875;}
 		else if(d.x<25){return 25;}
 		else{return d.x;}})
             .attr("cy", function(d){
