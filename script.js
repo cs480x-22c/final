@@ -180,6 +180,7 @@ function makeNodeLinkGraph() {
           .nodes(nodes)
           .links(links)
           .jaccardLinkLengths(55, 0.7)
+      	  .symmetricDiffLinkLengths(10)
           .start(30,30,30);
       
       const link = svg.append("g")
