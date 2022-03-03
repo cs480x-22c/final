@@ -200,7 +200,11 @@ function makeNodeLinkGraph() {
           .attr("fill", d => color(d.typeA, 0))
       	  .attr("stroke", function(d){if(d.typeB){return color(d.typeB, 1);} else{return color(d.typeA, 1);}})
           .attr("stroke-width", 4)
-          .call(layout.drag);
+          .call(layout.drag)
+	  .each(function (d){
+            var b = this.getBBox();
+            d.width = b.width + 50;
+            d.height = b.height + 50;});
 	
       node.append("title")
 		.html(d => {
