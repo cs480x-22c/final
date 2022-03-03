@@ -11,8 +11,9 @@ Samantha Mora
 
 # Submission Overview
  - Code can be found in index.html
- - world.geojson and world.topojson load in the global map
+ - world.geojson loads in the global map
  - The "csv updated" folder contains the final version of our data that we used for the animals
+ - Process book is also found as a pdf 
 
 # Links
 [Project Website(GitHub Pages)](https://jbiss4.github.io/final/)
