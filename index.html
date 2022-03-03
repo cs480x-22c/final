@@ -71,7 +71,7 @@
 
         <div class="scroll-page" id="page-2">Abductions By Location</div>
 
-        <div class="scroll-page" id="page-3">Abductions By Type</div>
+        <div class="scroll-page2" id="page-3">Abductions By Type</div>
 
         <p>Freqency of Shapes Reported</p>
         <div id="shape"><svg width="600" height="700"></svg></div>
@@ -198,19 +198,13 @@
         </script>
 
         <p>Freqency of Duration of Abduction</p>
-        <div class="duration">
-          <svg width="600" height="500"></svg>
-        </div>
+        <div class="duration"></div>
 
         <p>Freqency of Date of Report</p>
-        <div class="date">
-          <svg width="600" height="500"></svg>
-        </div>
+        <div class="date"></div>
 
         <p>Freqency of Time of Report</p>
-        <div class="time">
-          <svg width="600" height="500"></svg>
-        </div>
+        <div class="time"></div>
         <div class="scroll-page" id="page-4">Get Me Abducted</div>
       </div>
     </div>
@@ -288,7 +282,7 @@
             .append("svg")
             .attr("width", 960)
             .attr("height", 600)
-            .style("border-style", "solid");
+            .style("border-style", "none");
 
           var path = d3.geoPath();
 
