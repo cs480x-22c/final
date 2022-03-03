@@ -176,7 +176,7 @@ function makeNodeLinkGraph() {
       
       const link = svg.append("g")
           .attr("stroke", "#000")
-          .attr("stroke-opacity", 0.6)
+          .attr("stroke-opacity", 0.8)
         .selectAll("line")
         .data(links)
         .enter().append("line")
