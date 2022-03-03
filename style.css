@@ -94,6 +94,19 @@ nav {
   display: block;
 }
 
+div.maptooltip {
+  position: absolute;
+  text-align: center;
+  padding: .3rem;
+  background: #FFFFFF;
+  color: #313639;
+  border: 1px solid #313639;
+  border-radius: 2px;
+  pointer-events: none;
+  font-size: 0.7rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .box {
   margin: 40px auto 0 auto;
   background-color: lightgray;
