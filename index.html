@@ -74,14 +74,13 @@
         <div class="scroll-page2" id="page-3">Abductions By Type</div>
 
         <p>Freqency of Shapes Reported</p>
-        <div id="shape"></svg></div>
+        <div id="shape"></div>
 
         <script>
           var margin = { top: 30, right: 30, bottom: 70, left: 60 },
             width = 460 - margin.left - margin.right,
             height = 400 - margin.top - margin.bottom;
 
-          // append the svg object to the body of the page
           var svg = d3
             .select("#shape")
             .append("svg")
@@ -179,14 +178,64 @@
           }
         </script>
 
-        <p>Freqency of Duration of Abduction</p>
-        <div class="duration"></div>
+        <p>Abduction Report</p>
+        <div class="report">
+          <script
+            type="text/javascript"
+            src="https://prod-useast-a.online.tableau.com/javascripts/api/viz_v1.js"
+          ></script>
+          <div class="tableauPlaceholder" style="width: 1424px; height: 649px">
+            <object
+              class="tableauViz"
+              width="800"
+              height="649"
+              style="display: none"
+            >
+              <param
+                name="host_url"
+                value="https%3A%2F%2Fprod-useast-a.online.tableau.com%2F"
+              />
+              <param name="embed_code_version" value="3" />
+              <param name="site_root" value="&#47;t&#47;acaira" />
+              <param name="name" value="total&#47;Sheet2" />
+              <param name="tabs" value="no" />
+              <param name="toolbar" value="yes" />
+              <param name="showAppBanner" value="false" />
+            </object>
+          </div>
+        </div>
 
         <p>Freqency of Date of Report</p>
-        <div class="date"></div>
+        <div class="date">
+          <script
+            type="text/javascript"
+            src="https://prod-useast-a.online.tableau.com/javascripts/api/viz_v1.js"
+          ></script>
+          <div
+            class="tableauPlaceholder"
+            style="width: 800px; height: 649px; content: center"
+          >
+            <object
+              class="tableauViz"
+              width="800"
+              height="649"
+              style="display: none"
+            >
+              <param
+                name="host_url"
+                value="https%3A%2F%2Fprod-useast-a.online.tableau.com%2F"
+              />
+              <param name="embed_code_version" value="3" />
+              <param name="site_root" value="&#47;t&#47;acaira" />
+              <param name="name" value="total&#47;Sheet1" />
+              <param name="tabs" value="no" />
+              <param name="toolbar" value="yes" />
+              <param name="showAppBanner" value="false" />
+            </object>
+          </div>
+        </div>
+        <br />
 
-        <p>Freqency of Time of Report</p>
-        <div class="time"></div>
         <div class="scroll-page" id="page-4">Get Me Abducted</div>
       </div>
     </div>
