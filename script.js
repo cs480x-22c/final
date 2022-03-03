@@ -226,19 +226,31 @@ function makeNodeLinkGraph() {
 
       layout.on("tick", () => {
         link
-            .attr("x1", d => d.source.x)
-            .attr("y1", d => d.source.y)
-            .attr("x2", d => d.target.x)
-            .attr("y2", d => d.target.y);
+            .attr("x1", function(d){
+		if(d.source.x>975){return 975;}
+		else if(d.source.x<25){return 25;}
+		else{return d.source.x;}})
+            .attr("y1", function(d){
+		if(d.source.y>975){return 975;}
+		else if(d.source.y<25){return 25;}
+		else{return d.source.y;}})
+            .attr("x2", function(d){
+		if(d.target.x>975){return 975;}
+		else if(d.target.x<25){return 25;}
+		else{return d.target.x;}})
+            .attr("y2", function(d){
+		if(d.target.y>975){return 975;}
+		else if(d.target.y<25){return 25;}
+		else{return d.target.y;}});
 
         node
             .attr("cx", function(d){
-		if(d.x>950){return 950;}
-		else if(d.x<50){return 50;}
+		if(d.x>975){return 975;}
+		else if(d.x<25){return 25;}
 		else{return d.x;}})
             .attr("cy", function(d){
-		if(d.y>750){return 750;}
-		else if(d.y<50){return 50;}
+		if(d.y>775){return 775;}
+		else if(d.y<25){return 25;}
 		else{return d.y;}});
       });
 
