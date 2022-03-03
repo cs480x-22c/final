@@ -112,7 +112,10 @@
               .style("text-anchor", "end");
 
             // Add Y axis
-            var y = d3.scaleLinear().domain([0, 3000]).range([height, 0]);
+            var y = d3
+              .scaleLinear()
+              .domain([0, 3000])
+              .range([height - margin.bottom, margin.top]);
             svg.append("g").call(d3.axisLeft(y)).style("font-size", "14px");
 
             // Bars
@@ -237,7 +240,19 @@
         </div>
         <br />
 
-        <div class="scroll-page" id="page-4">Get Me Abducted</div>
+        <div class="scroll-page" id="page-4">
+          <p>Get Me Abducted</p>
+          <iframe
+            width="560"
+            height="315"
+            display="block"
+            src="https://www.youtube.com/embed/PfPdYYsEfAE"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </div>
     <script>
