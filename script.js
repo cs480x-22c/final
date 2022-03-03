@@ -202,7 +202,7 @@ function makeNodeLinkGraph() {
           .attr("stroke-width", 4)
           .call(layout.drag);
 	
-	    avoidOverlaps(true);
+	 layout.avoidOverlaps(true);
 
       node.append("title")
 		.html(d => {
