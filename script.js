@@ -198,11 +198,19 @@ function makeNodeLinkGraph() {
           .call(layout.drag);
 
       node.append("title")
-		  .html(d => ("<div><img src='" + d.sprite + "' />\n" + d.species + "\n"
-		  + d.typeA + "/" + d.typeB + "\nStats:\n  HP: " + d.baseHP + "\n  Attack: " + d.baseAttack
-		  + "\n  Defense: " + d.baseDefense + "\n  Speed: " + d.baseSpeed
-		  + "\n  Special: " + d.baseSpecial + "\n  Total: " + d.total
-      + "</div>"));
+		.html(d => (
+	      		if (d.typeB) {
+				return "<div><img src='" + d.sprite + "' />\n" + d.species + "\n"
+		  		+ d.typeA + "/" + d.typeB + "\nStats:\n  HP: " + d.baseHP + "\n  Attack: " + d.baseAttack
+		  		+ "\n  Defense: " + d.baseDefense + "\n  Speed: " + d.baseSpeed
+		  		+ "\n  Special: " + d.baseSpecial + "\n  Total: " + d.total + "</div>";
+			} else {
+				return "<div><img src='" + d.sprite + "' />\n" + d.species + "\n"
+		  		+ d.typeA + "\nStats:\n  HP: " + d.baseHP + "\n  Attack: " + d.baseAttack
+		 		+ "\n  Defense: " + d.baseDefense + "\n  Speed: " + d.baseSpeed
+		  		+ "\n  Special: " + d.baseSpecial + "\n  Total: " + d.total + "</div>";
+	  		}
+		));
 	  
 	  
           //.text(d => (d.species + ", " + d.typeA + ", " + d.typeB));
