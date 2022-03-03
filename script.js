@@ -143,7 +143,7 @@ function makeNodeLinkGraph() {
           .attr("stroke", "#fff")
           .attr("stroke-width", 1.5);
 	
-	var legend_height = 200;
+	var legend_height = 500;
 	var legend_top_y = (height - legend_height)/2;
 	
 	legend.append("rect")
