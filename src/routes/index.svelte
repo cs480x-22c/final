@@ -4,7 +4,7 @@
 	import Scatterplot from '../components/Scatterplot.svelte';
 
 	let points;
-	let data;
+	let data, dataWDeriv;
 	let progress = 0;
 
 	onMount(async () => {
@@ -12,8 +12,24 @@
 	});
 
 	$: if (points) {
-		data = filterTime(progress, points);
+		data = filterTime(progress, points)
+			.map((point) => {
+				return {
+					x: point.tip1,
+					y: point.tip2
+				};
+			});
+        dataWDeriv = filterTime(progress, diff(points));
 	}
+
+    function diff(points) {
+        return points.map((d, i, arr) => {
+            let point = d;
+            point['tip2prime'] = (i-1 > 0 ? d.tip2 - arr[i - 1].tip2 : 0) / 2 + 550
+            point['tip1prime'] = (i-1 > 0 ? d.tip1 - arr[i - 1].tip1 : 0) / 2 + 550
+            return point;
+        })
+    }
 
 	function filterTime(time, data) {
 		let startTime = 1646183695000;
@@ -23,19 +39,13 @@
 					point.timestamp < time * 1000 + startTime &&
 					point.timestamp > time * 1000 + startTime - 500
 			)
-			.map((point) => {
-				return {
-					x: point.tip1,
-					y: point.tip2
-				};
-			});
 	}
 </script>
 
 
 <br />
 <div id="plots">
-    <ParallelPlot data={data} domain={["x","y"]} range={[0,1500]}
+    <ParallelPlot data={dataWDeriv} domain={["tip1prime","tip1","tip2","tip2prime"]} range={[0,1000]}
 	/>
     <Scatterplot
     {...{

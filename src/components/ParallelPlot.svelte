@@ -38,7 +38,6 @@
 		// For each dimension, I build a linear scale. I store all in a y object
 		y = {};
 		for (let axis in domain) {
-			console.log(domain[axis]);
 			y[domain[axis]] = d3.scaleLinear().domain(range).range([height, 0]);
 		}
 
@@ -54,8 +53,6 @@
 			.append('g')
 			// I translate this element to its right position on the x axis
 			.attr('transform', (d) => `translate(${x(d)})`)
-			// And I build the axis with the call function
-			.each((d) => d3.select(this).call(d3.axisLeft().scale(y[d])))
 			// Add axis title
 			.append('text')
 			.style('text-anchor', 'middle')
