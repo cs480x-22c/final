@@ -10,7 +10,7 @@ function makeNodeLinkGraph() {
 		for( i = 0 ; i < types.length ; i++ ){if(type.localeCompare(types[i])==0){if(x==0){return fills[i];} if (x==1){return outlines[i];}}}
 		return "#000000";}
   
-  let r_scale = = d3.scaleLinear().domain([175,590]).range([8,25]);
+  let r_scale = d3.scaleLinear().domain([175,590]).range([8,25]);
 	
   const data = d3.json("data.json")
     .then((response) => {
