@@ -4,7 +4,7 @@ function makeNodeLinkGraph() {
 	const fills = ["#52AD18","#C72100","#0C66C1","#87950D","#B2B2B2","#6D2470","#E79302","#B18F34","#E28FE2","#682714","#DF366C","#A38A3F","#454592","#71D5F5","#6751C9","#5D73D4","#8D8D9F"];
 	const outlines = ["#399400","#AE0800","#004DA8","#6E7C00","#999999","#540B57","#CE7A00","#98761B","#C976C9","#4F0E00","#C61D53","#8A7126","#2C2C79","#58BCDC","#4E38B0","#445ABB","#747486"];
 	const height = 700;
-  const width = 900;
+  const width = 1100;
 	
   function color(type, x){
 		for( i = 0 ; i < types.length ; i++ ){if(type.localeCompare(types[i])==0){if(x==0){return fills[i];} if (x==1){return outlines[i];}}}
