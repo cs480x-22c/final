@@ -12,6 +12,7 @@
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
+    "@types/d3": "^7.1.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.1",
@@ -22,14 +23,10 @@
   "type": "module",
   "dependencies": {
     "@sveltejs/adapter-static": "^1.0.0-next.28",
+    "d3": "^7.3.0",
     "d3-axis": "^3.0.0",
-<<<<<<< HEAD
-    "d3-selection": "^3.0.0",
-    "gaussian-mixture-model": "^1.0.0",
-    "sirv-cli": "^2.0.0"
-=======
     "d3-scale": "^3.0.0",
-    "d3-selection": "^3.0.0"
->>>>>>> 156ea62848d32b8155d39a0142d7a8d05500edcb
+    "d3-selection": "^3.0.0",
+    "gaussian-mixture-model": "^1.0.0"
   }
 }
