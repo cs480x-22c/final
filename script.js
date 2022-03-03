@@ -170,15 +170,17 @@ function makeNodeLinkGraph() {
 		  .attr("class", "legend")
 		  .text(d => d);
 	
-
+	delete d3cola._lastStress;
+    	delete d3cola._alpha;
+    	delete d3cola._descent;
+    	delete d3cola._rootGroup;
+	    
       const layout = cola.d3adaptor(d3)
           .size([width, height])
           .nodes(nodes)
           .links(links)
           .jaccardLinkLengths(55, 0.7)
-      	  .defaultNodeSize(15)
       	  .avoidOverlaps(true)
-      	  .symmetricDiffLinkLengths(25)
           .start(30);
       
       const link = svg.append("g")
