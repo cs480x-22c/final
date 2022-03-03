@@ -291,6 +291,11 @@
             .style("fill", "green")
             .style("stroke", "green");
       });
+      
+      var obj = {"video": {
+        "value": "<iframe title='YouTube video player' type=\"text/html\" width=" + width + " height=" + height + " src='https://www.youtube.com/embed/42jXF928klU' frameborder='0' allowFullScreen></iframe>"
+      }}
+      document.write(obj.video.value);
     </script>
   </body>
 </html>
