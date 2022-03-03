@@ -124,6 +124,7 @@ nav {
   scrollbar-color: transparent white;
 }
 
+/* fix height */
 .scroll-page3 {
   display: block;
   align-items: top-center;
