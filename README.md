@@ -6,6 +6,9 @@
 
 All of the code is our own except a simple skeleton for a treemap(in d3.js) and dropdown bar(in js). We also used the d3 library and a simple library for icons we use throughout our websites from fontawesome.com.
 
+### Technologies used
+The website is made with React and Material UI. Besided D3, there was also a Chart JS code in the earlt versions of the app. The code architecture follows the classic structure with components for each section of the website.
+
 ### Project Website(s):
 
 Link to main website:https://dacs30.github.io/final/
