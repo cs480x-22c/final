@@ -10,13 +10,7 @@
     <script src="state-converter.js"></script>
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <link rel="stylesheet" href="style.css" />
-
-    <style>
-      * {
-        cursor: url("https://github.com/alexiscaira/final/blob/main/custom%20alien%20cursor%20(50%20%C3%97%2050%20px).png?raw=true"),
-          auto;
-      }
-    </style>
+    <script type="text/javascript" src="scripts.js"></script>
   </head>
   <body>
     <div id="overlay">
@@ -76,12 +70,113 @@
           </div>
         </div>
 
-        <div id="chart"></div>
-
         <div class="scroll-page" id="page-2">Abductions By Location</div>
-        <div id="locationchart"></div>
+
         <div class="scroll-page" id="page-3">Abductions By Type</div>
-        <div id="charttypes"></div>
+
+        <p>Freqency of Shapes Reported</p>
+        <div id="shape"><svg width="600" height="500"></svg></div>
+
+        <script>
+          var svg = d3.select("svg"),
+            margin = 200,
+            width = svg.attr("width") - margin,
+            height = svg.attr("height") - margin;
+
+          var x = d3.scaleBand().range([0, width]).padding(0.4),
+            y = d3.scaleLinear().range([height, 0]);
+
+          var xScale = d3.scaleBand().range([0, width]).padding(0.4),
+            yScale = d3.scaleLinear().range([height, 0]);
+          var g = svg
+            .append("g")
+            .attr("transform", "translate(" + 100 + "," + 100 + ")");
+
+          d3.csv("shape.csv").then(function (data) {
+            xScale.domain(
+              data.map(function (d) {
+                return d.shape;
+              })
+            );
+            yScale.domain([
+              0,
+              d3.max(data, function (d) {
+                return d.value;
+              }),
+            ]);
+
+            svg
+              .append("g")
+              .attr("transform", "translate(0," + height + ")")
+              .call(d3.axisBottom(x).ticks(5));
+
+            var y = d3.scaleLinear().domain([8, 40]).range([height, 0]);
+            svg.append("g").call(d3.axisLeft(y).ticks(5));
+            g.append("g")
+              .attr("transform", "translate(0," + height + ")")
+              .call(d3.axisBottom(xScale))
+              .selectAll("text")
+              .style("text-anchor", "end")
+              .attr("dx", "-.8em")
+              .attr("dy", ".15em")
+              .style("font", "14px times")
+              .attr("transform", "rotate(-65)")
+              .append("text")
+              .attr("y", height - 250)
+              .attr("x", width - 100)
+              .attr("text-anchor", "end")
+              .attr("stroke", "white")
+              .text("Shape");
+
+            g.append("g")
+              .call(
+                d3
+                  .axisLeft(yScale)
+                  .tickFormat(function (d) {
+                    return d;
+                  })
+                  .ticks(10)
+              )
+              .append("text")
+              .attr("transform", "rotate(-90)")
+              .attr("y", 6)
+              .attr("dy", "-5.1em")
+              .attr("text-anchor", "end")
+              .attr("stroke", "white")
+              .text("Number of Reports");
+
+            g.selectAll(".bar")
+              .data(data)
+              .enter()
+              .append("rect")
+              .attr("class", "bar")
+              .attr("x", function (d) {
+                return xScale(d.shape);
+              })
+              .attr("y", function (d) {
+                return yScale(d.value);
+              })
+              .attr("width", xScale.bandwidth())
+              .attr("height", function (d) {
+                return height - yScale(d.value);
+              });
+          });
+        </script>
+
+        <p>Freqency of Duration of Abduction</p>
+        <div class="duration">
+          <svg width="600" height="500"></svg>
+        </div>
+
+        <p>Freqency of Date of Report</p>
+        <div class="date">
+          <svg width="600" height="500"></svg>
+        </div>
+
+        <p>Freqency of Time of Report</p>
+        <div class="time">
+          <svg width="600" height="500"></svg>
+        </div>
         <div class="scroll-page" id="page-4">Get Me Abducted</div>
       </div>
     </div>
@@ -197,8 +292,6 @@
               reports.push(data[i]);
             }
           }
-
-
         });
     </script>
   </body>
