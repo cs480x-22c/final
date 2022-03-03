@@ -81,9 +81,9 @@
             width = 800 - margin.left - margin.right,
             height = 600 - margin.top - margin.bottom;
 
-          const space = d3
-            .select("#shape")
-            .append("space")
+          const svg = d3
+            .select("#shape") //test
+            .append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
