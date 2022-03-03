@@ -208,12 +208,12 @@ function makeNodeLinkGraph() {
       node.append("title")
 		.html(d => {
 	      		if (d.typeB) {
-				return "<div style='width:60px;height:60px'><img src='" + d.sprite + "'</div>\n<div>" + d.species + "\n"
+				return "<div style='width:60px;height:60px;background-image:url('" + d.sprite + "')'>\n<div>" + d.species + "\n"
 		  		+ d.typeA + "/" + d.typeB + "\nStats:\n  HP: " + d.baseHP + "\n  Attack: " + d.baseAttack
 		  		+ "\n  Defense: " + d.baseDefense + "\n  Speed: " + d.baseSpeed
 		  		+ "\n  Special: " + d.baseSpecial + "\n  Total: " + d.total + "</div>";
 			} else {
-				return "<div style='width:60px;height:60px'><img src='" + d.sprite + "'></div>\n<div>" + d.species + "\n"
+				return "<div style='width:60px;height:60px;background-image:url('" + d.sprite + "')'>\n<div>" + d.species + "\n"
 		  		+ d.typeA + "\nStats:\n  HP: " + d.baseHP + "\n  Attack: " + d.baseAttack
 		 		+ "\n  Defense: " + d.baseDefense + "\n  Speed: " + d.baseSpeed
 		  		+ "\n  Special: " + d.baseSpecial + "\n  Total: " + d.total + "</div>";
