@@ -24,6 +24,10 @@ Footer
 
 ![first chart](./last-pic.png)
 
+Website for treemaps
+
+![image](https://user-images.githubusercontent.com/73619173/156631854-8b85b351-3b7e-4a26-ad12-dd007a8f8016.png)
+
 ### Project Website(s):
 
 Link to main website:https://dacs30.github.io/final/
