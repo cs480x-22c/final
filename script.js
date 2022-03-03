@@ -175,7 +175,7 @@ function makeNodeLinkGraph() {
           .size([width, height])
           .nodes(nodes)
           .links(links)
-          .jaccardLinkLengths(40, 0.7)
+          .jaccardLinkLengths(55, 0.7)
       	  .avoidOverlaps(true)
           .start(30);
       
