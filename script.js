@@ -9,7 +9,9 @@ function makeNodeLinkGraph() {
   function color(type, x){
 		for( i = 0 ; i < types.length ; i++ ){if(type.localeCompare(types[i])==0){if(x==0){return fills[i];} if (x==1){return outlines[i];}}}
 		return "#000000";}
-        
+  
+  let r_scale = = d3.scaleLinear().domain([175,590]).range([8,25]);
+	
   const data = d3.json("data.json")
     .then((response) => {
       console.log(response);
@@ -153,7 +155,7 @@ function makeNodeLinkGraph() {
 		.selectAll("circle")
 		.data(types)
 		.enter().append("circle")
-		  .attr("r", 5)
+		  .attr("r", d => r_scale(d.total))
 		  .attr("fill", d => color(d, 0))
 			.attr("stroke", d => color(d, 1))
 		  .attr("cx", (width-90))
