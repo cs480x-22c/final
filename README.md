@@ -1,12 +1,12 @@
 ### Overview of Project:
 
-
+Rick and Morty Data Viz for representing characters screen time. Using a stacked area chart and treemaps, in a rick and morty themed react based website.
 
 ### Overview of Handling:
 
 All of the code is our own except a simple skeleton for a treemap(in d3.js) and dropdown bar(in js). We also used the d3 library and a simple library for icons we use throughout our websites from fontawesome.com.
 
-### Technologies used
+### Technologies used:
 The website is made with React and Material UI. Besides D3, there was also a Chart JS code in the early versions of the app. The code architecture follows the classic structure with components for each section of the website.
 
 ### Project Website(s):
