@@ -1,0 +1,120 @@
+
+html {
+    font-family: "Arial";
+}
+
+#header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#main {
+    text-align: center;
+    position: relative;
+}
+
+#legend {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.legend-box {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+
+#svg-container {
+    display: inline-block;
+    position: relative;
+}
+
+button {
+    color: white;
+    background-color: #0085fd;
+    border: 0;
+    border-radius: 4px;
+    transition: background-color 100ms linear 0ms;
+}
+
+button:hover {
+    background-color: #0660b0;
+    cursor: pointer;
+}
+
+button.sales-button, button.critic-button {
+    position: absolute;
+    padding: 10px;
+}
+
+button.sales-button {
+    left: -175px;
+}
+
+#us-sales-button {
+    top: 150px;
+}
+
+#eu-sales-button {
+    top: 200px;
+}
+
+#jp-sales-button {
+    top: 250px;
+}
+
+#global-sales-button {
+    top: 300px;
+}
+
+button.critic-button {
+    width: 100px;
+    bottom: -50px;
+}
+
+#user-score-button {
+    left: 125px;
+}
+
+#critic-score-button {
+    left: 275px;
+}
+
+#svg-title {
+    margin-bottom: 0;
+}
+
+button#yaxis-plus {
+}
+
+button.yaxis-scale {
+    display: inline-block;
+    vertical-align: top;
+    width: 24px;
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+svg {
+
+}
+
+#additional-info {
+    text-align: left;
+    line-height: 2;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    width: 400px;
+}
+
+#additional-info span {
+    font-weight: bold;
+}
+
+#additional-info p {
+    display: inline;
+}
