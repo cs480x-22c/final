@@ -184,7 +184,7 @@ function makeNodeLinkGraph() {
 
       const node = svg.append("g")
           .attr("stroke", function(d){if(d.typeB){return color(d.typeB);} else{return color(d.typeA);}})
-          .attr("stroke-width", 1.5)
+          .attr("stroke-width", 2.5)
         .selectAll("circle")
         .data(nodes)
         .enter().append("circle")
