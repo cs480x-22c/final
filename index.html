@@ -71,19 +71,17 @@
 
         <div class="scroll-page2" id="page-2">
           Abductions By Location
+          <p>Total Reports By US State</p>
 
           <svg width="960" height="600" id="mapsvg1"></svg>
           <br />
-          <p>
-            Where are you most likely to get abducted? (populations based on
-            2019 census data)
-          </p>
+          <p>Likelihood of Abduction By State Capita</p>
           <svg width="960" height="600" id="mapsvg2"></svg>
         </div>
 
         <div class="scroll-page3" id="page-3">Abductions By Type</div>
 
-        <p>Freqency of Shapes Reported</p>
+        <p>Freqency of UFO Shape From Total Reports</p>
         <div id="shape"></div>
 
         <script>
@@ -99,7 +97,8 @@
             .append("g")
             .attr("transform", `translate(${margin.left},${margin.top})`);
 
-          var mapMouseover = d3.select("body")
+          var mapMouseover = d3
+            .select("body")
             .append("div")
             .attr("class", "maptooltip")
             .style("opacity", 0);
@@ -381,18 +380,20 @@
                 );
               })
               .on("mouseover", (e, d) => {
-                mapMouseover.transition()
-                    .duration(50)
-                    .style("opacity", 1.0);
+                mapMouseover.transition().duration(50).style("opacity", 1.0);
 
-                mapMouseover.html(d.properties.name + "<br />" + "Sightings: " + sightingsByState[state_attr_convert[d.properties.name]])
-                    .style("left", (e.pageX + 10) + "px")
-                    .style("top",  (e.pageY - 15) + "px");
+                mapMouseover
+                  .html(
+                    d.properties.name +
+                      "<br />" +
+                      "Sightings: " +
+                      sightingsByState[state_attr_convert[d.properties.name]]
+                  )
+                  .style("left", e.pageX + 10 + "px")
+                  .style("top", e.pageY - 15 + "px");
               })
               .on("mouseout", (e, d) => {
-                mapMouseover.transition()
-                  .duration(50)
-                  .style("opacity", 0.0);
+                mapMouseover.transition().duration(50).style("opacity", 0.0);
               });
 
             mapSVG2
@@ -412,18 +413,27 @@
                 );
               })
               .on("mouseover", (e, d) => {
-                mapMouseover.transition()
-                    .duration(50)
-                    .style("opacity", 1.0);
+                mapMouseover.transition().duration(50).style("opacity", 1.0);
 
-                mapMouseover.html(d.properties.name + "<br />" + "Sightings per 10000 people: " + (10000 * sightingsByStatePerCapita[state_attr_convert[d.properties.name]]).toString().substring(0, 4))
-                    .style("left", (e.pageX + 10) + "px")
-                    .style("top",  (e.pageY - 15) + "px");
+                mapMouseover
+                  .html(
+                    d.properties.name +
+                      "<br />" +
+                      "Sightings per 10000 people: " +
+                      (
+                        10000 *
+                        sightingsByStatePerCapita[
+                          state_attr_convert[d.properties.name]
+                        ]
+                      )
+                        .toString()
+                        .substring(0, 4)
+                  )
+                  .style("left", e.pageX + 10 + "px")
+                  .style("top", e.pageY - 15 + "px");
               })
               .on("mouseout", (e, d) => {
-                mapMouseover.transition()
-                  .duration(50)
-                  .style("opacity", 0.0);
+                mapMouseover.transition().duration(50).style("opacity", 0.0);
               });
           });
 
