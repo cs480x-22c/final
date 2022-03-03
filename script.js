@@ -193,7 +193,7 @@ function makeNodeLinkGraph() {
           .attr("r", d => r_scale(d.total))
           .attr("fill", d => color(d.typeA, 0))
       	  .attr("stroke", function(d){if(d.typeB){return color(d.typeB, 1);} else{return color(d.typeA, 1);}})
-          .attr("stroke-width", 2.5)
+          .attr("stroke-width", 4)
           .call(layout.drag);
 
       node.append("title")
