@@ -213,14 +213,16 @@ function makeNodeLinkGraph() {
 	
 	  // Credit: https://www.d3-graph-gallery.com/graph/interactivity_tooltip.html#template
 	  function mouseover(event, d) {
+		  console.log(event);
+		  console.log(d);
 		d3.select(this).style("opacity", 0.75);
 		tooltip.style("opacity", 1)
-        .style("left", (event.x) + "px")
-        .style("top", (event.y) + "px");
-		/*.html(d => ("<img src=" + d.sprite + " /><br>" /*+ d.species + "<br>"
+        .style("left", (event.x + 10) + "px")
+        .style("top", (event.y + 10) + "px")
+		.html(d => ("<img src=" + d.sprite + " /><br>" /*+ d.species + "<br>"
 		  + d.typeA + "/" + d.typeB + "<br>Stats:<br>  HP: " + d.baseHP + "<br>  Attack: " + d.baseAttack
 		  + "<br>  Defense: " + d.baseDefense + "<br>  Speed: " + d.baseSpeed
-		  + "<br>  Special: " + d.baseSpecial + "<br>  Total: " + *//*d.total*///));
+		  + "<br>  Special: " + d.baseSpecial + "<br>  Total: " + *//*d.total*/));
 	  }
 	  
 	  function mouseleave() {
