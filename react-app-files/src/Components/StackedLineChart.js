@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import * as d3 from 'd3';
 import useD3 from '../hooks/useD3';
 import Grid from '@mui/material/Grid';
-import $ from 'jquery';
+
 
 function StackedLineChart({ data, characters }) {
 

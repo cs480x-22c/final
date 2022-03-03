@@ -147,7 +147,7 @@ function MainBody() {
 
                         </Grid>
                         <p>For all the seasons Rick and Morty have the most screentime. Other characters from the family usually stay behind of them
-                            and have less screentime. For Season 2, Picklerick has more screentime than the others family members execept for Morty
+                            and have less screentime. For Season 3, Picklerick has more screentime than the others family members execept for Morty
                             and Rick itself.
                         </p>
                         <iframe scrolling="no" id='iframe-chart' width="100%" height="100%" src="https://rickandmortyfinalp.glitch.me/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
