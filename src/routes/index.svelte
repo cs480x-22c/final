@@ -10,6 +10,8 @@
         points = await (await fetch('/video_demo.json')).json();
     });
 
+
+
 	$: if (points) {
 		data = points.map((point) => {
 			return {
@@ -29,10 +31,12 @@
 />
 {progress}
 <br />
+
 <Scatterplot
-	{...{
-		points: data
-	}}
+		{...{
+			points: data
+		}}
+
 />
 
 <style>
