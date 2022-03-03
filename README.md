@@ -11,5 +11,8 @@ As you scroll, the final two graphs are interactive representations of overall a
 
 Our website, process book, and screencast are included below. 
 
-https://alexiscaira.github.io/final/
-https://youtu.be/N9cc1WJxpUA
+## [view our process book](https://alexiscaira.github.io/final/FinalProcessBook.pdf)
+
+## [view our site](https://alexiscaira.github.io/final/)
+
+## [view our screencast](https://youtu.be/N9cc1WJxpUA)
