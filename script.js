@@ -1,13 +1,14 @@
 function makeNodeLinkGraph() {
 	
-	const types = ["Grass","Fire","Water","Bug","Normal","Poison","Electric","Ground","Fairy","Fighting","Psychic","Rock","Ghost","Ice","Dragon","Flying"];
-	const scheme = ["#52AD18","#C72100","#0C66C1","#87950D","#B2B2B2","#6D2470","#E79302","#B18F34","#E28FE2","#682714","#DF366C","#A38A3F","#454592","#71D5F5","#6751C9","#5D73D4"];
+	const types = ["Grass","Fire","Water","Bug","Normal","Poison","Electric","Ground","Fairy","Fighting","Psychic","Rock","Ghost","Ice","Dragon","Flying","Steel"];
+	const fills = ["#52AD18","#C72100","#0C66C1","#87950D","#B2B2B2","#6D2470","#E79302","#B18F34","#E28FE2","#682714","#DF366C","#A38A3F","#454592","#71D5F5","#6751C9","#5D73D4","#8D8D9F"];
+	const outlines = ["#399400","#AE0800","#004DA8","#6E7C00","#999999","#540B57","#CE7A00","#98761B","#C976C9","#4F0E00","#C61D53","#8A7126","#2C2C79","#58BCDC","#4E38B0","#445ABB","#747486"];
 	const height = 500;
   const width = 750;
 	
-  function color(type) {
-		for( i = 0 ; i < types.length ; i++ ) { if(type.localeCompare(types[i])==0) { return scheme[i]; } }
-		return "#000000"; }
+  function color(type, x){
+		for( i = 0 ; i < types.length ; i++ ){if(type.localeCompare(types[i])==0){if(x==0){return fills[i];} if (x==1){return outlines[i];}}}
+		return "#000000";}
         
   const data = d3.json("data.json")
     .then((response) => {
@@ -153,7 +154,8 @@ function makeNodeLinkGraph() {
 		.data(types)
 		.enter().append("circle")
 		  .attr("r", 5)
-		  .attr("fill", d => color(d))
+		  .attr("fill", d => color(d, 0))
+			.attr("stroke", d => color(d, 1))
 		  .attr("cx", (width-90))
 		  .attr("cy", (d,i) => ((i+1) * height/18));
 		  
@@ -187,8 +189,8 @@ function makeNodeLinkGraph() {
         .data(nodes)
         .enter().append("circle")
           .attr("r", 5)
-          .attr("fill", d => color(d.typeA))
-      	  .attr("stroke", function(d){if(d.typeB){return color(d.typeB);} else{return color(d.typeA);}})
+          .attr("fill", d => color(d.typeA, 0))
+      	  .attr("stroke", function(d){if(d.typeB){return color(d.typeB, 1);} else{return color(d.typeA, 1);}})
           .attr("stroke-width", 2.5)
           .call(layout.drag);
 
