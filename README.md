@@ -1,6 +1,10 @@
-### Overview:
+### Overview of Project:
 
-The README file must give an overview of what you are handing in: which parts are your code, which parts are libraries, and so on.
+
+
+### Overview of Handling:
+
+All of the code is our own except a simple skeleton for a treemap(in d3.js) and dropdown bar(in js). We also used the d3 library and a simple library for icons we use throughout our websites from fontawesome.com.
 
 ### Project Website(s):
 
