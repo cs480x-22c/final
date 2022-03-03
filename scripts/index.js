@@ -52,7 +52,7 @@ window.addEventListener("load", main);
 async function main()
 {
     //Open CSV and Load Data
-    DATA = await d3.csv("../video_game.csv", d3.autoType);
+    DATA = await d3.csv("video_game.csv", d3.autoType);
     FILTERED_DATA = DATA.filter(game => game.Critic_Score !== "NA" && game.Name !== "Wii Sports" && game.User_Score !== "tbd" && game.User_Score !== null);
     Y_MAX = d3.max(FILTERED_DATA, function (game) { return game.Global_players; });
     SALES_FUNCTION_REF = getGlobalPlayers;
