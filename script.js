@@ -170,10 +170,10 @@ function makeNodeLinkGraph() {
 		  .attr("class", "legend")
 		  .text(d => d);
 	
-	delete d3cola._lastStress;
-    	delete d3cola._alpha;
-    	delete d3cola._descent;
-    	delete d3cola._rootGroup;
+	delete cola._lastStress;
+    	delete cola._alpha;
+    	delete cola._descent;
+    	delete cola._rootGroup;
 	    
       const layout = cola.d3adaptor(d3)
           .size([width, height])
