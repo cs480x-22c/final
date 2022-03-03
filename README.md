@@ -1,6 +1,7 @@
 # Final Project - Baseball’s Offensive Evolution Throughout the Eras
 Website: https://jacobadamsky.github.io/final/
-Video:
+<br>
+Video: https://www.youtube.com/watch?v=LXRfRSWAasQ
 
 I created this using D3.js, CSVToTable from vividvilla, Webflow for a basic HTML website, and Sean Lahman's Baseball Statistics database which I downloaded as .csv files.
 
