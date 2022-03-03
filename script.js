@@ -169,12 +169,7 @@ function makeNodeLinkGraph() {
 		  .attr("y", (d,i) => ((i+1) * height/18 + 5))
 		  .attr("class", "legend")
 		  .text(d => d);
-	
-	delete cola._lastStress;
-    	delete cola._alpha;
-    	delete cola._descent;
-    	delete cola._rootGroup;
-	    
+
       const layout = cola.d3adaptor(d3)
           .size([width, height])
           .nodes(nodes)
@@ -182,7 +177,7 @@ function makeNodeLinkGraph() {
           .jaccardLinkLengths(55, 0.7)
       	  .defaultNodeSize(15)
       	  .avoidOverlaps(true)
-          .start(30);
+          .start(30,30,30);
       
       const link = svg.append("g")
           .attr("stroke", "#626262")
