@@ -180,6 +180,7 @@ function makeNodeLinkGraph() {
           .nodes(nodes)
           .links(links)
           .jaccardLinkLengths(55, 0.7)
+      	  .defaultNodeSize(15)
       	  .avoidOverlaps(true)
           .start(30);
       
