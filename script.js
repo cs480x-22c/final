@@ -191,23 +191,36 @@ function makeNodeLinkGraph() {
       	  .attr("stroke", function(d){if(d.typeB){return color(d.typeB);} else{return color(d.typeA);}})
           .attr("stroke-width", 2.5)
 		.on("mouseover", mouseover)
-		.on("mousemove", mousemove)
+		//.on("mousemove", mouseover)
 		.on("mouseleave", mouseleave)
           .call(layout.drag);
 
 	  var tooltip = d3.select("#graph").append("div")
 		.attr("class", "tooltip")
+		.style("position", "absolute")
+		.style("text-align", "center")
+		.style("width", "100px")
+		.style("text-align", "center")
+		.style("text-align", "center")
 		.style("background-color", "white")
-		.style("border-width", 1)
-		.style("border-radius", 10)
-		.style("padding", 5)
+		.style("border", "solid")
+		.style("border-width", "1px")
+		.style("border-radius", "10px")
+		.style("padding", "5px")
 		.style("opacity", 0)
+		.style("pointer-events", "none")
 		.html("hi UwU");
 	
 	  // Credit: https://www.d3-graph-gallery.com/graph/interactivity_tooltip.html#template
-	  function mouseover() {
-		tooltip.style("opacity", 1);
+	  function mouseover(event, d) {
 		d3.select(this).style("opacity", 0.75);
+		tooltip.style("opacity", 1)
+        .style("left", (event.x) + "px")
+        .style("top", (event.y) + "px");
+		/*.html(d => ("<img src=" + d.sprite + " /><br>" /*+ d.species + "<br>"
+		  + d.typeA + "/" + d.typeB + "<br>Stats:<br>  HP: " + d.baseHP + "<br>  Attack: " + d.baseAttack
+		  + "<br>  Defense: " + d.baseDefense + "<br>  Speed: " + d.baseSpeed
+		  + "<br>  Special: " + d.baseSpecial + "<br>  Total: " + *//*d.total*///));
 	  }
 	  
 	  function mouseleave() {
@@ -215,16 +228,10 @@ function makeNodeLinkGraph() {
 		d3.select(this).style("opacity", 1);
 	  }
 	  
-	  function mousemove(d) {
+	  /*function mousemove(event, i, nodes) {
 		  console.log(d);
 		tooltip
-        .style("left", (event.pageX) + "px")
-        .style("top", (event.pageY) + "px")
-		.html(d => ("<img src=" + Object.getPrototypeOf(d).sprite + " /><br>" /*+ d.species + "<br>"
-		  + d.typeA + "/" + d.typeB + "<br>Stats:<br>  HP: " + d.baseHP + "<br>  Attack: " + d.baseAttack
-		  + "<br>  Defense: " + d.baseDefense + "<br>  Speed: " + d.baseSpeed
-		  + "<br>  Special: " + d.baseSpecial + "<br>  Total: " + *//*d.total*/));
-      }		
+      }		*/
 		
       layout.on("tick", () => {
         link
