@@ -2,7 +2,7 @@
 
 Rick and Morty Data Viz for representing characters screen time. Using a stacked area chart and treemaps, in a rick and morty themed react based website.
 
-Process book link:https://docs.google.com/document/d/10QZLrAD1B8KyROV4MddCoAbmHzg4DHS3jWi8olJR0mQ/edit?usp=sharing
+Process book link: https://docs.google.com/document/d/10QZLrAD1B8KyROV4MddCoAbmHzg4DHS3jWi8olJR0mQ/edit?usp=sharing
 
 ### Overview of Handling:
 
