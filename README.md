@@ -8,6 +8,14 @@ Process book link: https://docs.google.com/document/d/10QZLrAD1B8KyROV4MddCoAbmH
 
 All of the code is our own except a simple skeleton for a treemap(in d3.js) and dropdown bar(in js). We also used the d3 library and a simple library for icons we use throughout our websites from fontawesome.com.
 
+### How to run locally:
+
+1. Open a terminal in the project directory
+2. In the terminal type the command "cd react-app-files"
+3. If this is the first time running the website locally type the command "npm i"
+4. Lastly type the command "npm start"
+5. The website should pop-up, if not it is located in local host 3000
+
 ### Technologies used:
 The website is made with React and Material UI. Besides D3, there was also a Chart JS code in the early versions of the app. The code architecture follows the classic structure with components for each section of the website. Our main website runs on node.js server. For our secondary websites we used glitch to host them, running them on http server.
 
