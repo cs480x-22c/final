@@ -13,4 +13,4 @@ In script.js we create arrays using data from data.json that are similar to the 
 
 Our visualization features a node/link graph where each node is a species of generation 1 Pokemon. Each node is colored based on the species’ type, and if the Pokémon has two types, the second type informs the color of the node’s outline stroke color. The size of each node’s radius is scaled based on the sum of the following statistics: base HP, base Attack, base Defense, base Speed, and base Special. Each node has a link to any other node that shares one (or both) of its type(s). This leads to the nodes clustering based on shared types in the visual, making it clear how the original game’s Pokémon selection spreads across the different types.
 
-We have a legend on the right of the visualiation which shows what color is associated with each type of Pokemon. 
+We have a legend on the right of the visualization which shows what color is associated with each type of Pokemon. 
