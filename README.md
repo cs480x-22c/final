@@ -7,7 +7,7 @@ While creating our project, we drew on libraries such as JSON. We also made use 
 
 When browsing our site, you may scroll down to view multiple visualizations of UFO data nationwide, to give full insight about the data we recieved from the NUFORC website.
 
-As you scroll, the final two graphs are interactive representations of overall abduction reports nationwide as well as the frequency of abductions per year, hosted on Tableau live.
+As you scroll, the final two graphs are interactive representations of overall abduction reports nationwide as well as the frequency of abductions per year, hosted on Tableau live. The first three graphs were created using D3, and display information about each visualization when moused over.
 
 Our website, process book, and screencast are included below. 
 
