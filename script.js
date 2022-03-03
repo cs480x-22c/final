@@ -203,8 +203,8 @@ function makeNodeLinkGraph() {
           .call(layout.drag)
 	  .each(function (d){
             var b = this.getBBox();
-            d.width = b.width + 50;
-            d.height = b.height + 50;});
+            d.width = b.width+5;
+            d.height = b.height+5;});
 	
       node.append("title")
 		.html(d => {
