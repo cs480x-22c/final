@@ -41,11 +41,11 @@ Link to video: https://drive.google.com/file/d/1SRcv2gGc4mXVZa7gMXJ80TmX6y1y9Kez
 References:
 ---
 
-Link: https://towardsdatascience.com/the-office-story-thats-what-the-data-said-224e8a6f47e
+Inspiration: https://towardsdatascience.com/the-office-story-thats-what-the-data-said-224e8a6f47e
 
-Link: https://www.youtube.com/watch?v=f_E5d9Gt5nM&ab_channel=BeforeSemicolon
+Dropdown: https://www.youtube.com/watch?v=f_E5d9Gt5nM&ab_channel=BeforeSemicolon
 
-Link: https://www.d3-graph-gallery.com/graph/treemap_basic.html
+Treemap: https://www.d3-graph-gallery.com/graph/treemap_basic.html
 
 - This final project is adapted from https://www.dataviscourse.net/2020/project/
 
