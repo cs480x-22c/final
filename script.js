@@ -6,7 +6,7 @@ function makeNodeLinkGraph() {
   const width = 750;
 	
   function color(type) {
-		for( int i = 0 ; i < types.length ; i++ ) { if(type.localeCompare(types[i])==0) { return scheme[i]; } }
+		for( i = 0 ; i < types.length ; i++ ) { if(type.localeCompare(types[i])==0) { return scheme[i]; } }
 		return "#000000"; }
         
   const data = d3.json("data.json")
