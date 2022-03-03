@@ -24,12 +24,6 @@ Your process book should include the following topics. Depending on your project
 - Implementation: Describe the intent and functionality of the interactive visualizations you implemented. Provide clear and well-referenced images showing the key design and interaction elements.
 - Evaluation: What did you learn about the data by using your visualizations? How did you answer your questions? How well does your visualization work, and how could you further improve it?
 
-As this will be your only chance to describe your project in detail make sure that your process book is a standalone document that fully describes your results and the final design. 
-[Here](http://dataviscourse.net/2015/assets/process_books/bansal_cao_hou.pdf) are a [few examples](http://dataviscourse.net/2015/assets/process_books/walsh_trevino_bett.pdf) of process books from a similar course final.
-
-Tip: Start your process book on Day 1. Make entries after each meeting, and trim / edit as needed towards the end of the project. Many folks use either slides software (like PowerPoint) or Google Docs to make this book, as both allow for flexible layouts and export to PDF.
-
-
 ### Project Website
 
 Create a public website for your project using GitHub pages or another web hosting service of your choice. 
@@ -63,6 +57,7 @@ Store the following in your GitHub repository:
 - Data - Include all the data that you used in your project. If the data is too large for github store it on a cloud storage provider, such as Dropbox or Yousendit.
 - Process Book- Your Process Book in PDF format.
 - README - The README file must give an overview of what you are handing in: which parts are your code, which parts are libraries, and so on. The README must contain URLs to your project websites and screencast videos. The README must also explain any non-obvious features of your interface.
+
 
 GitHub Details
 ---
