@@ -183,13 +183,13 @@ function makeNodeLinkGraph() {
           .attr("stroke-width", d => Math.sqrt(d.value));
 
       const node = svg.append("g")
-          .attr("stroke", function(d){if(d.typeB){return color(d.typeB);} else{return color(d.typeA);}})
-          .attr("stroke-width", 2.5)
         .selectAll("circle")
         .data(nodes)
         .enter().append("circle")
           .attr("r", 5)
           .attr("fill", d => color(d.typeA))
+      	  .attr("stroke", function(d){if(d.typeB){return color(d.typeB);} else{return color(d.typeA);}})
+          .attr("stroke-width", 2.5)
           .call(layout.drag);
 
       node.append("title")
