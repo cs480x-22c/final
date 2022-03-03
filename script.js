@@ -190,6 +190,7 @@ function makeNodeLinkGraph() {
         .enter().append("circle")
           .attr("r", 5)
           .attr("fill", d => color(d.typeA))
+      	  .style("stroke", function(d){if(d.typeB){return color(d.typeB);} else{return color(d.typeA);}})
           .call(layout.drag);
 
       node.append("title")
