@@ -1,0 +1,1222 @@
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
+          <h2>Choose Animal Data</h2>
+          <b>Canada Geese:</b> <input type="checkbox" id="canada_geese"><br>
+          <b>Galapagos Tortoises:</b> <input type="checkbox" id="gtort"><br>
+          <b>Great Whales:</b> <input type="checkbox" id="great_whales"><br>
+          <b>Grey Wolf:</b> <input type="checkbox" id="grey_wolf"><br>
+          <b>Heron and Egret:</b> <input type="checkbox" id="herone"><br>
+          <b>Ringed Seals:</b> <input type="checkbox" id="rseal"><br>
+          <b>Roe Deer:</b> <input type="checkbox" id="roe_deer"><br>
+          <b>Turtle Doves:</b> <input type="checkbox" id="turtle_doves"><br>
+          <b>Whale Shark:</b> <input type="checkbox" id="whale_shark"><br>
+          <b>White Tailed Eagle:</b> <input type="checkbox" id="white_eagle"><br>
+          
+          
+<svg width=960 height=600>
+</svg>
+
+
+<div id="info">
+</div>
+
+<button onClick="plot();">Plot map</button>
+<button onClick="start();">Update data</button>
+<button onClick="end();">Stop</button>
+
+<script>
+var count = 1;
+var cities_data;
+var geese_data;
+var tort_data;
+var whales_data;
+var heron_data;
+var seals_data;
+var deer_data;
+var doves_data;
+var shark_data;
+var eagle_data;
+var countries_data;
+var interval_id = 0;
+var circle1 = d3.select('svg').selectAll('circle1');
+var circle2 = d3.select('svg').selectAll('circle2');
+var circle3 = d3.select('svg').selectAll('circle3');
+var circle4 = d3.select('svg').selectAll('circle4');
+var circle5 = d3.select('svg').selectAll('circle5');
+var circle6 = d3.select('svg').selectAll('circle6');
+var circle7 = d3.select('svg').selectAll('circle7');
+var circle8 = d3.select('svg').selectAll('circle8');
+var circle9 = d3.select('svg').selectAll('circle9');
+var circle10 = d3.select('svg').selectAll('circle10');
+var cGeese;
+var gtort;
+var greatWhale;
+var greyWolf;
+var heronAndE;
+var rSeal;
+var roeDeer;
+var turtleDoves;
+var whaleShark;
+var whiteEagle;
+//getting which ones to use
+var geeseCheck = document.getElementById("canada_geese");
+if(cGeese){
+  geeseCheck.checked = true;
+}
+geeseCheck.oninput = function() {
+  cGeese = geeseCheck.checked;
+}
+
+var gtortCheck = document.getElementById("gtort");
+if(gtort){
+  gtortCheck.checked = true;
+}
+gtortCheck.oninput = function() {
+  gtort = gtortCheck.checked;
+}
+
+var greatWhaleCheck = document.getElementById("great_whales");
+if(greatWhale){
+  greatWhaleCheck.checked = true;
+}
+greatWhaleCheck.oninput = function() {
+  greatWhale = greatWhaleCheck.checked;
+}
+
+var greyWolfCheck = document.getElementById("grey_wolf");
+if(greyWolf){
+  greyWolfCheck.checked = true;
+}
+greyWolfCheck.oninput = function() {
+  greyWolf = greyWolfCheck.checked;
+}
+
+var heronAndECheck = document.getElementById("herone");
+if(heronAndE){
+  heronAndECheck.checked = true;
+}
+heronAndECheck.oninput = function() {
+  heronAndE = heronAndECheck.checked;
+}
+
+var rSealCheck = document.getElementById("rseal");
+if(rSeal){
+  rSealCheck.checked = true;
+}
+rSealCheck.oninput = function() {
+  rSeal = rSealCheck.checked;
+}
+
+var roeDeerCheck = document.getElementById("roe_deer");
+if(roeDeer){
+  roeDeerCheck.checked = true;
+}
+roeDeerCheck.oninput = function() {
+  roeDeer = roeDeerCheck.checked;
+}
+
+var turtleDovesCheck = document.getElementById("turtle_doves");
+if(turtleDoves){
+  turtleDovesCheck.checked = true;
+}
+turtleDovesCheck.oninput = function() {
+  turtleDoves = turtleDovesCheck.checked;
+}
+
+var whaleSharkCheck = document.getElementById("whale_shark");
+if(whaleShark){
+  whaleSharkCheck.checked = true;
+}
+whaleSharkCheck.oninput = function() {
+  whaleShark = whaleSharkCheck.checked;
+}
+
+var whiteEagleCheck = document.getElementById("white_eagle");
+if(whiteEagle){
+  whiteEagleCheck.checked = true;
+}
+whiteEagleCheck.oninput = function() {
+  whiteEagle = whiteEagleCheck.checked;
+}
+function plot(){
+  // Also see TOPOJSON
+Promise.all([
+  d3.json('world.geojson'),
+  d3.csv('csv w rank/Grey_Wolf.csv'),
+  d3.csv('csv w rank/Canada_Geese.csv'),
+  d3.csv('csv w rank/Galapagos_Tortoises.csv'),
+  d3.csv('csv w rank/Great_Whales.csv'),
+  d3.csv('csv w rank/Heron_and_Egret.csv'),
+  d3.csv('csv w rank/Ringed_Seals.csv'),
+  d3.csv('csv w rank/Roe_Deer.csv'),
+  d3.csv('csv w rank/Turtle_Doves.csv'),
+  d3.csv('csv w rank/Whale_Shark.csv'),
+  d3.csv('csv w rank/White_Tailed_Eagle.csv')
+]).then( ([countries, cities, geese, tort, whales, heron, seals, deer, doves, shark, eagle]) => {
+  createMap(countries,cities, geese, tort, whales, heron, seals, deer, doves, shark, eagle);
+  
+})
+
+  function createMap(countries, cities, geese, tort, whales, heron, seals, deer, doves, shark, eagle) {
+    var proj = d3.geoEquirectangular()
+      .translate([250, 250])
+      .scale(120);
+
+  var gpath = d3.geoPath()
+    .projection(proj);
+
+  var ccolor = 
+    d3.scaleSequential( d3.interpolateBlues )
+    .domain( 
+      d3.extent( countries.features, d => gpath.area(d))
+      );
+
+  countries_data = countries;
+  // draw country boundaries
+  d3.select('svg')
+    .append('g')
+    .attr('id', 'countries')
+    .selectAll('path1')
+      .data(countries.features)
+    .enter()
+    .append('path')
+      .attr('d', function(d) { return gpath(d); })
+      .attr('stroke-width', 1)
+      .attr('stroke', 'steelblue')
+      .attr('id', d => d.id)
+      .attr('fill', d => ccolor( gpath.area(d)) );
+//data to pront the paths
+  var links0 = [];
+  for(var i=0; i<cities.length-1;  i++){
+    // (note: loop until length - 1 since we're getting the next
+    //  item with i+1)
+        links0.push({
+            type: "LineString",
+            coordinates: [
+                [ cities[i].x, cities[i].y ],
+                [ cities[i+1].x, cities[i+1].y ]
+            ]
+        });
+    }
+  var links1 = [];
+  for(var i=0; i<geese.length-1;  i++){
+    // (note: loop until length - 1 since we're getting the next
+    //  item with i+1)
+        links1.push({
+            type: "LineString",
+            coordinates: [
+                [ geese[i].x, geese[i].y ],
+                [ geese[i+1].x, geese[i+1].y ]
+            ]
+        });
+    }
+  var links2 = [];
+  for(var i=0; i<tort.length-1;  i++){
+    // (note: loop until length - 1 since we're getting the next
+    //  item with i+1)
+        links2.push({
+            type: "LineString",
+            coordinates: [
+                [ tort[i].x, tort[i].y ],
+                [ tort[i+1].x, tort[i+1].y ]
+            ]
+        });
+    }
+  var links3 = [];
+  for(var i=0; i<whales.length-1;  i++){
+    // (note: loop until length - 1 since we're getting the next
+    //  item with i+1)
+        links3.push({
+            type: "LineString",
+            coordinates: [
+                [ whales[i].x, whales[i].y ],
+                [ whales[i+1].x, whales[i+1].y ]
+            ]
+        });
+    }
+  var links4 = [];
+  for(var i=0; i<heron.length-1;  i++){
+    // (note: loop until length - 1 since we're getting the next
+    //  item with i+1)
+        links4.push({
+            type: "LineString",
+            coordinates: [
+                [ heron[i].x, heron[i].y ],
+                [ heron[i+1].x, heron[i+1].y ]
+            ]
+        });
+    }
+  var links5 = [];
+  for(var i=0; i<seals.length-1;  i++){
+    // (note: loop until length - 1 since we're getting the next
+    //  item with i+1)
+        links5.push({
+            type: "LineString",
+            coordinates: [
+                [ seals[i].x, seals[i].y ],
+                [ seals[i+1].x, seals[i+1].y ]
+            ]
+        });
+    }
+  var links6 = [];
+  for(var i=0; i<deer.length-1;  i++){
+    // (note: loop until length - 1 since we're getting the next
+    //  item with i+1)
+        links6.push({
+            type: "LineString",
+            coordinates: [
+                [ deer[i].x, deer[i].y ],
+                [ deer[i+1].x, deer[i+1].y ]
+            ]
+        });
+    }
+  var links7 = [];
+  for(var i=0; i<doves.length-1;  i++){
+    // (note: loop until length - 1 since we're getting the next
+    //  item with i+1)
+        links7.push({
+            type: "LineString",
+            coordinates: [
+                [ doves[i].x, doves[i].y ],
+                [ doves[i+1].x, doves[i+1].y ]
+            ]
+        });
+    }
+  var links8 = [];
+  for(var i=0; i<shark.length-1;  i++){
+    // (note: loop until length - 1 since we're getting the next
+    //  item with i+1)
+        links8.push({
+            type: "LineString",
+            coordinates: [
+                [ shark[i].x, shark[i].y ],
+                [ shark[i+1].x, shark[i+1].y ]
+            ]
+        });
+    }
+  var links9 = [];
+  for(var i=0; i<eagle.length-1;  i++){
+    // (note: loop until length - 1 since we're getting the next
+    //  item with i+1)
+        links9.push({
+            type: "LineString",
+            coordinates: [
+                [ eagle[i].x, eagle[i].y ],
+                [ eagle[i+1].x, eagle[i+1].y ]
+            ]
+        });
+    }
+  
+  //draw animal paths
+  if(greyWolf){
+  d3.select('svg')
+    .append('g')
+    .selectAll('path2')
+      .data(links0)
+    .enter()
+    .append('path')
+      .attr('d', function(d) { return gpath(d); })
+      .attr('stroke-width', 1)
+      .attr('stroke', 'black');
+  }
+    
+    if(cGeese){
+    d3.select('svg')
+      .append('g')
+      .selectAll('path2')
+        .data(links1)
+      .enter()
+      .append('path')
+        .attr('d', function(d) { return gpath(d); })
+        .attr('stroke-width', 1)
+        .attr('stroke', 'black');
+    }
+        
+  if(gtort){
+  d3.select('svg')
+    .append('g')
+    .selectAll('path2')
+      .data(links2)
+    .enter()
+    .append('path')
+      .attr('d', function(d) { return gpath(d); })
+      .attr('stroke-width', 1)
+      .attr('stroke', 'black');
+  }
+
+  if(greatWhale){
+  d3.select('svg')
+    .append('g')
+    .selectAll('path2')
+      .data(links3)
+    .enter()
+    .append('path')
+      .attr('d', function(d) { return gpath(d); })
+      .attr('stroke-width', 1)
+      .attr('stroke', 'black');
+  }
+      
+  if(heronAndE){
+  d3.select('svg')
+    .append('g')
+    .selectAll('path2')
+      .data(links4)
+    .enter()
+    .append('path')
+      .attr('d', function(d) { return gpath(d); })
+      .attr('stroke-width', 1)
+      .attr('stroke', 'black');
+  }
+      
+  if(rSeal){
+  d3.select('svg')
+    .append('g')
+    .selectAll('path2')
+      .data(links5)
+    .enter()
+    .append('path')
+      .attr('d', function(d) { return gpath(d); })
+      .attr('stroke-width', 1)
+      .attr('stroke', 'black');
+  }
+      
+  if(roeDeer){
+  d3.select('svg')
+    .append('g')
+    .selectAll('path2')
+      .data(links6)
+    .enter()
+    .append('path')
+      .attr('d', function(d) { return gpath(d); })
+      .attr('stroke-width', 1)
+      .attr('stroke', 'black');
+  }
+      
+  if(turtleDoves){
+  d3.select('svg')
+    .append('g')
+    .selectAll('path2')
+      .data(links7)
+    .enter()
+    .append('path')
+      .attr('d', function(d) { return gpath(d); })
+      .attr('stroke-width', 1)
+      .attr('stroke', 'black');
+  }
+      
+  if(whaleShark){
+  d3.select('svg')
+    .append('g')
+    .selectAll('path2')
+      .data(links8)
+    .enter()
+    .append('path')
+      .attr('d', function(d) { return gpath(d); })
+      .attr('stroke-width', 1)
+      .attr('stroke', 'black');
+  }
+       
+  if(whiteEagle){
+  d3.select('svg')
+    .append('g')
+    .selectAll('path2')
+      .data(links9)
+    .enter()
+    .append('path')
+      .attr('d', function(d) { return gpath(d); })
+      .attr('stroke-width', 1)
+      .attr('stroke', 'black');
+  }
+
+  
+   var mapZoom = d3.zoom()
+    .on('zoom', zoomed);
+
+  var zoomSettings = d3.zoomIdentity
+    .translate(250, 250)
+    .scale(120);
+
+  d3.select('svg')
+    .call(mapZoom)
+    .call(mapZoom.transform, zoomSettings);
+
+  function zoomed(e) {
+    proj
+      .translate([e.transform.x, e.transform.y])
+      .scale(e.transform.k);
+
+    console.log(e.transform.k);
+
+    if( e.transform.k > 400 ) 
+      console.log('toggle adaptive map feature');
+
+    // redraw map with new projection settings
+    d3.selectAll('path')
+      .attr('d', gpath);
+
+    d3.selectAll('circle')
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+  }
+  
+     geese_data = geese;
+    if(cGeese){
+      circle1.data(geese.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#645452')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+       }
+ 
+    cities_data = cities
+    if(greyWolf){
+    circle2
+      .data(cities.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#b2beb5')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+    }
+
+   tort_data = tort;
+   if(gtort){
+   circle3
+      .data(tort.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#8db600')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+   }
+
+      whales_data = whales
+      if(greatWhale){
+      circle4
+      .data(whales.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#007fff')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+      }
+     
+     heron_data = heron;
+     if(heronAndE){
+     circle5
+      .data(heron.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#ff9966')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+     }
+     
+     seals_data = seals;
+     if(rSeal){
+     circle6
+      .data(seals.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#321414')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+     }
+      
+      deer_data = deer;
+      if(roeDeer){
+      circle7
+      .data(deer.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#cd7f32')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+      }
+         
+    doves_data = doves
+    if(turtleDoves){
+    circle8
+      .data(doves.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '	#ffffff')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+    }
+            
+     shark_data = shark
+     if(whaleShark){
+     circle9
+      .data(shark.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#0000ff')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+     }
+            
+    eagle_data = eagle
+    if(whiteEagle){
+    circle10
+      .data(eagle.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy',  d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#ffef00')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+    }
+    count++;
+}
+}
+function update(countries_data,cities_data,geese_data,tort_data,whales_data,heron_data,seals_data,deer_data,doves_data,shark_data,eagle_data){
+    console.log("here");
+    d3.selectAll('circle').remove(); 
+  
+  
+  console.log("count: "+count);
+      var proj = d3.geoEquirectangular()
+      .translate([250, 250])
+      .scale(120);
+      
+  var gpath = d3.geoPath()
+    .projection(proj);
+
+  var ccolor = 
+    d3.scaleSequential( d3.interpolateBlues )
+    .domain( 
+      d3.extent( countries_data.features, d => gpath.area(d))
+      );
+  
+   var mapZoom = d3.zoom()
+    .on('zoom', zoomed);
+
+  var zoomSettings = d3.zoomIdentity
+    .translate(250, 250)
+    .scale(120);
+
+  d3.select('svg')
+    .call(mapZoom)
+    .call(mapZoom.transform, zoomSettings);
+
+  function zoomed(e) {
+    proj
+      .translate([e.transform.x, e.transform.y])
+      .scale(e.transform.k);
+
+    console.log(e.transform.k);
+
+    if( e.transform.k > 400 ) 
+      console.log('toggle adaptive map feature');
+
+    // redraw map with new projection settings
+    d3.selectAll('path')
+      .attr('d', gpath);
+
+    d3.selectAll('circle')
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+  }
+     
+      if(cGeese){
+      circle1.data(geese_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#645452')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+      }
+
+    if(greyWolf){
+    circle2
+      .data(cities_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#b2beb5')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+    }
+
+   if(gtort){
+   circle3
+      .data(tort_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#8db600')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+   }
+
+      if(greatWhale){
+      circle4
+      .data(whales_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#007fff')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+      }
+     
+     if(heronAndE){
+     circle5
+      .data(heron_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#ff9966')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+     }
+     
+     if(rSeal){
+     circle6
+      .data(seals_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#321414')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+     }
+
+      if(roeDeer){
+      circle7
+      .data(deer_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#cd7f32')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+      }
+         
+    if(turtleDoves){
+    circle8
+      .data(doves_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '	#ffffff')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+    }
+            
+     if(whaleShark){
+     circle9
+      .data(shark_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#0000ff')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+     }
+            
+    if(whiteEagle){
+    circle10
+      .data(eagle_data.filter(function(d){ return d.rank == count }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy',  d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#ffef00')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+    }
+    count++;
+}
+
+//also here setInterval is not working
+function start(){
+  interval_id = setInterval(
+    function(){
+      update(countries_data,cities_data,geese_data,tort_data,whales_data,heron_data,seals_data,deer_data,doves_data,shark_data,eagle_data)
+    }
+  ,1);
+}
+
+function end(){
+  clearInterval(interval_id);
+  var proj = d3.geoEquirectangular()
+      .translate([250, 250])
+      .scale(120);
+
+  var gpath = d3.geoPath()
+    .projection(proj);
+  
+  if(cGeese){
+  circle1.data(geese_data.filter(function(d){ return d.rank == 0 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#645452')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+  }
+
+    if(greyWolf){
+    circle2
+      .data(cities_data.filter(function(d){ return d.rank == 0 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#b2beb5')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+    }
+
+   if(gtort){
+   circle3
+      .data(tort_data.filter(function(d){ return d.rank == 0 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#8db600')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+   }
+
+      if(greatWhale){
+      circle4
+      .data(whales_data.filter(function(d){ return d.rank == 0 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#007fff')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+      }
+     
+     if(heronAndE){
+     circle5
+      .data(heron_data.filter(function(d){ return d.rank == 0 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#ff9966')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+     }
+     
+     if(rSeal){
+     circle6
+      .data(seals_data.filter(function(d){ return d.rank == 0 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#321414')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+     }
+
+      if(roeDeer){
+      circle7
+      .data(deer_data.filter(function(d){ return d.rank == 0 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#cd7f32')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+      }
+         
+    if(turtleDoves){
+    circle8
+      .data(doves_data.filter(function(d){ return d.rank == 0 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '	#ffffff')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+    }
+            
+     if(whaleShark){
+     circle9
+      .data(shark_data.filter(function(d){ return d.rank == 0 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#0000ff')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+     }
+            
+    if(whiteEagle){
+    circle10
+      .data(eagle_data.filter(function(d){ return d.rank == 0 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy',  d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#ffef00')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+    }
+            
+    //last elements
+    if(cGeese){
+    circle1.data(geese_data.filter(function(d){ return d.rank == 8703 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#645452')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+    }
+
+    if(greyWolf){
+    circle2
+      .data(cities_data.filter(function(d){ return d.rank == 4912 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#b2beb5')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+    }
+
+   if(gtort){
+   circle3
+      .data(tort_data.filter(function(d){ return d.rank == 96 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#8db600')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+   }
+
+      if(greatWhale){
+      circle4
+      .data(whales_data.filter(function(d){ return d.rank == 642 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#007fff')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+      }
+     
+     if(heronAndE){
+     circle5
+      .data(heron_data.filter(function(d){ return d.rank == 29764 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#ff9966')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+     }
+     if(rSeal){
+     circle6
+      .data(seals_data.filter(function(d){ return d.rank == 4222 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#321414')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+     }
+
+      if(roeDeer){
+      circle7
+      .data(deer_data.filter(function(d){ return d.rank == 2695 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#cd7f32')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+      }
+         
+    if(turtleDoves){
+    circle8
+      .data(doves_data.filter(function(d){ return d.rank == 244 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '	#ffffff')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+    }
+            
+     if(whaleShark){
+     circle9
+      .data(shark_data.filter(function(d){ return d.rank == 367 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy', d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#0000ff')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+     }
+            
+    if(whiteEagle){
+    circle10
+      .data(eagle_data.filter(function(d){ return d.rank == 5545 }))
+      .enter()
+      .append('circle')
+      .attr('r', 5)
+      .attr('cx', d => proj([d.x, d.y])[0])
+      .attr('cy',  d => proj([d.x, d.y])[1])
+      .attr('stroke-width', 1)
+      .attr('stroke', '#4F442B')
+      .attr('fill', '#ffef00')
+      .on('mouseover', function(e, d) {
+        console.log("mouseover: "+d);
+              d3.select('#info').text(d.name);
+            });
+    }
+}
+
+</script>
