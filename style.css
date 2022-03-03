@@ -76,7 +76,7 @@ nav {
 .scroll-container {
   display: block;
   width: 1000px;
-  height: 800px;
+  height: 700px;
   align-items: center;
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -108,6 +108,15 @@ nav {
   align-items: top-center;
   justify-content: center;
   height: 100%;
+  font-size: 5em;
+  color: white;
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: transparent white;
+}
+
+.scroll-page2 {
+  display: block;
+  align-items: top-center;
   font-size: 5em;
   color: white;
   scrollbar-width: thin; /* "auto" or "thin" */
