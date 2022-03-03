@@ -138,7 +138,7 @@ function makeNodeLinkGraph() {
 		
 	const legend = svg.append("g")
           .attr("stroke", "#fff")
-          .attr("stroke-width", 1.5);
+          .attr("stroke-width", 1);
 	
 	legend.append("rect")
 		.attr("stroke","black")
@@ -190,17 +190,42 @@ function makeNodeLinkGraph() {
           .attr("fill", d => color(d.typeA))
       	  .attr("stroke", function(d){if(d.typeB){return color(d.typeB);} else{return color(d.typeA);}})
           .attr("stroke-width", 2.5)
+		.on("mouseover", mouseover)
+		.on("mousemove", mousemove)
+		.on("mouseleave", mouseleave)
           .call(layout.drag);
 
-      node.append("title")
-		  .html(d => ("<img src=" + d.sprite + " />\n" + d.species + "\n"
-		  + d.typeA + "/" + d.typeB + "\nStats:\n  HP: " + d.baseHP + "\n  Attack: " + d.baseAttack
-		  + "\n  Defense: " + d.baseDefense + "\n  Speed: " + d.baseSpeed
-		  + "\n  Special: " + d.baseSpecial + "\n  Total: " + d.total));
+	  var tooltip = d3.select("#graph").append("div")
+		.attr("class", "tooltip")
+		.style("background-color", "white")
+		.style("border-width", 1)
+		.style("border-radius", 10)
+		.style("padding", 5)
+		.style("opacity", 0)
+		.html("hi UwU");
+	
+	  // Credit: https://www.d3-graph-gallery.com/graph/interactivity_tooltip.html#template
+	  function mouseover() {
+		tooltip.style("opacity", 1);
+		d3.select(this).style("opacity", 0.75);
+	  }
 	  
+	  function mouseleave() {
+		tooltip.style("opacity", 0);
+		d3.select(this).style("opacity", 1);
+	  }
 	  
-          //.text(d => (d.species + ", " + d.typeA + ", " + d.typeB));
-
+	  function mousemove(d) {
+		  console.log(d);
+		tooltip
+        .style("left", (event.pageX) + "px")
+        .style("top", (event.pageY) + "px")
+		.html(d => ("<img src=" + Object.getPrototypeOf(d).sprite + " /><br>" /*+ d.species + "<br>"
+		  + d.typeA + "/" + d.typeB + "<br>Stats:<br>  HP: " + d.baseHP + "<br>  Attack: " + d.baseAttack
+		  + "<br>  Defense: " + d.baseDefense + "<br>  Speed: " + d.baseSpeed
+		  + "<br>  Special: " + d.baseSpecial + "<br>  Total: " + *//*d.total*/));
+      }		
+		
       layout.on("tick", () => {
         link
             .attr("x1", d => d.source.x)
