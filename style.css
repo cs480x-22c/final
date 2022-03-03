@@ -113,3 +113,14 @@ nav {
   scrollbar-width: thin; /* "auto" or "thin" */
   scrollbar-color: transparent white;
 }
+.bar {
+  fill: steelblue;
+}
+
+.highlight {
+  fill: orange;
+}
+* {
+  cursor: url("https://github.com/alexiscaira/final/blob/main/custom%20alien%20cursor%20(50%20%C3%97%2050%20px).png?raw=true"),
+    auto;
+}
