@@ -18,7 +18,7 @@ function drawCalendar(myData, time, location) {
 
 
       if (myData[j].Day == unique[i]) {
-        tempArr1.push(myData[j].Event_Name)
+        tempArr1.push([myData[j].Event_Name, myData[j].Location])
         dict[new Date(myData[j].Day)] = tempArr1
       }
     }
@@ -118,7 +118,7 @@ function drawCalendar(myData, time, location) {
       console.log(d)
       d3.select("#events").html("")
       dict[d].forEach(function(element) {
-        d3.select("#events").append("p").text(element)
+        d3.select("#events").append("p").text(`${element[1]} : ${element[0]}`)
       })
       selectedDate = new Date(d).toLocaleDateString('en-US')
       d3.select("#time").text(`Showing events on ${selectedDate} in ${location} starting at ${time}`)
@@ -138,7 +138,7 @@ function getInputValue(location = document.getElementById('building').options[do
       console.log(moment(row['Event_Start'], 'h:mm A').startOf('hour').format('h:mm A'))
       return (row['Event_Start'] == time) && (row['Location1'] == location);
     })
-    d3.select("#info").text(`Calendar of events starting at ${time} in ${location}. Click a date to see details`)
+    d3.select("#info").text(`Calendar of events starting at ${time} in ${location}. Click a date to see details and update map`)
     drawCalendar(data, time, location)
   })
 }
