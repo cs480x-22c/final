@@ -19,7 +19,7 @@ Samantha Mora
 
 [Process Book](https://docs.google.com/document/d/1_JWxuHCLJCEP-DQQ2yrrMmI9l7LnQM0E0gDquMhUY84/edit?usp=sharing)
 
-[Screencast Video](tbd)
+[Screencast Video](https://youtu.be/HtEIMjK11oI)
 
 # Features
  - Pressing the "Update data" button will cause the dots to start moving on their paths.
