@@ -1,0 +1,167 @@
+body {
+  background-color: #0e1e34;
+  background-image: url("https://github.com/alexiscaira/final/blob/main/starsDark.jpg?raw=true");
+  background-position: bottom-center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+}
+@font-face {
+  font-family: AlphacodeBeyondRegular;
+  src: url("AlphacodeBeyondRegular.ttf") format("truetype");
+}
+@font-face {
+  font-family: AlienLeagueIiRegular;
+  src: url("AlienLeagueIiRegular.otf") format("opentype");
+}
+@font-face {
+  font-family: Raleway-ExtraLight;
+  src: url("Raleway-ExtraLight.ttf") format("truetype");
+}
+
+h1 {
+  vertical-align: top;
+  display: inline-block;
+  font-size: 64px;
+  font-family: "AlienLeagueIiRegular";
+  text-decoration: none;
+  color: white;
+}
+p {
+  display: block;
+  font-size: 40px;
+  font-family: "AlienLeagueIiRegular";
+  text-decoration: none;
+  color: white;
+}
+text {
+  display: block;
+  font-size: 25px;
+  font-family: "Raleway-ExtraLight";
+  text-decoration: none;
+  color: white;
+}
+h1:hover {
+  vertical-align: top;
+  display: inline-block;
+  font-size: 40px;
+  font-family: "AlphacodeBeyondRegular";
+  text-decoration: none;
+  color: white;
+}
+a {
+  display: inline-block;
+  width: 32px;
+  text-decoration: none;
+  color: white;
+  font-family: "AlienLeagueIiRegular";
+}
+nav,
+.scroll-container {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: white white;
+}
+nav {
+  display: block;
+  width: 339px;
+  padding: 5px;
+  border: 0px;
+  color: white;
+}
+.scroll-container {
+  display: block;
+  width: 1000px;
+  height: 700px;
+  align-items: center;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  color: white;
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: white white;
+  font-family: "AlienLeagueIiRegular";
+  font-size: medium;
+}
+.flex-container {
+  margin: 40px auto 0 auto;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  display: block;
+}
+
+div.maptooltip {
+  position: absolute;
+  text-align: center;
+  padding: .3rem;
+  background: #FFFFFF;
+  color: #313639;
+  border: 1px solid #313639;
+  border-radius: 2px;
+  pointer-events: none;
+  font-size: 0.7rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.box {
+  margin: 40px auto 0 auto;
+  background-color: lightgray;
+  width: 140px;
+  margin: 20px;
+  text-align: center;
+  line-height: 140px;
+  font-size: 20px;
+}
+.scroll-page {
+  display: block;
+  align-items: top-center;
+  justify-content: center;
+  font-size: 5em;
+  color: white;
+  height: 100%;
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: transparent white;
+}
+
+.scroll-page2 {
+  display: block;
+  align-items: top-center;
+  font-size: 5em;
+  height: 220%;
+  color: white;
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: transparent white;
+}
+
+/* fix height */
+.scroll-page3 {
+  display: block;
+  align-items: top-center;
+  font-size: 40px;
+  height: 10%;
+  color: white;
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: transparent white;
+}
+
+.bar {
+  fill: whitesmoke;
+}
+
+.highlight {
+  fill: orange;
+}
+* {
+  cursor: url("https://github.com/alexiscaira/final/blob/main/custom%20alien%20cursor%20(50%20%C3%97%2050%20px).png?raw=true"),
+    auto;
+}
+
+.tableauPlaceholder {
+  margin: 80px auto 0 auto;
+  justify-content: center;
+  align-items: top-center;
+}
