@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <title>CS480x - Arctic Circle Analysis</title>
+    <h1 style="font-family:verdana;color:white;padding-left: 50px">Arctic Sea-Ice Leads Data Visulization</h1>
+    <a style="font-family:verdana;color:white;padding-left: 50px" href="#areaPlot">Time Series Plot</a>
+    <div id = "svgmain"></div>
+    <div id = "gvs"></div>
+    <div id = "areaPlot"></div>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script>
+
+    window.onload = function() {
+        d3.json("https://dataviz-wpi.herokuapp.com/data.json", function(d) {
+            d.forEach(name => {
+                var img = new Image();
+                img.src = 'https://dataviz-wpi.herokuapp.com/' + name
+            })
+        })
+    }
+
+    //Made with assistance from: https://bl.ocks.org/HarryStevens/90ce46b5e3af730d84a368a9ecfa3780, https://www.geeksforgeeks.org/d3-js-geoorthographic-function/
+
+    //--------------------------------------------------------- Make Globe: 
+
+    document.getElementsByTagName("body")[0].style.backgroundColor = "rgb(37, 37, 40)"
+
+    var width = window.innerWidth, height = window.innerHeight;
+
+    var svg = d3.select("#svgmain").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+    
+    var graticule = d3.geoGraticule()
+        .step([10, 10]);
+
+    var projection = d3.geoOrthographic()
+        .scale(width / 7.9)
+        .translate([width / 2, height / 2])
+        .clipAngle(90)
+        .precision(1);
+
+    var path = d3.geoPath()
+        .projection(projection);
+
+    d3.json("https://raw.githubusercontent.com/"
+            +"epistler999/GeoLocation/master/world.json", 
+            function (data) { 
+              // Draw the ocean
+              svg.append('circle')
+                .attr("id", "cir")
+                .attr('cx', width/2)
+                .attr('cy', height/2)
+                .attr('r', height/4)
+                .attr('fill', 'lightBlue')
+  
+              // Draw the map 
+              svg.append("g") 
+                  .attr("id", "map")
+                  .selectAll("path") 
+                  .data(data.features) 
+                  .enter().append("path") 
+                  .attr("fill", function(d) {
+                    return d3.rgb(Math.random()*128, 128, 0)
+                  }) 
+                  .attr("d", d3.geoPath() 
+                      .projection(projection) 
+                  ) 
+
+            var image = svg.append("image")
+              .attr("id", "img")
+              .attr("xlink:href",
+                  function(d) { return "https://dataviz-wpi.herokuapp.com/2018345.leads.png"; })
+              .attr("width", width/3.7)
+              .attr("height", height/3.7)
+              .attr("x", width/2.74)//width/2.74
+              .attr("y", height/2.74);//height/2.74
+                  
+            prep(10);
+        }) 
+
+    var c = d3.scaleOrdinal(d3.schemeCategory20);
+
+    //--------------------------------------------------------- Globe Interactivity:
+    
+    var rot_speed = 0, rotx = -90, roty = 0;
+
+    function enableRotation() {
+        d3.timer(function (elapsed) {
+            projection.rotate([180, rotx, roty]); //rot_speed * elapsed - 120
+            svg.selectAll("path").attr("d", path);
+        });
+    }        
+
+    enableRotation(); //STOP, BEFORE YOU REMOVE THE ROTATION, CONSIDER ADDING A PAUSE BUTTON WHERE YOU SET ROT_SPEED TO 0 (pause) OR .005 (unpause)
+
+    var scl = Math.min(width, height)/3;
+    var zoom = d3.zoom()
+      .scaleExtent([0.75, 50]) //bound zoom
+      .on("zoom", zoomed);
+
+    svg.call(zoom);
+
+    function zoomed() {
+      projection.scale(d3.event.transform.translate(projection).k * scl)
+      prep(10)
+    }
+
+    function prep(x) {
+      setTimeout(() => {
+          var newRad = svg.select("#map").node().getBBox().height
+          svg.select("#cir").attr("r", newRad/1.86)
+          var cx = document.getElementById("cir").cx.animVal.value
+          var cy = document.getElementById("cir").cy.animVal.value
+          var img = document.getElementById("#img")
+          svg.select("#img")
+          .attr("width", newRad * 0.58)
+          .attr("height", newRad * 0.58)
+          .attr("x", (cx - ((newRad-(newRad * 0.58))/2)) - (newRad * .08)) //cx - ((newRad-(newRad * 0.58))/2) - 141
+          .attr("y", (cy - ((newRad-(newRad * 0.58))/2)) - (newRad * .08)) //cy - ((newRad-(newRad * 0.58))/2) - 141
+    }, x)}
+
+    //--------------------------------------------------------- Date Interactivity
+
+    var gvs = d3.select("#gvs").append("svg")
+        .attr("width", width)
+        .attr("height", height / 4);
+
+    var keys = []
+    d3.json("https://dataviz-wpi.herokuapp.com/data.json", function(d) {
+      keys = d.sort()
+    })
+
+    function dateFromDay(year, day){
+        var date = new Date(year, 0);
+        return new Date(date.setDate(day));
+    }
+
+    var date = ""
+
+    gvs.append("line")
+      .style("stroke", "lightgreen")
+      .style("stroke-width",50)
+      .attr("x1", width/4)
+      .attr("y1", 100)
+      .attr("x2", width*3/4)
+      .attr("y2", 100)
+      .on("click", function(d) {
+
+        // line = gvs.append("line") MAKE LINE THAT UPDATES EVERY CLICK
+        //   .attr("x1", d3)
+        var mousex = d3.event.x - width/4
+        var rectWidth = width*3/4-width/4
+        var index = rectWidth/105 //106 data points
+        var realIndex = Math.round(mousex/index)-1
+        //console.log(realIndex)
+        
+        var url = keys[realIndex]
+        var imgurl = "https://dataviz-wpi.herokuapp.com/" + url
+        svg.select("#img").attr("xlink:href",
+                  function(d) { return imgurl; })
+        
+        var year = url.substring(0, 4)
+        var day = url.substring(4, 7)
+        var month = Math.round(1+(parseInt(day)-15)/30)
+
+        date = month + "-" + dateFromDay(year, day).getDate() + "-" + year
+        gvs.select("text").text(date)
+
+        gvs.select("#whiteline")
+            .attr("x1", width/3.9+mousex-10)
+            .attr("x2", width/4+mousex-10)
+    });
+
+    gvs.append("line")
+      .attr("id", "whiteline")
+      .style("stroke", "white")
+      .style("stroke-width",50)
+      .attr("x1", width/3.9)
+      .attr("y1", 100)
+      .attr("x2", width/4)
+      .attr("y2", 100);
+
+    gvs.append("text")
+        .attr("x", width/2-70)
+        .attr("y", 50)
+        .style("fill", "white")
+        .style("font-size", "34px")
+        .text("");
+
+    //-----------------------------------------Area Plot
+      // https://www.d3-graph-gallery.com/graph/area_lineDot.html
+      // https://www.d3-graph-gallery.com/graph/area_basic.html
+      var margin = {top: 80, right: 3 * width / 4, bottom: 80, left: width / 4};
+
+      var plotWidth = width / 2;
+      var plotHeight = height / 2;
+      var pvg = d3.select("#areaPlot")
+      .append("svg")
+          .attr("width", plotWidth * 2)
+          .attr("height", plotHeight * 2)
+          .append("g")
+          .attr("transform",
+              "translate(" + margin.left + "," + margin.top + ")");
+
+      // https://stackoverflow.com/questions/26067081/date-sorting-with-d3-js
+      function sortDateAscending(dateOne, dateTwo) {
+          return dateOne.date - dateTwo.date;
+      }
+
+      d3.json("https://dataviz-wpi.herokuapp.com/stats.json",
+
+      function(d){
+          d = Object.entries(d).map ((e)=>{
+              e[0] = e[0].replace(".leads.png", "");
+              var year = e[0].substr(0, 4);
+              var day = e[0].substr(4, 5);
+              e[0] = new Date(year, 0, day);
+              return {
+                  date : e[0], 
+                  value : e[1]
+              };
+          })
+          d = d.sort(sortDateAscending);
+          var x = d3.scaleTime()
+          .domain(d3.extent(d, function(d) {return d.date;}))
+          .range([0, plotWidth]);
+
+          pvg.append("g")
+          .attr("transform", "translate(0," + plotHeight + ")")
+          .call(d3.axisBottom(x))
+          .style("fill", "white")
+          .attr("y", plotHeight / 2);
+
+          var y = d3.scaleLinear()
+          .domain([0, d3.max(d, function(d) {return +d.value})])
+          .range([plotHeight, 0]);
+          pvg.append("g")
+          .call(d3.axisLeft(y))
+          .style("fill", "white");
+          
+          pvg.append("path")
+          .datum(d)
+          .attr("fill", "gray")
+          .attr("stroke", "green")
+          .attr("stroke-width", 2)
+          .attr("d", d3.area()
+              .x(function(d) { return x(d.date) })
+              .y0(y(0))
+              .y1(function(d) { return y(d.value) })
+              );
+          
+          
+              pvg.append('g')
+          .selectAll("dot")
+          .data(d)
+          .enter()
+          .append("circle")
+              .attr("fill", "green")
+              .attr("stroke", "none")
+              .attr("cx", function(d) { return x(d.date) })
+              .attr("cy", function(d) { return y(d.value) })
+              .attr("r", 5);
+
+
+          // https://stackoverflow.com/questions/11189284/d3-axis-labeling
+          pvg.append("text")
+              .attr("class", "x label")
+              .attr("text-anchor", "end")
+              .attr("x", plotWidth / 2 + 5)
+              .attr("y", plotHeight + 35)
+              .text("Year")
+              .style("fill", "green")
+              .style("stroke", "green")
+              .style("font", "20px times");
+
+          pvg.append("text")
+              .attr("class", "y label")
+              .attr("text-anchor", "end")
+              .attr("y", -plotHeight / 5)
+              .attr("dy", ".75em")
+              .attr("x", -plotHeight / 3)
+              .attr("transform", "rotate(-90)")
+              .text("Pixels of Ice Cracking")
+              .style("fill", "green")
+              .style("stroke", "green")
+              .style("font", "20px times");
+
+         pvg.selectAll("text")
+            .style("fill", "green")
+            .style("stroke", "green");
+      });
+      
+      var obj = {"video": {
+        "value": "<iframe title='YouTube video player' type=\"text/html\" width=" + width + " height=" + height + " src='https://www.youtube.com/embed/42jXF928klU' frameborder='0' allowFullScreen></iframe>"
+      }}
+      document.write(obj.video.value);
+    </script>
+  </body>
+</html>
