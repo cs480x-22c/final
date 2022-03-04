@@ -11,11 +11,11 @@
 	const padding = { top: 20, right: 40, bottom: 40, left: 100 };
 
 	$: xScale = scaleLinear()
-		.domain([0, 1250])
+		.domain([0, 1100])
 		.range([padding.left, width - padding.right]);
 
 	$: yScale = scaleLinear()
-		.domain([0, 1250])
+		.domain([0, 1100])
 		.range([height - padding.bottom, padding.top]);
 
 
@@ -112,7 +112,7 @@
 				<line x1='{padding.left}' x2='{xScale(1200)}'/>
 				<text x='{padding.left - 8}' y='+4'>{tick}</text>
 			</g>
-			<text y='{height/2}' x='{padding.left-12}'  transform='rotate(40deg)' > yAxis </text>
+			<text y='{height/2}' x='{padding.left-40}'  transform='rotate(40deg)' > Tip2 </text>
 		{/each}
 	</g>
 
@@ -124,7 +124,8 @@
 				<text y='{height - padding.bottom + 16}'>{tick}</text>
 			</g>
 		{/each}
-		<text y='{height - padding.bottom + 25}' x='{width/2}'> xAxis </text>
+		<text y='{height - padding.bottom + 35}' x='{width/2}'> Tip1 </text>
+		<text y="{10}" x ='{width/2}'>Tip1 v Tip2 Pressure Values</text>
 	</g>
 
 	<!-- data -->
