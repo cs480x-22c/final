@@ -8,7 +8,7 @@ import footerBackground from '../milky-way.jpg';
 function MainFooter() {
 
     const mystyle = {
-        fontSize:48,
+        fontSize:58,
         borderRadius: 15
       };
       function handleGit(e) {
