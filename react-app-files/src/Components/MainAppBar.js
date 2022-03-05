@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import logo from '../logo.png';
+import logo from '../me123-modified.png';
 import { Button, IconButton } from '@mui/material';
 
 const darkTheme = createTheme({

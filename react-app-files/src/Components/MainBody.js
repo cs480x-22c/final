@@ -75,7 +75,6 @@ function MainBody() {
 
                         </Grid>
                         <li>Similar to Wireshark the program parses tcpdump data into different headers, protocols, senders, and recipients.</li>
-                        <li>Fully tested using JUnit5 test cases.</li>
                         <li>A group project for my networks class that quickly turned into an individual project when my partner stopped doing work.</li>
                         <li>Works on Ubuntu 20.04 Linux virtual machine and is written in C and C++ using the pcap library.</li>
                     </Grid>
