@@ -11,7 +11,7 @@ function IntroductionsBlock() {
           Orest Ropi
         </Typography>
         <Typography variant="h4" style={{ color: 'white', marginTop: 'auto' }}>
-          (Below are some project I made)
+          (Below are some projects I made)
         </Typography>
       </div>
       <div className='introduction-block'>
