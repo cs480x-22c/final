@@ -7,6 +7,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import logo from '../me123-modified.png';
+import logo2 from '../hmpg.png';
 import { Button, IconButton } from '@mui/material';
 
 const darkTheme = createTheme({
@@ -59,10 +60,20 @@ export default function ElevateAppBar(props) {
                                 color="inherit"
                                 aria-label="menu"
                             >
-                                <img width={'60vw'} src={logo} alt="logo" />
+                                  <div class="avatar" data-tooltip="Home"></div>
+
+                                
+                            </IconButton>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <IconButton
+                                edge="start"
+                                color="inherit"
+                                aria-label="menu"
+                            >
+
+                            <div class="avatar2" data-tooltip="About Me"></div>
                             </IconButton>
                         </div>
-
                         <Button target={'_blank'} color="inherit" href="https://github.com/orestropi">GitHub</Button>
                     </Toolbar>
                 </AppBar>
