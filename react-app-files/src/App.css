@@ -237,6 +237,20 @@ a:visited {
   transform-origin: bottom center;
 }
 
+.button1 {
+  text-decoration: none;
+  transition-duration: 0.4s;
+  display: inline-block;
+  cursor: pointer;
+  background-color: cyan;
+  color: grey;
+}
+
+.button1:hover {
+  background-color: grey;
+  color: cyan;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

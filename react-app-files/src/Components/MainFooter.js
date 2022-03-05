@@ -9,8 +9,6 @@ function MainFooter() {
 
     const mystyle = {
         fontSize:48,
-        color: "grey",
-        backgroundColor: "cyan",
         borderRadius: 15
       };
       function handleGit(e) {
@@ -33,9 +31,9 @@ function MainFooter() {
                     <Container maxWidth="lg">
                         <Grid container textAlign={'center'} direction="row" spacing={2}>
                         <Grid style={{paddingTop: '50px'}}item xs={2} sm={6} md={6}>
-                            <button onClick={handleGit} style={mystyle}> <i class="fa fa-github"></i></button></Grid>
+                            <button class = "button1" onClick={handleGit} style={mystyle}> <i class="fa fa-github"></i></button></Grid>
                             <Grid onclick="window.open('https://github.com/orestropi','_blank');" style={{paddingTop: '50px'}} item xs={12} sm={6} md={6}>
-                            <button onClick={handleLinked} style={mystyle}> <i class="fa fa-linkedin-square"></i></button></Grid>
+                            <button class = "button1" onClick={handleLinked} style={mystyle}> <i class="fa fa-linkedin-square"></i></button></Grid>
                             <Grid item xs={12} sm={6} md={6}>
                                 <Typography variant="h6" color="white" >
                                     Projects
