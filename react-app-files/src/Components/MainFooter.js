@@ -41,16 +41,22 @@ function MainFooter() {
                                     Projects
                                 </Typography>
                                 <Typography variant="subtitle1" color="white" >
-                                    <a target={'_blank'} href="https://github.com/dacs30">Danilo Correia </a>
+                                    <a target={'_blank'} href="https://github.com/dacs30">P1: R&M Treemaps</a>
                                 </Typography>
                                 <Typography variant="subtitle1" color="white" >
-                                    <a target={'_blank'} href="https://github.com/cjdunn2">Craig James Dunn </a>
+                                    <a target={'_blank'} href="https://github.com/orestropi/GridGame">P2: GridGame</a>
                                 </Typography>
                                 <Typography variant="subtitle1" color="white" >
-                                    <a target={'_blank'} href="https://github.com/orestropi">Orest Ropi</a>
+                                    <a target={'_blank'} href="https://github.com/orestropi/a3-orestropi">P3: ContactTracker</a>
                                 </Typography>
                                 <Typography variant="subtitle1" color="white" >
-                                    <a target={'_blank'} href="https://github.com/mcaten">Maddison Caten</a>
+                                    <a target={'_blank'} href="https://github.com/BlueOcean090/final_project">P4: TaskManager </a>
+                                </Typography>
+                                <Typography variant="subtitle1" color="white" >
+                                    <a target={'_blank'} href="https://github.com/orestropi/P2-OthelloAI/blob/main/agony.py">P5: OthelloAI</a>
+                                </Typography>
+                                <Typography variant="subtitle1" color="white" >
+                                    <a target={'_blank'} href="https://github.com/orestropi/P2-Networking/blob/main/wireview.cpp">P6: WireView</a>
                                 </Typography>
                             </Grid>
                             <Grid item xs={12} sm={6} md={6}>
