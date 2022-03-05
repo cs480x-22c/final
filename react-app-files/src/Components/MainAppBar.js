@@ -73,6 +73,15 @@ export default function ElevateAppBar(props) {
 
                             <div class="avatar2" data-tooltip="About Me"></div>
                             </IconButton>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <IconButton
+                                edge="start"
+                                color="inherit"
+                                aria-label="menu"
+                            >
+
+                            <div class="avatar3" data-tooltip="Contact Me"></div>
+                            </IconButton>
                         </div>
                         <Button target={'_blank'} color="inherit" href="https://github.com/orestropi">GitHub</Button>
                     </Toolbar>

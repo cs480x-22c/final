@@ -152,8 +152,20 @@ a:visited {
   position: relative;
   font-size: small;
 }
+
+.avatar3 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-image: url('cntc.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  font-size: small;
+}
 .avatar2::before,
-.avatar2::after {
+.avatar2::after, .avatar3::before,
+.avatar3::after {
   --scale: 0;
   --arrow-size: 30px;
   --tooltip-color: grey;
@@ -166,7 +178,7 @@ a:visited {
   transform-origin: bottom center;
 }
 
-.avatar2::before {
+.avatar2::before, .avatar3::before {
   --translate-y: calc(289% - var(--arrow-size));
 
   content: attr(data-tooltip);
@@ -181,11 +193,12 @@ a:visited {
 }
 
 .avatar2:hover::before,
-.avatar2:hover::after {
+.avatar2:hover::after, .avatar3:hover::before,
+.avatar3:hover::after {
   --scale: 1;
 }
 
-.avatar2::after {
+.avatar2::after, .avatar3::after {
   --translate-y: calc(.89 * var(--arrow-size));
 
   content: '';
