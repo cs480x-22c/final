@@ -41,7 +41,7 @@ function MainFooter() {
                                     Projects
                                 </Typography>
                                 <Typography variant="subtitle1" color="white" >
-                                    <a target={'_blank'} href="https://github.com/dacs30">P1: R&M Treemaps</a>
+                                    <a target={'_blank'} href="https://rickandmortyfp.glitch.me/">P1: R&M Treemaps</a>
                                 </Typography>
                                 <Typography variant="subtitle1" color="white" >
                                     <a target={'_blank'} href="https://github.com/orestropi/GridGame">P2: GridGame</a>
