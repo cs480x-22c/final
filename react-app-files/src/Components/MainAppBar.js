@@ -63,7 +63,7 @@ export default function ElevateAppBar(props) {
                             </IconButton>
                         </div>
 
-                        <Button target={'_blank'} color="inherit" href="https://github.com/orestropi/final">GitHub</Button>
+                        <Button target={'_blank'} color="inherit" href="https://github.com/orestropi">GitHub</Button>
                     </Toolbar>
                 </AppBar>
             </ElevationScroll>
