@@ -1,5 +1,5 @@
 # Welcome! <br/>
-My name is Maxine and this is my final project for Data Vis made with Javascrip, HTML, and D3.js. The goal of this visualization is to provide insights on health, education, and employment with respect to countries which have the highest percent increase of GDP per capita from 2000 to 2019. <br/>
+My name is Maxine and this is my final project for Data Vis made with Javascrip, HTML, World Atlas TopoJSON, and D3.js. The goal of this visualization is to provide insights on health, education, and employment with respect to countries which have the highest percent increase of GDP per capita from 2000 to 2019. <br/>
 <br/>
 
 ![image](https://user-images.githubusercontent.com/15680552/156994412-3e1415f1-2dca-47e6-a6e5-baa6a8ba111d.png)
