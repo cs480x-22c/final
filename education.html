@@ -11,11 +11,13 @@
   .axistxt{font-family: Georgia, 'Times New Roman', Times, serif; font-size: 15}
   .titletxt{font-family: Georgia, 'Times New Roman', Times, serif; font-weight:bold; font-size: 20}
   .boxed { font-weight:bold; font-size:18}
-  .chart{border:solid; border-color:grey; border-width:2px; background-color:white; opacity:0.94}
+  .chart{border:solid; border-color:grey; border-width:2px; background-color:gray; opacity:0.94}
   .tick line{stroke:grey}
 
-  body{background-color: black; 
-  color:white;
+  body{
+    text-align: center;
+    background-color: black; 
+    color:white;
 }
 </style>
 
@@ -39,9 +41,9 @@ async function init() {
   var countryName = data02.map(d => d.key);
   //var color = d3.scaleOrdinal().domain(countryName).range(d3.schemePaired);
   var color = d3.scaleOrdinal().domain(countryName)
-  .range(["#9e0142", "#d53e4f", "#f46d43", "#fdae61", "#fee08b", "#e6f598", "#abdda4", "#66c2a5", "#3288bd", "#5e4fa2", "#f5c63c", "#f47f6b","#5344a9"]);
-  var yaxisTitle = "School Enrollment, Tertiary (%gross)"
-  var chartTitle = "School Enrollment, Tertiary (%gross) vs. Year"
+  .range(["#9e0142", "#d53e4f", "#f46d43", "#fdae61", "#fee08b", "#e6f598", "#abdda4", "#66c2a5", "#3288bd", "#5e4fa2", "brown", "darkgray","white"]);
+  var yaxisTitle = "School Enrollment, Tertiary (% gross)"
+  var chartTitle = "School Enrollment, Tertiary (% gross) vs. Year"
   var marginX = width * 0.10;
   var marginY = height * 0.10;
   var widthX = width - 3.5*marginX;
@@ -206,9 +208,8 @@ async function init() {
 
 <p>
   <svg width = "900" height = "100" class="boxed" >
-      </br>
+  </br>
       <tspan x= "0" dy="20" style="font-size:15">extra: "low/middle income" refer to groups of countries defined by World Bank.</tspan> 
-      </br>
   </svg>  
 </p>
 
