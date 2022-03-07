@@ -5,20 +5,18 @@
 <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
 
 <style> 
-  *{font-family:Arial}
-  .tooltiptext{font-family: Arial; font-size: 15}
-  .legendtxt{font-family: Arial; font-size: 15}
-  .axistxt{font-family: Arial; font-size: 15}
-  .titletxt{font-family: Arial; font-weight:bold; font-size: 20}
+  *{font-family:Georgia, 'Times New Roman', Times, serif}
+  .tooltiptext{font-family: Georgia, 'Times New Roman', Times, serif; font-size: 15}
+  .legendtxt{font-family: Georgia, 'Times New Roman', Times, serif; font-size: 15}
+  .axistxt{font-family: Georgia, 'Times New Roman', Times, serif; font-size: 15}
+  .titletxt{font-family: Georgia, 'Times New Roman', Times, serif; font-weight:bold; font-size: 20}
   .boxed { font-weight:bold; font-size:18}
   .chart{border:solid; border-color:grey; border-width:2px; background-color:white; opacity:0.94}
   .tick line{stroke:grey}
 
-  body{background-image: url(./data/contour-world-map.gif); 
-  background-repeat: repeat-y;
-  background-size: contain;
-  background-position: top right;
-  }
+  body{background-color: black; 
+  color:white;
+}
 </style>
 
 <body onload='init()'>
@@ -31,7 +29,7 @@
   d3.select("body").append("svg").attr("width", width).attr("height", height).attr("class", "chart");
 
 async function init() {
-  var data01 = await d3.csv("https://raw.githubusercontent.com/steve303/mywebpage/master/data/health.csv");
+  var data01 = await d3.csv("https://raw.githubusercontent.com/aamaxaa/final/main/data/health.csv");
   console.log(data01);
 
   //transform data01 wrt to "country name" => data02 
@@ -41,7 +39,7 @@ async function init() {
   var countryName = data02.map(d => d.key);
   //var color = d3.scaleOrdinal().domain(countryName).range(d3.schemePaired);
   var color = d3.scaleOrdinal().domain(countryName)
-  .range(["gold", "lightgrey", "green", "grey", "black", "red", "violet", "pink", "brown", "blue", "purple", "orange","skyblue"]);
+  .range(["#9e0142", "#d53e4f", "#f46d43", "#fdae61", "#fee08b", "#e6f598", "#abdda4", "#66c2a5", "#3288bd", "#5e4fa2", "#f5c63c", "#f47f6b","#5344a9"]);
   var yaxisTitle = "Mortality Rate (per 1000 male adults)"
   var chartTitle = "Mortality Rate (per 1000 male adults) vs. Year"
   var marginX = width * 0.10;
@@ -239,11 +237,9 @@ async function init() {
 <p>
   <svg width = "900" height = "80" class="boxed" >
      <text x="0" y="15">
-      <tspan>In general, mortality rate has shown consistent improvement over the years.  This trend is</tspan>
-      <tspan x= "0" dy="20">something we would expect with improved GDP per capita.  However this is not exclusive</tspan> 
-      <tspan x= "0" dy="20">to these 10 countries.  Low income countries as a group also show the same trend.</tspan>
+      
       </br>
-      <tspan x= "0" dy="20" style="font-size:15">note: "low/middle income" refer to groups of countries defined by World Bank.</tspan> 
+      <tspan x= "0" dy="20" style="font-size:15">extra: "low/middle income" refer to groups of countries defined by World Bank.</tspan> 
     </text>
   </svg>  
 </p>

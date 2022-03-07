@@ -4,12 +4,13 @@
 <script src = 'https://d3js.org/topojson.v1.min.js'></script>
 
 <style>
-  *{font-family:sans-serif} 
+  *{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+} 
  
-  body{background-image: url(./data/contour-world-map.gif); 
-  background-repeat: repeat-y;
-  background-size: 400px 200px;
-  background-position: top right;}
+  body{background-color: black; 
+  color:white;
+}
 
 </style>
 
@@ -77,7 +78,7 @@ await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
   var svgElem = d3.select("div.divChart").append("svg").attr("width", wx).attr("height", hy).attr("class", "chart");
   
   async function f1() {
-  const data01 = await d3.csv("https://raw.githubusercontent.com/steve303/mywebpage/master/data/PercentChangeGDP.csv");
+  const data01 = await d3.csv("https://raw.githubusercontent.com/aamaxaa/final/main/data/PercentChangeGDP.csv");
   console.log(data01);
  
 //append xaxis 
@@ -94,7 +95,7 @@ await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
   .attr("class", "axisTxt")
   .attr("x", 220)
   .attr("y", 50)
-  .attr("fill", "black")
+  .attr("fill", "white")
   .attr("font-weight", "bold")
   .attr("font-size", "15")
   .text("% Increase GDP per Capita from 2000 to 2019 (constant 2010 USD)");
@@ -113,7 +114,7 @@ await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
 //append bars
   var countryName = data01.map(d => d["Country Name"]);
   var color = d3.scaleOrdinal().domain(countryName)
-  .range(["gold", "red","purple", "blue", "violet", "pink","skyblue", "orange","brown", "green"]);
+  .range(["#9e0142", "#d53e4f", "#f46d43", "#fdae61", "#fee08b", "#e6f598", "#abdda4", "#66c2a5", "#3288bd", "#5e4fa2"]);
   
   svgElem.append("g")
   .attr("transform", "translate(100,10)")  //XY position !!!
@@ -184,7 +185,7 @@ await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
 
 </script>
 
-<p>PS: Hover over bar chart for tool tip</p>
+<p>extra: Hover over bar chart for tool tip</p>
 <p>source:<a href = "https://data.worldbank.org/">https://data.worldbank.org<a/></p>
 </body>
 </html>
