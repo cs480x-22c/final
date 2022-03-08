@@ -28,7 +28,9 @@ Staked area chart
 
 Tree map chart
 
-![first chart](./second-chart.png)
+![first chart](./bootstrappedlog2error distribution.png)
+![first chart](./errorgraph.png)
+
 
 Footer
 
