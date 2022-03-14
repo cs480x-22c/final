@@ -1,123 +1,64 @@
-Final Project - Interactive Data Visualization  
-===
+### Overview of Project:
 
-The key learning experience of this course is the final project. 
-You will design a web site and interactive visualizations that answer questions you have, provide an exploratory interface to some topic of your own choosing, or take on a more ambitious experiment than A3. 
-You will acquire the data, design your visualizations, implement them, and critically evaluate the results. 
+Rick and Morty Data Viz for representing characters screen time. Using a stacked area chart and treemaps, in a rick and morty themed react based website.
 
-The path to a good visualization is going to involve mistakes and wrong turns. 
-It is therefore important to recognize that mistakes are valuable in finding the path to a solution, to broadly explore the design space, and to iterate designs to improve possible solutions. 
-To help you explore the design space, we will hold events such as feedback sessions in which you propose your idea and initial designs and receive feedback from the class and staff.
+Process book link: https://docs.google.com/document/d/10QZLrAD1B8KyROV4MddCoAbmHzg4DHS3jWi8olJR0mQ/edit?usp=sharing
 
-Proposals / Idea Generation
+### Overview of Handling:
+
+All of the code is our own except a simple skeleton for a treemap(in d3.js) and dropdown bar(in js). We also used the d3 library and a simple library for icons we use throughout our websites from fontawesome.com.
+
+### How to run locally:
+
+1. Open a terminal in the project directory
+2. In the terminal type the command "cd react-app-files"
+3. If this is the first time running the website locally type the command "npm i"
+4. Lastly type the command "npm start"
+5. The website should pop-up, if not it is located in local host 3000
+
+### Technologies used:
+The website is made with React and Material UI. Besides D3, there was also a Chart JS code in the early versions of the app. The code architecture follows the classic structure with components for each section of the website. Our main website runs on node.js server. For our secondary websites we used glitch to host them, running them on http server.
+
+The introduction section contains the title and a background gif.
+![intro page](./intro-page.png)
+
+Staked area chart
+
+![first chart](./first-chart.png)
+
+Tree map chart
+
+![first chart](./second-chart.png)
+
+
+
+Footer
+
+![first chart](./last-pic.png)
+
+Website for treemaps
+
+![image](https://user-images.githubusercontent.com/73619173/156631854-8b85b351-3b7e-4a26-ad12-dd007a8f8016.png)
+
+### Project Website(s):
+
+Link to main website: https://dacs30.github.io/final/
+
+Link to website with just treemaps: https://rickandmortyfp.glitch.me/
+
+Link to video: https://drive.google.com/file/d/1SRcv2gGc4mXVZa7gMXJ80TmX6y1y9Kez/view?usp=sharing
+
+References:
 ---
 
-Submit project ideas using [this Google Form](https://docs.google.com/forms/d/e/1FAIpQLSepaCzjEq9AXwmJ8mJ-06ytkQUuLI1Z2QF5KGyhVnKaxBI-mA/viewform?usp=sf_link).
+Inspiration: https://towardsdatascience.com/the-office-story-thats-what-the-data-said-224e8a6f47e
 
-You're encouraged to submit many ideas-- staff will help you identify the most promising ones and possible roadblocks.
+Dropdown: https://www.youtube.com/watch?v=f_E5d9Gt5nM&ab_channel=BeforeSemicolon
 
-Please stick to 1-4 folks per team.
+Treemap: https://www.d3-graph-gallery.com/graph/treemap_basic.html
 
-Final Project Materials
----
-For your final project you must hand in the following items.
-
-### Process Book
-
-An important part of your project is your process book. Your process book details your steps in developing your solution, including the alternative designs you tried, and the insights you got. Develop your process book out of the project proposal. Equally important to your final results is how you got there! Your process book is the place you describe and document the space of possibilities you explored at each step of your project. It is not, however, a journal or lab notebook that describes every detail - you should think carefully about the important decisions you made and insights you gained and present your reasoning in a concise way.
-
-We strongly advise you to include many figures in your process book, including photos of your sketches of potential designs, screen shots from different visualization tools you explored, inspirations of visualizations you found online, etc. Several images illustrating changes in your design or focus over time will be far more informative than text describing those changes. Instead, use text to describe the rationale behind the evolution of your project.
-
-Your process book should include the following topics. Depending on your project type the amount of discussion you devote to each of them will vary:
-
-- Overview and Motivation: Provide an overview of the project goals and the motivation for it. Consider that this will be read by people who did not see your project proposal.
-- Related Work: Anything that inspired you, such as a paper, a web site, visualizations we discussed in class, etc.
-- Questions: What questions are you trying to answer? How did these questions evolve over the course of the project? What new questions did you consider in the course of your analysis?
-- Data: Source, scraping method, cleanup, etc.
-- Exploratory Data Analysis: What visualizations did you use to initially look at your data? What insights did you gain? How did these insights inform your design?
-- Design Evolution: What are the different visualizations you considered? Justify the design decisions you made using the perceptual and design principles you learned in the course. Did you deviate from your proposal?
-- Implementation: Describe the intent and functionality of the interactive visualizations you implemented. Provide clear and well-referenced images showing the key design and interaction elements.
-- Evaluation: What did you learn about the data by using your visualizations? How did you answer your questions? How well does your visualization work, and how could you further improve it?
-
-As this will be your only chance to describe your project in detail make sure that your process book is a standalone document that fully describes your results and the final design. 
-[Here](http://dataviscourse.net/2015/assets/process_books/bansal_cao_hou.pdf) are a [few examples](http://dataviscourse.net/2015/assets/process_books/walsh_trevino_bett.pdf) of process books from a similar course final.
-
-Tip: Start your process book on Day 1. Make entries after each meeting, and trim / edit as needed towards the end of the project. Many folks use either slides software (like PowerPoint) or Google Docs to make this book, as both allow for flexible layouts and export to PDF.
-
-
-### Project Website
-
-Create a public website for your project using GitHub pages or another web hosting service of your choice. 
-The web site should contain your interactive visualization, summarize the main results of the project, and tell a story. 
-Consider your audience (the site should be public if possible, unless you're running an experiment, etc.) and keep the level of discussion at the appropriate level. 
-Your process book and data should be linked from the web site as well. 
-Also embed your interactive visualization and your screen-cast in your website. 
-If you are not able to publish your work (e.g., due to confidential data) please let us know in your project proposal.
-
-### Project Screen-Cast
-
-Each team will create a two minute screen-cast with narration showing a demo of your visualization and/or some slides. 
-
-You can use any screencast tool of your choice, such as Camtasia or Loom (new and recommended). 
-Please make sure that the sound quality of your video is good -- it may be worthwhile to invest in an external USB microphone-- campus IT should have some you can borrow. 
-Upload the video to an online video-platform such as YouTube or Vimeo and embed it into your project web page. 
-For our final project presentation day, we will show as many videos in class as possible, and ask teams to field questions.
-
-We will strictly enforce the two minute time limit for the video, so please make sure you are not running longer. 
-Use principles of good storytelling and presentations to get your key points across. Focus the majority of your screencast on your main contributions rather than on technical details. 
-What do you feel is the best part of your project? 
-What insights did you gain? 
-What is the single most important thing you would like your audience to take away? Make sure it is front and center rather than at the end.
-
-Outside Libraries/References
----
-
-For this project you *do not* have to write everything from scratch.
-
-You may *reference* demo programs from books or the web, and *include* popular web libraries like Material UI, React, Svelte, etcetera. 
-
-Please *do not* use libraries on top of d3 without consulting staff, however. 
-Libraries like nvd3.js look tempting, but such libraries often have poor defaults and result in poor visualizations.
-There may be exceptions.
-Instead, draw from the numerous existing d3 examples on the web.
-
-If you use outside sources please provide a References section with links at the end of your Readme.
+- This final project is adapted from https://www.dataviscourse.net/2020/project/
 
 Resources
 ---
-The "[Data is Plural](https://tinyletter.com/data-is-plural/archive)" weekly letter often contains interesting datasets.
-
-Think of something you're interested in, go find data on it! Include data collection and processing as part of your work on this project.
-
-Requirements
----
-
-Store the following in your GitHub repository:
-
-- Code - All web site files and libraries assuming they are not too big to include
-- Data - Include all the data that you used in your project. If the data is too large for github store it on a cloud storage provider, such as Dropbox or Yousendit.
-- Process Book- Your Process Book in PDF format.
-- README - The README file must give an overview of what you are handing in: which parts are your code, which parts are libraries, and so on. The README must contain URLs to your project websites and screencast videos. The README must also explain any non-obvious features of your interface.
-
-GitHub Details
----
-
-- Fork the repo. You now have a copy associated with your username.
-- Make changes to index.html to fulfill the project requirements. 
-- Make sure your "main" branch matches your "gh-pages" branch. See the GitHub Guides referenced above if you need help.
-- Edit the README.md with a link to your gh-pages or other external site: for example http://YourUsernameGoesHere.github.io/DataVisFinal/index.html
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-- Process Book - Are you following a design process that is well documented in your process book?
-- Solution - Is your visualization effective in answering your intended questions? Was it designed following visualization principles?
-- Implementation - What is the quality of your implementation? Is it appropriately polished, robust, and reliable?
-- Presentation - Are your web site and screencast clear, engaging, and effective?
-Your individual project score will also be influenced by your peer evaluations.
-
-References
----
-
-- This final project is adapted from https://www.dataviscourse.net/2020/project/
+Data: https://www.kaggle.com/andradaolteanu/rickmorty-scripts
