@@ -1,23 +1,6 @@
 Final Project - Interactive Data Visualization  
 ===
 
-The key learning experience of this course is the final project. 
-You will design a web site and interactive visualizations that answer questions you have, provide an exploratory interface to some topic of your own choosing, or take on a more ambitious experiment than A3. 
-You will acquire the data, design your visualizations, implement them, and critically evaluate the results. 
-
-The path to a good visualization is going to involve mistakes and wrong turns. 
-It is therefore important to recognize that mistakes are valuable in finding the path to a solution, to broadly explore the design space, and to iterate designs to improve possible solutions. 
-To help you explore the design space, we will hold events such as feedback sessions in which you propose your idea and initial designs and receive feedback from the class and staff.
-
-Proposals / Idea Generation
----
-
-Submit project ideas using [this Google Form](https://docs.google.com/forms/d/e/1FAIpQLSepaCzjEq9AXwmJ8mJ-06ytkQUuLI1Z2QF5KGyhVnKaxBI-mA/viewform?usp=sf_link).
-
-You're encouraged to submit many ideas-- staff will help you identify the most promising ones and possible roadblocks.
-
-Please stick to 1-4 folks per team.
-
 Final Project Materials
 ---
 For your final project you must hand in the following items.

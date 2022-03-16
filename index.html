@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<meta name="viewport" content="width=device-width" charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto+Slab:wght@100;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+	.font{
+		font-family: "Roboto Slab", serif;
+	}
+
+
+	.grid .tick line {
+    stroke: #9FAAAE;
+    stroke-opacity: 0.4;
+}
+</style>
+<body class="font">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<h1 id="h">Gen 1 Pokemon by Type</h1>
+
+
+<script>
+var margin = {top: 20, right: 20, bottom: 50, left: 50},
+    width = 860 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
+var x = d3.scaleBand()
+          .range([0, width])
+          .padding(0.1);
+var y = d3.scaleLinear()
+          .range([height, 0]);
+
+var svg = d3.select("body").append("svg")
+    .attr("width",  width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", 
+          "translate(" + margin.left + "," + margin.top + ")")
+
+//read data and make page
+var url = d3.json("https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json");
+
+url.then(function (data) {
+ 
+console.log(data);
+
+var pokemon = []
+
+data['pokemon'].forEach(function(d){
+	pokemon.push( 
+		{'type': d.type,
+		 'name': d.name,
+		 'candy' : d.candy, 
+		 'id' : d.id  });
+})
+
+var countType = [];
+var typeList = [];
+var speciesList = [];
+//var count = 0;
+pokemon.forEach(function(d){
+ 	var type = d.type[0];
+	if(!(typeof d.type[1] === typeof 'undefined')){
+		var type1 = d.type[1];
+	}
+	var species = d.candy;
+	var index = countType.findIndex((obj => obj.name == type));
+
+	if (typeList.includes(type)){
+		countType[index].Count = countType[index].Count + 1;
+		if(speciesList.includes(species)){
+			countType[index].species = countType[index].species;
+		}
+		else{ 
+			speciesList.push(species);
+			countType[index].species = countType[index].species + 1;
+		}
+		//console.log(type);
+	}
+	else if (typeList.includes(type1)){
+		countType[index].Count = countType[index].Count + 1;
+		if(!speciesList.includes(species)){
+			countType[index].species = countType[index].species + 1;
+		}
+		//console.log(type1);
+	}
+	else{
+		typeList.push(type);
+		countType.push({'name': type, 'Count': 1, "height": 0, "species": 0});
+		//console.log(countType);
+	}
+
+
+})
+
+//colorscale
+var types = ['Normal', 'Fire', 'Water', 'Grass', 'Flying', 'Fighting', 'Poison', 'Electric', 'Ground', 'Rock', 'Psychic', 'Ice', 'Bug', 'Ghost', 'Steel', 'Dragon', 'Dark', 'Fairy']
+var colors = d3.scaleOrdinal()
+.domain(types)
+.range([
+"#A8A77A",
+"#EE8130",
+"#6390F0",
+"#7AC74C",
+"#A98FF3",
+"#C22E28",
+"#A33EA1",
+"#F7D02C",
+"#E2BF65",
+"#B6A136", 
+"#F95587",
+"#96D9D6",
+"#A6B91A",   
+"#735797", 
+"#B7B7CE", 
+"#6F35FC", 
+"#705746",  
+"#D685AD"]);
+
+//domain
+x.domain(pokemon.map(function(d){return d.type[0];}));
+y.domain([0,30]);
+
+var index = countType.findIndex((obj => obj.name == pokemon.type));
+
+console.log(pokemon[0]);
+
+//gridlines 
+const makeYLines = () => d3.axisLeft().scale(y);
+    svg
+      .append("g")
+      .attr("class", "grid")
+      .call(
+        makeYLines()
+          .tickSize(-width, 0, 0)
+          .tickFormat("")
+      );
+
+//set up mouseover text
+var tooltip = d3.select("body")
+    .append("div")
+    .style("position", "absolute")
+    .style("z-index", "10")
+    .style("visibility", "hidden")
+    .text("text is unchanged");
+
+//barchart
+	var h = 0;
+  svg.selectAll(".bar")
+      .data(countType)
+    .enter().append("rect")
+      .attr("class", "bar")
+	  .attr("id", function(d){ return d.name })
+      .attr("x", function(d) { d.x = x(d.name); return x(d.name); })
+      .attr("width", x.bandwidth())
+      .attr("y", function(d) { 
+		dy = y(d.Count);
+		d.y = dy;
+		//console.log(d);
+		return y(d.Count);})
+      .attr("height", function(d) {
+		h = height - y(d.Count);
+		d.height=h;
+		//console.log(h);
+		return h; })
+	  .attr("fill", function(d) { return colors((d.name)); })
+	  .on('mouseenter', function (d){
+        d3.select(this).attr('opacity', 0.8);
+		thisBar = d3.select(this);
+		return tooltip .data(countType)
+					//   .attr("x", function(d) { return thisBar.x +"px";})
+					//   .attr("y", function(d) { return thisBar.y +"px";})
+					  .style("visibility", "visible")
+					  .text(function(d) { 
+						var index = countType.findIndex((obj => obj.name == thisBar.attr("id")));
+					    return "Pokemon Type: " + countType[index].name + " |  Total Amount of Pokemon: " + countType[index].Count + " | Different Species: " + countType[index].species; ; 
+						});
+						
+    	})
+svg.selectAll(".bar")
+	.on('mouseleave', function (actual, i) {
+        d3.select(this).attr('opacity', 1)
+		//svg.selectAll('.hLine').remove()
+		return tooltip.style("visibility", "hidden");	
+	})
+// Add x axis
+ svg.append("g")
+    .call(d3.axisBottom(x))
+	.attr("transform", "translate(0," + height + ")");
+
+//x label
+svg.append("text")
+    .attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width / 2)
+    .attr("y", height + 45)
+    .text("Pokemon Type");
+
+  // Add y axis
+  svg.append("g")
+    .call(d3.axisLeft(y));
+
+	//y labels
+svg.append("text")
+    .attr("class", "y label")
+    .attr("text-anchor", "end")
+	.attr("x", -50)
+    .attr("y", -40)
+    .attr("dy", ".75em")
+    .attr("transform", "rotate(-90)")
+    .text("Number of Pokemon");
+})
+ 
+</script> 
+
+
+</body>
