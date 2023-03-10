@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>25Live Interactive Calendar and Map</title>
+	<link rel="shortcut icon" href="#">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+	<script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</head>
+<body>
+	<h1>25Live Interactive Calendar and Map</h1>
+	<p>Carley Gilmore, Justin Moy, Amos Roche</p>
+	<div id ="input">
+		<form id="myForm">  
+			<b>Select a Building</b>  
+			<select id="building">  
+				<option> ---Choose Building--- </option>  
+				<option> AK </option>  
+				<option> FL </option>  
+				<option> KH </option>  
+				<option> SL </option>  
+				<option> WB </option> 
+				<option> UH </option>  
+				<option> SH </option>
+				<option> AH </option> 
+				<option> RILEY </option>
+				<option> FBC </option>  
+				<option> WEST </option>
+				<option> HA </option>
+				<option> IS </option>   
+				<option> RC </option> 
+				<option> QUAD </option>
+				<option> HL </option>  
+				<option> CC </option>  
+				<option> OH </option>
+				<option> GH </option> 
+				<option> HH </option> 
+				<option> MORGAN </option> 
+				<option> CRC </option> 
+				<option> AF </option> 
+				<option> GP </option> 
+				<option> RT </option> 
+				<option> OASIS </option> 
+			</select>   
+		</form> 
+		<input type="time" id="myInputTime">
+    	<button type="button" onclick="getInputValue();">See Calendar</button>
+    	<button onclick="reset();">Reset</button>
+		<div class="results-container>
+			<ul class="results-list" id="list"></ul>
+		</div>
+	</div>
+	<h2 id="info"></h2>
+	<div id="calendar"></div>
+	<h2 id="time"></h2>
+	<p id="events"></p>
+	<svg width=960 height=400 id="map"></svg>
+	<p>Welcome! The data visualization above is based off of 25Live data obtained from the 25Live software administrator on February 24, 2022. The data that we received ranges from February 1st to May 3rd. We have filtered the data to resemble socially/professionally enriching events for students.</p>
+	<p>How to use the visualization: Select a building and time from the menu below. Note: Please choose events by the whole hour value; i.e: 1:00 PM. A calendar will show up with a variety of colors. The darker blue dates represent days with a high concentration of events in the building at the given time frame. Grey dates represent a lack of events at the specified date/time combination. Lighter blue dates represent minimal events. Days with events in the building during the specified time will be outlined with a blue border. When you hover over a date, the exact date will appear and the number of events happening. When you click on a date, a synopsis of the events will appear underneath the calendar.</p>
+	<p>Additionally, you can interact with the map below, which highlights all of the buildings based on event concentration at the specified date and time in the calendar. You may also see the calendar change when you click on a different building, and you can look through events in the same means aforementioned. When you hover over each building, you will see the abbreviation that describes the building. The buildings on the map include religious/cultural centers and do not include residential buildings or buildings not listed in the 25LiveData.</p>
+	<table>
+		<caption>Building Abbreviations</caption>
+		<tr>
+		  	<th>Abbreviation</th>
+		  	<th>Building</th>
+		</tr>
+		<tr>
+		  	<td>FL</td>
+		  	<td>Fuller Labs</td>
+		</tr>
+		<tr>
+		  	<td>KH</td>
+		  	<td>Kaven Hall</td>
+		</tr>
+		<tr>
+			<td>SL</td>
+			<td>Salisbury Labs</td>
+		</tr>
+		<tr>
+			<td>WB</td>
+			<td>Washburn Labs</td>
+		</tr>
+		<tr>
+			<td>UH</td>
+			<td>Unity Hall</td>
+		</tr>
+		<tr>
+			<td>SH</td>
+			<td>Stratton Hall</td>
+		</tr>
+		<tr>
+			<td>AH</td>
+			<td>Alden Hall</td>
+		</tr>
+		<tr>
+			<td>RILEY</td>
+			<td>Riley Commons</td>
+		</tr>
+		<tr>
+			<td>FBC</td>
+			<td>First Baptist Church</td>
+		</tr>
+		<tr>
+			<td>WEST</td>
+			<td>Fountain</td>
+		</tr>
+		<tr>
+			<td>HA</td>
+			<td>Harrington Auditorium</td>
+		</tr>
+		<tr>
+			<td>IS</td>
+			<td>Innovation Studio</td>
+		</tr>
+		<tr>
+			<td>KH</td>
+			<td>Kaven Hall</td>
+		</tr>
+		<tr>
+			<td>RC</td>
+			<td>Recreation Center</td>
+		</tr>
+		<tr>
+			<td>QUAD</td>
+			<td>Quad</td>
+		</tr>
+		<tr>
+			<td>CC</td>
+			<td>Campus Center</td>
+		</tr>
+		<tr>
+			<td>OH</td>
+			<td>Olin Hall</td>
+		</tr>
+		<tr>
+			<td>GH</td>
+			<td>Gordon Hall</td>
+		</tr>
+		<tr>
+			<td>HH</td>
+			<td>Higgins House</td>
+		</tr>
+		<tr>
+			<td>MORGAN</td>
+			<td>The Wedge in Morgan Hall</td>
+		</tr>
+		<tr>
+			<td>CRC</td>
+			<td>Collegiate Religious Center</td>
+		</tr>
+		<tr>
+			<td>AF</td>
+			<td>Alumni Field</td>
+		</tr>
+		<tr>
+			<td>GP</td>
+			<td>Gateway Park</td>
+		</tr>
+		<tr>
+			<td>RT</td>
+			<td>Rooftop Field</td>
+		</tr>
+		<tr>
+			<td>OASIS</td>
+			<td>OASIS Cultural Center</td>
+		</tr>
+	  </table>
+	<a href="https://github.com/amosr2002/final/blob/main/filtered_25live.csv">25live Dataset</a>
+	<a href="https://github.com/amosr2002/final/blob/main/FP%20Process%20Book.pdf">Process Book</a>
+	<a href="https://www.youtube.com/watch?v=9ITw_u35Otc">Video Demo</a>
+	<script src="renderMap.js"></script>
+	<script src="renderCalendar.js"></script>
+</body>
